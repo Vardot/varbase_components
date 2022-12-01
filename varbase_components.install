@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Varbase components module.
+ */
+use Vardot\Installer\ModuleInstallerFactory;
+
+/**
+ * Implements hook_install().
+ */
+function varbase_components_install() {
+  // Processer for install: in varbase_components.info.yml file using ModuleInstallerFactory.
+  // --------------------------------------------------------------------------.
+  ModuleInstallerFactory::installList('varbase_components');
+}
