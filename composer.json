@@ -21,6 +21,9 @@
     "oomphinc/composer-installers-extender": "~2.0",
     "cweagans/composer-patches": "~1.0",
     "drupal/core": "~9.0 || ~10.0",
-    "vardot/module-installer-factory": "~1.0"
+    "vardot/module-installer-factory": "~1.0",
+    "drupal/components": "2.4.0",
+    "drupal/ui_patterns": "~1.0",
+    "drupal/ui_patterns_settings": "~2.0"
   }
 }
