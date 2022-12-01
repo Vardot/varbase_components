@@ -16,5 +16,11 @@
     "issues": "https://www.drupal.org/project/issues/varbase_components",
     "source": "http://cgit.drupalcode.org/varbase_components"
   },
-  "require": {}
+  "require": {
+    "composer/installers": "~2.0",
+    "oomphinc/composer-installers-extender": "~2.0",
+    "cweagans/composer-patches": "~1.0",
+    "drupal/core": "~9.0 || ~10.0",
+    "vardot/module-installer-factory": "~1.0"
+  }
 }
