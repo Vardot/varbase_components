@@ -1,0 +1,20 @@
+{
+  "name": "drupal/varbase_components",
+  "description": "This is the components handler module for Varbase destribution.",
+  "type": "drupal-module",
+  "homepage": "https://www.drupal.org/project/varbase_components",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/varbase_components",
+    "source": "http://cgit.drupalcode.org/varbase_components"
+  },
+  "require": {}
+}
