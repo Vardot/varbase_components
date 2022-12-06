@@ -1,6 +1,6 @@
 {
   "name": "drupal/varbase_components",
-  "description": "This is the components handler module for Varbase destribution.",
+  "description": "This is the components handler module for Varbase distribution.",
   "type": "drupal-module",
   "homepage": "https://www.drupal.org/project/varbase_components",
   "license": "GPL-2.0-or-later",
@@ -13,8 +13,18 @@
     }
   ],
   "support": {
-    "issues": "https://www.drupal.org/project/issues/varbase_components",
+    "issues": "http://drupal.org/project/issues/varbase_components",
     "source": "http://cgit.drupalcode.org/varbase_components"
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    "assets": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
   },
   "require": {
     "composer/installers": "~2.0",
@@ -25,5 +35,19 @@
     "drupal/components": "2.4.0",
     "drupal/ui_patterns": "~1.0",
     "drupal/ui_patterns_settings": "~2.0"
+  },
+  "extra": {
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": true,
+    "patches": {
+      "drupal/components": {
+        "Issue #3107993: Fix Template is not defined error on node edit / admin pages":
+        "https://www.drupal.org/files/issues/2021-06-24/DRUP86-template_not_defined.patch"
+      }
+    }
   }
 }

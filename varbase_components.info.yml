@@ -1,5 +1,5 @@
 name: "Varbase Components"
-description: "This is the components handler module for Varbase destribution."
+description: "This is the components handler module for Varbase distribution."
 type: module
 package: Varbase
 core_version_requirement: ^9 || ^10

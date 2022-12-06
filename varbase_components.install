@@ -10,7 +10,7 @@ use Vardot\Installer\ModuleInstallerFactory;
  * Implements hook_install().
  */
 function varbase_components_install() {
-  // Processer for install: in varbase_components.info.yml file using ModuleInstallerFactory.
+  // Processor for install: in varbase_components.info.yml file using the Module Installer Factory.
   // --------------------------------------------------------------------------.
   ModuleInstallerFactory::installList('varbase_components');
 }
