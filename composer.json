@@ -32,7 +32,7 @@
     "cweagans/composer-patches": "~1.0",
     "drupal/core": "~9.0 || ~10.0",
     "vardot/module-installer-factory": "~1.0",
-    "drupal/components": "2.4.0",
+    "drupal/components": "~3.0",
     "drupal/ui_patterns": "~1.0",
     "drupal/ui_patterns_settings": "~2.0"
   },
@@ -43,11 +43,6 @@
     ],
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
-    "patches": {
-      "drupal/components": {
-        "Issue #3107993: Fix Template is not defined error on node edit / admin pages":
-        "https://www.drupal.org/files/issues/2021-06-24/DRUP86-template_not_defined.patch"
-      }
-    }
+    "patches": { }
   }
 }
