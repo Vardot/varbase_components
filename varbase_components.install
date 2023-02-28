@@ -11,6 +11,9 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function varbase_components_install() {
   // Processor for install: in varbase_components.info.yml file using the Module Installer Factory.
-  // --------------------------------------------------------------------------.
   ModuleInstallerFactory::installList('varbase_components');
+
+  // Add permissions.
+  ModuleInstallerFactory::addPermissions('varbase_components');
+
 }

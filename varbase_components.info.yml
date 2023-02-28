@@ -2,7 +2,7 @@ name: "Varbase Components"
 description: "This is the components handler module for Varbase distribution."
 type: module
 package: Varbase
-core_version_requirement: ^9 || ^10
+core_version_requirement: ~10.0
 install:
   - components
   - ui_patterns
