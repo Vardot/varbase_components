@@ -33,8 +33,13 @@
     "drupal/core": "~10.0",
     "vardot/entity-definition-update-manager": "~1.0 || 1.0.x-dev",
     "vardot/module-installer-factory": "~1.0 || 1.0.x-dev",
-    "drupal/components": "~3.0",
-    "drupal/ui_patterns": "~1.0",
+    "drupal/cl_components": "~1.0",
+    "drupal/cl_block": "~1.0",
+    "drupal/cl_selector_field": "~1.0",
+    "drupal/cl_server": "~2.0",
+    "drupal/cl_devel": "~2.0",
+    "drupal/cl_generator": "~2.0",
+    "drupal/ui_patterns": "2.0.x-dev",
     "drupal/ui_patterns_settings": "~2.0"
   },
   "extra": {
