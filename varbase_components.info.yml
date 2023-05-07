@@ -3,7 +3,7 @@ description: "This is the components handler module for Varbase distribution."
 type: module
 package: Varbase
 core_version_requirement: ^10.1
-dependance:
+dependencies:
   - drupal:sdc
   - ui_patterns:ui_patterns
   - cl_components:cl_components
