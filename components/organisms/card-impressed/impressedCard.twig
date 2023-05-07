@@ -1,0 +1,15 @@
+{% set classes = [
+  'card',
+  'varbase-impressed-card',
+  image_position == 'bottom' ? 'flex-column-reverse' : '',
+  card_classes
+]|merge(utility_classes ?? []) %}
+
+{% set content_classes = ['card-body', card_body_classes] %}
+
+<div {{ attributes.addClass(classes) }}>
+  {{ image }}
+  <div {{ content_attributes.addClass(content_classes) }}>
+    {{ content }}
+  </div>
+</div>

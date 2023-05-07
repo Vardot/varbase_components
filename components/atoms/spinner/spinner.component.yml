@@ -1,0 +1,53 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Spinner
+status: BETA
+componentType: atom
+description: Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML, CSS, and no JavaScript.
+props:
+  type: object
+  properties:
+    html_tag:
+      type: string
+      title: HTML tag
+      description: Having the spinner as div or span
+      enum:
+        - div
+        - span
+    type:
+      type: string
+      title: Type
+      description: Use the border spinners for a lightweight loading indicator. If you do not fancy a border spinner, switch to the grow spinner. While it does not technically spin, it does repeatedly grow!
+      enum:
+        - spinner-border
+        - spinner-grow
+    color:
+      type: string
+      title: Color
+      description: Once again, this spinner is built with currentColor, so you can easily change its appearance with text color utilities. Here it is in blue, along with the supported variants.
+      enum:
+        - text-primary
+        - text-secondary
+        - text-success
+        - text-danger
+        - text-warning
+        - text-info
+        - text-dark
+        - text-light
+    size:
+      type: string
+      title: Size
+      description: Add `.spinner-border-sm` and `.spinner-grow-sm` to make a smaller spinner that can quickly be used within other components.
+      enum:
+        - ''
+        - sm
+    content:
+      type: string
+      title: Content
+      description: Spinner text
+      examples:
+        - Processing
+        - Saving
+        - Loading
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes

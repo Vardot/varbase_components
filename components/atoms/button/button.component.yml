@@ -1,0 +1,52 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Button
+status: BETA
+componentType: atom
+description: Use Bootstrap custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+props:
+  type: object
+  required:
+    - content
+  properties:
+    color:
+      type: string
+      title: Color
+      description: Bootstrap class
+      enum:
+        - primary
+        - secondary
+        - success
+        - danger
+        - warning
+        - info
+        - dark
+        - light
+        - link
+    outline:
+      type: boolean
+      title: Outline
+      description: Bootstrap Outline button
+    size:
+      type: string
+      title: Size
+      description: Bootstrap button size class
+      enum:
+        - ''
+        - btn-sm
+        - btn-lg
+    disabled:
+      type: boolean
+      title: Disabled
+      description: Disabled button
+    content:
+      type: string
+      title: Content
+      description: The title for the button
+      minLength: 2
+      examples:
+        - Press
+        - Submit now
+        - Save
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes

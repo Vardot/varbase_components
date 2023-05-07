@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Comment 
+status: BETA
+componentType: organism
+description: Comment
+props:
+  type: object
+  properties:
+    content:
+      type: string
+      title: Content
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes
+    title_prefix:
+      type: array
+      title: title prefix
+    title_suffix:
+      type: array
+      title: title suffix
+slots:
+  content:
+    title: Content

@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Node
+status: BETA
+componentType: organism
+description: Node
+props:
+  type: object
+  required:
+    - content
+  properties:
+    content:
+      type: array
+      title: content
+    title_attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes
+slots:
+  content:
+    title: Content
+    description: The contents of node.

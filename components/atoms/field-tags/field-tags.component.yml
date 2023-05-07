@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Field tags
+status: BETA
+componentType: atom
+description: Field tags
+props:
+  type: object
+  properties:
+    label_display:
+      type: boolean
+      title: Label display
+      description: Display the label of the field. 
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes

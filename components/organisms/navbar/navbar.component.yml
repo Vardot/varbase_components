@@ -1,0 +1,49 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Navbar
+status: BETA
+componentType: organism
+description: Navbar component description
+props:
+  type: object
+  required:
+    - content
+  properties:
+    container:
+      type: string
+      title: Container
+      description: container type
+      enum:
+        - fixed
+        - fluid
+    color:
+      type: string
+      title: Color
+      description: Color
+      enum:
+        - light
+        - dark
+    placement:
+      type: string
+      title: Placement
+      description: Placement
+      enum:
+        - default
+        - fixed-top
+        - fixed-bottom
+        - sticky-top
+    navbar_expand:
+      type: string
+      title: Expand
+      description: Expanded navbar
+      enum:
+        - sm
+        - md
+        - lg
+        - xl
+slots:
+  branding:
+    title: Branding
+    description: Site branding.
+  navigation:
+    title: Content
+    description: site navigation.

@@ -1,0 +1,18 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Input 
+status: BETA
+componentType: atom
+description: Input
+props:
+  type: object
+  properties:
+    size:
+      type: string
+      title: Size
+      enum:
+        - ''
+        - form-control-sm
+        - form-control-lg
+    placeholder:
+      type: string
+      title: Place Holder

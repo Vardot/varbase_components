@@ -1,0 +1,52 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Progress bar
+status: BETA
+componentType: atom
+description: Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+props:
+  type: object
+  properties:
+    color:
+      type: string
+      title: Color
+      description: Use background utility classes to change the appearance of individual progress bars.
+      enum:
+        - primary
+        - bg-primary
+        - bg-secondary
+        - bg-success
+        - bg-info
+        - bg-warning
+        - bg-danger
+        - bg-light
+        - bg-dark
+        - bg-black
+        - bg-white
+        - bg-body
+        - bg-transparent
+        - bg-opacity-10
+        - bg-opacity-25
+        - bg-opacity-50
+        - bg-opacity-75
+        - bg-opacity-100
+        - bg-gradient
+    striped:
+      type: boolean
+      title: Striped
+      description: Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the background color.
+    animated:
+      type: boolean
+      title: Striped
+      description: The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
+    label:
+      type: string
+      title: Label
+      description: Add labels to your progress bars by placing text within the `.progress-bar`.
+    percent:
+      type: integer
+      title: Percent
+      description: The percentage of the progress.
+    message:
+      type: string
+      title: Message
+      description: A string containing information to be displayed.

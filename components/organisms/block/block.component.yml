@@ -1,0 +1,35 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Block 
+status: BETA
+componentType: organism
+description: Block
+props:
+  type: object
+  properties:
+    label:
+      type: string
+      title: Label
+    content:
+      type: string
+      title: Content
+    id:
+      type: string
+      title: ID
+    bundle:
+      type: string
+      title: Bundle
+    html_tag:
+      type: string
+      title: HTML tag
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes
+    title_prefix:
+      type: array
+      title: title prefix
+    title_suffix:
+      type: array
+      title: title suffix
+slots:
+  content:
+    title: Content

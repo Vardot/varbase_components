@@ -1,0 +1,41 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Nav
+status: BETA
+componentType: organism
+description: Nav component description
+props:
+  type: object
+  properties:
+    items:
+      type: array
+      name: Items
+    alignment:
+      type: string
+      name: Alignment
+      enum:
+        - ''
+        - left
+        - right
+        - center
+        - vertical
+    style:
+      type: string
+      name: Style
+      enum:
+        - ''
+        - tabs
+        - pills
+    fill:
+      type: string
+      name: Fill
+      enum:
+        - ''
+        - fill
+        - justify
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes
+slots:
+  items:
+    title: items
+    description: Navigation items.

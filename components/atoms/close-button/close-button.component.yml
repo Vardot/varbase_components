@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Close button
+status: BETA
+componentType: atom
+description: A generic close button for dismissing content like modals and alerts.
+props:
+  type: object
+  properties:
+    size:
+      type: string
+      title: Size
+      description: Bootstrap button size class
+      enum:
+        - ''
+        - btn-sm
+        - btn-md
+        - btn-lg

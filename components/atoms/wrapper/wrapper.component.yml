@@ -1,0 +1,14 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Wrapper
+status: BETA
+componentType: atom
+description: Wrapper
+props:
+  type: object
+  properties:
+    content:
+      type: string
+      title: Content
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes

@@ -1,0 +1,13 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Views view table
+status: BETA
+componentType: organism
+description: Region
+props:
+  type: object
+  required:
+    - content
+  properties:
+    content:
+      type: string
+      title: Content

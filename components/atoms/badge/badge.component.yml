@@ -1,0 +1,42 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Badge
+status: BETA
+componentType: atom
+description: "Documentation and examples for badges, our small count and labeling component."
+props:
+  type: object
+  required:
+    - content
+  properties:
+    color:
+      type: string
+      title: Color
+      description: Bootstrap text and background class.
+      enum:
+        - text-bg-primary
+        - text-bg-secondary
+        - text-bg-success
+        - text-bg-info
+        - text-bg-warning
+        - text-bg-danger
+        - text-bg-light
+        - text-bg-dark
+    tag:
+      type: string
+      title: Tag
+      description: HTML tag for Badge.
+      enum:
+        - span
+        - a
+        - div
+    content:
+      type: string
+      title: Content
+      description: Content for Badge.
+    url:
+      type: string
+      title: URL Link
+      description: URL link for Badge when the HTML tag is an anchor link.
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes

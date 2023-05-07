@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Tabs
+status: BETA
+componentType: molecule
+description: Tabs
+props:
+  type: object
+  properties:
+    shape:
+      type: string
+      title: Shape
+      enum:
+        - tabs
+        - pills
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes

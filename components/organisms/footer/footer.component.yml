@@ -1,0 +1,11 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Footer 
+status: BETA
+componentType: organism
+description: Block
+props:
+  type: object
+  properties:
+    content:
+      type: string
+      title: Content

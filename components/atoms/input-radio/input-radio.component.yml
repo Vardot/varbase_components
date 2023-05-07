@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Input radio 
+status: BETA
+componentType: atom
+description: Input radio
+props:
+  type: object
+  properties:
+    size:
+      type: string
+      title: Size
+      enum:
+        - ''
+        - form-control-sm
+        - form-control-lg
