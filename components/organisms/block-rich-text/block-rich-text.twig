@@ -9,6 +9,8 @@
   border_radius ? 'rounded-' ~ border_radius : ''
 ] %}
 
+{% set html_tag = html_tag ?? 'div' %}
+
 <{{ html_tag }} {{ attributes.addClass(classes) }}>
   {% if heading %}
     {% include "varbase_components:heading" with {
