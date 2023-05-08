@@ -12,6 +12,7 @@
 {% set html_tag = html_tag ?? 'div' %}
 
 <{{ html_tag }} {{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
   {% if heading %}
     {% include "varbase_components:heading" with {
       attributes: heading_attributes,
@@ -20,6 +21,7 @@
       utility_classes: ['rich-heading', 'mb-2']
     } %}
   {% endif %}
+  {{ title_suffix }}
 
   <div class="rich-body mb-2">{{ content }}</div>
 </{{ html_tag }}>
