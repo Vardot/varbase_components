@@ -15,7 +15,7 @@
   {% if heading %}
     {% include "varbase_components:heading" with {
       attributes: heading_attributes,
-      title_tag: title_tag,
+      html_tag: 'h2',
       content: heading,
       utility_classes: ['rich-heading', 'mb-2']
     } %}

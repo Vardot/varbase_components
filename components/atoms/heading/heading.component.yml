@@ -17,3 +17,6 @@ props:
         - h4
         - h5
         - h6
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes
