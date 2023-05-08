@@ -5,3 +5,6 @@ componentType: organism
 description: Radios
 props:
   type: object
+  attributes:
+    type: Drupal\Core\Template\Attribute
+    name: Attributes

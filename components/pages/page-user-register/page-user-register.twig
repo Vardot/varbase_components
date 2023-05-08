@@ -24,7 +24,7 @@
   {% endif %}
 
   {% if page.navbar_branding or page.navigation %}
-    {% embed '@organisms/navbar/navbar.twig' with {
+    {% embed 'varbase_components:navbar' with {
       placement: '',
       container: 'fixed',
       color: 'light',
@@ -90,14 +90,14 @@
   {% if page.footer_top or page.footer_bottom %}
     <footer class="footer small w-100 bg-light mt-auto py-3">
       {% if page.footer_top %}
-        {% include "@organisms/footer/footer.twig" with {
+        {% include "varbase_components:footer" with {
           content: page.footer_top,
           utility_classes: ['footer-top']
         } %}
       {% endif %}
 
       {% if page.footer_bottom %}
-        {% include "@organisms/footer/footer.twig" with {
+        {% include "varbase_components:footer" with {
           content: page.footer_bottom,
           utility_classes: ['footer-bottom']
         } %}

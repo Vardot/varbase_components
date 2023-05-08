@@ -1,0 +1,41 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Overlay Card 
+status: BETA
+componentType: organism
+description: Overlay card component description
+props:
+  type: object
+  properties:
+    heading_tag:
+      type: string
+      title: Heading HTML tag
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+    horizontal_alignment:
+      type: string
+      title: Horizontal alignment
+      enum:
+        - start
+        - center
+        - end
+    vertical_alignment:
+      type: string
+      title: Vertical alignment
+      enum:
+        - start
+        - center
+        - end
+    heading:
+      type: string
+      title: Heading
+    body:
+      type: string
+      title: Body
+    link:
+      type: string
+      title: Link

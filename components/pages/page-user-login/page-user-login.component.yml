@@ -1,8 +1,8 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
-name: Page
+name: Page User Login
 status: BETA
 componentType: page
-description: The page component.
+description: The user login page component.
 props:
   type: object
   properties:

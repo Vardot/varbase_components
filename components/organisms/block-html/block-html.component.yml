@@ -1,23 +1,30 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
-name: Node
+name: Block HTML
 status: BETA
 componentType: organism
-description: Node
+description: The HTMl block
 props:
   type: object
-  required:
-    - content
   properties:
-    content:
-      type: array
-      title: content
-    title_attributes:
-      type: Drupal\Core\Template\Attribute
-      name: Attributes
+    label:
+      type: string
+      title: Label
+    body:
+      type: string
+      title: body
+    id:
+      type: string
+      title: ID
+    bundle:
+      type: string
+      title: Bundle
+    html_tag:
+      type: string
+      title: HTML tag
     attributes:
       type: Drupal\Core\Template\Attribute
       name: Attributes
-    content_attributes:
+    title_attributes:
       type: Drupal\Core\Template\Attribute
       name: Attributes
     title_prefix:
@@ -27,6 +34,5 @@ props:
       type: array
       title: title suffix
 slots:
-  content:
-    title: Content
-    description: The contents of node.
+  body:
+    title: Body

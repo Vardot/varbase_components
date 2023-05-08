@@ -2,17 +2,18 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc
 name: Input 
 status: BETA
 componentType: atom
-description: Input
+description: Give textual form controls <input>s an upgrade with custom styles, sizing, focus states, and more.
 props:
   type: object
   properties:
     size:
       type: string
-      title: Size
+      title: Set heights using classes like .form-control-lg and .form-control-sm.
       enum:
         - ''
         - form-control-sm
         - form-control-lg
-    placeholder:
-      type: string
-      title: Place Holder
+    form_control:
+      type: boolean
+      title: Form Control
+      description: Have class 'form-control' related to input type.

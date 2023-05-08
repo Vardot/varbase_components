@@ -10,12 +10,13 @@
  * @see template_preprocess_input()
   * for checkboxes and radio buttons.
   * - utility_classes: An array of utility classes.
+  * - size: Set heights using classes like .form-control-lg and .form-control-sm.
   * - form_control: A class 'form-control' related to input type.
  */
 #}
 
 {% set form_control = form_control ? ['form-control'] : [] %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
-{% set classes = []|merge(form_control)|merge(utility_classes) %}
+{% set classes = []|merge(form_control)|merge([size])|merge(utility_classes) %}
 
 <input{{ attributes.addClass(classes) }} />{{ children }}

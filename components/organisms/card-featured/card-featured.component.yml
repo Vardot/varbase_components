@@ -1,0 +1,83 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Featured Card 
+status: BETA
+componentType: organism
+description: Featured card component description
+props:
+  type: object
+  properties:
+    columns_sm_size:
+      type: string
+      title: columns (sm) size
+      description: The numbers in keys are representation of bootstrap classes (example 3_9 = col-3 col-9)
+      enum:
+        - 2_10
+        - 3_9
+        - 4_8
+        - 6_6
+        - 12_12
+    columns_md_size:
+      type: string
+      title: columns (md) size
+      description: The numbers in keys are representation of bootstrap classes (example 3_9 = col-3 col-9)
+      enum:
+        - 2_10
+        - 3_9
+        - 4_8
+        - 6_6
+        - 12_12
+    columns_lg_size:
+      type: string
+      title: columns (lg) size
+      description: The numbers in keys are representation of bootstrap classes (example 3_9 = col-3 col-9)
+      enum:
+        - 2_10
+        - 3_9
+        - 4_8
+        - 6_6
+        - 12_12
+    columns_xl_size:
+      type: string
+      title: columns (xl) size
+      description: The numbers in keys are representation of bootstrap classes (example 3_9 = col-3 col-9)
+      enum:
+        - 2_10
+        - 3_9
+        - 4_8
+        - 6_6
+        - 12_12
+    columns_xxl_size:
+      type: string
+      title: columns (xxl) size
+      description: The numbers in keys are representation of bootstrap classes (example 3_9 = col-3 col-9)
+      enum:
+        - 2_10
+        - 3_9
+        - 4_8
+        - 6_6
+        - 12_12
+    heading_tag:
+      type: string
+      title: Heading HTML tag
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+    image_position:
+      type: string
+      title: Image position
+      enum:
+        - left
+        - right
+    heading:
+      type: string
+      title: Heading
+    body:
+      type: string
+      title: Body
+    link:
+      type: string
+      title: Link

@@ -6,12 +6,12 @@
  * Available config:
  * - utility_classes: An array of utility classes.
  * - size: sm, lg
- * - alignment: left | right | center | vertical.
+ * - alignment: start | end | center | vertical.
  */
  */
 #}
 
-{% if alignment == 'right' %}
+{% if alignment == 'end' %}
   {% set alignment = 'justify-content-end' %}
 {% elseif alignment == 'center' %}
   {% set alignment = 'justify-content-center' %}

@@ -1,0 +1,33 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Impressed Card 
+status: BETA
+componentType: organism
+description: Impressed card component description.
+props:
+  type: object
+  properties:
+    heading_tag:
+      type: string
+      title: Heading HTML tag
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+    image_position:
+      type: string
+      title: Image position
+      enum:
+        - top
+        - bottom
+    heading:
+      type: string
+      title: Heading
+    body:
+      type: string
+      title: Body
+    link:
+      type: string
+      title: Link

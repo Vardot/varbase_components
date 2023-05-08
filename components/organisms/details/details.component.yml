@@ -5,3 +5,16 @@ componentType: organism
 description: Details
 props:
   type: object
+  properties:
+    title:
+      type: string
+      title: Title
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes
+    summary_attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes

@@ -1,5 +1,5 @@
 link:
-  use: '@atoms/link/link.twig'
+  use: 'varbase_components:link'
   label: 'Link'
   description: 'Link component description.'
   # Link pattern fields

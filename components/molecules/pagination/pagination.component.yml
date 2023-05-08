@@ -2,6 +2,25 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc
 name: Pagination
 status: BETA
 componentType: molecule
-description: Pagination
+description: Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.
 props:
   type: object
+  properties:
+    size:
+      type: string
+      title: Size
+      description: Fancy larger or smaller pagination? Add .pagination-lg or .pagination-sm for additional sizes.
+      enum:
+        - ''
+        - sm
+        - lg
+    alignment:
+      type: string
+      title: Alignment
+      description: Change the alignment of pagination components with flex box utilities. For example, with .justify-content-center
+      enum:
+        - ''
+        - start
+        - end
+        - center
+        - vertical
