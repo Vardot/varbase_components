@@ -37,7 +37,7 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  {% include "varbase_components:title" %}
+  {% include 'varbase_components:heading' with { html_tag: 'h3' } %}
 
   {% if header %}
     <div class="view-header">

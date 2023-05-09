@@ -2,7 +2,7 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc
 name: Block Heading
 status: BETA
 componentType: organism
-description: Heading component description.
+description: A heading block is used to add headings to your page or sections. Headings help structure your page making your content easier to read by humans and search engines.
 props:
   type: object
   required:
@@ -11,8 +11,7 @@ props:
   properties:
     heading_tag:
       type: string
-      title: HTML title tag
-      description: 'HTML tag'
+      title: Heading HTML tag (h1, h2, h3, h4, h5, h6)
       enum:
         - h1
         - h2
@@ -20,9 +19,13 @@ props:
         - h4
         - h5
         - h6
-    label:
+    heading_text:
       type: string
-      title: Label
+      title: Heading Text
+    utility_classes:
+      type: array
+      title: Utility Classes 
+      description: An array of utility classes. Use this property to add extra Bootstrap utility classes or your custom class over to this to this component. 
     attributes:
       type: Drupal\Core\Template\Attribute
       name: Attributes

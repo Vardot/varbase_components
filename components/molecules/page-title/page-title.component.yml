@@ -1,43 +1,34 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
-name: Heading 
+name: Page title
 status: BETA
-componentType: atom
-description: Varbase Components implementation for the heading component
+componentType: molecule
+description: The Title component is responsible for rendering the page's main heading using the h1 HTML tag.
 props:
   type: object
   properties:
-    html_tag:
-      type: string
-      title: HTML tag
-      description: HTML header tag (h1, h2, h3, h4, h5, h6)
-      default: h1
-      enum:
-        - h1
-        - h2
-        - h3
-        - h4
-        - h5
-        - h6
     display:
       type: string
       title: Display Heading
       description: When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style.
       default: ''
       enum:
+        - ''
         - display-1
         - display-2
         - display-3
         - display-4
         - display-5
         - display-6
-    content:
-      type: string
-      title: Content
-      description: Content text for the heading.
     utility_classes:
       type: array
       title: Utility Classes 
       description: An array of utility classes. Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.
-    attributes:
+    title_attributes:
       type: Drupal\Core\Template\Attribute
       title: Attributes
+    title_prefix:
+      type: array
+      title: title prefix
+    title_suffix:
+      type: array
+      title: title suffix
