@@ -8,10 +8,27 @@ props:
   required:
     - content
   properties:
+    html_tag:
+      type: string
+      title: The HTML tag to use for the bade. Defaults to span.
+      default: span
+      enum:
+        - span
+        - div
+        - a
+    content:
+      type: string
+      title: Content
+      description: Content for Badge.
+    url:
+      type: string
+      title: URL Link
+      description: URL link for Badge when the HTML tag is an anchor link.
     color:
       type: string
-      title: Color
-      description: Bootstrap text and background class.
+      title: Background and Text Color
+      description: Set a background-color with contrasting foreground color with our .text-bg-{color} helpers. Previously it was required to manually pair your choice of .text-{color} and .bg-{color} utilities for styling, which you still may use if you prefer.
+      default: text-bg-secondary
       enum:
         - text-bg-primary
         - text-bg-secondary
@@ -21,25 +38,13 @@ props:
         - text-bg-danger
         - text-bg-light
         - text-bg-dark
-    tag:
-      type: string
-      title: Tag
-      description: HTML tag for Badge.
-      enum:
-        - span
-        - a
-        - div
-    content:
-      type: string
-      title: Content
-      description: Content for Badge.
-    url:
-      type: string
-      title: URL Link
-      description: URL link for Badge when the HTML tag is an anchor link.
+    utility_classes:
+      type: array
+      title: Utility Classes 
+      description: An array of utility classes. Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.
     attributes:
       type: Drupal\Core\Template\Attribute
       name: Attributes
 slots:
   content:
-    title: content
+    title: Content
