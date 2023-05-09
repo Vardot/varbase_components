@@ -1,20 +1,35 @@
 {#
 /**
  * @file
- * Template for an Image component.
+ * Varbase Components implementation of an image.
+ * 
+ * Available properties:
+ * - align: (optional) Align images with the helper float classes or text alignment classes.
+     block-level images can be centered using the .mx-auto margin utility class.
+     options (`float-start`, `mx-auto d-block`, `float-end`)
+ * - responsive: (optional) Images in Bootstrap are made responsive with `.img-fluid`. This applies max-width with 100% and height with auto to the image so that it scales with the parent width.
+ * - thumbnails: (optional) In addition to Bootstrap border-radius utilities, you can use `.img-thumbnail` to give an image a rounded 1px border appearance.
+ * - rounded: (optional) Rounded image
+ * - utility_classes: (optional) An array of utility classes. Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.
  *
- * Available config:
- * - utility_classes: An array of utility classes.
- * - align: left|right|center
- * - responsive: true|false
+ * Available variables:
+ * - attributes: HTML attributes for the img tag.
+ * - style_name: (optional) The name of the image style applied.
+ *
  */
 #}
+{% set aligning = {
+  start: ['float-start'],
+  center: ['mx-auto', 'd-block'],
+  end: ['float-end'],
+} %}
 
-{% set responsive = responsive ? 'img-fluid' : 'img-thumbnail' %}
-{% set align = align ?? '' %}
-{% set classes = [
-  responsive,
-  align
-]|merge(utility_classes ? utility_classes : []) %}
+{% set align = align ? aligning[align]: [] %}
+{% set responsive = responsive ? ['img-fluid'] : [] %}
+{% set thumbnails = thumbnails ? ['img-thumbnail'] : [] %}
+{% set rounded = rounded ? ['rounded'] : [] %}
+{% set utility_classes = utility_classes ? utility_classes : [] %}
 
-<img{{ attributes.setAttribute('src', src).addClass(classes) }} />
+{% set classes = []|merge(align)|merge(responsive)|merge(thumbnails)|merge(rounded)|merge(utility_classes) %}
+
+<img{{ attributes.addClass(classes) }} />

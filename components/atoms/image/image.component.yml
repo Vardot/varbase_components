@@ -1,0 +1,39 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Image
+status: BETA
+componentType: atom
+description: Image component with responsive behavior for the system image.
+props:
+  type: object
+  properties:
+    align:
+      type: string
+      title: Aligning images
+      description: (optional) Align images with the helper float classes or text alignment classes. block-level images can be centered using the .mx-auto margin utility class.
+      enum:
+        - ''
+        - start
+        - center
+        - end
+    responsive:
+      type: boolean
+      title: Responsive image
+      description: (optional) Images in Bootstrap are made responsive with `.img-fluid`. This applies max-width with 100% and height with auto to the image so that it scales with the parent width.
+    thumbnails:
+      type: boolean
+      title: Image thumbnails
+      description: (optional) In addition to Bootstrap border-radius utilities, you can use .img-thumbnail to give an image a rounded 1px border appearance.
+    rounded:
+      type: boolean
+      title: Rounded image
+    utility_classes:
+      type: array
+      title: Utility Classes 
+      description: (optional) An array of utility classes. Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes
+    style_name:
+      type: string:
+      title: Style name
+      description: (optional) The name of the image style applied.
