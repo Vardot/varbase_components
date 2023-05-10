@@ -43,12 +43,18 @@
 %}
 
 {% if html_tag %}
-  <{{ html_tag }} {{ attributes.addClass(classes) }}>
+  <{{ html_tag }}{{ attributes.addClass(classes) }}>
 {% endif %}
 
   {{ title_prefix }}
   {% if label %}
-    <h2{{ title_attributes.addClass('block__title') }}>{{ label }}</h2>
+  {% include 'varbase_components:heading' with {
+      html_tag: 'h2',
+      content: label,
+      attributes: title_attributes,
+      utility_classes: ['block__title']
+    }
+  %}
   {% endif %}
   {{ title_suffix }}
   {% block content %}

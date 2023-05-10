@@ -30,7 +30,7 @@
 {% if title|render|striptags|trim %}
   {% include 'varbase_components:heading' with {
       html_tag: 'h1',
-      content: title|render|striptags|trim,
+      content: title,
       attributes: title_attributes,
       utility_classes: classes
     }

@@ -31,7 +31,7 @@
   {% if heading_text|render|striptags|trim %}
   {% include 'varbase_components:heading' with {
       html_tag: heading_tag,
-      content: heading_text|render|striptags|trim,
+      content: heading_text,
       attributes: []
     }
   %}

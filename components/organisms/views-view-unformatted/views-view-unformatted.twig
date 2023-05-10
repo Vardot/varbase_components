@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display a view of unformatted rows.
+ * Varbase Component implementation to display a view of unformatted rows.
  *
  * Available variables:
  * - title: The title of this group of rows. May be empty.
@@ -15,9 +15,13 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
-
-{% include 'varbase_components:heading' with { html_tag: 'h3' } %}
-
+{% if title %}
+  {% include 'varbase_components:heading' with {
+      html_tag: 'h3',
+      content: title
+    }
+  %}
+{% endif %}
 {% for row in rows %}
   {%
     set row_classes = [
