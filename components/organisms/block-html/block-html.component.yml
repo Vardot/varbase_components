@@ -1,8 +1,7 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Block HTML
-status: BETA
-componentType: organism
-description: The HTMl block
+status: experimental
+description: The HTMl block.
 props:
   type: object
   properties:

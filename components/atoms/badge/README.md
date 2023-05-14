@@ -3,15 +3,6 @@
 ## Bootstrap Documentation
 https://getbootstrap.com/docs/5.2/components/badge/
 
-## Full List Utility Classes
-https://github.com/twbs/bootstrap/blob/v5.2.3/dist/css/bootstrap.css#L4630
-
-### CSS Variables
-https://getbootstrap.com/docs/5.2/components/badge/#css
-
-### SASS Variables
-https://getbootstrap.com/docs/5.2/components/badge/#sass-variables
-
 ## Available Properties:
 #### color:
 Background and Text Color. Set a `background-color` with contrasting

@@ -1,7 +1,6 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Links Drop button 
-status: BETA
-componentType: organism
+status: experimental
 description: Links Drop button 
 props:
   type: object

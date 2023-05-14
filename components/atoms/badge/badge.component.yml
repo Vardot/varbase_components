@@ -1,8 +1,7 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Badge
-status: BETA
-componentType: atom
-description: "Documentation and examples for badges, our small count and labeling component."
+status: experimental
+description: Documentation and examples for badges, our small count and labeling component.
 props:
   type: object
   required:

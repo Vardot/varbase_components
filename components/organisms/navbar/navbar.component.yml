@@ -1,7 +1,6 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Navbar
-status: BETA
-componentType: organism
+status: experimental
 description: Navbar component description
 props:
   type: object

@@ -1,7 +1,6 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Page
-status: BETA
-componentType: page
+status: experimental
 description: The page component.
 props:
   type: object

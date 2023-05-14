@@ -1,7 +1,6 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Pagination
-status: BETA
-componentType: molecule
+status: experimental
 description: Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.
 props:
   type: object
