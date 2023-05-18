@@ -1,10 +1,10 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
-name: Footer 
+name: Page Better Login 
 status: experimental
-description: Block
+description: The Better Login page component
 props:
   type: object
   properties:
-    content:
-      type: string
-      title: Content
+    without_blocks:
+      type: array
+      name: Without Blocks
