@@ -62,14 +62,9 @@ $theme-colors: (
 );
 // scss-docs-end theme-colors-map
 
+@import "../../defaults";   // Global component defaults.
+
 // scss-docs-start import-stack
-// Configuration
-
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../styles/base/variables";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/maps";
-@import "../../../node_modules/bootstrap/scss/mixins";
-@import "../../../node_modules/bootstrap/scss/utilities";
-
+// Import the alert style from the Bootstrap 5 package to be compiled with
+// Restricted style and colors in most websites.
 @import "../../../node_modules/bootstrap/scss/alert";

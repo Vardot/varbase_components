@@ -8,6 +8,7 @@
     "node": ">= 16.0"
   },
   "scripts": {
+    "components:build": "webpack --progress --config webpack.config.build.js",
     "theme:watch": "webpack --progress --config webpack.config.dev.js --watch",
     "theme:build": "webpack --progress --config webpack.config.build.js"
   },
