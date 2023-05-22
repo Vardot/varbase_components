@@ -4,6 +4,7 @@
  * @file
  * Install, update and uninstall functions for the Varbase components module.
  */
+
 use Vardot\Installer\ModuleInstallerFactory;
 
 /**

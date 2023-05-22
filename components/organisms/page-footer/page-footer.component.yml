@@ -4,4 +4,3 @@ status: experimental
 description: Block
 props:
   type: object
-

@@ -4,4 +4,3 @@ status: experimental
 description: The Remote Video block component.
 props:
   type: object
-

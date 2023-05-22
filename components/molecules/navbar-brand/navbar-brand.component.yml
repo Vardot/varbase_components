@@ -4,5 +4,3 @@ status: experimental
 description: Navbar Brand description
 props:
   type: object
-
-

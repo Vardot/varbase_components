@@ -1,5 +1,7 @@
-dist/**/*
 node_modules/**/*
+# Ignore deliberately malformed YAML files.
+drupalci.yml
+
 webpack.config.js
 webpack.config.dev.js
 webpack.config.build.js
