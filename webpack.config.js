@@ -22,6 +22,7 @@ module.exports = {
     'organisms/page-footer/page-footer': ['./components/organisms/page-footer/page-footer.scss'],
     'organisms/page-better-login/page-better-login': ['./components/organisms/page-better-login/page-better-login.scss'],
     'organisms/social-auth/social-auth': ['./components/organisms/social-auth/social-auth.scss'],
+    'organisms/block-cta/block-cta': ['./components/organisms/block-cta/block-cta.scss'],
     'pages/page/page': ['./components/pages/page/page.scss']
   },
   output: {

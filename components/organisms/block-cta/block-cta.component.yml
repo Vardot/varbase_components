@@ -7,54 +7,9 @@ props:
   required:
     - content
   properties:
-    cta_width:
-      type: string
-      title: CTA width
-      enum:
-        - w-25
-        - w-50
-        - w-75
-        - w-100
-    bg_color:
-      type: string
-      title: CTA background color
-      enum:
-        - primary
-        - secondary
-        - success
-        - danger
-        - warning
-        - info
-        - dark
-        - light
-        - white
-    cta_color:
-      type: string
-      title: CTA text color
-      enum:
-        - primary
-        - secondary
-        - success
-        - danger
-        - warning
-        - info
-        - dark
-        - light
-        - white
-    border_radius:
-      type: string
-      title: CTA border radius
-      enum:
-        - 0
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
     title_tag:
       type: string
       title: HTML title tag
-      description: 'HTML tag'
       enum:
         - h1
         - h2
@@ -68,19 +23,6 @@ props:
     content:
       type: string
       title: content
-    button_content:
-      type: string
-      title: Button Content
-    button_color:
-      type: string
-      title: Button color
-      enum:
-        - primary
-        - secondary
-        - success
-        - danger
-        - warning
-        - info
-        - dark
-        - light
-        - white
+slots:
+  content:
+    title: Content

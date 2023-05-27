@@ -1,11 +1,39 @@
-<div class="cta-block py-2 px-3 {{ cta_width }} {{ 'bg-' ~ bg_color }} {{ 'text-' ~ cta_color }} {{ 'rounded-' ~ border_radius }}">
-  <{{ title_tag }} class="cta-heading mb-2">{{ heading }}</{{ title_tag }}>
+{#
+@file
+ * Varbase Components implementation for a CTA Block component.
+ *
+ * Available Properties:
+ * - heading_tag: Heading HTML tag (h1, h2, h3, h4, h5, h6)
+ * - heading_text: The content of the heading.
+ * - utility_classes: This property contains an array of utility classes that can
+ *                    be used to add extra Bootstrap utility classes or custom
+ *                    classes to this component.
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'cta-block',
+    'py-2',
+    'px-3',
+  ]|merge(utility_classes ? utility_classes : [])
+%}
+
+{% set title_tag = ((title_tag == '') or (title_tag == '_none')) ? 'h3' : title_tag %}
+
+<div{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {% if label|render|striptags|trim %}
+  {% include 'varbase_components:heading' with {
+      html_tag: title_tag,
+      content: label,
+      attributes: [],
+      utility_classes: ['cta-heading', 'mb-2'],
+    }
+  %}
+  {% endif %}
+  {{ title_suffix }}
+
   <div class="cta-body mb-2">{{ content }}</div>
-  {% embed "varbase_components:button" with {
-    attributes: attributes,
-    content: button_content,
-    color: button_color,
-    utility_classes: ['mb-2']
-  } %}
-  {% endembed %}
 </div>
