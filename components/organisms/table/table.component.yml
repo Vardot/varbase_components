@@ -23,16 +23,4 @@ props:
     footer:
       type: string
       title: Footer
-slots:
-  table:
-    title: Table
-  caption:
-    title: Caption
-  colgroup:
-    title: Column Group
-  header:
-    title: Header
-  body:
-    title: Body
-  footer:
-    title: Footer
+

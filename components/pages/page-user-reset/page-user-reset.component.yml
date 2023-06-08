@@ -8,16 +8,11 @@ props:
     branding:
       type: array
       title: Branding
+      description: Site branding.
     navigation:
       type: array
       title: navigation
+      description: site navigation.
     attributes:
       type: Drupal\Core\Template\Attribute
       name: Attributes
-slots:
-  branding:
-    title: Branding
-    description: Site branding.
-  navigation:
-    title: Navigation
-    description: site navigation.

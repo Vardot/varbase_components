@@ -8,6 +8,3 @@ props:
     content:
       type: string
       title: Content
-slots:
-  content:
-    title: Content

@@ -23,6 +23,3 @@ props:
     content:
       type: string
       title: content
-slots:
-  content:
-    title: Content

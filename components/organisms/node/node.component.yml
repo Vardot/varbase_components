@@ -9,7 +9,8 @@ props:
   properties:
     content:
       type: array
-      title: content
+      title: Content
+      description: The contents of node.
     title_attributes:
       type: Drupal\Core\Template\Attribute
       name: Attributes
@@ -25,7 +26,4 @@ props:
     title_suffix:
       type: array
       title: title suffix
-slots:
-  content:
-    title: Content
-    description: The contents of node.
+

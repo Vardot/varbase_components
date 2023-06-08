@@ -32,6 +32,3 @@ props:
     title_suffix:
       type: array
       title: title suffix
-slots:
-  body:
-    title: Body

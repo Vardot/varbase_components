@@ -20,6 +20,4 @@ props:
     title_suffix:
       type: array
       title: title suffix
-slots:
-  content:
-    title: Content
+

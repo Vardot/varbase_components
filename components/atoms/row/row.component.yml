@@ -11,6 +11,3 @@ props:
     attributes:
       type: Drupal\Core\Template\Attribute
       name: Attributes
-slots:
-  content:
-    title: Content

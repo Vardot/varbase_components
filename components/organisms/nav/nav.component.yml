@@ -8,6 +8,7 @@ props:
     items:
       type: array
       name: Items
+      description: Navigation items.
     alignment:
       type: string
       name: Alignment
@@ -34,7 +35,4 @@ props:
     attributes:
       type: Drupal\Core\Template\Attribute
       name: Attributes
-slots:
-  items:
-    title: items
-    description: Navigation items.
+
