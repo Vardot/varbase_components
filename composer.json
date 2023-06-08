@@ -34,7 +34,7 @@
     "vardot/entity-definition-update-manager": "~1.0 || 1.0.x-dev",
     "vardot/module-installer-factory": "~1.0 || 1.0.x-dev",
     "drupal/cl_components": "~1.0",
-    "drupal/cl_block": "~1.0",
+    "drupal/cl_block": "1.0.0-rc1",
     "drupal/cl_selector_field": "~2.0",
     "drupal/cl_server": "~2.0",
     "drupal/cl_devel": "~2.0",
@@ -50,6 +50,11 @@
     ],
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
-    "patches": {  }
+    "patches": {
+      "drupal/cl_block": {
+        "Issue #3365591: Fix TypeError: array_filter() when pressing Save configuration":
+        "https://www.drupal.org/files/issues/2023-06-08/3365591-3.patch"
+      }
+    }
   }
 }
