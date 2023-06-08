@@ -3,8 +3,6 @@ status: experimental
 description: Call to action (CTA) block component.
 props:
   type: object
-  required:
-    - content
   properties:
     title_tag:
       type: string

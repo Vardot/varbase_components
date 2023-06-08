@@ -3,8 +3,6 @@ status: experimental
 description: Nav item
 props:
   type: object
-  required:
-    - content
   properties:
     container:
       type: string
@@ -18,23 +16,24 @@ props:
       title: Color
       description: Color
       enum:
-        - light'
-        - dark'
+        - light
+        - dark
     placement:
       type: string
       title: Placement
       description: Placement
+      default: ''
       enum:
-        - default'
-        - fixed-top'
-        - fixed-bottom'
-        - sticky-top'
+        - ''
+        - fixed-top
+        - fixed-bottom
+        - sticky-top
     navbar_expand:
       type: string
       title: Expand
       description: Expanded navbar
       enum:
-        - sm'
-        - md'
-        - lg'
-        - xl'
+        - sm
+        - md
+        - lg
+        - xl

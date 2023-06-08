@@ -3,8 +3,6 @@ status: experimental
 description: Implementation for main view component.
 props:
   type: object
-  required:
-    - content
   properties:
     content:
       type: string

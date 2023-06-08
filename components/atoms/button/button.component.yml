@@ -3,8 +3,6 @@ status: experimental
 description: Use Bootstrap custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
 props:
   type: object
-  required:
-    - content
   properties:
     color:
       type: string

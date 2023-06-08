@@ -3,8 +3,6 @@ status: experimental
 description: Component implementation for views to display rows in a grid.
 props:
   type: object
-  required:
-    - content
   properties:
     content:
       type: string

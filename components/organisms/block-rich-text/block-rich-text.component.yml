@@ -3,8 +3,6 @@ status: experimental
 description: Block Rich Text description.
 props:
   type: object
-  required:
-    - content
   properties:
     title_tag:
       type: string

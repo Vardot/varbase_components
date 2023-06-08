@@ -3,8 +3,6 @@ status: experimental
 description: Component implementation to display a view of unformatted rows.
 props:
   type: object
-  required:
-    - content
   properties:
     content:
       type: string

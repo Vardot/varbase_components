@@ -5,7 +5,7 @@ props:
   type: object
   properties:
     label_display:
-      type: boolean
+      type: string
       title: Label display
       description: Display the label of the field. 
     title_attributes:

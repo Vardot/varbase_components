@@ -3,8 +3,6 @@ status: experimental
 description: Node
 props:
   type: object
-  required:
-    - content
   properties:
     title_attributes:
       type: Drupal\Core\Template\Attribute

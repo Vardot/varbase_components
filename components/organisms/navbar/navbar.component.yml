@@ -3,8 +3,6 @@ status: experimental
 description: Navbar component description
 props:
   type: object
-  required:
-    - content
   properties:
     container:
       type: string
@@ -24,8 +22,9 @@ props:
       type: string
       title: Placement
       description: Placement
+      default: ''
       enum:
-        - default
+        - ''
         - fixed-top
         - fixed-bottom
         - sticky-top

@@ -3,8 +3,6 @@ status: experimental
 description: Implementation for displaying a view as a table.
 props:
   type: object
-  required:
-    - content
   properties:
     content:
       type: string
