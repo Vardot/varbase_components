@@ -41,15 +41,16 @@ props:
       title: Disabled
       description: Disabled button
       default: false
-    content:
-      type: string
-      title: Content
-      description: The title for the button
-      minLength: 1
-      examples:
-        - Press
-        - Submit now
-        - Save
     attributes:
       type: Drupal\Core\Template\Attribute
       name: Attributes
+slots:
+  content:
+    type: string
+    title: Content
+    description: The title for the button
+    minLength: 1
+    examples:
+      - Press
+      - Submit now
+      - Save

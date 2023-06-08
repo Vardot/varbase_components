@@ -3,7 +3,7 @@ status: experimental
 description: User
 props:
   type: object
-  properties:
-    content:
-      type: string
-      title: Content
+slots:
+  content:
+    type: string
+    title: Content

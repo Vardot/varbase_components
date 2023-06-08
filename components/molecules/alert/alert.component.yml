@@ -4,6 +4,6 @@ description: Alerts are available for any length of text, as well as an optional
 props:
   type: object
   properties:
-    content:
-      type: string
-      title: Content
+slots:
+  content:
+    title: Content

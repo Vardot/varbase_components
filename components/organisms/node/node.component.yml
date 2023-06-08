@@ -6,10 +6,6 @@ props:
   required:
     - content
   properties:
-    content:
-      type: array
-      title: Content
-      description: The contents of node.
     title_attributes:
       type: Drupal\Core\Template\Attribute
       name: Attributes
@@ -25,4 +21,8 @@ props:
     title_suffix:
       type: array
       title: title suffix
-
+slots:
+  content:
+    type: array
+    title: content
+    description: The contents of node.

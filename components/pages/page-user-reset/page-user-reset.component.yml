@@ -4,14 +4,15 @@ description: The user reset Page component.
 props:
   type: object
   properties:
-    branding:
-      type: array
-      title: Branding
-      description: Site branding.
-    navigation:
-      type: array
-      title: navigation
-      description: site navigation.
     attributes:
       type: Drupal\Core\Template\Attribute
       name: Attributes
+slots:
+  branding:
+    type: array
+    title: Branding
+    description: Site branding.
+  navigation:
+    type: array
+    title: navigation
+    description: site navigation.

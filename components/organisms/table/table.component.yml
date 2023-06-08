@@ -22,4 +22,3 @@ props:
     footer:
       type: string
       title: Footer
-

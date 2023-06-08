@@ -4,10 +4,6 @@ description: Nav component description
 props:
   type: object
   properties:
-    items:
-      type: array
-      name: Items
-      description: Navigation items.
     alignment:
       type: string
       name: Alignment
@@ -34,4 +30,8 @@ props:
     attributes:
       type: Drupal\Core\Template\Attribute
       name: Attributes
-
+slots:
+  items:
+    type: array
+    name: Items
+    description: Navigation items.

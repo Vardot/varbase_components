@@ -7,9 +7,6 @@ props:
     label:
       type: string
       title: Label
-    content:
-      type: string
-      title: Content
     id:
       type: string
       title: ID
@@ -28,3 +25,7 @@ props:
     title_suffix:
       type: array
       title: title suffix
+slots:
+  content:
+    type: string
+    title: Content

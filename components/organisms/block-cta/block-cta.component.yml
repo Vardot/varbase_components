@@ -19,6 +19,7 @@ props:
     heading:
       type: string
       title: Heading
-    content:
-      type: string
-      title: content
+slots:
+  content:
+    type: string
+    title: content
