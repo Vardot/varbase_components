@@ -3,3 +3,10 @@ status: experimental
 description: Dropdown menu
 props:
   type: object
+  properties:
+    content:
+      type: string
+      title: Content
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes

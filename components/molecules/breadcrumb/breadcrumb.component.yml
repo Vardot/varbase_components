@@ -1,5 +1,12 @@
-name: Dropdown menu
+name: Breadcrumb
 status: experimental
-description: Dropdown menu
+description: Breadcrumb component.
 props:
   type: object
+  properties:
+    content:
+      type: string
+      title: Content
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      name: Attributes
