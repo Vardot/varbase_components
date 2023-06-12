@@ -1,9 +1,0 @@
-name: Region
-status: experimental
-description: Region
-props:
-  type: object
-  properties:
-    content:
-      type: string
-      title: Content
