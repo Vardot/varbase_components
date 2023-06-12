@@ -41,7 +41,6 @@ props:
       default: false
     attributes:
       type: Drupal\Core\Template\Attribute
-      name: Attributes
 slots:
   content:
     type: string

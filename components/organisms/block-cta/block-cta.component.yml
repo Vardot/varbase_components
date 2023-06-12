@@ -17,6 +17,8 @@ props:
     heading:
       type: string
       title: Heading
+    attributes:
+      type: Drupal\Core\Template\Attribute
 slots:
   content:
     type: string

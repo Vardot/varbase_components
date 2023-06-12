@@ -48,4 +48,3 @@ props:
         - Loading
     attributes:
       type: Drupal\Core\Template\Attribute
-      name: Attributes

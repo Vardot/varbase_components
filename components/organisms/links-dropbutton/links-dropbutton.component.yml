@@ -6,4 +6,3 @@ props:
   properties:
     attributes:
       type: Drupal\Core\Template\Attribute
-      name: Attributes

@@ -7,3 +7,5 @@ props:
     content:
       type: string
       title: Content
+    attributes:
+      type: Drupal\Core\Template\Attribute

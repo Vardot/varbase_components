@@ -9,4 +9,3 @@ props:
       title: Content
     attributes:
       type: Drupal\Core\Template\Attribute
-      name: Attributes

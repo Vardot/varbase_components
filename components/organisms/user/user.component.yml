@@ -3,6 +3,9 @@ status: experimental
 description: User
 props:
   type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
 slots:
   content:
     type: string

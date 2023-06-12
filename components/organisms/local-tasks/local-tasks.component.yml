@@ -3,3 +3,6 @@ status: experimental
 description: Local Tasks
 props:
   type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute

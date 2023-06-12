@@ -3,3 +3,6 @@ status: experimental
 description: Navbar Brand description
 props:
   type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute

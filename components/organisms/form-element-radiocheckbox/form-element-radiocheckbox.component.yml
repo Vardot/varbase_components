@@ -3,3 +3,6 @@ status: experimental
 description: Form Element Radio Checkbox
 props:
   type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute

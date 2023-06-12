@@ -10,4 +10,3 @@ props:
       description: children for the container.
     attributes:
       type: Drupal\Core\Template\Attribute
-      name: Attributes

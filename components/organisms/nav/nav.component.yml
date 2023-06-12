@@ -29,7 +29,6 @@ props:
         - justify
     attributes:
       type: Drupal\Core\Template\Attribute
-      name: Attributes
 slots:
   items:
     type: array

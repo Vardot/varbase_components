@@ -9,10 +9,7 @@ props:
       title: Title
     attributes:
       type: Drupal\Core\Template\Attribute
-      name: Attributes
     summary_attributes:
       type: Drupal\Core\Template\Attribute
-      name: Attributes
     content_attributes:
       type: Drupal\Core\Template\Attribute
-      name: Attributes

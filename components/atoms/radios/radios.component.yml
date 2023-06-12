@@ -3,6 +3,6 @@ status: experimental
 description: Radios
 props:
   type: object
-  attributes:
-    type: Drupal\Core\Template\Attribute
-    name: Attributes
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute

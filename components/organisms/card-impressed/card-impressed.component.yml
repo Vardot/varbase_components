@@ -29,3 +29,7 @@ props:
     link:
       type: string
       title: Link
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    content_attributes:
+      type: Drupal\Core\Template\Attribute

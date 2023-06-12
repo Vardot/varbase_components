@@ -79,3 +79,11 @@ props:
     link:
       type: string
       title: Link
+    card_attributes:
+      type: Drupal\Core\Template\Attribute
+    row_attributes:
+      type: Drupal\Core\Template\Attribute
+    left_column_attributes:
+      type: Drupal\Core\Template\Attribute
+    right_column_attributes:
+      type: Drupal\Core\Template\Attribute

@@ -37,6 +37,8 @@ props:
         - md
         - lg
         - xl
+    attributes:
+      type: Drupal\Core\Template\Attribute
 slots:
   branding:
     title: Branding

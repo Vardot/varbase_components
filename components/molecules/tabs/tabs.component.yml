@@ -12,4 +12,3 @@ props:
         - pills
     attributes:
       type: Drupal\Core\Template\Attribute
-      name: Attributes

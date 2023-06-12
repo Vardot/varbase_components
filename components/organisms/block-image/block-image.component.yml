@@ -3,3 +3,6 @@ status: experimental
 description: Block Image component description.
 props:
   type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute

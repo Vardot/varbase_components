@@ -21,3 +21,5 @@ props:
     content:
       type: string
       title: content
+    attributes:
+      type: Drupal\Core\Template\Attribute

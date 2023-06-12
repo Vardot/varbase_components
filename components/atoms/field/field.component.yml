@@ -10,7 +10,5 @@ props:
       description: Display the label of the field. 
     title_attributes:
       type: Drupal\Core\Template\Attribute
-      name: Attributes
     attributes:
       type: Drupal\Core\Template\Attribute
-      name: Attributes

@@ -10,4 +10,3 @@ props:
       description: Content for the column.
     attributes:
       type: Drupal\Core\Template\Attribute
-      name: Attributes

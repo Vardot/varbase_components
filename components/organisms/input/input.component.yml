@@ -6,7 +6,8 @@ props:
   properties:
     size:
       type: string
-      title: Set heights using classes like .form-control-lg and .form-control-sm.
+      title: Size
+      description: Set heights using classes like .form-control-lg and .form-control-sm.
       enum:
         - ''
         - form-control-sm
@@ -14,4 +15,6 @@ props:
     form_control:
       type: boolean
       title: Form Control
-      description: Have class 'form-control' related to input type.
+      description: Have class .form-control related to input type.
+    attributes:
+      type: Drupal\Core\Template\Attribute
