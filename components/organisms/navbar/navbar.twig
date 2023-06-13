@@ -18,7 +18,7 @@
  */
 #}
 
-{% set container = container == 'fixed' ? 'container' : false %}
+{% set container = container ?? false %}
 {% set placement = placement ?? '' %}
 {% set color = color ?? 'light' %}
 {% set navbar_expand = navbar_expand ?? 'lg' %}

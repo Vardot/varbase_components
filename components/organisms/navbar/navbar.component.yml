@@ -9,8 +9,14 @@ props:
       title: Container
       description: container type
       enum:
-        - fixed
-        - fluid
+        - ''
+        - no-container
+        - container
+        - container-md
+        - container-lg
+        - container-xl
+        - container-xxl
+        - container-fluid
     color:
       type: string
       title: Color
