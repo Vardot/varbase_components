@@ -34,7 +34,7 @@
     "vardot/entity-definition-update-manager": "~1.0 || 1.0.x-dev",
     "vardot/module-installer-factory": "~1.0 || 1.0.x-dev",
     "drupal/cl_components": "~1.0",
-    "drupal/cl_editorial": "2.0.0-beta1",
+    "drupal/cl_editorial": "~2.0",
     "drupal/cl_block": "1.0.0-rc1",
     "drupal/cl_selector_field": "~2.0",
     "drupal/cl_server": "~2.0",
@@ -54,7 +54,9 @@
     "patches": {
       "drupal/cl_block": {
         "Issue #3365591: Fix TypeError: array_filter() when pressing Save configuration":
-        "https://www.drupal.org/files/issues/2023-06-08/3365591-3.patch"
+        "https://www.drupal.org/files/issues/2023-06-08/3365591-3.patch",
+        "Issue #3367477: Fix Error: Call to undefined method getFilteredComponentTypes()":
+        "https://www.drupal.org/files/issues/2023-06-18/3367477-11.patch"
       }
     }
   }
