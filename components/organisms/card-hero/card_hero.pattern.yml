@@ -1,7 +1,7 @@
 card_hero:
   use: varbase_components:card-hero
   label: Hero Card
-  description: Hero card pattern for a media and a text over the media
+  description: Hero card component for a media and a text over the media.
   fields:
     media:
       type: media
@@ -14,16 +14,6 @@ card_hero:
       description: 'Content description.'
       preview: 'Card Content'
   settings:
-    style_size:
-      type: 'select'
-      label: Card style size
-      default_value: medium
-      options:
-        xsmall: xsmall
-        small: small
-        medium: medium
-        large: large
-        xlarge: xlarge
     card_attributes:
       type: 'attributes'
       label: 'Card attributes'

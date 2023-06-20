@@ -4,13 +4,6 @@ description: Hero card component for a media and a text over the media
 props:
   type: object
   properties:
-    style_size:
-      type: string
-      title: Card style size
-      default: xlarge
-      enum:
-        - large
-        - xlarge
     heading_tag:
       type: string
       title: Heading HTML tag
