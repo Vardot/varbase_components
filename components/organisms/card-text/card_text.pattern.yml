@@ -1,0 +1,30 @@
+card_text:
+  use: 'varbase_components:card-text'
+  label: 'Text Card'
+  description: Text card pattern.
+  fields:
+    content:
+      type: 'textfield'
+      label: 'Content'
+      description: 'Content description.'
+      preview: 'Card Content'
+  settings:
+    style_size:
+      type: 'select'
+      label: Card style size
+      default_value: medium
+      options:
+        xsmall: xsmall
+        small: small
+        medium: medium
+        large: large
+        xlarge: xlarge
+    card_attributes:
+      type: 'attributes'
+      label: 'Card attributes'
+    content_attributes:
+      type: 'attributes'
+      label: 'Content attributes'
+    card_classes:
+      type: 'textfield'
+      label: 'Card classes'

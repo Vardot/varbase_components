@@ -1,15 +1,13 @@
 {% set classes = [
   'card',
-  'varbase-impressed-card',
+  'varbase-text-card',
   style_size ?? '',
-  media_position == 'bottom' ? 'flex-column-reverse' : '',
   card_classes
 ]|merge(utility_classes ?? []) %}
 
 {% set content_classes = ['card-body', card_body_classes] %}
 
 <div {{ attributes.addClass(classes) }}>
-  {{ media }}
   <div {{ content_attributes.addClass(content_classes) }}>
     {{ content }}
   </div>

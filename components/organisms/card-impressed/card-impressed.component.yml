@@ -4,6 +4,16 @@ description: Impressed card component description.
 props:
   type: object
   properties:
+    style_size:
+      type: string
+      title: Card style size
+      default: medium
+      enum:
+        - xsmall
+        - small
+        - medium
+        - large
+        - xlarge
     heading_tag:
       type: string
       title: Heading HTML tag
@@ -14,9 +24,9 @@ props:
         - h4
         - h5
         - h6
-    image_position:
+    media_position:
       type: string
-      title: Image position
+      title: Media position
       enum:
         - top
         - bottom

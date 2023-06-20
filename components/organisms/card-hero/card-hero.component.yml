@@ -1,17 +1,14 @@
-name: Overlay Card 
+name: Hero Card 
 status: experimental
-description: Overlay card component for a media and a text over the media
+description: Hero card component for a media and a text over the media
 props:
   type: object
   properties:
     style_size:
       type: string
       title: Card style size
-      default: medium
+      default: xlarge
       enum:
-        - xsmall
-        - small
-        - medium
         - large
         - xlarge
     heading_tag:

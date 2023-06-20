@@ -1,37 +1,45 @@
-overlayCard:
-  use: 'varbase_components:overlay-card'
-  label: 'Overlay Card'
-  description: Overlay card component description.
-  # Overlay card pattern fields
+card_hero:
+  use: varbase_components:card-hero
+  label: Hero Card
+  description: Hero card pattern for a media and a text over the media
   fields:
-    image:
-      type: 'image'
-      label: 'Image'
-      description: 'Image description.'
-      preview: 'Card image'
+    media:
+      type: media
+      label: Media
+      description: 'Media description.'
+      preview: 'Card media'
     content:
       type: 'textfield'
       label: 'Content'
       description: 'Content description.'
       preview: 'Card Content'
-  # Overlay card pattern settings
   settings:
+    style_size:
+      type: 'select'
+      label: Card style size
+      default_value: medium
+      options:
+        xsmall: xsmall
+        small: small
+        medium: medium
+        large: large
+        xlarge: xlarge
     card_attributes:
       type: 'attributes'
-      label: 'Overlay card attributes'
+      label: 'Card attributes'
     content_attributes:
       type: 'attributes'
       label: 'Content attributes'
     card_classes:
       type: 'textfield'
-      label: 'Overlay card classes'
+      label: 'Card classes'
     horizontal_alignment:
       type: 'select'
       label: 'Horizontal alignment'
       options:
-        start: 'Left'
+        start: 'Start'
         center: 'Center'
-        end: 'Right'
+        end: 'End'
       default_value: 'center'
     vertical_alignment:
       type: 'select'

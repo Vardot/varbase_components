@@ -17,44 +17,44 @@
  * - row_classes: An array of classes for row.
  * - left_column_classes: An array of classes for left column.
  * - right_column_classes: An array of classes for right column.
- * - image_position: left|right to determine if the row is reversed or not.
- * - lang_dir: A global variable to check the language direction LTR|RTL.
+ * - media_position: start|end to determine if the row is reversed or not.
  * - utility_classes: An array of aditional classes for featured card wrapper.
  */
 #}
 
 {% set featured_card_classes = [
   'card',
-  'varbase-featured-card'
+  'varbase-featured-card',
+  style_size ?? '',
 ]|merge(utility_classes ?? []) %}
 
 {% set row_classes = [
   'row',
-  image_position == 'right' ? 'flex-row-reverse' : ''
+  media_position == 'end' ? 'flex-row-reverse' : ''
 ] %}
 
 {% set left_column_classes = [
   'left-column',
-  columns_sm_size ? 'col-sm-' ~ columns_sm_size|split("_")[0] : '',
-  columns_md_size ? 'col-md-' ~ columns_md_size|split("_")[0] : '',
-  columns_lg_size ? 'col-lg-' ~ columns_lg_size|split("_")[0] : '',
-  columns_xl_size ? 'col-xl-' ~ columns_xl_size|split("_")[0] : '',
-  columns_xxl_size ? 'col-xxl-' ~ columns_xxl_size|split("_")[0] : ''
+  columns_sm_size ? 'col-sm-' ~ columns_sm_size|split("_")[0]|trim('0', 'right') : '',
+  columns_md_size ? 'col-md-' ~ columns_md_size|split("_")[0]|trim('0', 'right') : '',
+  columns_lg_size ? 'col-lg-' ~ columns_lg_size|split("_")[0]|trim('0', 'right') : '',
+  columns_xl_size ? 'col-xl-' ~ columns_xl_size|split("_")[0]|trim('0', 'right') : '',
+  columns_xxl_size ? 'col-xxl-' ~ columns_xxl_size|split("_")[0]|trim('0', 'right') : ''
 ] %}
 
 {% set right_column_classes = [
   'right-column',
-  columns_sm_size ? 'col-sm-' ~ columns_sm_size|split("_")[1] : '',
-  columns_md_size ? 'col-md-' ~ columns_md_size|split("_")[1] : '',
-  columns_lg_size ? 'col-lg-' ~ columns_lg_size|split("_")[1] : '',
-  columns_xl_size ? 'col-xl-' ~ columns_xl_size|split("_")[1] : '',
-  columns_xxl_size ? 'col-xxl-' ~ columns_xxl_size|split("_")[0] : ''
+  columns_sm_size ? 'col-sm-' ~ columns_sm_size|split("_")[1]|trim('0', 'right') : '',
+  columns_md_size ? 'col-md-' ~ columns_md_size|split("_")[1]|trim('0', 'right') : '',
+  columns_lg_size ? 'col-lg-' ~ columns_lg_size|split("_")[1]|trim('0', 'right') : '',
+  columns_xl_size ? 'col-xl-' ~ columns_xl_size|split("_")[1]|trim('0', 'right') : '',
+  columns_xxl_size ? 'col-xxl-' ~ columns_xxl_size|split("_")[0]|trim('0', 'right') : ''
 ] %}
 
 <div {{ card_attributes.addClass(featured_card_classes) }}>
   <div {{ row_attributes.addClass(row_classes) }}>
     <div {{ left_column_attributes.addClass(left_column_classes) }}>
-      {{ image }}
+      {{ media }}
       </div>
     <div {{ right_column_attributes.addClass(right_column_classes) }}>
       <div class="card-body">

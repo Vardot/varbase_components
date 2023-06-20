@@ -1,0 +1,51 @@
+card_overlay:
+  use: varbase_components:card-overlay
+  label: Overlay Card
+  description: Overlay card pattern for a media and a text over the media
+  fields:
+    media:
+      type: media
+      label: Media
+      description: 'Media description.'
+      preview: 'Card media'
+    content:
+      type: 'textfield'
+      label: 'Content'
+      description: 'Content description.'
+      preview: 'Card Content'
+  settings:
+    style_size:
+      type: 'select'
+      label: Card style size
+      default_value: medium
+      options:
+        xsmall: xsmall
+        small: small
+        medium: medium
+        large: large
+        xlarge: xlarge
+    card_attributes:
+      type: 'attributes'
+      label: 'Card attributes'
+    content_attributes:
+      type: 'attributes'
+      label: 'Content attributes'
+    card_classes:
+      type: 'textfield'
+      label: 'Card classes'
+    horizontal_alignment:
+      type: 'select'
+      label: 'Horizontal alignment'
+      options:
+        start: 'Start'
+        center: 'Center'
+        end: 'End'
+      default_value: 'center'
+    vertical_alignment:
+      type: 'select'
+      label: 'Vertical alignment'
+      options:
+        start: 'Top'
+        center: 'Center'
+        end: 'Bottom'
+      default_value: 'center'

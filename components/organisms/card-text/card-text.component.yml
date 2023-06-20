@@ -1,19 +1,9 @@
-name: Overlay Card 
+name: Text Card 
 status: experimental
-description: Overlay card component for a media and a text over the media
+description: Text card component description.
 props:
   type: object
   properties:
-    style_size:
-      type: string
-      title: Card style size
-      default: medium
-      enum:
-        - xsmall
-        - small
-        - medium
-        - large
-        - xlarge
     heading_tag:
       type: string
       title: Heading HTML tag
@@ -24,20 +14,15 @@ props:
         - h4
         - h5
         - h6
-    horizontal_alignment:
+    style_size:
       type: string
-      title: Horizontal alignment
+      title: Card style size
       enum:
-        - start
-        - center
-        - end
-    vertical_alignment:
-      type: string
-      title: Vertical alignment
-      enum:
-        - start
-        - center
-        - end
+        - xsmall
+        - small
+        - medium
+        - large
+        - xlarge
     heading:
       type: string
       title: Heading
