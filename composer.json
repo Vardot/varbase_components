@@ -30,9 +30,9 @@
     "composer/installers": "~2.0",
     "oomphinc/composer-installers-extender": "~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core": "^10.1",
-    "vardot/entity-definition-update-manager": "~1.0 || 1.0.x-dev",
-    "vardot/module-installer-factory": "~1.0 || 1.0.x-dev",
+    "drupal/core": "~10.1.0",
+    "vardot/entity-definition-update-manager": "~1.0",
+    "vardot/module-installer-factory": "~1.0",
     "drupal/cl_components": "~1.0",
     "drupal/cl_editorial": "~2.0",
     "drupal/cl_block": "1.0.0-rc1",
@@ -41,7 +41,6 @@
     "drupal/cl_devel": "~2.0",
     "drupal/cl_generator": "~2.0",
     "drupal/ui_patterns": "2.0.x-dev",
-    "drupal/ui_patterns_field_group-ui_patterns_field_group": "2.0.x-dev",
     "drupal/ui_patterns_settings": "~2.0"
   },
   "extra": {

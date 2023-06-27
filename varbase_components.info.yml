@@ -2,7 +2,7 @@ name: "Varbase Components"
 description: "This is the components handler module for Varbase distribution."
 type: module
 package: Varbase
-core_version_requirement: ^10.1
+core_version_requirement: ~10.1.0
 dependencies:
   - drupal:sdc
   - cl_components:cl_components
@@ -10,7 +10,6 @@ dependencies:
   - cl_selector_field:cl_selector_field
 install:
   - ui_patterns
-  - ui_patterns_field_group
   - ui_patterns_layouts
   - ui_patterns_library
   - ui_patterns_views
