@@ -42,9 +42,9 @@ props:
       title: Label
       description: Add labels to your progress bars by placing text within the `.progress-bar`.
     percent:
-      type: integer
+      type: string
       title: Percent
-      description: The percentage of the progress.
+      description: The percentage of the progress between 1 to 100.
     message:
       type: string
       title: Message
