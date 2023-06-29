@@ -8,8 +8,9 @@ props:
       type: string
       title: Color
       description: Use background utility classes to change the appearance of individual progress bars.
+      default: ''
       enum:
-        - primary
+        - ''
         - bg-primary
         - bg-secondary
         - bg-success
