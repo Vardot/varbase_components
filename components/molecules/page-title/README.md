@@ -24,7 +24,7 @@ Used in the `page-title.html.twig` default theme implementation for a page title
 
 **Example #1:** Normal Page title 
 ```
-  {% include 'vartheme_bs5:page-title' %}
+  {% include 'varbase_components:page-title' %}
 ```
 
 **Example #2:** Have a Bootstrap display class with the page title.
@@ -37,7 +37,7 @@ Used in the `page-title.html.twig` default theme implementation for a page title
 
 **Example #3:** Have custom title class with the page title.
 ```
-  {% include 'vartheme_bs5:page-title' with {
+  {% include 'varbase_components:page-title' with {
       utility_classes: ['custom-section-title1', 'custom-title2']
     }
   %}
