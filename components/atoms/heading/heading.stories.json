@@ -1,0 +1,53 @@
+{
+  "title": "Varbase Components/Atoms/Heading",
+  "description": "A generic close button for dismissing content like modals and alerts.",
+  "argTypes": {
+    "html_tag": {
+      "name": "HTML Tag",
+      "description": "HTML header tag (h1, h2, h3, h4, h5, h6)",
+      "defaultValue": "h1",
+      "control": "select",
+      "options": {
+        "h1": "h1",
+        "h2": "h2",
+        "h3": "h3",
+        "h4": "h4",
+        "h5": "h5",
+        "h6": "h6"
+      }
+    },
+    "display": {
+      "name": "Display",
+      "description": "Bootstrap button size class",
+      "defaultValue": "",
+      "control": "select",
+      "options": {
+        "empty": "",
+        "Display1": "display-1",
+        "Display2": "display-2",
+        "Display3": "display-3",
+        "Display4": "display-4",
+        "Display5": "display-5",
+        "Display6": "display-6"
+      }
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.",
+      "control": "object",
+      "defaultValue": {}
+    }
+  },
+  "stories": [
+    {
+      "name": "Heading",
+      "args": {
+        "html_tag": "h1",
+        "display": "",
+        "content": "Test Header 1",
+        "utility_classes": {},
+        "attributes": {}
+      }
+    }
+  ]
+}

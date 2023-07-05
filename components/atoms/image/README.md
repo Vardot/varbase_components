@@ -2,9 +2,13 @@
 
 Image component with responsive behavior for the system image.
 
+Images in Bootstrap are made responsive with `.img-fluid`. This applies
+ `max-width: 100%;` and `height: auto;` to the image so that it scales
+ with the parent width.
+
 ## Bootstrap Documentation
-https://getbootstrap.com/docs/5.2/content/images
-https://getbootstrap.com/docs/5.2/content/images/#responsive-images
+https://getbootstrap.com/docs/5.3/content/images
+https://getbootstrap.com/docs/5.3/content/images/#responsive-images
 
 
 ## Available Properties:

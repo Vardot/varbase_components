@@ -1,0 +1,54 @@
+{
+  "title": "Varbase Components/Atoms/Image",
+  "description": "Image component with responsive behavior for the system image.",
+  "argTypes": {
+    "align": {
+      "name": "Aligning images",
+      "description": "(optional) Align images with the helper float classes or text alignment classes. block-level images can be centered using the `.mx-auto` margin utility class.",
+      "defaultValue": "",
+      "control": "select",
+      "options": {
+        "empty": "",
+        "Start": "start",
+        "Center": "center",
+        "End": "end"
+      }
+    },
+    "responsive": {
+      "name": "Responsive image",
+      "description": "(optional) Images in Bootstrap are made responsive with `.img-fluid`. This applies max-width with 100% and height with auto to the image so that it scales with the parent width.",
+      "defaultValue": false,
+      "control": "boolean"
+    },
+    "thumbnails": {
+      "name": "Image thumbnails",
+      "description": "(optional) In addition to Bootstrap border-radius utilities, you can use `.img-thumbnail` to give an image a rounded 1px border appearance.",
+      "defaultValue": false,
+      "control": "boolean"
+    },
+    "rounded": {
+      "name": "Rounded image",
+      "defaultValue": false,
+      "control": "boolean"
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.",
+      "control": "object",
+      "defaultValue": {}
+    }
+  },
+  "stories": [
+    {
+      "name": "Image",
+      "args": {
+        "align": "",
+        "responsive": false,
+        "thumbnails": false,
+        "rounded": false,
+        "utility_classes": {},
+        "attributes": {"src": "https://git.drupalcode.org/project/vartheme_bs5/-/raw/3.0.x/screenshot.png"}
+      }
+    }
+  ]
+}

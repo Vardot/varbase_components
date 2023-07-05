@@ -8,6 +8,7 @@ props:
       type: string
       title: Aligning images
       description: (optional) Align images with the helper float classes or text alignment classes. block-level images can be centered using the .mx-auto margin utility class.
+      default: ''
       enum:
         - ''
         - start
@@ -27,10 +28,6 @@ props:
     utility_classes:
       type: array
       title: Utility Classes 
-      description: (optional) An array of utility classes. Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.
+      description: Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.
     attributes:
       type: Drupal\Core\Template\Attribute
-    style_name:
-      type: string
-      title: Style name
-      description: (optional) The name of the image style applied.

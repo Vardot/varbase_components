@@ -11,5 +11,9 @@ props:
       enum:
         - ''
         - btn-sm
-        - btn-md
         - btn-lg
+    disabled:
+      type: boolean
+      title: Disabled
+      description: Disabled button
+      default: false

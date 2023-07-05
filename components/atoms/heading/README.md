@@ -1,11 +1,11 @@
 # Heading
 
-Varbase Components implementation for the heading component.
+All HTML headings, `<h1>` through `<h6>`, are available.
 
 
 ### Bootstrap Documentation
-https://getbootstrap.com/docs/5.2/content/typography/#headings
-https://getbootstrap.com/docs/5.2/content/typography/#display-headings
+https://getbootstrap.com/docs/5.3/content/typography/#headings
+https://getbootstrap.com/docs/5.3/content/typography/#display-headings
 
 
 #### HTML Tag (`html_tag`)
@@ -15,7 +15,7 @@ Heading HTML tag (h1, h2, h3, h4, h5, h6)
 When you need a heading to stand out, consider using a display
 heading—a larger, slightly more opinionated heading style.
 optional values are: ( display-1, display-2, display-3, display-4, display-5, display-6)
-https://getbootstrap.com/docs/5.2/content/typography/#display-headings
+https://getbootstrap.com/docs/5.3/content/typography/#display-headings
 
 #### Utility Classes (`utility_classes`):
 This property contains an array of utility classes that can be used to

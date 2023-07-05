@@ -1,0 +1,29 @@
+{
+  "title": "Varbase Components/Molecules/Input Submit",
+  "description": "Input Submit component",
+  "argTypes": {
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "children": {
+      "name": "children",
+      "defaultValue": "",
+      "control": "text"
+    }
+  },
+  "stories": [
+    {
+      "name": "Input Submit",
+      "args": {
+        "children": " Example input Submit button element",
+        "utility_classes": {
+          "0": "btn",
+          "1": "btn-primary"
+        }
+      }
+    }
+  ]
+}

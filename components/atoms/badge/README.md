@@ -1,10 +1,18 @@
 # Badge
 
 ## Bootstrap Documentation
-https://getbootstrap.com/docs/5.2/components/badge/
+https://getbootstrap.com/docs/5.3/components/badge/
 
 ## Available Properties:
-#### color:
+
+#### HTML Tag (`html_tag`):
+The HTML tag to use for the badge.
+
+Recommended to use: `span` | `div` | `a`
+
+Default value: `span`
+
+#### Background and Text Color (`color`):
 Background and Text Color. Set a `background-color` with contrasting
 foreground color with our `.text-bg-{color}` helpers. Previously it
 was required to manually pair your choice of `.text-{color}`
@@ -17,22 +25,16 @@ Recommended to use: `text-bg-primary` | `text-bg-secondary` | `text-bg-success` 
 
 Default value: `text-bg-secondary`
 
-#### html_tag:
-The HTML tag to use for the bade.
-
-Recommended to use: `span` | `div` | `a`
-
-Default value: `text-bg-secondary`
-
-#### content:
+#### Content (`content`):
 The content of the badge.
 
-#### url:
+#### URL Link (`url`):
 The HTML tag will automatically be set to a if an anchor is added to the URL.
 
-#### utility_classes:
+#### Utility Classes (`utility_classes`):
 This property contains an array of utility classes that can be used to
 add extra Bootstrap utility classes or custom classes to this component.
+
 
 ### Examples
 **Example #1:** New post badge.

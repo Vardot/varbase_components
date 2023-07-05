@@ -1,0 +1,82 @@
+{
+  "title": "Varbase Components/Atoms/Button",
+  "description": "Use Bootstrap custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.",
+  "argTypes": {
+    "html_tag": {
+      "name": "HTML Tag",
+      "description": "The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).",
+      "defaultValue": "span",
+      "control": "select",
+      "options": {
+        "button": "button",
+        "input": "input",
+        "a": "a"
+      }
+    },
+    "color": {
+      "name": "Color",
+      "description": "Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.",
+      "defaultValue": "",
+      "control": "select",
+      "options": {
+        "Primary": "primary",
+        "Secondary": "secondary",
+        "Success": "success",
+        "Info": "info",
+        "Warning": "warning",
+        "Danger": "danger",
+        "Light": "light",
+        "Dark": "dark"
+      }
+    },
+    "outline": {
+      "name": "Outline",
+      "description": "In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the .btn-outline-* ones to remove all background images and colors on any button.",
+      "defaultValue": false,
+      "control": "boolean"
+    },
+    "size": {
+      "name": "Size",
+      "description": "Bootstrap button size class",
+      "defaultValue": "",
+      "control": "select",
+      "options": {
+        "empty": "",
+        "Small": "btn-sm",
+        "Large": "btn-lg"
+      }
+    },
+    "disabled": {
+      "name": "Disabled",
+      "description": "Disabled button",
+      "defaultValue": false,
+      "control": "boolean"
+    },
+    "content": {
+      "name": "Content",
+      "description": "The content for the button",
+      "control": "text",
+      "defaultValue": "Button"
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.",
+      "control": "object",
+      "defaultValue": {}
+    }
+  },
+  "stories": [
+    {
+      "name": "Button",
+      "args": {
+        "html_tag": "button",
+        "color": "primary",
+        "outline": false,
+        "size": "",
+        "disabled": false,
+        "content": "Button",
+        "utility_classes": {}
+      }
+    }
+  ]
+}

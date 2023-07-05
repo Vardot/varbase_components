@@ -4,10 +4,18 @@ description: Use Bootstrap custom button styles for actions in forms, dialogs, a
 props:
   type: object
   properties:
+    html_tag:
+      type: string
+      title: The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
+      default: button
+      enum:
+        - button
+        - input
+        - a
     color:
       type: string
       title: Color
-      description: Bootstrap class
+      description: Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
       default: ''
       enum:
         - ''
@@ -23,7 +31,7 @@ props:
     outline:
       type: boolean
       title: Outline
-      description: Bootstrap Outline button
+      description: In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the .btn-outline-* ones to remove all background images and colors on any button.
       default: false
     size:
       type: string
@@ -39,13 +47,17 @@ props:
       title: Disabled
       description: Disabled button
       default: false
+    utility_classes:
+      type: array
+      title: Utility Classes 
+      description: An array of utility classes. Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.
     attributes:
       type: Drupal\Core\Template\Attribute
 slots:
   content:
     type: string
     title: Content
-    description: The title for the button
+    description: The content for the button
     minLength: 1
     examples:
       - Press

@@ -1,6 +1,6 @@
 name: Heading 
 status: experimental
-description: Varbase Components implementation for the heading component
+description: "All HTML headings, `<h1>` through `<h6>`, are available."
 props:
   type: object
   properties:
@@ -22,6 +22,7 @@ props:
       description: When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style.
       default: ''
       enum:
+        - ''
         - display-1
         - display-2
         - display-3

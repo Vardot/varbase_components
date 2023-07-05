@@ -1,0 +1,39 @@
+{
+  "title": "Varbase Components/Atoms/Close Button",
+  "description": "A generic close button for dismissing content like modals and alerts.",
+  "argTypes": {
+    "size": {
+      "name": "Size",
+      "description": "Bootstrap button size class",
+      "defaultValue": "",
+      "control": "select",
+      "options": {
+        "empty": "",
+        "Small": "btn-sm",
+        "Large": "btn-lg"
+      }
+    },
+    "disabled": {
+      "name": "Disabled",
+      "description": "Disabled button",
+      "defaultValue": false,
+      "control": "boolean"
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.",
+      "control": "object",
+      "defaultValue": {}
+    }
+  },
+  "stories": [
+    {
+      "name": "Close Button",
+      "args": {
+        "size": "",
+        "disabled": false,
+        "utility_classes": {}
+      }
+    }
+  ]
+}

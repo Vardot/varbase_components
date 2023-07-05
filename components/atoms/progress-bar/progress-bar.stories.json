@@ -1,0 +1,79 @@
+{
+  "title": "Varbase Components/Atoms/Progress Bar",
+  "desc": "Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.",
+  "argTypes": {
+    "color": {
+      "name": "Progress Bar Color",
+      "description": "Use background utility classes to change the appearance of individual progress bars.",
+      "defaultValue": "bg-secondary",
+      "control": "select",
+      "options": {
+        "empty": "",
+        "Primary": "bg-primary",
+        "Secondary": "bg-secondary",
+        "Success": "bg-success",
+        "Info": "bg-info",
+        "Warning": "bg-warning",
+        "Danger": "bg-danger",
+        "Light": "bg-light",
+        "Dark": "bg-dark",
+        "Black": "bg-black",
+        "White": "bg-white",
+        "Body": "bg-body",
+        "Transparent": "bg-transparent",
+        "Opacity10": "bg-opacity-10",
+        "Opacity25": "bg-opacity-25",
+        "Opacity50": "bg-opacity-50",
+        "Opacity75": "bg-opacity-75",
+        "Opacity100": "bg-opacity-100",
+        "Gradient": "bg-gradient"
+      }
+    },
+    "striped": {
+      "name": "Striped",
+      "description": "Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the background color.",
+      "defaultValue": true,
+      "control": "boolean"
+    },
+    "animated": {
+      "name": "Animated",
+      "description": "The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.",
+      "defaultValue": true,
+      "control": "boolean"
+    },
+    "label": {
+      "name": "Label",
+      "description": "Add labels to your progress bars by placing text within the `.progress-bar`.",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "percent": {
+      "name": "Percent",
+      "description": "The percentage of the progress between 1 to 100.",
+      "control": "number",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "defaultValue": "35"
+    },
+    "message": {
+      "name": "Message",
+      "description": "A string containing information to be displayed.",
+      "control": "text",
+      "defaultValue": ""
+    }
+  },
+  "stories": [
+    {
+      "name": "Progress Bar",
+      "args": {
+        "color": "bg-primary",
+        "striped": true,
+        "animated": true,
+        "label": "Progress Bar Label",
+        "percent": "35",
+        "message": "More information about this progress bar."
+      }
+    }
+  ]
+}

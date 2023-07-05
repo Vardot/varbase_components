@@ -1,0 +1,15 @@
+name: Input Submit 
+status: experimental
+description: Input Submit
+props:
+  type: object
+  properties:
+    utility_classes:
+      type: array
+      title: Utility Classes 
+      description: Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.
+    children:
+      type: string
+      title: Children
+    attributes:
+      type: Drupal\Core\Template\Attribute

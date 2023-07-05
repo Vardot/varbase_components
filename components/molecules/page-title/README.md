@@ -3,8 +3,8 @@
 The Page Title component is responsible for rendering the page's main heading using the h1 HTML tag.
 
 ## Bootstrap Documentation
-https://getbootstrap.com/docs/5.2/content/typography/#headings
-https://getbootstrap.com/docs/5.2/content/typography/#display-headings
+https://getbootstrap.com/docs/5.3/content/typography/#headings
+https://getbootstrap.com/docs/5.3/content/typography/#display-headings
 
 
 ## Available Properties:
@@ -13,7 +13,7 @@ https://getbootstrap.com/docs/5.2/content/typography/#display-headings
 When you need a heading to stand out, consider using a display
 heading—a larger, slightly more opinionated heading style.
 optional values are: ( display-1, display-2, display-3, display-4, display-5, display-6)
-https://getbootstrap.com/docs/5.2/content/typography/#display-headings
+https://getbootstrap.com/docs/5.3/content/typography/#display-headings
 
 #### Utility Classes (`utility_classes`):
 This property contains an array of utility classes that can be used to

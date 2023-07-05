@@ -5,8 +5,8 @@ Headings help structure your page making your content easier to
 read by humans and search engines.
 
 ## Bootstrap Documentation
-https://getbootstrap.com/docs/5.2/content/typography/#headings
-https://getbootstrap.com/docs/5.2/content/typography/#display-headings
+https://getbootstrap.com/docs/5.3/content/typography/#headings
+https://getbootstrap.com/docs/5.3/content/typography/#display-headings
 
 
 ## Available Properties:

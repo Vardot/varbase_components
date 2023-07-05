@@ -6,7 +6,7 @@ props:
   properties:
     color:
       type: string
-      title: Color
+      title: Progress Bar Color
       description: Use background utility classes to change the appearance of individual progress bars.
       default: ''
       enum:
@@ -33,10 +33,12 @@ props:
       type: boolean
       title: Striped
       description: Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the background color.
+      default: false
     animated:
       type: boolean
       title: Striped
       description: The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
+      default: false
     label:
       type: string
       title: Label
