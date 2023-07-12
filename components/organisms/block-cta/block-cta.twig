@@ -10,16 +10,18 @@
  *                    classes to this component.
  */
 #}
+
+{% set title_tag = ((title_tag == '') or (title_tag == '_none')) ? 'h3' : title_tag %}
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
 {%
   set classes = [
     'block',
     'cta-block',
     'py-2',
     'px-3',
-  ]|merge(utility_classes ? utility_classes : [])
+  ]|merge(utility_classes)
 %}
-
-{% set title_tag = ((title_tag == '') or (title_tag == '_none')) ? 'h3' : title_tag %}
 
 <div{{ attributes.addClass(classes) }}>
 

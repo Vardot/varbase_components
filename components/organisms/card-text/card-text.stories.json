@@ -1,0 +1,49 @@
+{
+  "title": "Varbase Components/Organisms/Text Card",
+  "description": "Text card component and pattern with content.",
+  "argTypes": {
+    "style_size": {
+      "name": "Card style size",
+      "description": "Card style size",
+      "control": "select",
+      "defaultValue": "",
+      "options": {
+        "' - none - '": "",
+        "XSmall": "xsmall",
+        "Small": "small",
+        "Medium": "medium",
+        "Large": "large",
+        "XLarge": "xlarge"
+      }
+    },
+    "card_border": {
+      "name": "Card Boarder",
+      "description": "Card Boarder",
+      "defaultValue": true,
+      "control": "boolean"
+    },
+    "content": {
+      "name": "Card content",
+      "slots": "The content for card",
+      "control": "html",
+      "defaultValue": ""
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "Use to add extra Bootstrap utility classes or custom CSS classes over component.",
+      "control": "object",
+      "defaultValue": {}
+    }
+  },
+  "stories": [
+    {
+      "name": "Text Card",
+      "args": {
+        "style_size": "",
+        "card_border": true,
+        "content": "<h3 class=\"card-title\">Example title</h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>",
+        "utility_classes": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "title": "Varbase Components/Organisms/Overlay Card",
+  "description": "Hero card component and pattern with media and content.",
+  "argTypes": {
+    "style_size": {
+      "name": "Card style size",
+      "description": "Card style size",
+      "control": "select",
+      "defaultValue": "",
+      "options": {
+        "' - none - '": "",
+        "XSmall": "xsmall",
+        "Small": "small",
+        "Medium": "medium",
+        "Large": "large",
+        "XLarge": "xlarge"
+      }
+    },
+    "card_border": {
+      "name": "Card Boarder",
+      "description": "Card Boarder",
+      "defaultValue": true,
+      "control": "boolean"
+    },
+    "horizontal_alignment": {
+      "name": "Horizontal Alignment",
+      "description": "Horizontal alignment of the content",
+      "control": "select",
+      "defaultValue": "",
+      "options": {
+        "' - none - '": "",
+        "Start": "start",
+        "Center": "center",
+        "End": "end"
+      }
+    },
+    "vertical_alignment": {
+      "name": "Vertical Alignment",
+      "description": "Vertical alignment of the content",
+      "control": "select",
+      "defaultValue": "",
+      "options": {
+        "' - none - '": "",
+        "Start": "start",
+        "Center": "center",
+        "End": "end"
+      }
+    },
+    "media": {
+      "name": "Card media",
+      "description": "The content for card",
+      "control": "html",
+      "defaultValue": ""
+    },
+    "content": {
+      "name": "Card content",
+      "slots": "The content for card",
+      "control": "html",
+      "defaultValue": ""
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "Use to add extra Bootstrap utility classes or custom CSS classes over component.",
+      "control": "object",
+      "defaultValue": {}
+    }
+  },
+  "stories": [
+    {
+      "name": "Overlay Card",
+      "args": {
+        "style_size": "",
+        "card_border": true,
+        "horizontal_alignment": "",
+        "vertical_alignment": "",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\">Example title</h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>",
+        "utility_classes": {}
+      }
+    }
+  ]
+}

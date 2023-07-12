@@ -14,17 +14,23 @@ card_text:
       label: Card style size
       default_value: medium
       options:
-        xsmall: xsmall
-        small: small
-        medium: medium
-        large: large
-        xlarge: xlarge
+        '': '- none -'
+        xsmall: 'X-small'
+        small: 'Small'
+        medium: 'Medium'
+        large: 'Large'
+        xlarge: 'X-large'
+    card_border:
+      type: 'boolean'
+      label: Card Boarder
+      default_value: 1
     card_attributes:
       type: 'attributes'
       label: 'Card attributes'
     content_attributes:
       type: 'attributes'
       label: 'Content attributes'
-    card_classes:
+    utility_classes:
       type: 'textfield'
-      label: 'Card classes'
+      label: 'Utility classes'
+      description: 'Use to add extra Bootstrap utility classes or custom CSS classes over component.'

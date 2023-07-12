@@ -60,7 +60,7 @@
     },
     "utility_classes": {
       "name": "Utility Classes",
-      "description": "Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.",
+      "description": "Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.",
       "control": "object",
       "defaultValue": {}
     }

@@ -20,7 +20,7 @@ props:
     utility_classes:
       type: array
       title: Utility Classes 
-      description: An array of utility classes. Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
     title_attributes:
       type: Drupal\Core\Template\Attribute
     title_prefix:

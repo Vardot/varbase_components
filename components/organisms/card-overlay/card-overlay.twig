@@ -1,23 +1,49 @@
-{% set classes = [
+{#
+/**
+ * @file
+ * Template for a Overlay Card component.
+ *
+ * Available config:
+ * - style_size: Card style size.
+ * - card_attributes: Drupal attributes for featured card wrapper.
+ * - content_attributes: Drupal attributes for card content.
+ * - utility_classes: Use to add extra Bootstrap utility classes or custom CSS classes over component.
+ * - media: Card Media region.
+ * - content: Card Content region.
+ */
+#}
+
+{% set style_size = style_size ? [style_size]: [] %}
+{% set vertical_alignment = vertical_alignment == '' ? [] : ['justify-content-' ~ vertical_alignment] %}
+{% set contnet_horizontal_alignment = horizontal_alignment == '' ? [] : ['align-items-' ~ horizontal_alignment] %}
+{% set text_horizontal_alignment = horizontal_alignmentv == '' ? [] : ['align-items-' ~ horizontal_alignment] %}
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
+{# Check if the Card has a boarder on not and set needed no border Bootstrap class #}
+{% set card_border = card_border == 1 ? [] : ['border-0'] %}
+
+{% set card_classes = [
   'card',
-  'varbase-overlay-card',
-  style_size ?? '',
-  card_classes
-]|merge(utility_classes ?? []) %}
+  'varbase-overlay-card'
+]|merge(card_border)|merge(utility_classes) %}
 
 {% set content_classes = [
   'card-img-overlay',
   'd-flex',
   'flex-column',
-  'justify-content-' ~ vertical_alignment,
-  'align-items-' ~ horizontal_alignment,
-  'text-' ~ horizontal_alignment,
-   card_body_classes
-] %}
+]|merge(vertical_alignment)|merge(contnet_horizontal_alignment)|merge(text_horizontal_alignment) %}
 
-<div {{ attributes.addClass(classes) }}>
+{% if not card_attributes %}
+  {% set card_attributes = create_attribute() %}
+{% endif %}
+
+{% if not content_attributes %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+
+<div{{ card_attributes.addClass(card_classes) }}>
   {{ media }}
-  <div {{ content_attributes.addClass(content_classes) }}>
+  <div{{ content_attributes.addClass(content_classes) }}>
     {{ content }}
   </div>
 </div>

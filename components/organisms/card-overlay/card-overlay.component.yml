@@ -1,53 +1,59 @@
 name: Overlay Card 
 status: experimental
-description: Overlay card component for a media and a text over the media
+description: Overlay card component for a media and a content over the media with sizes
+group: Cards
 props:
   type: object
   properties:
     style_size:
       type: string
       title: Card style size
-      default: medium
+      default: ''
       enum:
+        - ''
         - xsmall
         - small
         - medium
         - large
         - xlarge
-    heading_tag:
-      type: string
-      title: Heading HTML tag
-      enum:
-        - h1
-        - h2
-        - h3
-        - h4
-        - h5
-        - h6
+    card_border:
+      type: boolean
+      title: Card Boarder
+      default: true
     horizontal_alignment:
       type: string
       title: Horizontal alignment
+      default: ''
       enum:
+        - ''
         - start
         - center
         - end
     vertical_alignment:
       type: string
       title: Vertical alignment
+      default: ''
       enum:
+        - ''
         - start
         - center
         - end
-    heading:
-      type: string
-      title: Heading
-    body:
-      type: string
-      title: Body
-    link:
-      type: string
-      title: Link
-    attributes:
+    card_attributes:
       type: Drupal\Core\Template\Attribute
     content_attributes:
       type: Drupal\Core\Template\Attribute
+    utility_classes:
+      type: array
+      title: Utility Classes 
+      description: Use to add extra Bootstrap utility classes or custom CSS classes over component.
+slots:
+  media:
+    title: Card Media
+    description: Media for the Card.
+    examples:
+      - "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>"
+  content:
+    title: Card Content
+    description: Content for the Card.
+    examples:
+      - "<h3 class=\"card-title\">Example title</h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"

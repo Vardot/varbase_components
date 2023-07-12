@@ -10,6 +10,8 @@
  * - utility_classes: An array of utility classes.
  */
 #}
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
 {% import _self as menus %}
 
 {% if alignment == 'right' %}
@@ -25,7 +27,14 @@
 {% set style = style ? 'nav-' ~ style : '' %}
 {% set fill = fill ? 'nav-' ~ fill : '' %}
 
-{% set nav_classes = [ 'nav', style, alignment, fill]|merge(utility_classes ? utility_classes : []) %}
+{%
+  set nav_classes = [
+    'nav',
+    style,
+    alignment,
+    fill
+  ]|merge(utility_classes)
+%}
 
 {% if items %}
   <ul{{ attributes.addClass(nav_classes) }}>

@@ -1,38 +1,32 @@
 name: Text Card 
 status: experimental
-description: Text card component description.
+description: Text card component only.
+group: Cards
 props:
   type: object
   properties:
-    heading_tag:
-      type: string
-      title: Heading HTML tag
-      enum:
-        - h1
-        - h2
-        - h3
-        - h4
-        - h5
-        - h6
     style_size:
       type: string
       title: Card style size
+      default: ''
       enum:
+        - ''
         - xsmall
         - small
         - medium
         - large
         - xlarge
-    heading:
-      type: string
-      title: Heading
-    body:
-      type: string
-      title: Body
-    link:
-      type: string
-      title: Link
-    attributes:
+    card_border:
+      type: boolean
+      title: Card Boarder
+      default: true
+    card_attributes:
       type: Drupal\Core\Template\Attribute
     content_attributes:
       type: Drupal\Core\Template\Attribute
+slots:
+  content:
+    title: Card Content
+    description: Content for the Card.
+    examples:
+      - "<h3 class=\"card-title\">Example title</h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"

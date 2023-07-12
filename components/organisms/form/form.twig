@@ -12,11 +12,14 @@
  * @ingroup themeable
  */
 #}
+
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
 {%
   set classes = [
     'form',
     isInline ? 'form-inline',
-  ]|merge(utility_classes ? utility_classes : [])
+  ]|merge(utility_classes)
 %}
 
 <form{{ attributes.addClass(classes) }}>

@@ -4,60 +4,108 @@
  * Template for a Featured card component.
  *
  * Available config:
+ * - style_size: Card style size.
+ * - columns_xs_size: All Breakpoints - Size of two columns for all devices. Starting from Extra small and up.
+ * - columns_sm_size: Small Breakpoint size (sm) - Size of two columns for Small devices (landscape phones, 576px and up)
+ * - columns_md_size: Medium Breakpoint size (md) - Size of two columns for Medium devices (tablets, 768px and up)
+ * - columns_lg_size: Large Breakpoint size (lg) - Size of two columns for Large devices (desktops, 992px and up)
+ * - columns_xl_size: Extra large Breakpoint size (xl) - Size of two columns for X-Large devices (large desktops, 1200px and up)
+ * - columns_xxl_size: Extra extra large Breakpoint size (xxl) - Size of two columns for XX-Large devices (larger desktops, 1400px and up)
  * - card_attributes: Drupal attributes for featured card wrapper.
  * - row_attributes: Drupal attributes for row.
- * - left_column_attributes: Drupal attributes for left column.
- * - right_column_attributes: Drupal attributes for right column.
- * - columns_sm_size: The bootstrap columns size in sm view.
- * - columns_md_size: The bootstrap columns size in md view.
- * - columns_lg_size: The bootstrap columns size in lg view.
- * - columns_xl_size: The bootstrap columns size in xl view.
- * - columns_xxl_size: The bootstrap columns size in xxl view.
- * - featured_card_classes: An array of classes for featured card wrapper.
- * - row_classes: An array of classes for row.
- * - left_column_classes: An array of classes for left column.
- * - right_column_classes: An array of classes for right column.
+ * - start_column_attributes: Drupal attributes for start column.
+ * - end_column_attributes: Drupal attributes for end column.
+ * - content_attributes: Drupal attributes for card content.
  * - media_position: start|end to determine if the row is reversed or not.
- * - utility_classes: An array of aditional classes for featured card wrapper.
+ * - utility_classes: Use to add extra Bootstrap utility classes or custom CSS classes over component.
+ * - media: Card Media region.
+ * - content: Card Content region.
  */
 #}
 
-{% set featured_card_classes = [
-  'card',
-  'varbase-featured-card',
-  style_size ?? '',
-]|merge(utility_classes ?? []) %}
+{% set style_size = style_size ? [style_size]: [] %}
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set media_position = media_position == 'end' ? ['flex-row-reverse'] : [] %}
 
-{% set row_classes = [
-  'row',
-  media_position == 'end' ? 'flex-row-reverse' : ''
-] %}
+{# Mapping for the start column with selected column sizes on each brackpoint #}
+{% set start_column_xs_size = columns_xs_size ? ['col-' ~ columns_xs_size|split("_")[0]|trim('0', 'left')] : [] %}
+{% set start_column_sm_size = columns_sm_size ? ['col-sm-' ~ columns_sm_size|split("_")[0]|trim('0', 'left')] : [] %}
+{% set start_column_md_size = columns_md_size ? ['col-md-' ~ columns_md_size|split("_")[0]|trim('0', 'left')] : [] %}
+{% set start_column_lg_size = columns_lg_size ? ['col-lg-' ~ columns_lg_size|split("_")[0]|trim('0', 'left')] : [] %}
+{% set start_column_xl_size = columns_xl_size ? ['col-xl-' ~ columns_xl_size|split("_")[0]|trim('0', 'left')] : [] %}
+{% set start_column_xxl_size = columns_xxl_size ? ['col-xxl-' ~ columns_xxl_size|split("_")[0]|trim('0', 'left')] : [] %}
 
-{% set left_column_classes = [
-  'left-column',
-  columns_sm_size ? 'col-sm-' ~ columns_sm_size|split("_")[0]|trim('0', 'right') : '',
-  columns_md_size ? 'col-md-' ~ columns_md_size|split("_")[0]|trim('0', 'right') : '',
-  columns_lg_size ? 'col-lg-' ~ columns_lg_size|split("_")[0]|trim('0', 'right') : '',
-  columns_xl_size ? 'col-xl-' ~ columns_xl_size|split("_")[0]|trim('0', 'right') : '',
-  columns_xxl_size ? 'col-xxl-' ~ columns_xxl_size|split("_")[0]|trim('0', 'right') : ''
-] %}
+{# Mapping for the end column with selected column sizes on each brackpoint #}
+{% set end_column_xs_size = columns_xs_size ? ['col-' ~ columns_xs_size|split("_")[1]|trim('0', 'left')] : [] %}
+{% set end_column_sm_size = columns_sm_size ? ['col-sm-' ~ columns_sm_size|split("_")[1]|trim('0', 'left')] : [] %}
+{% set end_column_md_size = columns_md_size ? ['col-md-' ~ columns_md_size|split("_")[1]|trim('0', 'left')] : [] %}
+{% set end_column_lg_size = columns_lg_size ? ['col-lg-' ~ columns_lg_size|split("_")[1]|trim('0', 'left')] : [] %}
+{% set end_column_xl_size = columns_xl_size ? ['col-xl-' ~ columns_xl_size|split("_")[1]|trim('0', 'left')] : [] %}
+{% set end_column_xxl_size = columns_xxl_size ? ['col-xxl-' ~ columns_xxl_size|split("_")[1]|trim('0', 'left')] : [] %}
 
-{% set right_column_classes = [
-  'right-column',
-  columns_sm_size ? 'col-sm-' ~ columns_sm_size|split("_")[1]|trim('0', 'right') : '',
-  columns_md_size ? 'col-md-' ~ columns_md_size|split("_")[1]|trim('0', 'right') : '',
-  columns_lg_size ? 'col-lg-' ~ columns_lg_size|split("_")[1]|trim('0', 'right') : '',
-  columns_xl_size ? 'col-xl-' ~ columns_xl_size|split("_")[1]|trim('0', 'right') : '',
-  columns_xxl_size ? 'col-xxl-' ~ columns_xxl_size|split("_")[0]|trim('0', 'right') : ''
-] %}
+{# Check if the Card has a boarder on not and set needed no border Bootstrap class #}
+{% set card_border = card_border == 1 ? [] : ['border-0'] %}
 
-<div {{ card_attributes.addClass(featured_card_classes) }}>
-  <div {{ row_attributes.addClass(row_classes) }}>
-    <div {{ left_column_attributes.addClass(left_column_classes) }}>
+{%
+  set card_classes = [
+    'card',
+    'h-100',
+    'varbase-featured-card',
+  ]|merge(style_size)|merge(card_border)|merge(utility_classes)
+%}
+
+{%
+  set row_classes = [
+    'row',
+    'g-0',
+  ]|merge(media_position)
+%}
+
+{%
+  set start_column_classes = [
+    'start-column',
+  ]|merge(start_column_xs_size)|merge(start_column_sm_size)|merge(start_column_md_size)|merge(start_column_lg_size)|merge(start_column_xl_size)|merge(start_column_xxl_size)
+%}
+
+{%
+  set end_column_classes = [
+    'end-column',
+  ]|merge(end_column_xs_size)|merge(end_column_sm_size)|merge(end_column_md_size)|merge(end_column_lg_size)|merge(end_column_xl_size)|merge(end_column_xxl_size)
+%}
+
+{%
+  set content_classes = [
+    'card-body',
+  ]
+%}
+
+{% if not card_attributes %}
+  {% set card_attributes = create_attribute() %}
+{% endif %}
+
+{% if not row_attributes %}
+  {% set row_attributes = create_attribute() %}
+{% endif %}
+
+{% if not start_column_attributes %}
+  {% set start_column_attributes = create_attribute() %}
+{% endif %}
+
+{% if not end_column_attributes %}
+  {% set end_column_attributes = create_attribute() %}
+{% endif %}
+
+{% if not content_attributes %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+
+<div{{ card_attributes.addClass(card_classes) }}>
+  <div{{ row_attributes.addClass(row_classes) }}>
+    <div{{ start_column_attributes.addClass(start_column_classes) }}>
       {{ media }}
-      </div>
-    <div {{ right_column_attributes.addClass(right_column_classes) }}>
-      <div class="card-body">
+    </div>
+    <div{{ end_column_attributes.addClass(end_column_classes) }}>
+      <div{{ content_attributes.addClass(content_classes) }}>
         {{ content }}
       </div>
     </div>

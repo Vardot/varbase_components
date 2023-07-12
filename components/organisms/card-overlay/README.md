@@ -1,4 +1,4 @@
 # Overlay Card
 
-Overlay card component and pattern for a media and a text over it.
+Overlay card component for a media and a content over the media with sizes
 

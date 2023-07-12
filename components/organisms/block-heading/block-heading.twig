@@ -17,14 +17,15 @@
  */
 #}
 
+{% set heading_tag = ((heading_tag == '') or (heading_tag == '_none')) ? 'div' : heading_tag %}
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
 {%
   set classes = [
     'block',
-    'heading-block'
-  ]|merge(utility_classes ? utility_classes : [])
+    'heading-block',
+  ]|merge(utility_classes)
 %}
-
-{% set heading_tag = ((heading_tag == '') or (heading_tag == '_none')) ? 'div' : heading_tag %}
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}

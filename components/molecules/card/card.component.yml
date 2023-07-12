@@ -1,0 +1,94 @@
+name: Card 
+status: experimental
+description: A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
+group: Cards
+props:
+  type: object
+  properties:
+    card_body:
+      type: string
+      title: Card body
+    card_body_tag:
+      type: string
+      title: Card body HTML tag
+      default: div
+      enum:
+        - div
+        - section
+    card_title:
+      type: string
+      title: Card title
+    card_title_tag:
+      type: string
+      title: Card title HTML tag
+      default: h3
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+    card_subtitle:
+      type: string
+      title: Card Sub-title
+    card_subtitle_tag:
+      type: string
+      title: Card Sub-title HTML tag
+      default: h3
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+    card_text:
+      type: string
+      title: Card text
+    card_text_tag:
+      type: string
+      title: Card text HTML tag
+      default: p
+      enum:
+        - p
+        - span
+        - div
+    card_link_text:
+      type: string
+      title: Card link text
+    card_link_url:
+      type: string
+      title: Card link url
+    card_image_src:
+      type: string
+      title: Card Image source url
+    card_image_alt:
+      type: string
+      title: Card Image alternate text
+    card_image_cap:
+      type: string
+      title: Image Caps
+      default: ''
+      enum:
+        - ''
+        - top
+        - bottom
+    card_image_overlays:
+      type: boolean
+      title: Card Image overlays
+      default: false
+    card_header:
+      type: string
+      title: Card Header
+    card_footer:
+      type: string
+      title: Card Footer
+    card_border:
+      type: boolean
+      title: Card Boarder
+      default: false
+    utility_classes:
+      type: array
+      title: Utility Classes 
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.

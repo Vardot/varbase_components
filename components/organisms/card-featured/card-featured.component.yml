@@ -1,108 +1,145 @@
 name: Featured Card 
 status: experimental
 description: Featured card component and pattern with media and content.
+group: Cards
 props:
   type: object
   properties:
     style_size:
       type: string
       title: Card style size
-      default: medium
+      default: ''
       enum:
+        - ''
         - xsmall
         - small
         - medium
         - large
         - xlarge
-    columns_sm_size:
-      type: string
-      title: columns (sm) size
-      enum:
-        - 02_10
-        - 10_02
-        - 03_09
-        - 09_03
-        - 04_08
-        - 06_06
-        - 12_12
-    columns_md_size:
-      type: string
-      title: columns (md) size
-      enum:
-        - 02_10
-        - 10_02
-        - 03_09
-        - 09_03
-        - 04_08
-        - 08_04
-        - 06_06
-        - 12_12
-    columns_lg_size:
-      type: string
-      title: columns (lg) size
-      enum:
-        - 02_10
-        - 10_02
-        - 03_09
-        - 09_03
-        - 04_08
-        - 08_04
-        - 06_06
-        - 12_12
-    columns_xl_size:
-      type: string
-      title: columns (xl) size
-      enum:
-        - 02_10
-        - 10_02
-        - 03_09
-        - 09_03
-        - 04_08
-        - 08_04
-        - 06_06
-        - 12_12
-    columns_xxl_size:
-      type: string
-      title: columns (xxl) size
-      enum:
-        - 02_10
-        - 10_02
-        - 03_09
-        - 09_03
-        - 04_08
-        - 08_04
-        - 06_06
-        - 12_12
-    heading_tag:
-      type: string
-      title: Heading HTML tag
-      enum:
-        - h1
-        - h2
-        - h3
-        - h4
-        - h5
-        - h6
+    card_border:
+      type: boolean
+      title: Card Boarder
+      default: true
     media_position:
       type: string
       title: Media position
+      default: ''
       enum:
+        - ''
         - start
         - end
-    heading:
+    columns_xs_size:
       type: string
-      title: Heading
-    body:
+      title: All Breakpoints
+      description: Size of two columns for all devices. Starting from Extra small and up
+      default: '06_06'
+      enum:
+        - ''
+        - '02_10'
+        - '10_02'
+        - '03_09'
+        - '09_03'
+        - '04_08'
+        - '08_04'
+        - '06_06'
+        - '12_12'
+    columns_sm_size:
       type: string
-      title: Body
-    link:
+      title: Small Breakpoint size (sm)
+      description: Size of two columns for Small devices (landscape phones, 576px and up)
+      default: ''
+      enum:
+        - ''
+        - '02_10'
+        - '10_02'
+        - '03_09'
+        - '09_03'
+        - '04_08'
+        - '08_04'
+        - '06_06'
+        - '12_12'
+    columns_md_size:
       type: string
-      title: Link
+      title: Medium Breakpoint size (md)
+      description: Size of two columns for Medium devices (tablets, 768px and up)
+      default: ''
+      enum:
+        - ''
+        - '02_10'
+        - '10_02'
+        - '03_09'
+        - '09_03'
+        - '04_08'
+        - '08_04'
+        - '06_06'
+        - '12_12'
+    columns_lg_size:
+      type: string
+      title: Large Breakpoint size (lg)
+      description: Size of two columns for Large devices (desktops, 992px and up
+      default: ''
+      enum:
+        - ''
+        - '02_10'
+        - '10_02'
+        - '03_09'
+        - '09_03'
+        - '04_08'
+        - '08_04'
+        - '06_06'
+        - '12_12'
+    columns_xl_size:
+      type: string
+      title: Extra large Breakpoint size (xl)
+      description: Size of two columns for X-Large devices (large desktops, 1200px and up)
+      default: ''
+      enum:
+        - ''
+        - '02_10'
+        - '10_02'
+        - '03_09'
+        - '09_03'
+        - '04_08'
+        - '08_04'
+        - '06_06'
+        - '12_12'
+    columns_xxl_size:
+      type: string
+      title: Extra extra large Breakpoint size (xxl)
+      description: Size of two columns for XX-Large devices (larger desktops, 1400px and up)
+      default: ''
+      enum:
+        - ''
+        - '02_10'
+        - '10_02'
+        - '03_09'
+        - '09_03'
+        - '04_08'
+        - '08_04'
+        - '06_06'
+        - '12_12'
     card_attributes:
+      type: Drupal\Core\Template\Attribute
+    content_attributes:
       type: Drupal\Core\Template\Attribute
     row_attributes:
       type: Drupal\Core\Template\Attribute
-    left_column_attributes:
+    start_column_attributes:
       type: Drupal\Core\Template\Attribute
-    right_column_attributes:
+    end_column_attributes:
       type: Drupal\Core\Template\Attribute
+    utility_classes:
+      type: array
+      title: Utility Classes 
+      description: Use to add extra Bootstrap utility classes or custom CSS classes over component.
+slots:
+  media:
+    title: Card Media
+    description: Media for the Card.
+    examples:
+      - "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>"
+  content:
+    title: Card Content
+    description: Content for the Card.
+    examples:
+      - "<h3 class=\"card-title\">Example title</h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"

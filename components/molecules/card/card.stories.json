@@ -1,0 +1,157 @@
+{
+  "title": "Varbase Components/Molecules/Card",
+  "description": "A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.",
+  "argTypes": {
+    "card_body": {
+      "name": "Card body",
+      "control": "text",
+      "defaultValue": "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    "card_body_tag": {
+      "name": "Card body HTML tag",
+      "control": "select",
+      "defaultValue": "div",
+      "options": {
+        "div": "div",
+        "section": "section"
+      }
+    },
+    "card_title": {
+      "name": "Card title",
+      "control": "text",
+      "defaultValue": "Card title"
+    },
+    "card_title_tag": {
+      "name": "Card title HTML tag",
+      "control": "select",
+      "defaultValue": "h3",
+      "options": {
+        "h1": "h1",
+        "h2": "h2",
+        "h3": "h3",
+        "h4": "h4",
+        "h5": "h5",
+        "h6": "h6"
+      }
+    },
+    "card_subtitle": {
+      "name": "Card Sub-title",
+      "control": "text",
+      "defaultValue": "Card subtitle"
+    },
+    "card_subtitle_tag": {
+      "name": "Card Sub-title HTML tag",
+      "control": "select",
+      "defaultValue": "h3",
+      "options": {
+        "h1": "h1",
+        "h2": "h2",
+        "h3": "h3",
+        "h4": "h4",
+        "h5": "h5",
+        "h6": "h6"
+      }
+    },
+    "card_text": {
+      "name": "Card text",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "card_text_tag": {
+      "name": "Card text HTML tag",
+      "control": "select",
+      "defaultValue": "p",
+      "options": {
+        "p": "p",
+        "span": "span",
+        "div": "div"
+      }
+    },
+    "card_link_text": {
+      "name": "Card link text",
+      "control": "text",
+      "defaultValue": "Card link"
+    },
+    "card_link_url": {
+      "name": "Card link url",
+      "control": "text",
+      "defaultValue": "https://getbootstrap.com/docs/5.0/components/card/"
+    },
+    "card_image_src": {
+      "name": "Card Image source url",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "card_image_alt": {
+      "name": "Card Image alternate text",
+      "control": "text",
+      "defaultValue": "Card Image alt"
+    },
+    "card_image_cap": {
+      "name": "Card Image Caps",
+      "control": "select",
+      "defaultValue": "",
+      "options": {
+        "' - none - '": "",
+        "top": "top",
+        "bottom": "bottom"
+      }
+    },
+    "card_image_overlays": {
+      "name": "Card Image overlays",
+      "control": "boolean",
+      "defaultValue": false
+    },
+    "card_header": {
+      "name": "Card Header",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "card_footer": {
+      "name": "Card Footer",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "card_border": {
+      "name": "Card Boarder",
+      "description": "Card Boarder",
+      "defaultValue": false,
+      "control": "boolean"
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.",
+      "control": "object",
+      "defaultValue": {
+        "0": "w-25"
+      }
+    }
+  },
+  "stories": [
+    {
+      "name": "Card",
+      "args": {
+        "card_body": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "card_body_tag": "div",
+        "card_title": "Card title",
+        "card_title_tag": "h4",
+        "card_subtitle": "Card subtitle",
+        "card_subtitle_tag": "h5",
+        "card_text": "",
+        "card_text_tag": "p",
+        "card_link_text": "Card link",
+        "card_link_url": "https://getbootstrap.com/docs/5.0/components/card/",
+        "card_image_src": "https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-02_1.jpg",
+        "card_image_alt": "Card Image alt",
+        "card_image_cap": "top",
+        "card_image_overlays": false,
+        "card_header": "",
+        "card_footer": "",
+        "card_border": false,
+        "utility_classes": {
+          "0": "w-50"
+        }
+      }
+    }
+  ]
+}

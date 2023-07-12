@@ -1,0 +1,158 @@
+card_featured:
+  use: 'varbase_components:card-featured'
+  label: Featured Card
+  description: Featured card component and pattern for media and content.
+  fields:
+    media:
+      type: media
+      label: Media
+      description: Media description.
+      preview: 'Card Media'
+    content:
+      type: 'textfield'
+      label: 'Content'
+      description: 'Content description.'
+      preview: 'Card Content'
+  settings:
+    style_size:
+      type: 'select'
+      label: Card style size
+      description: 'Select the size'
+      default_value: ''
+      options:
+        '': '- none -'
+        xsmall: 'X-small'
+        small: 'Small'
+        medium: 'Medium'
+        large: 'Large'
+        xlarge: 'X-large'
+    card_border:
+      type: 'boolean'
+      label: Card Boarder
+      default_value: 1
+    media_position:
+      type: 'select'
+      label: 'Media position'
+      default_value: ''
+      options:
+        '': '- none -'
+        start: 'Start'
+        end: 'End'
+    utility_classes:
+      type: 'textfield'
+      label: 'Utility Classes'
+      description: Use to add extra Bootstrap utility classes or custom CSS classes over component
+    additional_attributes:
+      type: 'group'
+      label: 'Additional attributes'
+      group_type: 'details'
+    card_attributes:
+      type: 'attributes'
+      label: 'Featured card attributes'
+      group: 'additional_attributes'
+    row_attributes:
+      type: 'attributes'
+      label: 'Row attributes'
+      group: 'additional_attributes'
+    start_column_attributes:
+      type: 'attributes'
+      label: 'Start column attributes'
+      group: 'additional_attributes'
+    end_column_attributes:
+      type: 'attributes'
+      label: 'End column attributes'
+      group: 'additional_attributes'
+    columns_xs_size:
+      type: 'select'
+      label: 'All Breakpoints'
+      description: 'Size of two columns for all devices. Starting from Extra small and up'
+      default_value: '06_06'
+      options:
+        '': '- none -'
+        '02_10': '16% - 83%'
+        '10_02': '83% - 16%'
+        '03_09': '25% - 75%'
+        '09_03': '75% - 25%'
+        '04_08': '33% - 66%'
+        '08_04': '66% - 33%'
+        '06_06': '50% - 50%'
+        '12_12': '100% - 100%'
+    columns_sm_size:
+      type: 'select'
+      label: 'Small Breakpoint size (sm)'
+      description: 'Size of two columns for Small devices (landscape phones, 576px and up'
+      default_value: ''
+      options:
+        '': '- none -'
+        '02_10': '16% - 83%'
+        '10_02': '83% - 16%'
+        '03_09': '25% - 75%'
+        '09_03': '75% - 25%'
+        '04_08': '33% - 66%'
+        '08_04': '66% - 33%'
+        '06_06': '50% - 50%'
+        '12_12': '100% - 100%'
+    columns_md_size:
+      type: 'select'
+      label: 'Medium Breakpoint size (md)'
+      description: 'Size of two columns for Medium devices (tablets, 768px and up)'
+      default_value: ''
+      options:
+        '': '- none -'
+        '02_10': '16% - 83%'
+        '10_02': '83% - 16%'
+        '03_09': '25% - 75%'
+        '09_03': '75% - 25%'
+        '04_08': '33% - 66%'
+        '08_04': '66% - 33%'
+        '06_06': '50% - 50%'
+        '12_12': '100% - 100%'
+    columns_lg_size:
+      type: 'select'
+      label: 'Large Breakpoint size (lg)'
+      description: 'Size of two columns for Large devices (desktops, 992px and up)'
+      default_value: ''
+      options:
+        '': '- none -'
+        '02_10': '16% - 83%'
+        '10_02': '83% - 16%'
+        '03_09': '25% - 75%'
+        '09_03': '75% - 25%'
+        '04_08': '33% - 66%'
+        '08_04': '66% - 33%'
+        '06_06': '50% - 50%'
+        '12_12': '100% - 100%'
+    columns_xl_size:
+      type: 'select'
+      label: 'Extra large Breakpoint size (xl)'
+      description: 'Size of two columns for X-Large devices (large desktops, 1200px and up)'
+      default_value: ''
+      options:
+        '': '- none -'
+        '02_10': '16% - 83%'
+        '10_02': '83% - 16%'
+        '03_09': '25% - 75%'
+        '09_03': '75% - 25%'
+        '04_08': '33% - 66%'
+        '08_04': '66% - 33%'
+        '06_06': '50% - 50%'
+        '12_12': '100% - 100%'
+    columns_xxl_size:
+      type: 'select'
+      label: 'Extra extra large Breakpoint size (xxl)'
+      description: 'Size of two columns for XX-Large devices (larger desktops, 1400px and up)'
+      default_value: ''
+      options:
+        '': '- none -'
+        '02_10': '16% - 83%'
+        '10_02': '83% - 16%'
+        '03_09': '25% - 75%'
+        '09_03': '75% - 25%'
+        '04_08': '33% - 66%'
+        '08_04': '66% - 33%'
+        '06_06': '50% - 50%'
+        '12_12': '100% - 100%'
+    utility_classes:
+      type: 'textfield'
+      label: 'Utility classes'
+      description: 'Use to add extra Bootstrap utility classes or custom CSS classes over component.'

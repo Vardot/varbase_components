@@ -20,22 +20,29 @@ card_hero:
     content_attributes:
       type: 'attributes'
       label: 'Content attributes'
-    card_classes:
+    utility_classes:
       type: 'textfield'
-      label: 'Card classes'
+      label: 'Utility classes'
+      description: 'Use to add extra Bootstrap utility classes or custom CSS classes over component.'
     horizontal_alignment:
       type: 'select'
       label: 'Horizontal alignment'
+      default_value: ''
       options:
+        '': '- none -'
         start: 'Start'
         center: 'Center'
         end: 'End'
-      default_value: 'center'
     vertical_alignment:
       type: 'select'
       label: 'Vertical alignment'
+      default_value: ''
       options:
+        '': '- none -'
         start: 'Top'
         center: 'Center'
         end: 'Bottom'
-      default_value: 'center'
+    utility_classes:
+      type: 'textfield'
+      label: 'Utility classes'
+      description: 'Use to add extra Bootstrap utility classes or custom CSS classes over component.'
