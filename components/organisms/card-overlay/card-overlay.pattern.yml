@@ -25,6 +25,10 @@ card_overlay:
         medium: 'Medium'
         large: 'Large'
         xlarge: 'X-large'
+    card_border:
+      type: 'boolean'
+      label: Card Boarder
+      default_value: 1
     horizontal_alignment:
       type: 'select'
       label: 'Horizontal alignment'
