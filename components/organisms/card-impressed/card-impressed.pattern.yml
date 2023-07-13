@@ -50,7 +50,7 @@ card_impressed:
       group: 'additional_attributes'
     card_attributes:
       type: 'attributes'
-      label: 'Impressed card attributes'
+      label: 'Card attributes'
       group: 'additional_attributes'
     content_attributes:
       type: 'attributes'

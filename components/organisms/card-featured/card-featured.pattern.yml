@@ -140,7 +140,7 @@ card_featured:
       group: 'additional_attributes'
     card_attributes:
       type: 'attributes'
-      label: 'Featured card attributes'
+      label: 'Card attributes'
       group: 'additional_attributes'
     content_attributes:
       type: 'attributes'
