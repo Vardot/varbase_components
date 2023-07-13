@@ -37,9 +37,10 @@ card_hero:
       label: 'Additional attributes'
       group_type: 'details'
     utility_classes:
-      type: 'textfield'
+      type: 'utility_classes'
       label: 'Utility classes'
-      description: 'Use to add extra Bootstrap utility classes or custom CSS classes over component.'
+      description: 'Use to add extra Bootstrap utility classes or custom CSS classes over component. E.g. w-75 mb-3'
+      default_value: { }
       group: 'additional_attributes'
     card_attributes:
       type: 'attributes'

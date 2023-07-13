@@ -7,6 +7,7 @@ props:
     label_display:
       type: boolean
       title: Label display
-      description: Display the label of the field. 
+      description: Display the label of the field.
+      default: true
     attributes:
       type: Drupal\Core\Template\Attribute
