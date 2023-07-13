@@ -38,13 +38,20 @@ card_impressed:
         top: 'Top'
         bottom: 'Bottom'
       default_value: 'top'
-    card_attributes:
-      type: 'attributes'
-      label: 'Impressed card attributes'
-    content_attributes:
-      type: 'attributes'
-      label: 'Content attributes'
+    additional_attributes:
+      type: 'group'
+      label: 'Additional attributes'
+      group_type: 'details'
     utility_classes:
       type: 'textfield'
       label: 'Utility classes'
       description: 'Use to add extra Bootstrap utility classes or custom CSS classes over component.'
+      group: 'additional_attributes'
+    card_attributes:
+      type: 'attributes'
+      label: 'Impressed card attributes'
+      group: 'additional_attributes'
+    content_attributes:
+      type: 'attributes'
+      label: 'Content attributes'
+      group: 'additional_attributes'

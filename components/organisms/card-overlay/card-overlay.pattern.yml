@@ -25,12 +25,6 @@ card_overlay:
         medium: 'Medium'
         large: 'Large'
         xlarge: 'X-large'
-    card_attributes:
-      type: 'attributes'
-      label: 'Card attributes'
-    content_attributes:
-      type: 'attributes'
-      label: 'Content attributes'
     horizontal_alignment:
       type: 'select'
       label: 'Horizontal alignment'
@@ -49,7 +43,20 @@ card_overlay:
         start: 'Top'
         center: 'Center'
         end: 'Bottom'
+    additional_attributes:
+      type: 'group'
+      label: 'Additional attributes'
+      group_type: 'details'
     utility_classes:
       type: 'textfield'
       label: 'Utility classes'
       description: 'Use to add extra Bootstrap utility classes or custom CSS classes over component.'
+      group: 'additional_attributes'
+    card_attributes:
+      type: 'attributes'
+      label: 'Card attributes'
+      group: 'additional_attributes'
+    content_attributes:
+      type: 'attributes'
+      label: 'Content attributes'
+      group: 'additional_attributes'

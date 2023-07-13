@@ -38,30 +38,6 @@ card_featured:
         '': '- none -'
         start: 'Start'
         end: 'End'
-    utility_classes:
-      type: 'textfield'
-      label: 'Utility Classes'
-      description: Use to add extra Bootstrap utility classes or custom CSS classes over component
-    additional_attributes:
-      type: 'group'
-      label: 'Additional attributes'
-      group_type: 'details'
-    card_attributes:
-      type: 'attributes'
-      label: 'Featured card attributes'
-      group: 'additional_attributes'
-    row_attributes:
-      type: 'attributes'
-      label: 'Row attributes'
-      group: 'additional_attributes'
-    start_column_attributes:
-      type: 'attributes'
-      label: 'Start column attributes'
-      group: 'additional_attributes'
-    end_column_attributes:
-      type: 'attributes'
-      label: 'End column attributes'
-      group: 'additional_attributes'
     columns_xs_size:
       type: 'select'
       label: 'All Breakpoints'
@@ -152,7 +128,28 @@ card_featured:
         '08_04': '66% - 33%'
         '06_06': '50% - 50%'
         '12_12': '100% - 100%'
+    additional_attributes:
+      type: 'group'
+      label: 'Additional attributes'
+      group_type: 'details'
     utility_classes:
       type: 'textfield'
       label: 'Utility classes'
       description: 'Use to add extra Bootstrap utility classes or custom CSS classes over component.'
+      group: 'additional_attributes'
+    card_attributes:
+      type: 'attributes'
+      label: 'Featured card attributes'
+      group: 'additional_attributes'
+    row_attributes:
+      type: 'attributes'
+      label: 'Row attributes'
+      group: 'additional_attributes'
+    start_column_attributes:
+      type: 'attributes'
+      label: 'Start column attributes'
+      group: 'additional_attributes'
+    end_column_attributes:
+      type: 'attributes'
+      label: 'End column attributes'
+      group: 'additional_attributes'

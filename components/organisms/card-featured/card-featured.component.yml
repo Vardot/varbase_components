@@ -118,6 +118,10 @@ props:
         - '08_04'
         - '06_06'
         - '12_12'
+    utility_classes:
+      type: array
+      title: Utility Classes 
+      description: Use to add extra Bootstrap utility classes or custom CSS classes over component.
     card_attributes:
       type: Drupal\Core\Template\Attribute
     content_attributes:
@@ -128,10 +132,6 @@ props:
       type: Drupal\Core\Template\Attribute
     end_column_attributes:
       type: Drupal\Core\Template\Attribute
-    utility_classes:
-      type: array
-      title: Utility Classes 
-      description: Use to add extra Bootstrap utility classes or custom CSS classes over component.
 slots:
   media:
     title: Card Media
