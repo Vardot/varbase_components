@@ -141,6 +141,10 @@ card_featured:
       type: 'attributes'
       label: 'Featured card attributes'
       group: 'additional_attributes'
+    content_attributes:
+      type: 'attributes'
+      label: 'Content attributes'
+      group: 'additional_attributes'
     row_attributes:
       type: 'attributes'
       label: 'Row attributes'

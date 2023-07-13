@@ -20,6 +20,10 @@ props:
       type: boolean
       title: Card Boarder
       default: true
+    utility_classes:
+      type: array
+      title: Utility Classes 
+      description: Use to add extra Bootstrap utility classes or custom CSS classes over component.
     card_attributes:
       type: Drupal\Core\Template\Attribute
     content_attributes:
