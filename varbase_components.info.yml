@@ -9,6 +9,7 @@ dependencies:
   - cl_block:cl_block
   - cl_selector_field:cl_selector_field
 install:
+  - sdc_display
   - ui_patterns
   - ui_patterns_layouts
   - ui_patterns_library

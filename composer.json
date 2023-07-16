@@ -40,6 +40,7 @@
     "drupal/cl_server": "~2.0",
     "drupal/cl_devel": "~2.0",
     "drupal/cl_generator": "~2.0",
+    "drupal/sdc_display": "1.x-dev",
     "drupal/ui_patterns": "2.0.x-dev",
     "drupal/ui_patterns_settings": "~2.0"
   },
