@@ -1,0 +1,104 @@
+.varbase-overlay-card .overlay-card-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.2rem;
+  z-index: 3;
+  display: flex;
+  align-self: flex-end;
+  color: #fff;
+  background: linear-gradient(to bottom, transparent 65%, #000 105%) repeat scroll 0 0;
+  background: -o-linear-gradient(to bottom, transparent 65%, #000 105%) repeat scroll 0 0;
+}
+
+[dir="ltr"] .varbase-overlay-card .overlay-card-content {
+  background: -moz-linear-gradient(to bottom, transparent 65%, #000 105%) repeat scroll 0 0;
+}
+
+[dir="rtl"] .varbase-overlay-card .overlay-card-content {
+  background: -moz-linear-gradient(to bottom, transparent 65%, #000 105%) repeat scroll 100% 0;
+}
+
+.varbase-overlay-card .overlay-card-content:hover, .varbase-overlay-card .overlay-card-content:focus, .varbase-overlay-card .overlay-card-content:active {
+  opacity: .9;
+}
+
+.varbase-overlay-card .overlay-card-content > .field {
+  display: flex;
+  align-self: flex-end;
+}
+
+.varbase-overlay-card.anchor-all h3.card-title {
+  position: static;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.varbase-overlay-card.anchor-all h3.card-title a {
+  color: #fff;
+  text-decoration: none;
+  position: static;
+}
+
+.varbase-overlay-card.anchor-all h3.card-title a::before {
+  position: absolute;
+  content: "";
+  display: block;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.varbase-overlay-card.anchor-all a {
+  z-index: 3;
+  position: relative;
+}
+
+.varbase-overlay-card.xlarge h3.card-title {
+  font-size: calc(1.525rem + 3.3vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-overlay-card.xlarge h3.card-title {
+    font-size: 4rem;
+  }
+}
+
+.varbase-overlay-card.xlarge .overlay-card-content {
+  padding: 1.8rem;
+}
+
+.varbase-overlay-card.large h3.card-title {
+  font-size: calc(1.305rem + .66vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-overlay-card.large h3.card-title {
+    font-size: 1.8rem;
+  }
+}
+
+.varbase-overlay-card.large .overlay-card-content {
+  padding: 1.8rem;
+}
+
+.varbase-overlay-card.medium h3.card-title {
+  font-size: calc(1.265rem + .18vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-overlay-card.medium h3.card-title {
+    font-size: 1.4rem;
+  }
+}
+
+.varbase-overlay-card.medium .overlay-card-content {
+  padding: 1.4rem;
+}
+

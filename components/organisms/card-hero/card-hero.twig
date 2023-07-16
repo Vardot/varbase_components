@@ -4,6 +4,9 @@
  * Template for a Hero Card component.
  *
  * Available config:
+ * - card_border: Card Boarder (true/false)
+ * - horizontal_alignment: Horizontal alignment (start, center, end)
+ * - vertical_alignment: Vertical alignment (start, center, end)
  * - card_attributes: Drupal attributes for featured card wrapper.
  * - content_attributes: Drupal attributes for card content.
  * - utility_classes: Use to add extra Bootstrap utility classes or custom CSS classes over component. E.g. w-75 mb-3
@@ -18,18 +21,24 @@
 {% set utility_classes = utility_classes ? utility_classes : [] %}
 
 {# Check if the Card has a boarder on not and set needed no border Bootstrap class #}
-{% set card_border = card_border == 1 ? [] : ['border-0'] %}
+{% set card_border = card_border ? [] : ['border-0'] %}
 
-{% set card_classes = [
-  'card',
-  'varbase-overlay-card'
-]|merge(card_border)|merge(utility_classes) %}
+{%
+  set card_classes = [
+    'card',
+    'varbase-hero-card',
+    'clearfix',
+  ]|merge(card_border)|merge(utility_classes)
+%}
 
-{% set content_classes = [
-  'card-img-overlay',
-  'd-flex',
-  'flex-column',
-]|merge(vertical_alignment)|merge(contnet_horizontal_alignment)|merge(text_horizontal_alignment) %}
+{%
+  set content_classes = [
+    'hero-card-content',
+    'card-img-overlay',
+    'd-flex',
+    'flex-column',
+  ]|merge(vertical_alignment)|merge(contnet_horizontal_alignment)|merge(text_horizontal_alignment)
+%}
 
 {% if not card_attributes %}
   {% set card_attributes = create_attribute() %}

@@ -1,0 +1,91 @@
+@import "../../defaults";   // Global component defaults.
+
+.varbase-featured-card {
+
+  .start-column,
+  .end-column {
+    padding-left: 0;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  h3.card-title {
+    margin-top: 0;
+  }
+
+  &.anchor-all {
+    position: static;
+
+    .start-column,
+    .end-column {
+      position: static;
+    }
+
+    h3.card-title {
+      position: static;
+
+      a {
+        position: static;
+
+        &::before {
+          position: absolute;
+          content: '';
+          display: block;
+          overflow: hidden;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;        
+          z-index: 1;
+        }
+      }
+    }
+
+    a {
+      z-index: 2;
+      position: relative;
+    }
+  }
+
+  &.border-0 {
+    .featured-card-content {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &.xlarge {
+    h3.card-title {
+      @include font-size($card-xlarge-title-font-size);
+    }
+  }
+
+  &.large {
+    h3.card-title {
+      @include font-size($card-large-title-font-size);
+    }
+  }
+
+  &.medium {
+    h3.card-title {
+      @include font-size($card-medium-title-font-size);
+    }
+  }
+
+  &.small {
+    h3.card-title {
+      @include font-size($card-small-title-font-size);
+    }
+  }
+
+  &.xsmall {
+    h3.card-title {
+      @include font-size($card-xsmall-title-font-size);
+    }
+  }
+
+}

@@ -24,6 +24,14 @@ card_text:
       type: 'switcher'
       label: Card Boarder
       default_value: true
+    equal_height:
+      type: 'switcher'
+      label: Equal height
+      default_value: true
+    anchor_all:
+      type: 'switcher'
+      label: Anchor All
+      default_value: false
     additional_attributes:
       type: 'group'
       label: 'Additional attributes'

@@ -1,0 +1,95 @@
+@import "../../defaults";   // Global component defaults.
+
+.varbase-overlay-card {
+  .overlay-card-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: $card-xsmall-title-font-size;
+    z-index: 3;
+    display: flex;
+    align-self: flex-end;
+    color: $overlay-card-content-color;
+
+    background: linear-gradient(to bottom, $overlay-card-content-stop1-color $overlay-card-content-stop1-location, $overlay-card-content-stop2-color $overlay-card-content-stop2-location) repeat scroll 0 0;
+    background: -webkit-linear-gradient(to bottom, $overlay-card-content-stop1-color $overlay-card-content-stop1-location, $overlay-card-content-stop2-color  $overlay-card-content-stop2-location) repeat scroll 0 0;
+    background: -o-linear-gradient(to bottom, $overlay-card-content-stop1-color $overlay-card-content-stop1-location, $overlay-card-content-stop2-color  $overlay-card-content-stop2-location) repeat scroll 0 0;
+    background: -moz-linear-gradient(to bottom, $overlay-card-content-stop1-color $overlay-card-content-stop1-location, $overlay-card-content-stop2-color  $overlay-card-content-stop2-location) repeat scroll 0 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: $overlay-card-content-hover-opacity;
+    }
+
+    >.field {
+      display: flex;
+      align-self: flex-end;
+    }
+  }
+  
+  &.anchor-all {
+    h3.card-title {
+      position: static;
+      margin: 0;
+      padding: 0;
+      color: $overlay-card-title-color;
+
+      a {
+        color: $overlay-card-title-color;
+        text-decoration: none;
+        position: static;
+
+        &::before {
+          position: absolute;
+          content: '';
+          display: block;
+          overflow: hidden;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;        
+          z-index: 2;
+        }
+      }
+    }
+
+    a {
+      z-index: 3;
+      position: relative;
+    }
+  }
+
+  &.xlarge {
+    h3.card-title {
+      @include font-size($overlay-card-xlarge-title-font-size);
+    }
+
+    .overlay-card-content {
+      padding: $card-large-title-font-size;
+    }
+  }
+
+  &.large {
+    h3.card-title {
+      @include font-size($card-large-title-font-size);
+    }
+
+    .overlay-card-content {
+      padding: $card-large-title-font-size;
+    }
+  }
+
+  &.medium {
+    h3.card-title {
+      @include font-size($card-medium-title-font-size);
+    } 
+
+    .overlay-card-content {
+      padding: $card-medium-title-font-size;
+    }
+  }
+
+}

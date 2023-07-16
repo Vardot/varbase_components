@@ -1,0 +1,80 @@
+.varbase-text-card.anchor-all .text-card-content {
+  position: static;
+}
+
+.varbase-text-card.anchor-all h3.card-title {
+  position: static;
+}
+
+.varbase-text-card.anchor-all h3.card-title a {
+  position: static;
+}
+
+.varbase-text-card.anchor-all h3.card-title a::before {
+  position: absolute;
+  content: "";
+  display: block;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.varbase-text-card.anchor-all a {
+  z-index: 2;
+  position: relative;
+}
+
+.varbase-text-card.border-0 .text-card-content {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.varbase-text-card.xlarge h3.card-title {
+  font-size: calc(1.325rem + .9vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-text-card.xlarge h3.card-title {
+    font-size: 2rem;
+  }
+}
+
+.varbase-text-card.large h3.card-title {
+  font-size: calc(1.305rem + .66vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-text-card.large h3.card-title {
+    font-size: 1.8rem;
+  }
+}
+
+.varbase-text-card.medium h3.card-title {
+  font-size: calc(1.265rem + .18vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-text-card.medium h3.card-title {
+    font-size: 1.4rem;
+  }
+}
+
+.varbase-text-card.small h3.card-title {
+  font-size: calc(1.265rem + .18vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-text-card.small h3.card-title {
+    font-size: 1.4rem;
+  }
+}
+
+.varbase-text-card.xsmall h3.card-title {
+  font-size: 1.2rem;
+}
+

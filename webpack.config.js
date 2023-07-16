@@ -22,6 +22,11 @@ module.exports = {
     'organisms/page-footer/page-footer': ['./components/organisms/page-footer/page-footer.scss'],
     'organisms/page-better-login/page-better-login': ['./components/organisms/page-better-login/page-better-login.scss'],
     'organisms/social-auth/social-auth': ['./components/organisms/social-auth/social-auth.scss'],
+    'organisms/card-featured/card-featured': ['./components/organisms/card-featured/card-featured.scss'],
+    'organisms/card-impressed/card-impressed': ['./components/organisms/card-impressed/card-impressed.scss'],
+    'organisms/card-overlay/card-overlay': ['./components/organisms/card-overlay/card-overlay.scss'],
+    'organisms/card-hero/card-hero': ['./components/organisms/card-hero/card-hero.scss'],
+    'organisms/card-text/card-text': ['./components/organisms/card-text/card-text.scss'],
     'pages/page/page': ['./components/pages/page/page.scss']
   },
   output: {

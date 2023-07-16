@@ -20,6 +20,14 @@ props:
       type: boolean
       title: Card Boarder
       default: true
+    equal_height:
+      type: boolean
+      title: Equal height
+      default: true
+    anchor_all:
+      type: boolean
+      title: Anchor All
+      default: false
     media_position:
       type: string
       title: Media position
@@ -46,4 +54,4 @@ slots:
     title: Card Content
     description: Content for the Card.
     examples:
-      - "<h3 class=\"card-title\">Example title</h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      - "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"

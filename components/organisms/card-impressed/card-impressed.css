@@ -1,0 +1,85 @@
+.varbase-impressed-card .impressed-card-content:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.varbase-impressed-card.anchor-all .impressed-card-content {
+  position: static;
+}
+
+.varbase-impressed-card.anchor-all h3.card-title {
+  position: static;
+}
+
+.varbase-impressed-card.anchor-all h3.card-title a {
+  position: static;
+}
+
+.varbase-impressed-card.anchor-all h3.card-title a::before {
+  position: absolute;
+  content: "";
+  display: block;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.varbase-impressed-card.anchor-all a {
+  z-index: 2;
+  position: relative;
+}
+
+.varbase-impressed-card.border-0 .impressed-card-content {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.varbase-impressed-card.xlarge h3.card-title {
+  font-size: calc(1.325rem + .9vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-impressed-card.xlarge h3.card-title {
+    font-size: 2rem;
+  }
+}
+
+.varbase-impressed-card.large h3.card-title {
+  font-size: calc(1.305rem + .66vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-impressed-card.large h3.card-title {
+    font-size: 1.8rem;
+  }
+}
+
+.varbase-impressed-card.medium h3.card-title {
+  font-size: calc(1.265rem + .18vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-impressed-card.medium h3.card-title {
+    font-size: 1.4rem;
+  }
+}
+
+.varbase-impressed-card.small h3.card-title {
+  font-size: calc(1.265rem + .18vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-impressed-card.small h3.card-title {
+    font-size: 1.4rem;
+  }
+}
+
+.varbase-impressed-card.xsmall h3.card-title {
+  font-size: 1.2rem;
+}
+

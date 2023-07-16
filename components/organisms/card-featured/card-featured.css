@@ -1,0 +1,104 @@
+[dir="ltr"] .varbase-featured-card .start-column,
+[dir="ltr"] .varbase-featured-card .end-column {
+  padding-left: 0;
+}
+
+[dir="rtl"] .varbase-featured-card .start-column,
+[dir="rtl"] .varbase-featured-card .end-column {
+  padding-right: 0;
+}
+
+.varbase-featured-card .start-column:first-child,
+.varbase-featured-card .end-column:first-child {
+  margin-top: 0;
+}
+
+.varbase-featured-card h3.card-title {
+  margin-top: 0;
+}
+
+.varbase-featured-card.anchor-all {
+  position: static;
+}
+
+.varbase-featured-card.anchor-all .start-column,
+.varbase-featured-card.anchor-all .end-column {
+  position: static;
+}
+
+.varbase-featured-card.anchor-all h3.card-title {
+  position: static;
+}
+
+.varbase-featured-card.anchor-all h3.card-title a {
+  position: static;
+}
+
+.varbase-featured-card.anchor-all h3.card-title a::before {
+  position: absolute;
+  content: "";
+  display: block;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.varbase-featured-card.anchor-all a {
+  z-index: 2;
+  position: relative;
+}
+
+.varbase-featured-card.border-0 .featured-card-content {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.varbase-featured-card.xlarge h3.card-title {
+  font-size: calc(1.325rem + .9vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-featured-card.xlarge h3.card-title {
+    font-size: 2rem;
+  }
+}
+
+.varbase-featured-card.large h3.card-title {
+  font-size: calc(1.305rem + .66vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-featured-card.large h3.card-title {
+    font-size: 1.8rem;
+  }
+}
+
+.varbase-featured-card.medium h3.card-title {
+  font-size: calc(1.265rem + .18vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-featured-card.medium h3.card-title {
+    font-size: 1.4rem;
+  }
+}
+
+.varbase-featured-card.small h3.card-title {
+  font-size: calc(1.265rem + .18vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-featured-card.small h3.card-title {
+    font-size: 1.4rem;
+  }
+}
+
+.varbase-featured-card.xsmall h3.card-title {
+  font-size: 1.2rem;
+}
+

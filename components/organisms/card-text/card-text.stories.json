@@ -22,6 +22,18 @@
       "defaultValue": true,
       "control": "boolean"
     },
+    "equal_height": {
+      "name": "Equal height",
+      "description": "Equal height",
+      "defaultValue": true,
+      "control": "boolean"
+    },
+    "anchor_all": {
+      "name": "Anchor All",
+      "description": "Anchor All",
+      "defaultValue": false,
+      "control": "boolean"
+    },
     "content": {
       "name": "Card content",
       "slots": "The content for card",
@@ -41,7 +53,9 @@
       "args": {
         "style_size": "",
         "card_border": true,
-        "content": "<h3 class=\"card-title\">Example title</h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>",
+        "equal_height": true,
+        "anchor_all": false,
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>",
         "utility_classes": {}
       }
     }

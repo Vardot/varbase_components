@@ -14,6 +14,10 @@ card_hero:
       description: 'Content description.'
       preview: 'Card Content'
   settings:
+    card_border:
+      type: 'switcher'
+      label: Card Boarder
+      default_value: true
     horizontal_alignment:
       type: 'select'
       label: 'Horizontal alignment'

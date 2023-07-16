@@ -29,6 +29,14 @@ card_overlay:
       type: 'switcher'
       label: Card Boarder
       default_value: true
+    equal_height:
+      type: 'switcher'
+      label: Equal height
+      default_value: true
+    anchor_all:
+      type: 'switcher'
+      label: Anchor All
+      default_value: false
     horizontal_alignment:
       type: 'select'
       label: 'Horizontal alignment'

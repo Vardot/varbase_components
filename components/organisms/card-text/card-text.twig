@@ -5,6 +5,9 @@
  *
  * Available config:
  * - style_size: Card style size.
+ * - card_border: Card Boarder (true/false)
+ * - equal_height: Equal height (true/false)
+ * - anchor_all: Anchor All (true/false)
  * - card_attributes: Drupal attributes for featured card wrapper.
  * - content_attributes: Drupal attributes for card content.
  * - media_position: start|end to determine if the row is reversed or not.
@@ -18,19 +21,27 @@
 {% set utility_classes = utility_classes ? utility_classes : [] %}
 
 {# Check if the Card has a boarder on not and set needed no border Bootstrap class #}
-{% set card_border = card_border == 1 ? [] : ['border-0'] %}
+{% set card_border = card_border ? [] : ['border-0'] %}
+
+{# Check if the Card is using the Equal height #}
+{% set equal_height = equal_height ? ['h-100'] : [] %}
+
+{# Check if the Card is using the Anchor All #}
+{% set anchor_all = anchor_all ? ['anchor-all'] : [] %}
 
 {%
   set card_classes = [
     'card',
-    'h-100',
     'varbase-text-card',
-  ]|merge(style_size)|merge(card_border)|merge(utility_classes)
+  ]|merge(style_size)|merge(card_border)|merge(equal_height)|merge(anchor_all)|merge(utility_classes)
 %}
 
-{% set content_classes = [
-  'card-body'
-] %}
+{%
+  set content_classes = [
+    'text-card-content',
+    'card-body'
+  ]
+%}
 
 {% if not card_attributes %}
   {% set card_attributes = create_attribute() %}

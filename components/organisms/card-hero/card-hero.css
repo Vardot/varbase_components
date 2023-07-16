@@ -1,0 +1,46 @@
+.varbase-hero-card .hero-card-content {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.2rem;
+  z-index: 3;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, .7);
+  color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .varbase-hero-card .hero-card-content {
+    width: 50%;
+    top: 20%;
+    bottom: 20%;
+    left: 5%;
+    right: 5%;
+  }
+}
+
+.varbase-hero-card .hero-card-content h3.card-title {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: calc(1.425rem + 2.1vw);
+}
+
+@media (min-width: 1200px) {
+  .varbase-hero-card .hero-card-content h3.card-title {
+    font-size: 3rem;
+  }
+}
+
+.varbase-hero-card .hero-card-content a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.varbase-hero-card .hero-card-content:hover, .varbase-hero-card .hero-card-content:focus, .varbase-hero-card .hero-card-content:active {
+  opacity: .7;
+}
+

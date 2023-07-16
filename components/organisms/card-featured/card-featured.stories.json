@@ -22,6 +22,18 @@
       "defaultValue": true,
       "control": "boolean"
     },
+    "equal_height": {
+      "name": "Equal height",
+      "description": "Equal height",
+      "defaultValue": true,
+      "control": "boolean"
+    },
+    "anchor_all": {
+      "name": "Anchor All",
+      "description": "Anchor All",
+      "defaultValue": false,
+      "control": "boolean"
+    }, 
     "media_position": {
       "name": "Media position",
       "description": "Media position",
@@ -160,6 +172,8 @@
       "args": {
         "style_size": "",
         "card_border": true,
+        "equal_height": true,
+        "anchor_all": false,
         "media_position": "",
         "columns_xs_size": "06_06",
         "columns_sm_size": "",
@@ -168,7 +182,7 @@
         "columns_xl_size": "",
         "columns_xxl_size": "",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\">Example title</h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>",
         "utility_classes": {}
       }
     }

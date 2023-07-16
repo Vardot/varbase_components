@@ -29,6 +29,14 @@ card_impressed:
       type: 'switcher'
       label: Card Boarder
       default_value: true
+    equal_height:
+      type: 'switcher'
+      label: Equal height
+      default_value: true
+    anchor_all:
+      type: 'switcher'
+      label: Anchor All
+      default_value: false
     media_position:
       type: 'select'
       label: 'Media position'
