@@ -45,7 +45,6 @@ card_impressed:
         '': '- none -'
         top: 'Top'
         bottom: 'Bottom'
-      default_value: 'top'
     additional_attributes:
       type: 'group'
       label: 'Additional attributes'
