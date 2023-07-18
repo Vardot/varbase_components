@@ -30,20 +30,24 @@
   align-self: flex-end;
 }
 
-.varbase-overlay-card.anchor-all h3.card-title {
+.varbase-overlay-card.anchor-all {
+  position: relative;
+}
+
+.varbase-overlay-card.anchor-all .card-title {
   position: static;
   margin: 0;
   padding: 0;
   color: #fff;
 }
 
-.varbase-overlay-card.anchor-all h3.card-title a {
+.varbase-overlay-card.anchor-all .card-title a {
   color: #fff;
   text-decoration: none;
   position: static;
 }
 
-.varbase-overlay-card.anchor-all h3.card-title a::before {
+.varbase-overlay-card.anchor-all .card-title a::before {
   position: absolute;
   content: "";
   display: block;
@@ -55,8 +59,26 @@
   z-index: 2;
 }
 
-.varbase-overlay-card.anchor-all a {
+.varbase-overlay-card.anchor-all a.card-link,
+.varbase-overlay-card.anchor-all div.card-link > a {
+  position: static;
+}
+
+.varbase-overlay-card.anchor-all a.card-link::before,
+.varbase-overlay-card.anchor-all div.card-link > a::before {
+  position: absolute;
+  content: "";
+  display: block;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   z-index: 3;
+}
+
+.varbase-overlay-card.anchor-all a {
+  z-index: 4;
   position: relative;
 }
 

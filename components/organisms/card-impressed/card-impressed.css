@@ -3,19 +3,23 @@
   padding-top: 0;
 }
 
+.varbase-impressed-card.anchor-all {
+  position: relative;
+}
+
 .varbase-impressed-card.anchor-all .impressed-card-content {
   position: static;
 }
 
-.varbase-impressed-card.anchor-all h3.card-title {
+.varbase-impressed-card.anchor-all .card-title {
   position: static;
 }
 
-.varbase-impressed-card.anchor-all h3.card-title a {
+.varbase-impressed-card.anchor-all .card-title a {
   position: static;
 }
 
-.varbase-impressed-card.anchor-all h3.card-title a::before {
+.varbase-impressed-card.anchor-all .card-title a::before {
   position: absolute;
   content: "";
   display: block;
@@ -27,8 +31,26 @@
   z-index: 1;
 }
 
-.varbase-impressed-card.anchor-all a {
+.varbase-impressed-card.anchor-all a.card-link,
+.varbase-impressed-card.anchor-all div.card-link > a {
+  position: static;
+}
+
+.varbase-impressed-card.anchor-all a.card-link::before,
+.varbase-impressed-card.anchor-all div.card-link > a::before {
+  position: absolute;
+  content: "";
+  display: block;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   z-index: 2;
+}
+
+.varbase-impressed-card.anchor-all a {
+  z-index: 3;
   position: relative;
 }
 

@@ -31,7 +31,9 @@
   }
   
   &.anchor-all {
-    h3.card-title {
+    position: relative;
+
+    .card-title {
       position: static;
       margin: 0;
       padding: 0;
@@ -56,8 +58,25 @@
       }
     }
 
+    a.card-link,
+    div.card-link > a {
+      position: static;
+
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        overflow: hidden;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;   
+        z-index: 3;
+      }
+    }
+
     a {
-      z-index: 3;
+      z-index: 4;
       position: relative;
     }
   }

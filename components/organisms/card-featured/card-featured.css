@@ -18,7 +18,7 @@
 }
 
 .varbase-featured-card.anchor-all {
-  position: static;
+  position: relative;
 }
 
 .varbase-featured-card.anchor-all .start-column,
@@ -26,15 +26,15 @@
   position: static;
 }
 
-.varbase-featured-card.anchor-all h3.card-title {
+.varbase-featured-card.anchor-all .card-title {
   position: static;
 }
 
-.varbase-featured-card.anchor-all h3.card-title a {
+.varbase-featured-card.anchor-all .card-title a {
   position: static;
 }
 
-.varbase-featured-card.anchor-all h3.card-title a::before {
+.varbase-featured-card.anchor-all .card-title a::before {
   position: absolute;
   content: "";
   display: block;
@@ -46,8 +46,26 @@
   z-index: 1;
 }
 
-.varbase-featured-card.anchor-all a {
+.varbase-featured-card.anchor-all a.card-link,
+.varbase-featured-card.anchor-all div.card-link > a {
+  position: static;
+}
+
+.varbase-featured-card.anchor-all a.card-link::before,
+.varbase-featured-card.anchor-all div.card-link > a::before {
+  position: absolute;
+  content: "";
+  display: block;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   z-index: 2;
+}
+
+.varbase-featured-card.anchor-all a {
+  z-index: 3;
   position: relative;
 }
 

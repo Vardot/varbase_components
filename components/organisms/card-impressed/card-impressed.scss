@@ -10,11 +10,13 @@
   }
 
   &.anchor-all {
+    position: relative;
+
     .impressed-card-content {
       position: static;
     }
 
-    h3.card-title {
+    .card-title {
       position: static;
 
       a {
@@ -34,8 +36,25 @@
       }
     }
 
+    a.card-link,
+    div.card-link > a {
+      position: static;
+
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        overflow: hidden;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;   
+        z-index: 2;
+      }
+    }
+
     a {
-      z-index: 2;
+      z-index: 3;
       position: relative;
     }
   }
