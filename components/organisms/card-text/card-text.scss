@@ -9,7 +9,7 @@
       position: static;
     }
 
-    h3.card-title {
+    .card-title {
       position: static;
 
       a {
@@ -62,31 +62,31 @@
   }
 
   &.xlarge {
-    h3.card-title {
+    .card-title {
       @include font-size($card-xlarge-title-font-size);
     }
   }
 
   &.large {
-    h3.card-title {
+    .card-title {
       @include font-size($card-large-title-font-size);
     }
   }
 
   &.medium {
-    h3.card-title {
+    .card-title {
       @include font-size($card-medium-title-font-size);
     }
   }
 
   &.small {
-    h3.card-title {
+    .card-title {
       @include font-size($card-small-title-font-size);
     }
   }
 
   &.xsmall {
-    h3.card-title {
+    .card-title {
       @include font-size($card-xsmall-title-font-size);
     }
   }

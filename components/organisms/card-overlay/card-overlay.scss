@@ -82,7 +82,7 @@
   }
 
   &.xlarge {
-    h3.card-title {
+    .card-title {
       @include font-size($overlay-card-xlarge-title-font-size);
     }
 
@@ -92,7 +92,7 @@
   }
 
   &.large {
-    h3.card-title {
+    .card-title {
       @include font-size($card-large-title-font-size);
     }
 
@@ -102,7 +102,7 @@
   }
 
   &.medium {
-    h3.card-title {
+    .card-title {
       @include font-size($card-medium-title-font-size);
     } 
 

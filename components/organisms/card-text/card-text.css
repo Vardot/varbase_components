@@ -6,15 +6,15 @@
   position: static;
 }
 
-.varbase-text-card.anchor-all h3.card-title {
+.varbase-text-card.anchor-all .card-title {
   position: static;
 }
 
-.varbase-text-card.anchor-all h3.card-title a {
+.varbase-text-card.anchor-all .card-title a {
   position: static;
 }
 
-.varbase-text-card.anchor-all h3.card-title a::before {
+.varbase-text-card.anchor-all .card-title a::before {
   position: absolute;
   content: "";
   display: block;
@@ -56,47 +56,47 @@
   padding-right: 0;
 }
 
-.varbase-text-card.xlarge h3.card-title {
+.varbase-text-card.xlarge .card-title {
   font-size: calc(1.325rem + .9vw);
 }
 
 @media (min-width: 1200px) {
-  .varbase-text-card.xlarge h3.card-title {
+  .varbase-text-card.xlarge .card-title {
     font-size: 2rem;
   }
 }
 
-.varbase-text-card.large h3.card-title {
+.varbase-text-card.large .card-title {
   font-size: calc(1.305rem + .66vw);
 }
 
 @media (min-width: 1200px) {
-  .varbase-text-card.large h3.card-title {
+  .varbase-text-card.large .card-title {
     font-size: 1.8rem;
   }
 }
 
-.varbase-text-card.medium h3.card-title {
+.varbase-text-card.medium .card-title {
   font-size: calc(1.265rem + .18vw);
 }
 
 @media (min-width: 1200px) {
-  .varbase-text-card.medium h3.card-title {
+  .varbase-text-card.medium .card-title {
     font-size: 1.4rem;
   }
 }
 
-.varbase-text-card.small h3.card-title {
+.varbase-text-card.small .card-title {
   font-size: calc(1.265rem + .18vw);
 }
 
 @media (min-width: 1200px) {
-  .varbase-text-card.small h3.card-title {
+  .varbase-text-card.small .card-title {
     font-size: 1.4rem;
   }
 }
 
-.varbase-text-card.xsmall h3.card-title {
+.varbase-text-card.xsmall .card-title {
   font-size: 1.2rem;
 }
 
