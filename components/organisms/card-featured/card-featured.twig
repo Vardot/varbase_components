@@ -19,16 +19,21 @@
  * - row_attributes: Drupal attributes for row.
  * - start_column_attributes: Drupal attributes for start column.
  * - end_column_attributes: Drupal attributes for end column.
- * - content_attributes: Drupal attributes for card content.
- * - utility_classes: Use to add extra Bootstrap utility classes or custom CSS classes over component. E.g. w-75 mb-3
- * - media: Card Media region.
- * - content: Card Content region.
+ * - media_attributes: Drupal attributes for card media slot reagion.
+ * - content_attributes: Drupal attributes for card content slot region.
+ * - utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)
+ * - media_utility_classes: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)
+ * - content_utility_classes: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
+ * - media: Card Media slot region.
+ * - content: Card Content slot region.
  */
 #}
 
 {% set style_size = style_size ? [style_size]: [] %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
 {% set media_position = media_position == 'end' ? ['flex-row-reverse'] : [] %}
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set media_utility_classes = media_utility_classes ? media_utility_classes : [] %}
+{% set content_utility_classes = content_utility_classes ? content_utility_classes : [] %}
 
 {# Mapping for the start column with selected column sizes on each brackpoint #}
 {% set start_column_xs_size = columns_xs_size ? ['col-' ~ columns_xs_size|split("_")[0]|trim('0', 'left')] : [] %}
@@ -82,10 +87,14 @@
 %}
 
 {%
+  set media_classes = []|merge(media_utility_classes)
+%}
+
+{%
   set content_classes = [
     'featured-card-content',
     'card-body',
-  ]
+  ]|merge(content_utility_classes)
 %}
 
 {% if not card_attributes %}
@@ -111,7 +120,16 @@
 <div{{ card_attributes.addClass(card_classes) }}>
   <div{{ row_attributes.addClass(row_classes) }}>
     <div{{ start_column_attributes.addClass(start_column_classes) }}>
-      {{ media }}
+      {% if media_classes is not empty %}
+        {% if not media_attributes %}
+          {% set media_attributes = create_attribute() %}
+        {% endif %}
+        <div{{ media_attributes.addClass(media_classes) }}>
+      {% endif %}
+        {{ media }}
+      {% if media_classes is not empty %}
+        </div>
+      {% endif %}
     </div>
     <div{{ end_column_attributes.addClass(end_column_classes) }}>
       <div{{ content_attributes.addClass(content_classes) }}>

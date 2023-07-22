@@ -129,8 +129,18 @@ props:
     utility_classes:
       type: array
       title: Utility Classes 
-      description: Use to add extra Bootstrap utility classes or custom CSS classes over component. E.g. w-75 mb-3
+      description: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card) 
+    media_utility_classes:
+      type: array
+      title: Media Utility Classes 
+      description: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)
+    content_utility_classes:
+      type: array
+      title: Content Utility Classes 
+      description: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
     card_attributes:
+      type: Drupal\Core\Template\Attribute
+    media_attributes:
       type: Drupal\Core\Template\Attribute
     content_attributes:
       type: Drupal\Core\Template\Attribute

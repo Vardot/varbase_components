@@ -9,16 +9,16 @@
  * - equal_height: Equal height (true/false)
  * - anchor_all: Anchor All (true/false)
  * - card_attributes: Drupal attributes for featured card wrapper.
- * - content_attributes: Drupal attributes for card content.
- * - media_position: start|end to determine if the row is reversed or not.
- * - utility_classes: Use to add extra Bootstrap utility classes or custom CSS classes over component. E.g. w-75 mb-3
- * - media: Card Media region.
- * - content: Card Content region.
+ * - content_attributes: Drupal attributes for card content slot region.
+ * - utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)
+ * - content_utility_classes: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
+ * - content: Card Content slot region.
  */
 #}
 
 {% set style_size = style_size ? [style_size]: [] %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set content_utility_classes = content_utility_classes ? content_utility_classes : [] %}
 
 {# Check if the Card has a boarder on not and set needed no border Bootstrap class #}
 {% set card_border = card_border ? [] : ['border-0'] %}
@@ -40,7 +40,7 @@
   set content_classes = [
     'text-card-content',
     'card-body'
-  ]
+  ]|merge(content_utility_classes)
 %}
 
 {% if not card_attributes %}
@@ -51,8 +51,8 @@
   {% set content_attributes = create_attribute() %}
 {% endif %}
 
-<div {{ card_attributes.addClass(card_classes) }}>
-  <div {{ content_attributes.addClass(content_classes) }}>
+<div{{ card_attributes.addClass(card_classes) }}>
+  <div{{ content_attributes.addClass(content_classes) }}>
     {{ content }}
   </div>
 </div>

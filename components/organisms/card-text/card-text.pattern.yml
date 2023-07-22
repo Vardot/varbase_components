@@ -32,21 +32,19 @@ card_text:
       type: 'switcher'
       label: Anchor All
       default_value: false
-    additional_attributes:
+    extra_utility_classes:
       type: 'group'
-      label: 'Additional attributes'
+      label: 'Utility classes'
+      description: '<b>Bootstrap ~5.3.0</b> has a big list of <b><a href="https://getbootstrap.com/docs/5.3/utilities/api/">Utility API</a></b> which brings out <b>Utility Classes</b> for all Bootstrap Components.'
       group_type: 'details'
     utility_classes:
       type: 'utility_classes'
-      label: 'Utility classes'
-      description: 'Use to add extra Bootstrap utility classes or custom CSS classes over component. E.g. w-75 mb-3'
+      label: 'Card Utility classes'
+      description: 'Use to add extra Bootstrap utility classes for the main Card wrapper.<br /> E.g. mb-3 shadow-lg <br /><b>( Do not add card)</b>'
       default_value: { }
-      group: 'additional_attributes'
-    card_attributes:
-      type: 'attributes'
-      label: 'Card attributes'
-      group: 'additional_attributes'
-    content_attributes:
-      type: 'attributes'
-      label: 'Content attributes'
-      group: 'additional_attributes'
+      group: 'extra_utility_classes'
+    content_utility_classes:
+      type: 'utility_classes'
+      label: 'Content region Utility classes'
+      description: 'Use to add extra Bootstrap utility classes for the Card Content region wrapper.<br /> E.g. w-75 mb-3 overflow-y-hidden <br /><b>( Do not add card-body)</b>'
+      group: 'extra_utility_classes'

@@ -9,17 +9,21 @@
  * - equal_height: Equal height (true/false)
  * - anchor_all: Anchor All (true/false)
  * - card_attributes: Drupal attributes for featured card wrapper.
- * - content_attributes: Drupal attributes for card content.
- * - media_position: start|end to determine if the row is reversed or not.
- * - utility_classes: Use to add extra Bootstrap utility classes or custom CSS classes over component. E.g. w-75 mb-3
- * - media: Card Media region.
- * - content: Card Content region.
+ * - media_attributes: Drupal attributes for card media slot reagion.
+ * - content_attributes: Drupal attributes for card content slot region.
+ * - utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)
+ * - media_utility_classes: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)
+ * - content_utility_classes: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
+ * - media: Card Media slot region.
+ * - content: Card Content slot region.
  */
 #}
 
 {% set style_size = style_size ? [style_size]: [] %}
 {% set media_position = media_position == 'bottom' ? ['flex-column-reverse'] : [] %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set media_utility_classes = media_utility_classes ? media_utility_classes : [] %}
+{% set content_utility_classes = content_utility_classes ? content_utility_classes : [] %}
 
 {# Check if the Card has a boarder on not and set needed no border Bootstrap class #}
 {% set card_border = card_border ? [] : ['border-0'] %}
@@ -38,10 +42,14 @@
 %}
 
 {%
+  set media_classes = []|merge(media_utility_classes)
+%}
+
+{%
   set content_classes = [
     'impressed-card-content',
     'card-body'
-  ]
+  ]|merge(content_utility_classes)
 %}
 
 {% if not card_attributes %}
@@ -53,7 +61,16 @@
 {% endif %}
 
 <div{{ card_attributes.addClass(card_classes) }}>
-  {{ media }}
+  {% if media_classes is not empty %}
+    {% if not media_attributes %}
+      {% set media_attributes = create_attribute() %}
+    {% endif %}
+    <div{{ media_attributes.addClass(media_classes) }}>
+  {% endif %}
+    {{ media }}
+  {% if media_classes is not empty %}
+    </div>
+  {% endif %}
   <div{{ content_attributes.addClass(content_classes) }}>
     {{ content }}
   </div>

@@ -158,12 +158,6 @@
       "slots": "The content for card",
       "control": "html",
       "defaultValue": "<h3>Example title</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
-    },
-    "utility_classes": {
-      "name": "Utility Classes",
-      "description": "Use to add extra Bootstrap utility classes or custom CSS classes over component. E.g. w-75 mb-3",
-      "control": "object",
-      "defaultValue": {}
     }
   },
   "stories": [
@@ -182,8 +176,7 @@
         "columns_xl_size": "",
         "columns_xxl_size": "",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>",
-        "utility_classes": {}
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
       }
     }
   ]
