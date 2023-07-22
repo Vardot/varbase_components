@@ -36,10 +36,6 @@ card_hero:
         start: 'Top'
         center: 'Center'
         end: 'Bottom'
-    additional_attributes:
-      type: 'group'
-      label: 'Additional attributes'
-      group_type: 'details'
     extra_utility_classes:
       type: 'group'
       label: 'Utility classes'
