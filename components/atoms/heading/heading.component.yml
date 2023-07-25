@@ -1,3 +1,4 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Heading 
 status: experimental
 description: "All HTML headings, `<h1>` through `<h6>`, are available."
