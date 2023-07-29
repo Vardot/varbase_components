@@ -9,6 +9,7 @@
  * - equal_height: Equal height (true/false)
  * - anchor_all: Anchor All (true/false)
  * - media_position: start|end to determine if the row is reversed or not.
+ * - gutters_between: Gutters Between - (large|small-start|small-end|no) to manage the guttering between the start and end columns.
  * - columns_xs_size: All Breakpoints - Size of two columns for all devices. Starting from Extra small and up.
  * - columns_sm_size: Small Breakpoint size (sm) - Size of two columns for Small devices (landscape phones, 576px and up)
  * - columns_md_size: Medium Breakpoint size (md) - Size of two columns for Medium devices (tablets, 768px and up)
@@ -52,7 +53,7 @@
 {% set end_column_xxl_size = columns_xxl_size ? ['col-xxl-' ~ columns_xxl_size|split("_")[1]|trim('0', 'left')] : [] %}
 
 {# Check if the Card has a boarder on not and set needed no border Bootstrap class #}
-{% set card_border = card_border ? [] : ['border-0'] %}
+{% set card_border = card_border ? ['bordered'] : ['border-0'] %}
 
 {# Check if the Card is using the Equal height #}
 {% set equal_height = equal_height ? ['h-100'] : [] %}
@@ -67,23 +68,21 @@
   ]|merge(style_size)|merge(card_border)|merge(equal_height)|merge(anchor_all)|merge(utility_classes)
 %}
 
+{% set row_gutters_between = gutters_between == 'no' ? ['gx-0'] : [] %}
 {%
   set row_classes = [
     'row',
-    'g-0',
-  ]|merge(media_position)
+  ]|merge(media_position|merge(row_gutters_between))
 %}
 
+{% set start_column_gutters_between = gutters_between == 'small-start' ? (media_position == [] ? ['pe-0'] : ['ps-0']) : [] %}
 {%
-  set start_column_classes = [
-    'start-column',
-  ]|merge(start_column_xs_size)|merge(start_column_sm_size)|merge(start_column_md_size)|merge(start_column_lg_size)|merge(start_column_xl_size)|merge(start_column_xxl_size)
+  set start_column_classes = []|merge(start_column_xs_size)|merge(start_column_sm_size)|merge(start_column_md_size)|merge(start_column_lg_size)|merge(start_column_xl_size)|merge(start_column_xxl_size)|merge(start_column_gutters_between)
 %}
 
+{% set end_column_gutters_between = gutters_between == 'small-end' ? (media_position == [] ? ['ps-0'] : ['pe-0']) : [] %}
 {%
-  set end_column_classes = [
-    'end-column',
-  ]|merge(end_column_xs_size)|merge(end_column_sm_size)|merge(end_column_md_size)|merge(end_column_lg_size)|merge(end_column_xl_size)|merge(end_column_xxl_size)
+  set end_column_classes = []|merge(end_column_xs_size)|merge(end_column_sm_size)|merge(end_column_md_size)|merge(end_column_lg_size)|merge(end_column_xl_size)|merge(end_column_xxl_size)|merge(end_column_gutters_between)
 %}
 
 {%

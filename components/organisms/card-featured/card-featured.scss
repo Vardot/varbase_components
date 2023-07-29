@@ -2,26 +2,12 @@
 
 .varbase-featured-card {
 
-  .start-column,
-  .end-column {
-    padding-left: 0;
-    
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
   .card-title {
     margin-top: 0;
   }
 
   &.anchor-all {
     position: relative;
-
-    .start-column,
-    .end-column {
-      position: static;
-    }
 
     .card-title {
       position: static;
@@ -68,10 +54,20 @@
 
   &.border-0 {
     .featured-card-content {
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-top: 0;
-      padding-bottom: 0;
+      padding: 0;
+    }
+  }
+
+  &.bordered {
+    .featured-card-content {
+      padding-left: 0;
+    }
+
+    .flex-row-reverse {
+      .featured-card-content {
+        padding-left: auto;
+        padding-right: 0;
+      }
     }
   }
 

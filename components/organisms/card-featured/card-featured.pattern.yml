@@ -46,6 +46,16 @@ card_featured:
         '': '- none -'
         start: 'Start'
         end: 'End'
+    gutters_between:
+      type: 'select'
+      label: 'Gutters Between'
+      description: 'Manage the guttering between the start and end columns.'
+      default_value: 'large'
+      options:
+        'large': 'Large'
+        'small-start': 'Small start'
+        'small-end': 'Small end'
+        'no': 'No Gutter'
     columns_xs_size:
       type: 'select'
       label: 'All Breakpoints'

@@ -37,6 +37,16 @@ props:
         - ''
         - start
         - end
+    gutters_between:
+      type: string
+      title: Gutters Between
+      description: Manage the guttering between the start and end columns.
+      default: large
+      enum:
+        - large
+        - small-start
+        - small-end
+        - no
     columns_xs_size:
       type: string
       title: All Breakpoints

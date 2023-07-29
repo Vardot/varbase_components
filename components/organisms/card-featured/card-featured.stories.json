@@ -45,6 +45,18 @@
         "End": "end"
       }
     },
+    "gutters_between": {
+      "name": "Gutters Between",
+      "description": "Manage the guttering between the start and end columns.",
+      "control": "select",
+      "defaultValue": "large",
+      "options": {
+        "Large": "large",
+        "'Small start'": "small-start",
+        "'Small end'": "small-end",
+        "No": "no"
+      }
+    },
     "columns_xs_size": {
       "name": "All Breakpoints",
       "description": "Size of two columns for all devices. Starting from Extra small and up",
