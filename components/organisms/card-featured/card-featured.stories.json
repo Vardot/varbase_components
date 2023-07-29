@@ -181,6 +181,7 @@
         "equal_height": true,
         "anchor_all": false,
         "media_position": "",
+        "gutters_between": "large",
         "columns_xs_size": "06_06",
         "columns_sm_size": "",
         "columns_md_size": "",
