@@ -178,6 +178,84 @@
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
         "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link\" hreflang=\"en\">Read more</a></div>"
       }
+    },
+    {
+      "name": "Large shadow - Top Media",
+      "args": {
+        "style_size": "medium",
+        "media_position": "top",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link\" hreflang=\"en\">Read more</a></div>",
+        "utility_classes": {"0": "shadow-lg"}
+      }
+    },
+    {
+      "name": "Large shadow - Buttom Media",
+      "args": {
+        "style_size": "medium",
+        "media_position": "bottom",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link\" hreflang=\"en\">Read more</a></div>",
+        "utility_classes": {"0": "shadow-lg"}
+      }
+    },
+    {
+      "name": "Light Backbround - Large shadow",
+      "args": {
+        "style_size": "medium",
+        "media_position": "top",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link\" hreflang=\"en\">Read more</a></div>",
+        "utility_classes": {"0": "bg-light", "2": "text-dark", "3": "shadow-lg"}
+      }
+    },
+    {
+      "name": "Light Backbround - Small shadow",
+      "args": {
+        "style_size": "medium",
+        "media_position": "top",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link\" hreflang=\"en\">Read more</a></div>",
+        "utility_classes": {"0": "bg-light", "2": "text-dark", "3": "shadow-sm"}
+      }
+    },
+    {
+      "name": "Dark Backbround - Top Media",
+      "args": {
+        "style_size": "medium",
+        "media_position": "top",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title text-light\"><a class=\"text-light\" href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link text-light\" hreflang=\"en\">Read more</a></div>",
+        "utility_classes": {"0": "bg-dark", "2": "text-light"}
+      }
+    },
+    {
+      "name": "Dark Backbround - Bottom Media",
+      "args": {
+        "style_size": "medium",
+        "media_position": "bottom",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title text-light\"><a class=\"text-light\" href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link text-light\" hreflang=\"en\">Read more</a></div>",
+        "utility_classes": {"0": "bg-dark", "2": "text-light"}
+      }
     }
   ]
 }
