@@ -13,11 +13,13 @@
  */
 #}
 
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
 {% set classes = [
   type ? type : 'spinner-border',
   color ? color : '',
   size ? type ~ '-' ~ size : '',
-]|merge(utility_classes ? utility_classes : []) %}
+]|merge(utility_classes) %}
 
 <{{ tag }} {{ attributes.addClass(classes) }} role="status">
   {% if content %}

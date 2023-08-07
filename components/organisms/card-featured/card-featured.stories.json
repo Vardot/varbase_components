@@ -126,7 +126,7 @@
       }
     },
     "columns_xl_size": {
-      "name": "Extra large Breakpoint size (xl)",
+      "name": "Extra Large Breakpoint size (xl)",
       "description": "Size of two columns for X-Large devices (large desktops, 1200px and up)",
       "control": "select",
       "defaultValue": "",
@@ -143,7 +143,7 @@
       }
     },
     "columns_xxl_size": {
-      "name": "Extra extra large Breakpoint size (xxl)",
+      "name": "Extra Extra Large Breakpoint size (xxl)",
       "description": "Size of two columns for XX-Large devices (larger desktops, 1400px and up)",
       "control": "select",
       "defaultValue": "",
@@ -162,25 +162,25 @@
     "media": {
       "name": "Card media",
       "description": "The content for card",
-      "control": "html",
-      "defaultValue": "<picture class=\"card-img img-fluid\"><img class=\"img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>"
+      "control": "text",
+      "defaultValue": ""
     },
     "content": {
       "name": "Card content",
       "slots": "The content for card",
-      "control": "html",
-      "defaultValue": "<h3>Example title</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      "control": "text",
+      "defaultValue": ""
     }
   },
   "stories": [
     {
-      "name": "Featured Card",
+      "name": "xlarge",
       "args": {
-        "style_size": "",
+        "style_size": "xlarge",
         "card_border": true,
         "equal_height": true,
         "anchor_all": false,
-        "media_position": "",
+        "media_position": "start",
         "gutters_between": "large",
         "columns_xs_size": "06_06",
         "columns_sm_size": "",
@@ -190,6 +190,139 @@
         "columns_xxl_size": "",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
         "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      }
+    },
+    {
+      "name": "large",
+      "args": {
+        "style_size": "large",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": false,
+        "media_position": "start",
+        "gutters_between": "large",
+        "columns_xs_size": "06_06",
+        "columns_sm_size": "",
+        "columns_md_size": "",
+        "columns_lg_size": "",
+        "columns_xl_size": "",
+        "columns_xxl_size": "",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      }
+    },
+    {
+      "name": "medium",
+      "args": {
+        "style_size": "medium",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": false,
+        "media_position": "start",
+        "gutters_between": "large",
+        "columns_xs_size": "06_06",
+        "columns_sm_size": "",
+        "columns_md_size": "",
+        "columns_lg_size": "",
+        "columns_xl_size": "",
+        "columns_xxl_size": "",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      }
+    },
+    {
+      "name": "small",
+      "args": {
+        "style_size": "small",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": false,
+        "media_position": "start",
+        "gutters_between": "small-end",
+        "columns_xs_size": "06_06",
+        "columns_sm_size": "",
+        "columns_md_size": "",
+        "columns_lg_size": "",
+        "columns_xl_size": "",
+        "columns_xxl_size": "",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo.</p>"
+      }
+    },
+    {
+      "name": "xsmall",
+      "args": {
+        "style_size": "xsmall",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": false,
+        "media_position": "start",
+        "gutters_between": "small-end",
+        "columns_xs_size": "06_06",
+        "columns_sm_size": "",
+        "columns_md_size": "",
+        "columns_lg_size": "",
+        "columns_xl_size": "",
+        "columns_xxl_size": "",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem ipsum dolor sit amet</a></h3>"
+      }
+    },
+    {
+      "name": "xlarge - with Read more",
+      "args": {
+        "style_size": "xlarge",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": false,
+        "media_position": "start",
+        "gutters_between": "large",
+        "columns_xs_size": "06_06",
+        "columns_sm_size": "",
+        "columns_md_size": "",
+        "columns_lg_size": "",
+        "columns_xl_size": "",
+        "columns_xxl_size": "",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link\" hreflang=\"en\">Read more</a></div>"
+      }
+    },
+    {
+      "name": "large - with Read more",
+      "args": {
+        "style_size": "large",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": false,
+        "media_position": "start",
+        "gutters_between": "large",
+        "columns_xs_size": "06_06",
+        "columns_sm_size": "",
+        "columns_md_size": "",
+        "columns_lg_size": "",
+        "columns_xl_size": "",
+        "columns_xxl_size": "",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link\" hreflang=\"en\">Read more</a></div>"
+      }
+    },
+    {
+      "name": "medium - with Read more",
+      "args": {
+        "style_size": "medium",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": false,
+        "media_position": "start",
+        "gutters_between": "large",
+        "columns_xs_size": "06_06",
+        "columns_sm_size": "",
+        "columns_md_size": "",
+        "columns_lg_size": "",
+        "columns_xl_size": "",
+        "columns_xxl_size": "",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link\" hreflang=\"en\">Read more</a></div>"
       }
     }
   ]

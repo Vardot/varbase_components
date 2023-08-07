@@ -19,11 +19,11 @@ was required to manually pair your choice of `.text-{color}`
 
 and `.bg-{color}` utilities for styling, which you still may use if you prefer.
 
-Recommended to use: `text-bg-primary` | `text-bg-secondary` | `text-bg-success` |
-              `text-bg-info` | `text-bg-warning` | `text-bg-danger` |
-              `text-bg-light` | `text-bg-dark`
+Recommended to use: `-primary` | `secondary` | `success` |
+              `info` | `warning` | `danger` |
+              `light` | `dark`
 
-Default value: `text-bg-secondary`
+Default value: `secondary`
 
 #### Content (`content`):
 The content of the badge.

@@ -8,7 +8,7 @@
       "defaultValue": "",
       "control": "select",
       "options": {
-        "empty": "",
+        "'- none -'": "",
         "Start": "start",
         "Center": "center",
         "End": "end"
@@ -30,12 +30,6 @@
       "name": "Rounded image",
       "defaultValue": false,
       "control": "boolean"
-    },
-    "utility_classes": {
-      "name": "Utility Classes",
-      "description": "Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.",
-      "control": "object",
-      "defaultValue": {}
     }
   },
   "stories": [
@@ -46,7 +40,6 @@
         "responsive": false,
         "thumbnails": false,
         "rounded": false,
-        "utility_classes": {},
         "attributes": {"src": "https://git.drupalcode.org/project/vartheme_bs5/-/raw/3.0.x/screenshot.png"}
       }
     }

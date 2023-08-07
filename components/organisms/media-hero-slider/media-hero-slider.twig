@@ -8,10 +8,26 @@
  * - utility_classes: An array of utility classes.
  * - controls: true | false
  * - indicators: true | false
+ * - slider_attributes: attributes for the media hero slider.
  */
 #}
 
-<div id="{{ id }}" class="carousel slide" data-bs-ride="true">
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
+{%
+  set classes = [
+    'carousel',
+    'slide'
+  ]|merge(utility_classes)
+%}
+
+{% if not slider_attributes %}
+  {% set slider_attributes = create_attribute() %}
+  {% set slider_attributes = attributes->setAttribute('id', id) %}
+  {% set slider_attributes = attributes->setAttribute('data-bs-ride', 'true') %}
+{% endif %}
+
+<div{{ slider_attributes.addClass(classes) }}>
 
   {% if indicators == true %}
   <div class="carousel-indicators">

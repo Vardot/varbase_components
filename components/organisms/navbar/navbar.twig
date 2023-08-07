@@ -22,14 +22,18 @@
 {% set placement = placement ?? '' %}
 {% set color = color ?? 'light' %}
 {% set navbar_expand = navbar_expand ?? 'lg' %}
-{% set classes = [
-  'navbar',
-  'navbar-expand-' ~ navbar_expand,
-  'justify-content-between',
-  'navbar-' ~ color,
-  'bg-' ~ color,
-  placement
-]|merge(utility_classes) %}
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
+{%
+  set classes = [
+    'navbar',
+    'navbar-expand-' ~ navbar_expand,
+    'justify-content-between',
+    'navbar-' ~ color,
+    'bg-' ~ color,
+    placement
+  ]|merge(utility_classes)
+%}
 
 <nav{{attributes.addClass(classes)}}>
   {% if container %}

@@ -16,8 +16,8 @@
  *          was required to manually pair your choice of .text-{color}
  *          and .bg-{color} utilities for styling,
  *				  which you still may use if you prefer.
- *          (text-bg-primary | text-bg-secondary | text-bg-success | text-bg-info |
- *          text-bg-warning | text-bg-danger | text-bg-light | text-bg-dark)
+ *          (primary | secondary | success | info |
+ *          warning | danger | light | dark)
  * - content: The content of the badge.
  * - url: The HTML tag will automatically be set to a if an anchor is added to the URL.
  * - utility_classes: This property contains an array of utility classes that can
@@ -25,17 +25,19 @@
  *                    classes to this component.
  */
 #}
-
-{% set color = color ?? 'text-bg-secondary' %}
-
-{% set classes = [
-  'badge',
-	color,
-]|merge(utility_classes ? utility_classes : []) %}
-
 {% set html_tag = html_tag ?? 'span' %}
+{% set color = color ? ['text-bg-' ~ color] : ['text-bg-secondary'] %}
+{% set utility_classes = utility_classes ? utility_classes : [] %}
 
-{% set attributes = create_attribute() %}
+{%
+  set classes = [
+    'badge',
+  ]|merge(color)|merge(utility_classes)
+%}
+
+{% if not attributes %}
+  {% set attributes = create_attribute() %}
+{% endif %}
 
 {% if url %}
 	{% set html_tag = 'a' %}

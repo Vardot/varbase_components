@@ -8,6 +8,8 @@
   * - classes: The main array of classes for row component.
 #}
 
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
 {% set classes = []|merge(utility_classes) %}
 
 {% if withRow %}

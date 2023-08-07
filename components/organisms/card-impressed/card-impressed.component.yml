@@ -9,6 +9,7 @@ props:
     style_size:
       type: string
       title: Card style size
+      description: Card style size (xsmall|small|medium|large|xlarge).
       default: ''
       enum:
         - ''
@@ -39,15 +40,18 @@ props:
         - bottom
     utility_classes:
       type: array
-      title: Utility Classes 
+      title: Utility Classes
+      default: []
       description: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card) 
     media_utility_classes:
       type: array
-      title: Media Utility Classes 
+      title: Media Utility Classes
+      default: []
       description: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)
     content_utility_classes:
       type: array
-      title: Content Utility Classes 
+      title: Content Utility Classes
+      default: []
       description: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
     card_attributes:
       type: Drupal\Core\Template\Attribute
@@ -57,10 +61,6 @@ slots:
   media:
     title: Card Media
     description: Media for the Card.
-    examples:
-      - "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>"
   content:
     title: Card Content
     description: Content for the Card.
-    examples:
-      - "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"

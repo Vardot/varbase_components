@@ -61,28 +61,145 @@
     "media": {
       "name": "Card media",
       "description": "The content for card",
-      "control": "html",
+      "control": "text",
       "defaultValue": ""
     },
     "content": {
       "name": "Card content",
       "slots": "The content for card",
-      "control": "html",
+      "control": "text",
       "defaultValue": ""
     }
   },
   "stories": [
     {
-      "name": "Overlay Card",
+      "name": "xlarge",
       "args": {
-        "style_size": "",
+        "style_size": "xlarge",
         "card_border": true,
         "equal_height": true,
-        "anchor_all": false,
+        "anchor_all": true,
         "horizontal_alignment": "",
         "vertical_alignment": "",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
         "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      }
+    },
+    {
+      "name": "large",
+      "args": {
+        "style_size": "large",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "horizontal_alignment": "",
+        "vertical_alignment": "",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      }
+    },
+    {
+      "name": "medium",
+      "args": {
+        "style_size": "medium",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "horizontal_alignment": "",
+        "vertical_alignment": "",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      }
+    },
+    {
+      "name": "small",
+      "args": {
+        "style_size": "small",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "horizontal_alignment": "",
+        "vertical_alignment": "",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      }
+    },
+    {
+      "name": "xsmall",
+      "args": {
+        "style_size": "xsmall",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "horizontal_alignment": "",
+        "vertical_alignment": "",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      }
+    },
+    {
+      "name": "xlarge - Centered",
+      "args": {
+        "style_size": "xlarge",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Amet Brevitas Dolore Jugis</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      }
+    },
+    {
+      "name": "large - Centered",
+      "args": {
+        "style_size": "large",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Amet Brevitas Dolore Jugis</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      }
+    },
+    {
+      "name": "medium - Centered",
+      "args": {
+        "style_size": "medium",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Amet Brevitas Dolore Jugis</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      }
+    },
+    {
+      "name": "small - Centered",
+      "args": {
+        "style_size": "small",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Amet Brevitas Dolore Jugis</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+      }
+    },
+    {
+      "name": "xsmall - Centered",
+      "args": {
+        "style_size": "xsmall",
+        "card_border": true,
+        "equal_height": true,
+        "anchor_all": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>",
+        "content": "<h3 class=\"card-title\"><a href=\"#\">Amet Brevitas Dolore Jugis</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
       }
     }
   ]

@@ -48,7 +48,7 @@
       "defaultValue": "",
       "control": "select",
       "options": {
-        "empty": "",
+        "'- none -'": "",
         "Small": "form-control-sm",
         "large": "form-control-lg"
       }

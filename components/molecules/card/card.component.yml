@@ -91,5 +91,6 @@ props:
       default: false
     utility_classes:
       type: array
+      default: []
       title: Utility Classes 
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.

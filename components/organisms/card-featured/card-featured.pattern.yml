@@ -118,7 +118,7 @@ card_featured:
         '12_12': '100% - 100%'
     columns_xl_size:
       type: 'select'
-      label: 'Extra large Breakpoint size (xl)'
+      label: 'Extra Large Breakpoint size (xl)'
       description: 'Size of two columns for X-Large devices (large desktops, 1200px and up)'
       default_value: ''
       options:
@@ -133,7 +133,7 @@ card_featured:
         '12_12': '100% - 100%'
     columns_xxl_size:
       type: 'select'
-      label: 'Extra extra large Breakpoint size (xxl)'
+      label: 'Extra Extra Large Breakpoint size (xxl)'
       description: 'Size of two columns for XX-Large devices (larger desktops, 1400px and up)'
       default_value: ''
       options:

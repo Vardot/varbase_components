@@ -8,7 +8,7 @@
       "defaultValue": "",
       "control": "select",
       "options": {
-        "empty": "",
+        "'- none -'": "",
         "Small": "btn-sm",
         "Large": "btn-lg"
       }
@@ -18,21 +18,21 @@
       "description": "Disabled button",
       "defaultValue": false,
       "control": "boolean"
-    },
-    "utility_classes": {
-      "name": "Utility Classes",
-      "description": "Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.",
-      "control": "object",
-      "defaultValue": {}
     }
   },
   "stories": [
     {
-      "name": "Close Button",
+      "name": "Small",
       "args": {
-        "size": "",
-        "disabled": false,
-        "utility_classes": {}
+        "size": "btn-sm",
+        "disabled": false
+      }
+    },
+    {
+      "name": "Large",
+      "args": {
+        "size": "btn-lg",
+        "disabled": false
       }
     }
   ]

@@ -21,19 +21,20 @@ props:
       type: string
       title: Background and Text Color
       description: Set a background-color with contrasting foreground color with our .text-bg-{color} helpers. Previously it was required to manually pair your choice of .text-{color} and .bg-{color} utilities for styling, which you still may use if you prefer.
-      default: text-bg-secondary
+      default: secondary
       enum:
-        - text-bg-primary
-        - text-bg-secondary
-        - text-bg-success
-        - text-bg-info
-        - text-bg-warning
-        - text-bg-danger
-        - text-bg-light
-        - text-bg-dark
+        - primary
+        - secondary
+        - success
+        - info
+        - warning
+        - danger
+        - light
+        - dark
     utility_classes:
       type: array
-      title: Utility Classes 
+      title: Utility Classes
+      default: []
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
     attributes:
       type: Drupal\Core\Template\Attribute

@@ -7,8 +7,18 @@
  * - utility_classes: An array of utility classes.
  */
 #}
+
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
+{% set classes = []|merge(utility_classes) %}
+
+{% if not attributes %}
+  {% set attributes = create_attribute() %}
+  {% set attributes = attributes.setAttribute('aria-label', 'breadcrumb' ) %}
+{% endif %}
+
 {% if breadcrumb %}
-  <nav aria-label="breadcrumb" class="{{ utility_classes|join(' ') }}">
+  <nav{{ attributes.addClass(classes) }}>
     <ol class="breadcrumb bg-light py-2 px-3 my-2">
       {% for item in breadcrumb %}
         <li class="breadcrumb-item {{ not item.url ? 'active' }}">

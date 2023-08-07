@@ -20,7 +20,8 @@ props:
       title: Heading Text
     utility_classes:
       type: array
-      title: Utility Classes 
+      title: Utility Classes
+      default: [] 
       description: Use to add extra Bootstrap utility classes or custom CSS classes over component. E.g. w-75 mb-3 
     attributes:
       type: Drupal\Core\Template\Attribute

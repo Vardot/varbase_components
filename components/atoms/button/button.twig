@@ -14,6 +14,8 @@
  */
 #}
 
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
 {% set button_color = '' %}
 
 {% if outline == true %}
@@ -25,12 +27,14 @@
 {% set size = size ? size : '' %}
 {% set disabled = disabled ? 'disabled' : '' %}
 
-{% set classes = [
-  'btn',
-  button_color,
-  size,
-  disabled,
-]|merge(utility_classes) %}
+{%
+  set classes = [
+    'btn',
+    button_color,
+    size,
+    disabled,
+  ]|merge(utility_classes)
+%}
 
 <button {{ attributes.addClass(classes) }}>
   {% block content %}

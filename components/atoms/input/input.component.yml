@@ -55,7 +55,8 @@ props:
       description: The input placeholder attribute specifies a short hint that describes the expected value of an input field (a sample value or a short description of the expected format).
     utility_classes:
       type: array
-      title: Utility Classes 
+      title: Utility Classes
+      default: []
       description: Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
     attributes:
       type: Drupal\Core\Template\Attribute

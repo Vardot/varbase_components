@@ -16,17 +16,17 @@
     "color": {
       "name": "Background and Text Color",
       "description": "Set a background-color with contrasting foreground color with our .text-bg-{color} helpers. Previously it was required to manually pair your choice of .text-{color} and .bg-{color} utilities for styling, which you still may use if you prefer.",
-      "defaultValue": "text-bg-secondary",
+      "defaultValue": "secondary",
       "control": "select",
       "options": {
-        "Primary": "text-bg-primary",
-        "Secondary": "text-bg-secondary",
-        "Success": "text-bg-success",
-        "Info": "text-bg-info",
-        "Warning": "text-bg-warning",
-        "Danger": "text-bg-danger",
-        "Light": "text-bg-light",
-        "Dark": "text-bg-dark"
+        "Primary": "primary",
+        "Secondary": "secondary",
+        "Success": "success",
+        "Info": "info",
+        "Warning": "warning",
+        "Danger": "danger",
+        "Light": "light",
+        "Dark": "dark"
       }
     },
     "content": {
@@ -40,24 +40,79 @@
       "description": "URL link for Badge when the HTML tag is an anchor link.",
       "defaultValue": "",
       "control": "text"
-    },
-    "utility_classes": {
-      "name": "Utility Classes",
-      "description": "Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.",
-      "control": "object",
-      "defaultValue": {}
     }
   },
   "stories": [
     {
-      "name": "Badge",
+      "name": "Primary",
       "args": {
         "html_tag": "span",
-        "color": "text-bg-primary",
+        "color": "primary",
         "content": "Badge",
-        "url": "",
-        "utility_classes": {},
-        "attributes": {}
+        "url": ""
+      }
+    },
+    {
+      "name": "Secondary",
+      "args": {
+        "html_tag": "span",
+        "color": "secondary",
+        "content": "Badge",
+        "url": ""
+      }
+    },
+    {
+      "name": "Success",
+      "args": {
+        "html_tag": "span",
+        "color": "success",
+        "content": "Badge",
+        "url": ""
+      }
+    },
+    {
+      "name": "Info",
+      "args": {
+        "html_tag": "span",
+        "color": "info",
+        "content": "Badge",
+        "url": ""
+      }
+    },
+    {
+      "name": "Warning",
+      "args": {
+        "html_tag": "span",
+        "color": "warning",
+        "content": "Badge",
+        "url": ""
+      }
+    },
+    {
+      "name": "Danger",
+      "args": {
+        "html_tag": "span",
+        "color": "danger",
+        "content": "Badge",
+        "url": ""
+      }
+    },
+    {
+      "name": "Light",
+      "args": {
+        "html_tag": "span",
+        "color": "light",
+        "content": "Badge",
+        "url": ""
+      }
+    },
+    {
+      "name": "Dark",
+      "args": {
+        "html_tag": "span",
+        "color": "dark",
+        "content": "Badge",
+        "url": ""
       }
     }
   ]

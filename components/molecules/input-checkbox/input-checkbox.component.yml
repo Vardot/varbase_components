@@ -7,7 +7,8 @@ props:
   properties:
     utility_classes:
       type: array
-      title: Utility Classes 
+      title: Utility Classes
+      default: [] 
       description: Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
     children:
       type: string

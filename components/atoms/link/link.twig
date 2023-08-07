@@ -12,6 +12,8 @@
  */
 #}
 
-{% set link_classes = []|merge(utility_classes ?? [])|merge(options["attributes"]["class"] ?? []) %}
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
+{% set link_classes = []|merge(utility_classes)|merge(options["attributes"]["class"] ?? []) %}
 
 <a href="{{ url }}" {{ attributes.addClass(link_classes) }}>{{ title }}</a>

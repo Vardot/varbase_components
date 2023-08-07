@@ -12,9 +12,11 @@
 {% set utility_classes = utility_classes ? utility_classes : [] %}
 
 {% block table %}
-  {% set classes = [
-    'table',
-  ]|merge(utility_classes) %}
+  {%
+    set classes = [
+      'table',
+    ]|merge(utility_classes)
+  %}
 
   <table{{ attributes.addClass(classes) }}>
     {% if caption %}

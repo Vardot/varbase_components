@@ -41,7 +41,7 @@
       "defaultValue": "",
       "control": "select",
       "options": {
-        "empty": "",
+        "'- none -'": "",
         "Small": "btn-sm",
         "Large": "btn-lg"
       }
@@ -57,25 +57,183 @@
       "description": "The content for the button",
       "control": "text",
       "defaultValue": "Button"
-    },
-    "utility_classes": {
-      "name": "Utility Classes",
-      "description": "Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.",
-      "control": "object",
-      "defaultValue": {}
     }
   },
   "stories": [
     {
-      "name": "Button",
+      "name": "Primary",
       "args": {
         "html_tag": "button",
         "color": "primary",
         "outline": false,
         "size": "",
         "disabled": false,
-        "content": "Button",
-        "utility_classes": {}
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Secondary",
+      "args": {
+        "html_tag": "button",
+        "color": "secondary",
+        "outline": false,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Success",
+      "args": {
+        "html_tag": "button",
+        "color": "success",
+        "outline": false,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Info",
+      "args": {
+        "html_tag": "button",
+        "color": "info",
+        "outline": false,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Warning",
+      "args": {
+        "html_tag": "button",
+        "color": "warning",
+        "outline": false,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Danger",
+      "args": {
+        "html_tag": "button",
+        "color": "danger",
+        "outline": false,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Light",
+      "args": {
+        "html_tag": "button",
+        "color": "light",
+        "outline": false,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Dark",
+      "args": {
+        "html_tag": "button",
+        "color": "dark",
+        "outline": false,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Outline - Primary",
+      "args": {
+        "html_tag": "button",
+        "color": "primary",
+        "outline": true,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Outline - Secondary",
+      "args": {
+        "html_tag": "button",
+        "color": "secondary",
+        "outline": true,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Outline - Success",
+      "args": {
+        "html_tag": "button",
+        "color": "success",
+        "outline": true,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Outline - Info",
+      "args": {
+        "html_tag": "button",
+        "color": "info",
+        "outline": true,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Outline - Warning",
+      "args": {
+        "html_tag": "button",
+        "color": "warning",
+        "outline": true,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Outline - Danger",
+      "args": {
+        "html_tag": "button",
+        "color": "danger",
+        "outline": true,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Outline - Light",
+      "args": {
+        "html_tag": "button",
+        "color": "light",
+        "outline": true,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
+      }
+    },
+    {
+      "name": "Outline - Dark",
+      "args": {
+        "html_tag": "button",
+        "color": "dark",
+        "outline": true,
+        "size": "",
+        "disabled": false,
+        "content": "Button"
       }
     }
   ]
