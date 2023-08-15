@@ -7,6 +7,16 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 https://getbootstrap.com/docs/5.3/content/typography/#headings
 https://getbootstrap.com/docs/5.3/content/typography/#display-headings
 
+## Properties:
+
+* `html_tag` : The HTML tag to use for the header.
+             Defaults to h1 (h1 | h2 | h3 | h4 | h5 | h6)
+* `display`: When you need a heading to stand out, consider using a display
+              `heading—a` larger, slightly more opinionated heading style.
+* `attributes`: Attributes array.
+* `utility_classe`: This property contains an array of utility classes that can
+                    be used to add extra Bootstrap utility classes or custom
+                    classes to this component.
 
 #### HTML Tag (`html_tag`)
 Heading HTML tag (h1, h2, h3, h4, h5, h6)
@@ -20,6 +30,9 @@ https://getbootstrap.com/docs/5.3/content/typography/#display-headings
 #### Utility Classes (`utility_classes`):
 This property contains an array of utility classes that can be used to
 add extra Bootstrap utility classes or custom classes to this component.
+
+## Slots:
+* `content`: Content text for the heading.
 
 ## Examples
 

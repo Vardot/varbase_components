@@ -30,10 +30,6 @@ props:
         - display-4
         - display-5
         - display-6
-    content:
-      type: string
-      title: Content
-      description: Content text for the heading.
     utility_classes:
       type: array
       title: Utility Classes 
@@ -41,3 +37,8 @@ props:
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
     attributes:
       type: Drupal\Core\Template\Attribute
+slots:
+  content:
+    type: string
+    title: Content
+    description: Content text for the heading.
