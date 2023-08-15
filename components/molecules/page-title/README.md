@@ -29,7 +29,7 @@ Used in the `page-title.html.twig` default theme implementation for a page title
 
 **Example #2:** Have a Bootstrap display class with the page title.
 ```
-  {% include 'c:page-title' with {
+  {% include 'varbase_components:page-title' with {
       display: 'display-1'
     }
   %}

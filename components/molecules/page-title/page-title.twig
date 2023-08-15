@@ -19,11 +19,14 @@
  *   displayed after the main title tag that appears in the template.
  */
 #}
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set display = display ? display : '' %}
+
 {%
   set classes = [
     'title',
     'page-title',
-  ]|merge(utility_classes ? utility_classes : [])
+  ]|merge(utility_classes)
 %}
 
 {{ title_prefix }}
@@ -31,6 +34,7 @@
   {% include 'varbase_components:heading' with {
       html_tag: 'h1',
       content: title,
+      display: display,
       attributes: title_attributes,
       utility_classes: classes
     } only
