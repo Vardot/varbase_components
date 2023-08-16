@@ -4,14 +4,19 @@
   "argTypes": {
     "html_tag": {
       "name": "HTML Tag",
-      "description": "The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).",
-      "defaultValue": "span",
+      "description": "The HTML tag to use for the button (button | a). Defaults to `button`.",
       "control": "select",
+      "defaultValue": "button",
       "options": {
-        "button": "button",
-        "input": "input",
-        "a": "a"
+        "'Button element'": "button",
+        "'Anchor button'": "a"
       }
+    },
+    "link": {
+      "name": "Link",
+      "description": "Optional and only when having HTML tag as anchor link button.",
+      "control": "text",
+      "defaultValue": ""
     },
     "color": {
       "name": "Color",
@@ -37,7 +42,7 @@
     },
     "size": {
       "name": "Size",
-      "description": "Bootstrap button size class",
+      "description": "Bootstrap button size",
       "defaultValue": "",
       "control": "select",
       "options": {
@@ -64,6 +69,7 @@
       "name": "Primary",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "primary",
         "outline": false,
         "size": "",
@@ -75,6 +81,7 @@
       "name": "Secondary",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "secondary",
         "outline": false,
         "size": "",
@@ -86,6 +93,7 @@
       "name": "Success",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "success",
         "outline": false,
         "size": "",
@@ -97,6 +105,7 @@
       "name": "Info",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "info",
         "outline": false,
         "size": "",
@@ -108,6 +117,7 @@
       "name": "Warning",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "warning",
         "outline": false,
         "size": "",
@@ -119,6 +129,7 @@
       "name": "Danger",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "danger",
         "outline": false,
         "size": "",
@@ -130,6 +141,7 @@
       "name": "Light",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "light",
         "outline": false,
         "size": "",
@@ -141,6 +153,7 @@
       "name": "Dark",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "dark",
         "outline": false,
         "size": "",
@@ -152,6 +165,7 @@
       "name": "Outline - Primary",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "primary",
         "outline": true,
         "size": "",
@@ -163,6 +177,7 @@
       "name": "Outline - Secondary",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "secondary",
         "outline": true,
         "size": "",
@@ -174,6 +189,7 @@
       "name": "Outline - Success",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "success",
         "outline": true,
         "size": "",
@@ -185,6 +201,7 @@
       "name": "Outline - Info",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "info",
         "outline": true,
         "size": "",
@@ -196,6 +213,7 @@
       "name": "Outline - Warning",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "warning",
         "outline": true,
         "size": "",
@@ -207,6 +225,7 @@
       "name": "Outline - Danger",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "danger",
         "outline": true,
         "size": "",
@@ -218,6 +237,7 @@
       "name": "Outline - Light",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "light",
         "outline": true,
         "size": "",
@@ -229,6 +249,7 @@
       "name": "Outline - Dark",
       "args": {
         "html_tag": "button",
+        "link": "",
         "color": "dark",
         "outline": true,
         "size": "",

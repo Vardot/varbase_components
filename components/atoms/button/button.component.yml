@@ -7,12 +7,15 @@ props:
   properties:
     html_tag:
       type: string
-      title: The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
+      title: The HTML tag to use for the button (button | a). Defaults to `button`.
       default: button
       enum:
         - button
-        - input
         - a
+    link:
+      type: string
+      title: Link
+      description: Optional and only when having HTML tag as anchor.
     color:
       type: string
       title: Color
@@ -37,7 +40,7 @@ props:
     size:
       type: string
       title: Size
-      description: Bootstrap button size class
+      description: Bootstrap button size
       default: ''
       enum:
         - ''
@@ -65,3 +68,5 @@ slots:
       - Press
       - Submit now
       - Save
+      - Login
+      - Read more
