@@ -1,19 +1,51 @@
 {#
 /**
  * @file
- * Template for a Link component.
+ * Template for the Link with Bootstrap Link helpers and utility classes
  *
- * Available config:
+ * Available properties:
+ * - url: URL Link
+ * - color: Bootstrap includes several predefined button styles, each serving its own
+ *          semantic purpose, with a few extras thrown in for more control.
+ *          (primary|secondary|success|danger|warning|info|light|dark|body-emphasis)
+ * - opacity: Change the alpha opacity of the link rgba() color value with utilities.
+ *            Please be aware that changes to a color’s opacity can lead to links with
+ *            insufficient contrast.
+ *            (10|25|50|75|100)
+ * - underline_color: Change the underline’s color independent of the link text color.
+ *                    (primary|secondary|success|danger|warning|info|light|dark)
+ * - underline_offset: Change the underline’s distance from your text. Offset is set in em
+ *                     units to automatically scale with the element’s current font-size.
+ *                     (1|2|3)
+ * - underline_opacity: Change the underline’s opacity. Requires adding .link-underline to
+ *                      first set an rgba() color we use to then modify the alpha opacity.
+ *                      (0|10|25|50|75|100)
+ * - utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes
+ *                    or custom CSS classes over to this component.
+ *
+ * Available attributes:
  * - attributes: Drupal attributes for link.
- * - url: Link href value.
- * - title: Link title.
- * - options["attributes"]["class"]: list of additional classes.
- * - utility_classes: An array of aditional classes for link.
+ *
+ * Available slots:
+ * - content: Link content.
  */
 #}
 
+{% set link_color = color ? ['link-' ~ color] : [] %}
+{% set link_opacity = opacity ? ['link-opacity-' ~ opacity] : [] %}
+{% set underline_offset = underline_offset ? ['link-offset-' ~ underline_offset] : [] %}
+{% set underline_opacity = underline_opacity ? ['link-underline', 'link-underline-opacity-' ~ underline_opacity] : [] %}
+{% set underline_color = underline_color ? ['link-underline-' ~ underline_color] : [] %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
 
-{% set link_classes = []|merge(utility_classes)|merge(options["attributes"]["class"] ?? []) %}
+{% set link_classes = []|merge(link_color)|merge(link_opacity)|merge(underline_offset)|merge(underline_opacity)|merge(underline_color)|merge(utility_classes) %}
 
-<a href="{{ url }}" {{ attributes.addClass(link_classes) }}>{{ title }}</a>
+{% if url %}
+  {% set attributes = attributes.setAttribute('href', url) %}
+{% endif %}
+
+<a{{ attributes.addClass(link_classes) }}>{% apply spaceless %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endapply %}</a>
