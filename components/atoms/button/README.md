@@ -37,9 +37,9 @@ https://getbootstrap.com/docs/5.3/components/buttons/
  {% include 'varbase_components:button' with {
     html_tag: 'a',
     color: 'primary',
-    link: '/blog/test-blog1',
-    content: 'Read more',
     outline: true,
+    content: 'Read more',
+    url: '/blog/test-blog1',
     utility_classes: ['card-link', 'float-end', 'mt-3', 'read-more']
   } %}
 ```
@@ -49,8 +49,8 @@ https://getbootstrap.com/docs/5.3/components/buttons/
   {% include 'varbase_components:button' with {
     html_tag: 'a',
     color: 'primary',
-    link: '#',
     content: 'Read more',
+    url: '#',
     disabled: true,
   } %}
 ```
