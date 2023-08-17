@@ -12,12 +12,6 @@
         "'Anchor button'": "a"
       }
     },
-    "link": {
-      "name": "Link",
-      "description": "Optional and only when having HTML tag as anchor link button.",
-      "control": "text",
-      "defaultValue": ""
-    },
     "color": {
       "name": "Color",
       "description": "Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.",
@@ -62,6 +56,12 @@
       "description": "The content for the button",
       "control": "text",
       "defaultValue": "Button"
+    },
+    "url": {
+      "name": "URL Link",
+      "description": "URL link for the button when the HTML tag is an anchor link.",
+      "defaultValue": "",
+      "control": "text"
     }
   },
   "stories": [
@@ -69,192 +69,192 @@
       "name": "Primary",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "primary",
         "outline": false,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Secondary",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "secondary",
         "outline": false,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Success",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "success",
         "outline": false,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Info",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "info",
         "outline": false,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Warning",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "warning",
         "outline": false,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Danger",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "danger",
         "outline": false,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Light",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "light",
         "outline": false,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Dark",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "dark",
         "outline": false,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Outline - Primary",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "primary",
         "outline": true,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Outline - Secondary",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "secondary",
         "outline": true,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Outline - Success",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "success",
         "outline": true,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Outline - Info",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "info",
         "outline": true,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Outline - Warning",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "warning",
         "outline": true,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Outline - Danger",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "danger",
         "outline": true,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Outline - Light",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "light",
         "outline": true,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     },
     {
       "name": "Outline - Dark",
       "args": {
         "html_tag": "button",
-        "link": "",
         "color": "dark",
         "outline": true,
         "size": "",
         "disabled": false,
-        "content": "Button"
+        "content": "Button",
+        "url": "#"
       }
     }
   ]

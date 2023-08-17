@@ -12,10 +12,10 @@ props:
       enum:
         - button
         - a
-    link:
+    url:
       type: string
-      title: Link
-      description: Optional and only when having HTML tag as anchor.
+      title: URL Link
+      description: URL link for the button when the HTML tag is an anchor link.
     color:
       type: string
       title: Color

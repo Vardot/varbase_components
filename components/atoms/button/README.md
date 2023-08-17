@@ -8,7 +8,7 @@ https://getbootstrap.com/docs/5.3/components/buttons/
 
 ## Available Properties:
 * `html_tag`: The HTML tag to use for the button (button | a). Defaults to `button`.
-* `link`: Optional and only when having HTML tag as anchor.
+* `url`: URL link for the button when the HTML tag is an anchor link.
 * `color`: Bootstrap includes several predefined button styles, each serving its own
           semantic purpose, with a few extras thrown in for more control.
           (primary | secondary | success | danger | warning | info | dark | light | link)
@@ -32,14 +32,15 @@ https://getbootstrap.com/docs/5.3/components/buttons/
   } %}
 ```
 
-**Example #2:** Anchor button
+**Example #2:** Anchor button as Read more link in a Card
 ```
-  {% include 'varbase_components:button' with {
+ {% include 'varbase_components:button' with {
     html_tag: 'a',
+    color: 'primary',
     link: '/blog/test-blog1',
-    size: 'btn-sm',
     content: 'Read more',
-    outline: true
+    outline: true,
+    utility_classes: ['card-link', 'float-end', 'mt-3', 'read-more']
   } %}
 ```
 
