@@ -41,10 +41,6 @@
   ]|merge(button_color)|merge(size)|merge(disabled_classes)|merge(utility_classes)
 %}
 
-{% if not attributes %}
-  {% set attributes = create_attribute() %}
-{% endif %}
-
 {# When the HTML tag is an anchor link #}
 {% if html_tag == 'a' %}
 
@@ -79,4 +75,8 @@
   {% endif %}
 {% endif %}
 
-<{{ html_tag }}{{ attributes.addClass(classes) }}>{% block content %}{{ content }}{% endblock %}</{{ html_tag }}>
+<{{ html_tag }}{{ attributes.addClass(classes) }}>{% apply spaceless %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endapply %}</{{ html_tag }}>
