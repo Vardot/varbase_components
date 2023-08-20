@@ -1,0 +1,167 @@
+{
+  "title": "Varbase Components/Atoms/Textarea",
+  "description": "Textarea type form element.",
+  "argTypes": {
+    "resizable": {
+      "name": "Resizable",
+      "description": "An indicator for whether the text area is resizable.",
+      "control": "select",
+      "defaultValue": "",
+      "options": {
+        "'- empty -'": "",
+        "None": "none",
+        "Vertical": "vertical",
+        "Horizontal": "horizontal",
+        "Both": "both"
+      }
+    },
+    "required": {
+      "name": "Required",
+      "description": "An indicator for whether the text area is required.",
+      "control": "boolean",
+      "defaultValue": false
+    },
+    "value": {
+      "name": "Value",
+      "description": "The text area content.",
+      "control": "text"
+    },
+    "rows": {
+      "name": "Rows",
+      "description": "Specifies the number of visible text lines.",
+      "control": "number",
+      "min": 1,
+      "step": 1
+    },
+    "cols": {
+      "name": "Cols",
+      "description": "Specifies the visible width in average character widths.",
+      "control": "number",
+      "min": 1,
+      "step": 1
+    },
+    "placeholder": {
+      "name": "Placeholder",
+      "description": "Specifies a short hint that describes the expected value of a text area.",
+      "control": "text"
+    },
+    "maxlength": {
+      "name": "Max Length",
+      "description": "Specifies the maximum length (in characters) of a text area. By default, the maximum is 524,288 characters.",
+      "control": "number",
+      "min": 1,
+      "max": 524288,
+      "step": 1
+    },
+    "readonly": {
+      "name": "Read Only",
+      "description": "Specifies whether the control may be modified by the user.",
+      "defaultValue": false,
+      "control": "boolean"
+    },
+    "disabled": {
+      "name": "Disabled",
+      "description": "Disables the control for user input.",
+      "defaultValue": false,
+      "control": "boolean"
+    },
+    "wrapper_html_tag": {
+      "name": "Wrapper HTML tag",
+      "description": "The HTML tag for the wrapper.",
+      "control": "select",
+      "defaultValue": "div",
+      "options": {
+        "'- empty -'": "",
+        "div": "div",
+        "span": "span"
+      }
+    }
+  },
+  "stories": [
+    {
+      "name": "Textarea",
+      "args": {
+        "resizable": "",
+        "required": false,
+        "value": "Vivamus hendrerit est sit amet vehicula tempus. Fusce non sollicitudin massa. Nam sollicitudin mollis ullamcorper.",
+        "rows": 5,
+        "cols": 80,
+        "maxlength": 300,
+        "placeholder": "Type test in this text area",
+        "readonly": false,
+        "disabled": false,
+        "wrapper_html_tag": "div",
+        "wrapper_utility_classes": {},
+        "utility_classes": {}
+      }
+    },
+    {
+      "name": "Textarea - Resize both",
+      "args": {
+        "resizable": "both",
+        "required": true,
+        "value": "Vivamus hendrerit est sit amet vehicula tempus. Fusce non sollicitudin massa. Nam sollicitudin mollis ullamcorper.",
+        "rows": 5,
+        "cols": 80,
+        "maxlength": 300,
+        "placeholder": "Type test in this text area",
+        "readonly": false,
+        "disabled": false,
+        "wrapper_html_tag": "div",
+        "wrapper_utility_classes": {},
+        "utility_classes": {}
+      }
+    },
+    {
+      "name": "Textarea - Disabled",
+      "args": {
+        "resizable": "",
+        "required": true,
+        "value": "Vivamus hendrerit est sit amet vehicula tempus. Fusce non sollicitudin massa. Nam sollicitudin mollis ullamcorper.",
+        "rows": 5,
+        "cols": 80,
+        "maxlength": 300,
+        "placeholder": "Type test in this text area",
+        "readonly": false,
+        "disabled": true,
+        "wrapper_html_tag": "div",
+        "wrapper_utility_classes": {},
+        "utility_classes": {}
+      }
+    },
+    {
+      "name": "Textarea - Valid",
+      "args": {
+        "resizable": "",
+        "required": true,
+        "value": "Vivamus hendrerit est sit amet vehicula tempus. Fusce non sollicitudin massa. Nam sollicitudin mollis ullamcorper.",
+        "rows": 5,
+        "cols": 80,
+        "maxlength": 300,
+        "placeholder": "Type test in this text area",
+        "readonly": false,
+        "disabled": false,
+        "wrapper_html_tag": "div",
+        "wrapper_utility_classes": {},
+        "utility_classes": {"0": "is-valid"}
+      }
+    },
+    {
+      "name": "Textarea - Invalid",
+      "args": {
+        "resizable": "",
+        "required": true,
+        "value": "",
+        "rows": 5,
+        "cols": 80,
+        "maxlength": 100,
+        "placeholder": "This field is required and has no text in the text area",
+        "readonly": false,
+        "disabled": false,
+        "wrapper_html_tag": "div",
+        "wrapper_utility_classes": {},
+        "utility_classes": {"0": "is-invalid"}
+      }
+    }
+  ]
+}
