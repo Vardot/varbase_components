@@ -1,0 +1,58 @@
+{/* Button.mdx */}
+
+import { Canvas, Title, Subtitle, ArgTypes, Source, Meta, Description, Primary, Stories } from '@storybook/blocks';
+import * as comStories from './button.stories.json';
+import templateSource from './button.twig?raw';
+
+<Meta of={comStories} name="Docs"/>
+
+<Title />
+<Subtitle />
+<Description of={comStories}/>
+<Description of={comStories.Primary}/>
+
+### Default
+
+<Canvas of={comStories.Primary} />
+
+## Properties
+<ArgTypes of={comStories.Primary}/>
+
+<Stories of={comStories} />
+
+### Examples
+**Example #1:** Primary button
+```
+{% include 'varbase_components:button' with {
+  html_tag: 'button',
+  color: 'primary',
+  content: 'Login'
+} %}
+```
+
+**Example #2:** Anchor button as Read more link in a Card
+```
+{% include 'varbase_components:button' with {
+  html_tag: 'a',
+  url: '/blog/blog-test1',
+  content: 'Read more'|t,
+  color: 'primary',
+  outline: true,
+  utility_classes: ['card-link', 'float-end', 'mt-3', 'read-more']
+} %}
+```
+
+**Example #3:** Disabled Anchor button
+```
+{% include 'varbase_components:button' with {
+  html_tag: 'a',
+  color: 'primary',
+  content: 'Read more',
+  url: '#',
+  disabled: true,
+} %}
+```
+
+## Source code
+[//]: # (Twig Template source code)
+<Source code={templateSource} />
