@@ -18,11 +18,16 @@
  *				  which you still may use if you prefer.
  *          (primary | secondary | success | info |
  *          warning | danger | light | dark)
- * - content: The content of the badge.
  * - url: The HTML tag will automatically be set to a if an anchor is added to the URL.
  * - utility_classes: This property contains an array of utility classes that can
  *                    be used to add extra Bootstrap utility classes or custom
  *                    classes to this component.
+ *
+ * Available attributes
+ * - N/A
+ *
+ * Available slots
+ * - content: The content of the badge.
  */
 #}
 {% set html_tag = html_tag ?? 'span' %}
@@ -46,11 +51,9 @@
 {% endif %}
 
 {% if content %}
-	<{{html_tag}}{{ attributes.addClass(classes)}}">
-
+	<{{html_tag}}{{ attributes.addClass(classes)}}">{% apply spaceless %}
 		{% block content %}
 			{{ content }}
 		{% endblock %}
-
-	</{{html_tag}}>
+	{% endapply %}</{{html_tag}}>
 {% endif %}

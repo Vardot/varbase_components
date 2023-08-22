@@ -1,6 +1,16 @@
 {
   "title": "Varbase Components/Atoms/Badge",
-  "desc": "Documentation and examples for badges, our small count and labeling component.",
+  "tags": [
+    "autodocs"
+  ],
+  "parameters": {
+    "componentSubtitle": "Bootstrap Badge Component",
+    "docs": {
+      "description": {
+        "component": "Documentation and examples for badges, our small count and labeling component."
+      }
+    }
+  },
   "argTypes": {
     "html_tag": {
       "name": "HTML Tag",
