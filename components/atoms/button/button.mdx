@@ -1,6 +1,6 @@
 {/* Button.mdx */}
 
-import { Canvas, Title, Subtitle, ArgTypes, Source, Meta, Description, Primary, Stories } from '@storybook/blocks';
+import { Canvas, Title, Subtitle, ArgTypes, Source, Meta, Description, Primary, Story, Stories, Controls } from '@storybook/blocks';
 import * as comStories from './button.stories.json';
 import templateSource from './button.twig?raw';
 
@@ -8,15 +8,23 @@ import templateSource from './button.twig?raw';
 
 <Title />
 <Subtitle />
-<Description of={comStories}/>
-<Description of={comStories.Primary}/>
+<Description />
 
-### Default
+> #### [Bootstrap ~5.3.0 Documentation on Buttons](https://getbootstrap.com/docs/5.3/components/buttons)
+> * [Button tags](https://getbootstrap.com/docs/5.3/components/buttons/#button-tags)
+> * [Outline buttons](https://getbootstrap.com/docs/5.3/components/buttons/#outline-buttons)
+> * [Disabled state](https://getbootstrap.com/docs/5.3/components/buttons/#disabled-state)
+> * [Link functionality caveat](https://getbootstrap.com/docs/5.3/components/buttons/#link-functionality-caveat)
+> * [Button plugin](https://getbootstrap.com/docs/5.3/components/buttons/#button-plugin)
+> * [Toggle states](https://getbootstrap.com/docs/5.3/components/buttons/#toggle-states)
 
-<Canvas of={comStories.Primary} />
+<Canvas of={comStories.Primary} >
+  <Story of={comStories.Primary}/>
+  <Source of={comStories.Primary}/>
+</Canvas>
 
 ## Properties
-<ArgTypes of={comStories.Primary}/>
+<Controls of={comStories.Primary} />
 
 <Stories of={comStories} />
 
