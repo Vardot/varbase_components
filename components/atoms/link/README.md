@@ -2,15 +2,14 @@
 
 Link with Bootstrap Link helpers and utility classes
 
-[Bootstrap ~5.3.0](https://getbootstrap.com/docs/5.3/utilities/link/) has the following link helpers and utility classes
-
-* [Colored links](https://getbootstrap.com/docs/5.3/helpers/colored-links/)
-* [Link opacity](https://getbootstrap.com/docs/5.3/utilities/link/#link-opacity)
-* [Link underlines](https://getbootstrap.com/docs/5.3/utilities/link/#link-underlines)
-* - [Underline color](https://getbootstrap.com/docs/5.3/utilities/link/#underline-color)
-* - [Underline offset](https://getbootstrap.com/docs/5.3/utilities/link/#underline-offset)
-* - [Underline opacity](https://getbootstrap.com/docs/5.3/utilities/link/#underline-opacity)
-* [Hover variants](https://getbootstrap.com/docs/5.3/utilities/link/#hover-variants)
+> #### [Bootstrap ~5.3.0 Documentation on Buttons](https://getbootstrap.com/docs/5.3/utilities/link/)
+> * [Colored links](https://getbootstrap.com/docs/5.3/helpers/colored-links/)
+> * [Link opacity](https://getbootstrap.com/docs/5.3/utilities/link/#link-opacity)
+> * [Link underlines](https://getbootstrap.com/docs/5.3/utilities/link/#link-underlines)
+> * [Underline color](https://getbootstrap.com/docs/5.3/utilities/link/#underline-color)
+> * [Underline offset](https://getbootstrap.com/docs/5.3/utilities/link/#underline-offset)
+> * [Underline opacity](https://getbootstrap.com/docs/5.3/utilities/link/#underline-opacity)
+> * [Hover variants](https://getbootstrap.com/docs/5.3/utilities/link/#hover-variants)
 
 ## Properties:
 * `url`: URL Link

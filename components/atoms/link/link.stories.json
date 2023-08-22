@@ -1,6 +1,16 @@
 {
   "title": "Varbase Components/Atoms/Link",
-  "description": "Link with Bootstrap Link helpers and utility classes",
+  "tags": [
+    "autodocs"
+  ],
+  "parameters": {
+    "componentSubtitle": "Bootstrap Link Component",
+    "docs": {
+      "description": {
+        "component": "Link with Bootstrap Link helpers and utility classes."
+      }
+    }
+  },
   "argTypes": {
     "url": {
       "name": "URL Link",
