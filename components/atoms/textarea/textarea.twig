@@ -31,32 +31,32 @@
 {% set wrapper_utility_classes = wrapper_utility_classes ? wrapper_utility_classes : [] %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
 
-{% if required == true %}
+{% if required is not empty and required == true %}
   {% set attributes = attributes.setAttribute('aria-required', 'true') %}
   {% set attributes = attributes.setAttribute('required', true) %}
 {% endif %}
 
-{% if rows and rows != '' %}
+{% if rows is not empty %}
   {% set attributes = attributes.setAttribute('rows', rows) %}
 {% endif %}
 
-{% if cols and cols != '' %}
+{% if cols is not empty %}
   {% set attributes = attributes.setAttribute('cols', cols) %}
 {% endif %}
 
-{% if maxlength and maxlength != '' %}
+{% if maxlength is not empty %}
   {% set attributes = attributes.setAttribute('maxlength', maxlength) %}
 {% endif %}
 
-{% if placeholder and placeholder != '' %}
+{% if placeholder is not empty %}
   {% set attributes = attributes.setAttribute('placeholder', placeholder) %}
 {% endif %}
 
-{% if readonly == true %}
+{% if readony is not empty and readonly == true %}
   {% set attributes = attributes.setAttribute('readonly', true) %}
 {% endif %}
 
-{% if disabled == true %}
+{% if disabled is not empty and disabled == true %}
   {% set attributes = attributes.setAttribute('disabled', true) %}
   {% set attributes = attributes.setAttribute('aria-disabled', 'true' ) %}
   {% set attributes = attributes.setAttribute('tabindex', '-1' ) %}

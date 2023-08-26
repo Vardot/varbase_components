@@ -1,34 +1,27 @@
-# Textarea
+{/* texterea.mdx */}
 
-Text area type form element.
+import { Canvas, Title, Subtitle, ArgTypes, Source, Meta, Description, Primary, Story, Stories, Controls } from '@storybook/blocks';
+import * as comStories from './textarea.stories.json';
+import templateSource from './textarea.twig?raw';
+
+<Meta of={comStories} name="Docs"/>
+
+<Title />
+<Subtitle />
+<Description />
+
 
 > #### [Bootstrap ~5.3.0 Documentation on Textareas](https://getbootstrap.com/docs/5.3/forms/floating-labels/#textareas)
 > * [Resizable textareas](https://git.drupalcode.org/project/drupal/-/blob/10.1.x/core/modules/system/css/components/resize.module.css) in **Drupal `~10.1.0`**
 > * [Utilizing more properties for the Textarea form element](https://git.drupalcode.org/project/drupal/-/blob/10.1.x/core/includes/form.inc#L382)
 > * [The TEXTAREA element by W3](https://www.w3.org/TR/html401/interact/forms.html#h-17.7)
 
+<Canvas of={comStories.Textarea} />
 
-## Properties:
-* `resizable`: (none|vertical|horizontal|both) An indicator for whether the textarea is resizable.
-* `required`: (true|false) An indicator for whether the textarea is required.
-* `value`: The textarea content.
-* `rows`: Specifies the number of visible text lines.
-* `cols`: Specifies the visible width in average character widths.
-* `maxlength`: Specifies the maximum length (in characters) of a text area. By default, the maximum is 524,288 characters.
-* `placeholder`: Specifies a short hint that describes the expected value of a text area.
-* `readonly`: Specifies whether the control may be modified by the user.
-* `disabled`: Disables the control for user input.
-* `wrapper_html_tag`: (div|span) The HTML tag for the wrapper.
-* `wrapper_utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the wrapper div to this component.
-* `utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the form element to this component.
+## Properties
+<Controls of={comStories.Textarea} />
 
-## Attributes:
-* `wrapper_attributes`: A list of HTML attributes for the wrapper element.
-* `attributes`: A list of HTML attributes for the <textarea> element.
-
-## Slots:
-* N/A
-
+<Stories of={comStories} />
 
 ### Examples
 
@@ -52,7 +45,6 @@ Text area type form element.
 {% include 'varbase_components:textarea' with {
     wrapper_attributes: wrapper_attributes,
     attributes: attributes,
-    resizable: resizable|default('none'),
     required: required|default(false),
     value: value|default('')
   }
@@ -90,3 +82,8 @@ Used in [Vartheme BS5](https://github.com/Vardot/vartheme_bs5/blob/3.0.x/templat
   } 
 %}
 ```
+
+
+## Source code
+[//]: # (Twig Template source code)
+<Source code={templateSource} />

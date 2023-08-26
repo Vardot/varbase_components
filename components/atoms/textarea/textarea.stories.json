@@ -1,6 +1,20 @@
 {
   "title": "Varbase Components/Atoms/Textarea",
-  "description": "Textarea type form element.",
+  "tags": [
+    "autodocs"
+  ],
+  "parameters": {
+    "componentSubtitle": "Bootstrap Textarea Component",
+    "docs": {
+      "description": {
+        "component": "Textarea type form element."
+      },
+      "story": {
+        "inline": true,
+        "source": true
+      }
+    }
+  },
   "argTypes": {
     "resizable": {
       "name": "Resizable",
