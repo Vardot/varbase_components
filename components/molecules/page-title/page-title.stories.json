@@ -1,7 +1,25 @@
 {
   "title": "Varbase Components/Molecules/Page Title",
-  "description": "The Title component is responsible for rendering the page's main heading using the h1 HTML tag.",
+  "tags": [
+    "autodocs"
+  ],
+  "parameters": {
+    "componentSubtitle": "Bootstrap Page Title Component",
+    "docs": {
+      "description": {
+        "component": "The Title component is responsible for rendering the page's main heading using the h1 HTML tag."
+      },
+      "story": {
+        "inline": true
+      }
+    }
+  },
   "argTypes": {
+    "title": {
+      "name": "Title",
+      "description": "The page title, for use in the actual content.",
+      "defaultValue": ""
+    },
     "display": {
       "name": "Display",
       "description": "Bootstrap button size class",
@@ -20,17 +38,17 @@
   },
   "stories": [
     {
-      "name": "Page Title Example",
+      "name": "Page Title",
       "args": {
-        "display": "",
-        "title": "Page Title Example"
+        "title": "Page Title Example",
+        "display": ""
       }
     },
     {
       "name": "Page Title with Display 1",
       "args": {
-        "display": "display-1",
-        "title": "Page Title with Display 1"
+        "title": "Page Title with Display 1",
+        "display": "display-1"
       }
     }
   ]

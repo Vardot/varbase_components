@@ -1,19 +1,25 @@
-# Page Title
+{/* page-title.mdx */}
 
-The Page Title component is responsible for rendering the page's main heading using the h1 HTML tag.
+import { Canvas, Title, Subtitle, ArgTypes, Source, Meta, Description, Primary, Story, Stories, Controls } from '@storybook/blocks';
+import * as comStories from './page-title.stories.json';
+import templateSource from './page-title.twig?raw';
+
+<Meta of={comStories} name="Docs"/>
+
+<Title />
+<Subtitle />
+<Description />
+
 
 > ## Bootstrap Documentation on Page Title
 > * [Headings](https://getbootstrap.com/docs/5.3/content/typography/#headings)
 > * [Display Headings](https://getbootstrap.com/docs/5.3/content/typography/#display-headings)
 
-## Properties:
-* `title`: The page title, for use in the actual content.
-* `display`: When you need a heading to stand out, consider using a display
-   heading—a larger, slightly more opinionated heading style.
-   optional values are:
-   ( display-1, display-2, display-3, display-4, display-5, display-6)
-* `utility_classes`: An array of utility classes. Use this property to add
-   extra Bootstrap utility classes or your custom class over to this to this component.
+
+<Canvas of={comStories.Page_Title} />
+
+## Properties
+<Controls of={comStories.Page_Title} />
 
 ## Attributes:        
 * `title_attributes`: HTML attributes for the page title element.
@@ -27,7 +33,9 @@ The Page Title component is responsible for rendering the page's main heading us
 ## Slots:
 * N/A
 
-## Examples
+<Stories of={comStories} />
+
+### Examples
 Used in the `page-title.html.twig` default theme implementation for a page title.
 
 **Example #1:** Normal Page title 
@@ -50,3 +58,7 @@ Used in the `page-title.html.twig` default theme implementation for a page title
     }
   %}
 ```
+
+## Source code
+[//]: # (Twig Template source code)
+<Source code={templateSource} />

@@ -5,6 +5,11 @@ description: The Title component is responsible for rendering the page's main he
 props:
   type: object
   properties:
+    title:
+      type: string
+      title: Title
+      description: The page title, for use in the actual content.
+      default: ''
     display:
       type: string
       title: Display Heading
