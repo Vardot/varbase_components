@@ -1,12 +1,78 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Media Hero Slider 
 status: experimental
-description: Media Hero Slider
+description: The universal implementation of a Hero Slider to be used on the homepage in most cases. A rich hero slider that allows you to display video and/or image slides.
 props:
   type: object
   properties:
     attributes:
       type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Remaining HTML attributes for the element.
+    css_name:
+      type: string
+      title: CSS name
+      description: A css-safe version of the view name.
+    css_class:
+      type: string
+      title: CSS Class
+      description: The user-specified classes names, if any.
+    header:
+      type: string
+      title: Header
+      description: The optional header.
+    footer:
+      type: string
+      title: Footer
+      description: The optional footer.
+    rows:
+      type: array
+      title: Rows
+      description: The results of the view query, if any.
+    empty:
+      type: string
+      title: Empty
+      description: The content to display if there are no rows.
+    pager:
+      type: string
+      title: Pager
+      description: The optional pager next/prev links to display.
+    exposed:
+      type: string
+      title: Exposed
+      description: Exposed widget form/info to display.
+    feed_icons:
+      type: string
+      title: Feed icons
+      description: Optional feed icons to display.
+    more:
+      type: string
+      title: More
+      description: An optional link to the next page of results.
+    title:
+      type: string
+      title: Title
+      description: Title of the view, only used when displaying in the admin preview.
+    title_prefix:
+      type: array
+      title: Title Prefix
+      description: Additional output populated by modules, intended to be displayed in front of the view title.
+    title_suffix:
+      type: array
+      title: Title Suffix
+      description: Additional output populated by modules, intended to be displayed after the view title.
+    attachment_before:
+      type: string
+      title: Attachment Before
+      description: An optional attachment view to be displayed before the view content.
+    attachment_after:
+      type: string
+      title: Attachment After
+      description: An optional attachment view to be displayed after the view content.
+    dom_id:
+      type: string
+      title: Dom ID
+      description: Unique id for every view being printed to give unique class for Javascript.
 libraryOverrides:
   dependencies:
     - core/drupal

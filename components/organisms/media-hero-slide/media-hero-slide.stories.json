@@ -1,0 +1,151 @@
+{
+  "title": "Varbase Components/Organisms/Media Hero Slide",
+  "tags": [
+    "autodocs"
+  ],
+  "parameters": {
+    "componentSubtitle": "Media Hero Slide Component",
+    "docs": {
+      "description": {
+        "component": "A rich hero slide that display video and/or image."
+      },
+      "story": {
+        "inline": true
+      }
+    }
+  },
+  "argTypes": {
+    "node": {
+      "name": "Node",
+      "description": "The node entity with limited access to object properties and methods.",
+      "control": "object",
+      "defaultValue": ""
+    },
+    "label": {
+      "name": "Label",
+      "description": "The title of the node.",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "content": {
+      "name": "Content",
+      "description": "All node items.",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "author_picture": {
+      "name": "Author Picture",
+      "description": "The node author user entity, rendered using the compact view mode.",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "metadata": {
+      "name": "Metadata",
+      "description": "Metadata for this node.",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "date": {
+      "name": "Date",
+      "description": "Themed creation date field.",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "author_name": {
+      "name": "Author Name",
+      "description": "Themed author name field.",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "url": {
+      "name": "URL",
+      "description": "Direct URL of the current node.",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "display_submitted": {
+      "name": "Display Submitted",
+      "description": "Whether submission information should be displayed.",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "attributes": {
+      "name": "Attributes",
+      "description": "HTML attributes for the containing element.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "title_attributes": {
+      "name": "Title Attributes",
+      "description": "Same as attributes, except applied to the main title tag that appears in the template.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "content_attributes": {
+      "name": "Content Attributes",
+      "description": "Same as attributes, except applied to the main content tag that appears in the template.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "author_attributes": {
+      "name": "Author Attributes",
+      "description": "Same as attributes, except applied to the author of the node tag that appears in the template.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "title_prefix": {
+      "name": "Title Prefix",
+      "description": "Additional output populated by modules, intended to be displayed in front of the main title tag that appears in the template.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "title_suffix": {
+      "name": "Title Suffix",
+      "description": "Additional output populated by modules, intended to be displayed after the main title tag that appears in the template.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "view_mode": {
+      "name": "View Mode",
+      "description": "View mode; for example, 'teaser' or 'full'.",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "teaser": {
+      "name": "Teaser",
+      "description": "Flag for the teaser state. Will be true if view_mode is 'teaser'.",
+      "control": "boolean",
+      "defaultValue": false
+    },
+    "page": {
+      "name": "Page",
+      "description": "Flag for the full page state. Will be true if view_mode is 'full'.",
+      "control": "boolean",
+      "defaultValue": true
+    },
+    "readmore": {
+      "name": "Read More",
+      "description": "Flag for more state. Will be true if the teaser content of the node cannot hold the main body content.",
+      "control": "boolean",
+      "defaultValue": false
+    },
+    "logged_in": {
+      "name": "Logged In",
+      "description": "Flag for authenticated user status. Will be true when the current user is a logged-in member.",
+      "control": "boolean",
+      "defaultValue": false
+    },
+    "is_admin": {
+      "name": "Is Admin",
+      "description": "Flag for admin user status. Will be true when the current user is an administrator.",
+      "control": "boolean",
+      "defaultValue": false
+    }
+  },
+  "stories": [
+    {
+      "name": "Media Hero Slide",
+      "args": { }
+    }
+  ]
+}
