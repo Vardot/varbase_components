@@ -1,0 +1,57 @@
+{/* image.mdx */}
+
+import { Canvas, Title, Subtitle, ArgTypes, Source, Meta, Description, Primary, Story, Stories, Controls } from '@storybook/blocks';
+import * as comStories from './image.stories.json';
+import templateSource from './image.twig?raw';
+
+<Meta of={comStories} name="Docs"/>
+
+<Title />
+<Subtitle />
+<Description />
+
+
+<Canvas of={comStories.Image} />
+
+## Properties
+<Controls of={comStories.Image} />
+
+<Stories of={comStories} />
+
+## Attributes:
+* `attributes`: Drupal attributes for Image.
+
+## Slots:
+* N/A
+
+
+### Examples
+
+**Example #1:** Default system image
+```
+{% include 'varbase_components:image' %}
+```
+
+**Example #2:** Use the Image component with Responsive image
+```
+{% include 'varbase_components:image' with {
+    responsive: true
+  }
+%}
+```
+
+**Example #3:** Use the Image component with align center, rounded, and thumbnails 
+```
+{% include 'varbase_components:image' with {
+    align: 'center',
+    responsive: true,
+    rounded: true,
+    thumbnails: true,
+  }
+%}
+```
+
+
+## Source code
+[//]: # (Twig Template source code)
+<Source code={templateSource} />

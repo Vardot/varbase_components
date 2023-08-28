@@ -19,13 +19,16 @@ props:
       type: boolean
       title: Responsive image
       description: (optional) Images in Bootstrap are made responsive with `.img-fluid`. This applies max-width with 100% and height with auto to the image so that it scales with the parent width.
+      default: false
     thumbnails:
       type: boolean
       title: Image thumbnails
       description: (optional) In addition to Bootstrap border-radius utilities, you can use .img-thumbnail to give an image a rounded 1px border appearance.
+      default: false
     rounded:
       type: boolean
       title: Rounded image
+      default: false
     utility_classes:
       type: array
       title: Utility Classes

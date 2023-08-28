@@ -27,6 +27,7 @@ module.exports = {
     'organisms/card-overlay/card-overlay': ['./components/organisms/card-overlay/card-overlay.scss'],
     'organisms/card-hero/card-hero': ['./components/organisms/card-hero/card-hero.scss'],
     'organisms/card-text/card-text': ['./components/organisms/card-text/card-text.scss'],
+    'organisms/media-header/media-header': ['./components/organisms/media-header/media-header.scss'],
     'pages/page/page': ['./components/pages/page/page.scss']
   },
   output: {

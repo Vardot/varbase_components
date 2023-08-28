@@ -54,7 +54,19 @@ add extra Bootstrap utility classes or custom classes to this component.
     align: 'center',
     responsive: true,
     rounded: true,
-    thumbnails: true,
+    thumbnails: true
+  }
+%}
+```
+
+**Example #3:** Use the Image component with align center, rounded, and thumbnails 
+```
+{% include 'varbase_components:image' with {
+    align: 'center',
+    responsive: true,
+    rounded: true,
+    thumbnails: true
+    attributes: ["src": "https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg"]
   }
 %}
 ```

@@ -1,6 +1,19 @@
 {
   "title": "Varbase Components/Atoms/Image",
-  "description": "Image component with responsive behavior for the system image.",
+  "tags": [
+    "autodocs"
+  ],
+  "parameters": {
+    "componentSubtitle": "Bootstrap Image component",
+    "docs": {
+      "description": {
+        "component": "Image component with responsive behavior for the system image."
+      },
+      "story": {
+        "inline": true
+      }
+    }
+  },
   "argTypes": {
     "align": {
       "name": "Aligning images",
@@ -37,10 +50,30 @@
       "name": "Image",
       "args": {
         "align": "",
-        "responsive": false,
+        "responsive": true,
         "thumbnails": false,
         "rounded": false,
-        "attributes": {"src": "https://git.drupalcode.org/project/vartheme_bs5/-/raw/3.0.x/screenshot.png"}
+        "attributes": {"src": "https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg"}
+      }
+    },
+    {
+      "name": "Thumbnails",
+      "args": {
+        "align": "",
+        "responsive": true,
+        "thumbnails": true,
+        "rounded": false,
+        "attributes": {"src": "https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg"}
+      }
+    },
+    {
+      "name": "Rounded",
+      "args": {
+        "align": "",
+        "responsive": true,
+        "thumbnails": false,
+        "rounded": true,
+        "attributes": {"src": "https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg"}
       }
     }
   ]
