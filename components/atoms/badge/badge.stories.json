@@ -8,6 +8,9 @@
     "docs": {
       "description": {
         "component": "Documentation and examples for badges, our small count and labeling component."
+      },
+      "story": {
+        "inline": true
       }
     }
   },
