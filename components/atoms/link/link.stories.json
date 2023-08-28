@@ -8,6 +8,9 @@
     "docs": {
       "description": {
         "component": "Link with Bootstrap Link helpers and utility classes."
+      },
+      "story": {
+        "inline": true
       }
     }
   },
