@@ -8,6 +8,9 @@
     "docs": {
       "description": {
         "component": "Use Bootstrap custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more"
+      },
+      "story": {
+        "inline": true
       }
     }
   },
