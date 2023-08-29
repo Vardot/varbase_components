@@ -66,8 +66,8 @@
     "display_submitted": {
       "name": "Display Submitted",
       "description": "Whether submission information should be displayed.",
-      "control": "text",
-      "defaultValue": ""
+      "control": "boolean",
+      "defaultValue": false
     },
     "attributes": {
       "name": "Attributes",
