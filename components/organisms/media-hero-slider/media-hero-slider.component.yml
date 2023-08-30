@@ -19,16 +19,6 @@ props:
       title: CSS Class
       description: The user-specified classes names, if any.
       default: ''
-    header:
-      type: string
-      title: Header
-      description: The optional header.
-      default: ''
-    footer:
-      type: string
-      title: Footer
-      description: The optional footer.
-      default: ''
     rows:
       type: array
       title: Rows
@@ -38,26 +28,6 @@ props:
       type: string
       title: Empty
       description: The content to display if there are no rows.
-      default: ''
-    pager:
-      type: string
-      title: Pager
-      description: The optional pager next/prev links to display.
-      default: ''
-    exposed:
-      type: string
-      title: Exposed
-      description: Exposed widget form/info to display.
-      default: ''
-    feed_icons:
-      type: string
-      title: Feed icons
-      description: Optional feed icons to display.
-      default: ''
-    more:
-      type: string
-      title: More
-      description: An optional link to the next page of results.
       default: ''
     title:
       type: string
@@ -74,16 +44,6 @@ props:
       title: Title Suffix
       description: Additional output populated by modules, intended to be displayed after the view title.
       default: []
-    attachment_before:
-      type: string
-      title: Attachment Before
-      description: An optional attachment view to be displayed before the view content.
-      default: ''
-    attachment_after:
-      type: string
-      title: Attachment After
-      description: An optional attachment view to be displayed after the view content.
-      default: ''
     dom_id:
       type: string
       title: Dom ID

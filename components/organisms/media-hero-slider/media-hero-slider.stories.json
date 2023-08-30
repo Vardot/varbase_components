@@ -32,19 +32,7 @@
       "description": "The user-specified classes names, if any.",
       "control": "text",
       "defaultValue": ""
-    },
-    "header": {
-      "name": "Header",
-      "description": "The optional header.",
-      "control": "text",
-      "defaultValue": ""
-    },
-    "footer": {
-      "name": "Footer",
-      "description": "The optional footer.",
-      "control": "text",
-      "defaultValue": ""
-    },  
+    }, 
     "rows": {
       "name": "Rows",
       "description": "HTML attributes for the containing element.",
@@ -54,30 +42,6 @@
     "empty": {
       "name": "Empty",
       "description": "The content to display if there are no rows.",
-      "control": "text",
-      "defaultValue": ""
-    },
-    "pager": {
-      "name": "Pager",
-      "description": "The optional pager next/prev links to display.",
-      "control": "text",
-      "defaultValue": ""
-    },
-    "exposed": {
-      "name": "Exposed",
-      "description": "Exposed widget form/info to display.",
-      "control": "text",
-      "defaultValue": ""
-    },
-    "feed_icons": {
-      "name": "Feed icons",
-      "description": "Optional feed icons to display.",
-      "control": "text",
-      "defaultValue": ""
-    },
-    "more": {
-      "name": "More",
-      "description": "An optional link to the next page of results.",
       "control": "text",
       "defaultValue": ""
     },
@@ -98,18 +62,6 @@
       "description": "Additional output populated by modules, intended to be displayed after the main title tag that appears in the template.",
       "control": "object",
       "defaultValue": {}
-    },
-    "attachment_before": {
-      "name": "Attachment Before",
-      "description": "An optional attachment view to be displayed before the view content.",
-      "control": "text",
-      "defaultValue": ""
-    },
-    "attachment_after": {
-      "name": "Attachment After",
-      "description": "An optional attachment view to be displayed after the view content.",
-      "control": "text",
-      "defaultValue": ""
     },
     "dom_id": {
       "name": "Dom ID",
