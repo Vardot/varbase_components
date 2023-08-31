@@ -1,6 +1,19 @@
 {
   "title": "Varbase Components/Atoms/Input",
-  "description": "Image component with responsive behavior for the system image.",
+  "tags": [
+    "autodocs"
+  ],
+  "parameters": {
+    "componentSubtitle": "Bootstrap Input form control component",
+    "docs": {
+      "description": {
+        "component": "Textual form controls `<input>`s an upgrade with custom styles, sizing, focus states, and more."
+      },
+      "story": {
+        "inline": true
+      }
+    }
+  },
   "argTypes": {
     "type": {
       "name": "HTML Input Type",

@@ -1,3 +1,48 @@
 # Input
 
-Give textual form controls <input>s an upgrade with custom styles, sizing, focus states, and more.
+Textual form controls `<input>`s an upgrade with custom styles, sizing, focus states, and more.
+
+> ### [Bootstrap ~5.3.0 Documentation on Form Input Controls](https://getbootstrap.com/docs/5.3/forms/form-control)
+> * [Form controls](https://getbootstrap.com/docs/5.3/forms/form-control/#example)
+> * [Sizing](https://getbootstrap.com/docs/5.3/forms/form-control/#sizing)
+> * [Form text](https://getbootstrap.com/docs/5.3/forms/form-control/#form-text)
+
+## Properties:
+* `type`: Specifies the type `<input>` element to display
+* `value`: Specifies the value of the input element
+* `bs_form_control`: Have class `.form-control` related to input type.
+* `utility_classes`: Use to add extra Bootstrap utility classes or custom CSS classes
+                     over to this to this component.
+* `bs_size`: Set heights using classes like `.form-control-lg` and `.form-control-sm`.
+* `placeholder`: The input placeholder attribute specifies a short hint that describes
+                 the expected value of an input field (a sample value or a short
+                 description of the expected format).
+* `utility_classes`: Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
+
+## Attributes:
+* `attributes`: A list of HTML attributes for the input element.
+* `children`: Optional additional rendered elements.
+
+## Slots:
+* - N/A
+
+
+## Examples:
+
+### Example #1 : Input type of checkbox form element.
+```
+{% include "varbase_components:input" with {
+  type: 'checkbox',
+  bs_form_control: false,
+  bs_size: '',
+  utility_classes: ['form-check-input'],
+  attributes: attributes
+} %}
+```
+
+### Example #2 : Input type of Input submit form element.
+```
+{% include "varbase_components:input" with {
+  type: 'submit'
+} %}
+```
