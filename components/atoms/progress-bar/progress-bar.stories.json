@@ -21,11 +21,11 @@
         "White": "bg-white",
         "Body": "bg-body",
         "Transparent": "bg-transparent",
-        "Opacity10": "bg-opacity-10",
-        "Opacity25": "bg-opacity-25",
-        "Opacity50": "bg-opacity-50",
-        "Opacity75": "bg-opacity-75",
-        "Opacity100": "bg-opacity-100",
+        "'Opacity 10'": "bg-opacity-10",
+        "'Opacity 25'": "bg-opacity-25",
+        "'Opacity 50'": "bg-opacity-50",
+        "'Opacity 75'": "bg-opacity-75",
+        "'Opacity 100'": "bg-opacity-100",
         "Gradient": "bg-gradient"
       }
     },
@@ -54,7 +54,7 @@
       "min": 0,
       "max": 100,
       "step": 1,
-      "defaultValue": "35"
+      "defaultValue": 0
     },
     "message": {
       "name": "Message",
@@ -71,7 +71,7 @@
         "striped": true,
         "animated": true,
         "label": "Progress Bar Label",
-        "percent": "35",
+        "percent": 35,
         "message": "More information about this progress bar."
       }
     },
@@ -82,7 +82,7 @@
         "striped": true,
         "animated": true,
         "label": "Progress Bar Label",
-        "percent": "35",
+        "percent": 40,
         "message": "More information about this progress bar."
       }
     },
@@ -93,7 +93,7 @@
         "striped": true,
         "animated": true,
         "label": "Progress Bar Label",
-        "percent": "35",
+        "percent": 45,
         "message": "More information about this progress bar."
       }
     },
@@ -104,7 +104,7 @@
         "striped": true,
         "animated": true,
         "label": "Progress Bar Label",
-        "percent": "35",
+        "percent": 50,
         "message": "More information about this progress bar."
       }
     },
@@ -115,7 +115,7 @@
         "striped": true,
         "animated": true,
         "label": "Progress Bar Label",
-        "percent": "35",
+        "percent": 55,
         "message": "More information about this progress bar."
       }
     },
@@ -126,7 +126,7 @@
         "striped": true,
         "animated": true,
         "label": "Progress Bar Label",
-        "percent": "35",
+        "percent": 60,
         "message": "More information about this progress bar."
       }
     },
@@ -137,7 +137,7 @@
         "striped": true,
         "animated": true,
         "label": "Progress Bar Label",
-        "percent": "35",
+        "percent": 65,
         "message": "More information about this progress bar."
       }
     },
@@ -148,7 +148,7 @@
         "striped": true,
         "animated": true,
         "label": "Progress Bar Label",
-        "percent": "35",
+        "percent": 70,
         "message": "More information about this progress bar."
       }
     },
@@ -159,7 +159,7 @@
         "striped": true,
         "animated": true,
         "label": "Progress Bar Label",
-        "percent": "35",
+        "percent": 35,
         "message": "More information about this progress bar."
       }
     },
@@ -170,7 +170,7 @@
         "striped": true,
         "animated": true,
         "label": "Progress Bar Label",
-        "percent": "35",
+        "percent": 35,
         "message": "More information about this progress bar."
       }
     },
@@ -181,7 +181,7 @@
         "striped": true,
         "animated": true,
         "label": "Progress Bar Label",
-        "percent": "35",
+        "percent": 35,
         "message": "More information about this progress bar."
       }
     },
@@ -192,7 +192,62 @@
         "striped": true,
         "animated": true,
         "label": "Progress Bar Label",
-        "percent": "35",
+        "percent": 35,
+        "message": "More information about this progress bar."
+      }
+    },
+    {
+      "name": "Opacity 10",
+      "args": {
+        "color": "bg-opacity-10",
+        "striped": true,
+        "animated": true,
+        "label": "Progress Bar Label",
+        "percent": 35,
+        "message": "More information about this progress bar."
+      }
+    },
+    {
+      "name": "Opacity 25",
+      "args": {
+        "color": "bg-opacity-25",
+        "striped": true,
+        "animated": true,
+        "label": "Progress Bar Label",
+        "percent": 35,
+        "message": "More information about this progress bar."
+      }
+    },
+    {
+      "name": "Opacity 50",
+      "args": {
+        "color": "bg-opacity-50",
+        "striped": true,
+        "animated": true,
+        "label": "Progress Bar Label",
+        "percent": 35,
+        "message": "More information about this progress bar."
+      }
+    },
+    {
+      "name": "Opacity 75",
+      "args": {
+        "color": "bg-opacity-75",
+        "striped": true,
+        "animated": true,
+        "label": "Progress Bar Label",
+        "percent": 35,
+        "message": "More information about this progress bar."
+      }
+    },
+    {
+      "name": "Opacity 100",
+      "args": {
+        "color": "bg-opacity-100",
+        "striped": true,
+        "animated": true,
+        "label": "Progress Bar Label",
+        "percent": 35,
         "message": "More information about this progress bar."
       }
     },
@@ -203,7 +258,7 @@
         "striped": true,
         "animated": true,
         "label": "Progress Bar Label",
-        "percent": "35",
+        "percent": 35,
         "message": "More information about this progress bar."
       }
     }

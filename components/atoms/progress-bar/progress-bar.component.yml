@@ -45,10 +45,36 @@ props:
       title: Label
       description: Add labels to your progress bars by placing text within the `.progress-bar`.
     percent:
-      type: string
+      type: number
       title: Percent
       description: The percentage of the progress between 1 to 100.
+      min: 0
+      max: 100
     message:
       type: string
       title: Message
       description: A string containing information to be displayed.
+    utility_classes:
+      type: array
+      title: Utility Classes
+      default: []
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
+    wrapper_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Progress Bar Attributes
+      description: A list of HTML attributes for the Progress Bar wrapper element.
+    indicator_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Progress Bar Attributes
+      description: A list of HTML attributes for the Progress Bar indicator element.
+    label_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Progress Bar label Attributes
+      description: A list of HTML attributes for the Progress Bar label element.
+    message_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Progress Bar message Attributes
+      description: A list of HTML attributes for the Progress Bar message element.
+libraryOverrides:
+  dependencies:
+    - core/drupal.progress

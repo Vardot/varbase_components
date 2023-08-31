@@ -1,34 +1,96 @@
 {#
 /**
  * @file
- * Template for a Progress Bar component.
+ * Varbase Components implementation for a Progress Bar component.
  *
-
- * Available config:
- * - color: [bg-primary | bg-secondary | bg-success | bg-info | bg-warning | bg-danger |
-            bg-light' | bg-dark | bg-black | bg-white | bg-body | bg-transparent |
-            bg-opacity-10 | bg-opacity-25 | bg-opacity-50 | bg-opacity-75 |
-            bg-opacity-100 | bg-gradient] Use background utility classes to change the
-            appearance of individual progress bars.
- * - striped: [true | false] Add .progress-bar-striped to any .progress-bar to
-              apply a stripe via CSS gradient over the background color.
- * - animated: [true | false] The striped gradient can also be animated.
-               Add .progress-bar-animated to .progress-bar to animate
-               the stripes right to left via CSS3 animations.
+ * Available properties:
+ * - color: Use background utility classes to change the appearance of individual progress bars.
+ *          (bg-primary|bg-secondary|bg-success|bg-info|bg-warning|bg-danger|
+ *          bg-light|bg-dark|bg-black|bg-white|bg-body|bg-transparent|bg-opacity-10|
+ *          bg-opacity-25|bg-opacity-50|bg-opacity-75|bg-opacity-100|bg-gradient)
+ * - striped: Add .progress-bar-striped to any .progress-bar to
+ *            apply a stripe via CSS gradient over the background color.
+ *            (true/false)
+ * - animated: The striped gradient can also be animated.
+ *             Add .progress-bar-animated to .progress-bar to animate
+ *             the stripes right to left via CSS3 animations.
+ *             (true/false)
  * - label: The label of the working task.
  * - percent: [1 to 100] The percentage of the progress.
  * - message: A string containing information to be displayed.
+ *
+ * Available attributes:
+ * - wrapper_attributes: A list of HTML attributes for the Progress Bar wrapper element.
+ * - indicator_attributes: A list of HTML attributes for the Progress Bar indicator element.
+ * - label_attributes: A list of HTML attributes for the Progress Bar label element.
+ * - message_attributes: A list of HTML attributes for the Progress Bar message element.
+ *
+ * Available slots:
+ * - N/A 
  */
 #}
 
-{% set color = color ? color : '' %}
-{% set striped = striped ? ' progress-bar-striped' : '' %}
-{% set animated = animated ? ' progress-bar-animated' : '' %}
+{% set color = color ? [color] : [] %}
+{% set striped = striped ? ['progress-bar-striped'] : [] %}
+{% set animated = animated ? ['progress-bar-animated'] : [] %}
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
+{# Progress Bar wrapper #}
+{%
+  set wrapper_classes = [
+    'progress'
+  ]
+%}
+{% if not wrapper_attributes %}
+  {% set wrapper_attributes = create_attribute() %}
+{% endif %}
+{% set wrapper_attributes = wrapper_attributes.addClass(wrapper_classes) %}
+{% set wrapper_attributes = wrapper_attributes.setAttribute('data-drupal-progress', true) %}
+
+
+{# Progress Bar indicator #}
+{%
+  set indicator_classes = [
+    'progress-bar'
+  ]|merge(color)|merge(striped)|merge(animated)|merge(utility_classes)
+%}
+{% if not indicator_attributes %}
+  {% set indicator_attributes = create_attribute() %}
+{% endif %}
+{% set indicator_attributes = indicator_attributes.addClass(indicator_classes) %}
+{%
+ set indicator_attributes = indicator_attributes.setAttribute('role', 'progressbar')
+  .setAttribute('aria-valuenow', percent)
+  .setAttribute('aria-valuemin', 0)
+  .setAttribute('aria-valuemax', 100)
+  .setAttribute('style', 'width: ' ~ percent ~ '%')
+%}
 
 {% if label %}
-  <label class="progress-bar-label">{{ label }}</label>
+  {# Progress Bar label #}
+  {%
+    set label_classes = [
+      'progress-bar-label'
+    ]
+  %}
+
+  <label{{ label_attributes.addClass(label_classes) }}>{{ label }}</label>
 {% endif %}
-<div class="progress" data-drupal-progress>
-  <div class="progress-bar {{ color }}{{ striped }}{{ animated }}" role="progressbar" aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percent }}%">{{ percent }}%</div>
+<div{{ wrapper_attributes }}>
+  <div{{ indicator_attributes }}>{{ percent }}%</div>
 </div>
-<small class="form-text text-muted progress-bar-message">{{ message }}</small>
+{% if message %}
+  {# Progress Bar message #}
+  {%
+    set message_classes = [
+      'form-textl',
+      'text-muted',
+      'rogress-bar-message'
+    ]
+  %}
+  {% if not message_attributes %}
+    {% set message_attributes = create_attribute() %}
+  {% endif %}
+  {% set message_attributes = message_attributes.addClass(message_classes) %}
+  <small{{ message_attributes }}>{{ message }}</small>
+{% endif %}
