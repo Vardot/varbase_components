@@ -1,0 +1,33 @@
+{/* close-button.mdx */}
+
+import { Canvas, Title, Subtitle, ArgTypes, Source, Meta, Description, Primary, Story, Stories, Controls } from '@storybook/blocks';
+import * as comStories from './close-button.stories.json';
+import templateSource from './close-button.twig?raw';
+
+<Meta of={comStories} name="Docs"/>
+
+<Title />
+<Subtitle />
+<Description />
+
+> #### [Bootstrap ~5.3.0 Documentation on Close Button](https://getbootstrap.com/docs/5.3/components/close-button/)
+> * [Close Button](https://getbootstrap.com/docs/5.3/components/close-button/#example)
+> * [Disabled state](https://getbootstrap.com/docs/5.3/components/close-button/#disabled-state)
+> * [Dark variant](https://getbootstrap.com/docs/5.3/components/close-button/#dark-variant)
+
+Provide an option to dismiss or close a component with .btn-close. Default styling is limited, but highly customizable.
+Modify the Sass variables to replace the default background-image. Be sure to include text for screen readers,
+as we have done with aria-label.
+
+
+<Canvas of={comStories.Small} />
+
+## Properties
+<Controls of={comStories.Small} />
+
+<Stories of={comStories} />
+
+
+## Source code
+[//]: # (Twig Template source code)
+<Source code={templateSource} />

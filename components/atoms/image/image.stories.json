@@ -53,7 +53,7 @@
         "responsive": true,
         "thumbnails": false,
         "rounded": false,
-        "attributes": {"src": "https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg"}
+        "attributes": {"src": "https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg"}
       }
     },
     {
@@ -63,7 +63,7 @@
         "responsive": true,
         "thumbnails": true,
         "rounded": false,
-        "attributes": {"src": "https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg"}
+        "attributes": {"src": "https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/avatar-1.jpg"}
       }
     },
     {
@@ -73,7 +73,7 @@
         "responsive": true,
         "thumbnails": false,
         "rounded": true,
-        "attributes": {"src": "https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg"}
+        "attributes": {"src": "https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/avatar-1.jpg"}
       }
     }
   ]

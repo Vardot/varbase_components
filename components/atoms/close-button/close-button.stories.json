@@ -34,6 +34,13 @@
         "size": "btn-lg",
         "disabled": false
       }
+    },
+    {
+      "name": "Disabled",
+      "args": {
+        "size": "",
+        "disabled": true
+      }
     }
   ]
 }

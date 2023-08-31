@@ -18,3 +18,10 @@ props:
       title: Disabled
       description: Disabled button
       default: false
+    utility_classes:
+      type: array
+      title: Utility Classes
+      default: []
+      description: An array of utility classes. Use to add extra Bootstrap utility classes.
+    attributes:
+      type: Drupal\Core\Template\Attribute
