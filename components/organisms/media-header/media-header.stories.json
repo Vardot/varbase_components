@@ -11,7 +11,7 @@
       },
       "story": {
         "inline": true,
-        "source": true
+        "iframeHeight": 400
       }
     }
   },
@@ -74,19 +74,39 @@
       "args": {
         "media_type": "image",
         "provider": "",
-        "page_breadcrumbs": "<nav data-component-id=\"varbase_components:breadcrumb\"><ol class=\"breadcrumb bg-light py-2 px-3 my-2\"><li class=\"breadcrumb-item\"><a href=\"/\">Home</a></li></ol></nav>",
+        "page_breadcrumbs": "",
         "page_title": "Test Title with Background Image",
-        "background_media": "<div class=\"field field--name-field-media-image field--type-image\"><img src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></div>"
+        "background_media": "<div class=\"field field--name-field-media-image field--type-image\"><img src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></div>"
       }
     },
     {
       "name": "Media Header - Video",
       "args": {
+        "media_type": "video",
+        "provider": "",
+        "page_breadcrumbs": "",
+        "page_title": "Test Title with Background Video",
+        "background_media": "<div class=\"varbase-video-player ratio ratio-16x9\"><video autoplay=\"autoplay\" loop=\"loop\" muted=\"muted\" width=\"1600\" height=\"900\"><source src=\"https://github.com/Vardot/varbase_media_demo/raw/10.0.0/content/file/business-meeting.mp4\" type=\"video/mp4\"></video></div>"
+      }
+    },
+    {
+      "name": "Media Header - Youtube",
+      "args": {
         "media_type": "remote_video",
         "provider": "youtube",
-        "page_breadcrumbs": "<nav data-component-id=\"varbase_components:breadcrumb\"><ol class=\"breadcrumb bg-light py-2 px-3 my-2\"><li class=\"breadcrumb-item\"><a href=\"/\">Home</a></li></ol></nav>",
-        "page_title": "Test Title with Background Video",
-        "background_media": ""
+        "page_breadcrumbs": "",
+        "page_title": "Test Title with Youtube Video",
+        "background_media": "<div class=\"varbase-video-player ratio ratio-16x9\"><iframe src=\"https://youtube.com/embed/bTqVqk7FSmY?autoplay=1&mute=1\" frameborder=\"0\" allowtransparency=\"\" width=\"1600\" height=\"900\" loading=\"lazy\" ></iframe></div>"
+      }
+    },
+    {
+      "name": "Media Header - Vimeo",
+      "args": {
+        "media_type": "remote_video",
+        "provider": "vimeo",
+        "page_breadcrumbs": "",
+        "page_title": "Test Title with Vimeo Video",
+        "background_media": "<div class=\"varbase-video-player ratio ratio-16x9\"><iframe src=\"https://player.vimeo.com/video/76979871?autoplay=1&background=1\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen=\"\" allowtransparency=\"\" width=\"1600\" height=\"900\" loading=\"lazy\"></iframe></div>"
       }
     }
   ]
