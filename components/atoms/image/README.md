@@ -6,32 +6,28 @@ Images in Bootstrap are made responsive with `.img-fluid`. This applies
  `max-width: 100%;` and `height: auto;` to the image so that it scales
  with the parent width.
 
-## Bootstrap Documentation
-https://getbootstrap.com/docs/5.3/content/images
-https://getbootstrap.com/docs/5.3/content/images/#responsive-images
+> ## [Bootstrap ~5.3.0 Documentation on Images](https://getbootstrap.com/docs/5.3/content/images)
+> * [Images](https://getbootstrap.com/docs/5.3/content/images)
+> * [Responsive Images](https://getbootstrap.com/docs/5.3/content/images/#responsive-images)
 
 
-## Available Properties:
-#### Aligning images (`align`):
-(optional) Align images with the helper float classes or text alignment classes.
-block-level images can be centered using the .mx-auto margin utility class.
-options (`start`, `center`, `end`)
+## Properties:
+* `align`: (optional) Align images with the helper float classes or text alignment classes.
+            block-level images can be centered using the .mx-auto margin utility class.
+            options (`float-start`, `mx-auto d-block`, `float-end`)
+* `responsive`: (optional) Images in Bootstrap are made responsive with `.img-fluid`.
+                This applies max-width with 100% and height with auto to the image so
+                that it scales with the parent width.
+* `thumbnails`: (optional)(true|false) In addition to Bootstrap border-radius utilities, you can
+                use `.img-thumbnail` to give an image a rounded 1px border appearance.
+* `rounded`: (optional)(true/false) Rounded image
+* `utility_classes`: (optional) An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
+ *
+## Attributes:
+* `attributes`: HTML attributes for the img tag.
 
-#### Responsive image (`responsive`):
-(optional) Images in Bootstrap are made responsive with `.img-fluid`.
-This applies max-width with 100% and height with auto to the image so that
-it scales with the parent width.
-
-#### Image thumbnails (`thumbnails`):
-(optional) In addition to Bootstrap border-radius utilities, you can use
- `.img-thumbnail` to give an image a rounded 1px border appearance.
-
-#### Rounded image (`rounded`):
-(optional) Rounded image
-
-#### Utility Classes (`utility_classes`):
-(optional) This property contains an array of utility classes that can be used to
-add extra Bootstrap utility classes or custom classes to this component.
+## Slots:
+* N/A
 
 ### Examples
 

@@ -10,6 +10,10 @@ import templateSource from './image.twig?raw';
 <Subtitle />
 <Description />
 
+> ## [Bootstrap ~5.3.0 Documentation on Images](https://getbootstrap.com/docs/5.3/content/images)
+> * [Images](https://getbootstrap.com/docs/5.3/content/images)
+> * [Responsive Images](https://getbootstrap.com/docs/5.3/content/images/#responsive-images)
+
 
 <Canvas of={comStories.Image} />
 
@@ -19,7 +23,7 @@ import templateSource from './image.twig?raw';
 <Stories of={comStories} />
 
 ## Attributes:
-* `attributes`: Drupal attributes for Image.
+* `attributes`: HTML attributes for the img tag.
 
 ## Slots:
 * N/A
@@ -46,7 +50,19 @@ import templateSource from './image.twig?raw';
     align: 'center',
     responsive: true,
     rounded: true,
-    thumbnails: true,
+    thumbnails: true
+  }
+%}
+```
+
+**Example #3:** Use the Image component with align center, rounded, and thumbnails 
+```
+{% include 'varbase_components:image' with {
+    align: 'center',
+    responsive: true,
+    rounded: true,
+    thumbnails: true
+    attributes: ["src": "https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg"]
   }
 %}
 ```
