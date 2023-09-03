@@ -5,8 +5,39 @@ description: Alerts are available for any length of text, as well as an optional
 props:
   type: object
   properties:
+    type:
+      type: string
+      title: Alert type
+      description: Bootstrap includes several predefined alert type styles.
+      default: ''
+      enum:
+        - ''
+        - alert-primary
+        - alert-secondary
+        - alert-success
+        - alert-danger
+        - alert-warning
+        - alert-info
+        - alert-dark
+        - alert-light
+    dismissible:
+      type: boolean
+      title: Dismissible
+      description: It is possible to dismiss any alert inline, When an alert is dismissed, the element is completely removed from the page structure.
     attributes:
       type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: A list of HTML attributes for the alert element.
+    dismissible_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Dismiss close button attribute
+      description: A list of HTML attributes for the alert dismiss close button element.
 slots:
   content:
-    title: Content
+    type: string
+    title: Alert content
+    description: The content of the alert.
+  heading:
+    type: string
+    title: Alert heading
+    description: Alerts can also contain primary alert heading.

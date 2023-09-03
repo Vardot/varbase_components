@@ -25,8 +25,29 @@ as we have done with aria-label.
 ## Properties
 <Controls of={comStories.Small} />
 
+## Attributes:
+* `attributes`: A list of HTML attributes for the close button element.
+
+## Slots:
+* N/A
+
 <Stories of={comStories} />
 
+### Examples:
+
+**Example #1** Dismissible Alert close button
+```
+{% if dismissible %}
+  {% if not dismissible_attributes %}
+   {% set dismissible_attributes = create_attribute() %}
+  {% endif %}
+  {% set dismissible_attributes = dismissible_attributes.setAttribute('data-bs-dismiss', 'alert') %}
+  {% include 'varbase_components:close-button' with {
+      size: 'btn-sm',
+      attributes: dismissible_attributes
+    } only %}
+{% endif %}
+```
 
 ## Source code
 [//]: # (Twig Template source code)

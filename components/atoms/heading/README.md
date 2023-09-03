@@ -62,3 +62,14 @@ All HTML headings, `<h1>` through `<h6>`, are available.
   utility_classes: ['rich-heading', 'mb-2']
 } %}
 ```
+
+**Example #5** Heading for the the alert message
+```
+	{% if heading|render|striptags|trim is not empty %}
+		{% include "varbase_components:heading" with {
+			html_tag: 'h4',
+			content: heading|render|striptags|trim,
+			utility_classes: ['alert-heading']
+		} only %}
+	{% endif %}
+```

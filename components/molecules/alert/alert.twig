@@ -3,33 +3,58 @@
  * @file
  * Varbase Components implementation for the Alert component.
  *
- * Available config:
- * - type: alert-primary | alert-secondary | alert-success | alert-info | alert-warning | alert-danger | alert-light | alert-dark
- * - heading: string,
- * - dimissible: true | false
+ * Available properties:
+ * - type: Bootstrap includes several predefined alert type styles.
+ *         (alert-primary|alert-secondary|alert-success|alert-info|
+ *          alert-warning|alert-danger|alert-light|alert-dark)
+ * - dismissible: It is possible to dismiss any alert inline, When an alert is dismissed, the element is completely removed from the page structure.
  * - utility_classes: An array of utility classes.
+ *
+ * Available attributes:
+ * - attributes: A list of HTML attributes for the alert element.
+ * - dismissible_attributes: A list of HTML attributes for the alert dismiss close button element.
+ *
+ * Available slots:
+ * - content: The content of the alert.
+ * - heading: Alerts can also contain primary alert heading.
  */
 #}
+{% set type_classes = type ? [type] : [] %}
+{% set dismissible = dismissible ?? true %}
+{% set dismissible_classes = dismissible ? ['alert-dismissible', 'fade', 'show'] : [] %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
 
-{% set dismissible = dismissible ?? true %}
 {% set classes = [
   'alert',
-  (type ?? 'alert-primary'),
-  (dismissible ? 'alert-dismissible' : ''),
-]|merge(utility_classes) %}
+]|merge(type_classes)|merge(dismissible_classes)|merge(utility_classes) %}
 
-<div{{attributes.addClass(classes)}} role="alert">
-	{% if heading %}
-		<h4 class="alert-heading">{{ heading }}</h4>
-	{% endif %}
+{% if not attributes %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+{% set attributes = attributes.addClass(classes) %}
+{% set attributes = attributes.setAttribute('role', 'alert') %}
 
-	{% block content %}
-		{{ content }}
-	{% endblock %}
+<div{{ attributes }}>
+  {% if heading|render|striptags|trim is not empty %}
+    {% include "varbase_components:heading" with {
+      html_tag: 'h4',
+      content: heading|render|striptags|trim,
+      utility_classes: ['alert-heading']
+    } only %}
+  {% endif %}
 
-	{% if dismissible %}
-    <button type="button" class="btn btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
-	{% endif %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+
+  {% if dismissible %}
+    {% if not dismissible_attributes %}
+      {% set dismissible_attributes = create_attribute() %}
+    {% endif %}
+    {% set dismissible_attributes = dismissible_attributes.setAttribute('data-bs-dismiss', 'alert') %}
+    {% include 'varbase_components:close-button' with {
+        size: 'btn-sm',
+        attributes: dismissible_attributes
+      } only %}
+  {% endif %}
 </div>
-

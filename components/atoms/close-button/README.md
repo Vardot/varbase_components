@@ -9,13 +9,29 @@ A generic close button for dismissing content like modals and alerts.
 
 Provide an option to dismiss or close a component with `.btn-close`. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default `background-image`. Be sure to include text for screen readers, as we’ve done with `aria-label`.
 
-## Available properties:
+## Properties:
 * `size`: (btn-sm|btn-lg) Bootstrap button size class.
 * `disabled`: (true|false) Disabled button.
 * `utility_classes`: An array of utility classes.
 
-## Available attributes:
-* `attributes`: Attributes array.
+## Attributes:
+* `attributes`: A list of HTML attributes for the close button element.
 
-## Available slots:
+## Slots:
 * N/A
+
+### Examples:
+
+**Example #1** Dismissible Alert close button
+```
+{% if dismissible %}
+  {% if not dismissible_attributes %}
+   {% set dismissible_attributes = create_attribute() %}
+  {% endif %}
+  {% set dismissible_attributes = dismissible_attributes.setAttribute('data-bs-dismiss', 'alert') %}
+  {% include 'varbase_components:close-button' with {
+      size: 'btn-sm',
+      attributes: dismissible_attributes
+    } only %}
+{% endif %}
+```
