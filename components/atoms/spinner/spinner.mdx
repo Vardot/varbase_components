@@ -1,6 +1,15 @@
-# Spinner
+{/* Spinner.mdx */}
 
-Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML, CSS, and no JavaScript.
+import { Canvas, Title, Subtitle, ArgTypes, Source, Meta, Description, Primary, Story, Stories, Controls } from '@storybook/blocks';
+import * as comStories from './spinner.stories.json';
+import templateSource from './spinner.twig?raw';
+
+<Meta of={comStories} name="Docs"/>
+
+<Title />
+<Subtitle />
+<Description />
+
 
 > ### [Bootstrap ~5.3.0 Documentation on Spinners](https://getbootstrap.com/docs/5.3/components/spinners/)
 > * [Border spinner](https://getbootstrap.com/docs/5.3/components/spinners/#border-spinner)
@@ -9,20 +18,19 @@ Indicate the loading state of a component or page with Bootstrap spinners, built
 > * [Size](https://getbootstrap.com/docs/5.3/components/spinners/#size)
 > * [Hidden Status](https://getbootstrap.com/docs/5.3/components/spinners/#buttons)
 
-### Properties:
-* `html_tag`: Having the spinner as div or span.
-* `type`: Use the border spinners for a lightweight loading indicator. If you do not fancy a border spinner, switch to the grow spinner. While it does not technically spin, it does repeatedly grow!
-* `color`: Built with current Color, so you can easily change its appearance with text color utilities.
-         (primary|secondary|success|danger|warning|info|dark|light)
-* `size`: Make a smaller spinner that can quickly be used within other components.
-* `hidden_status`: Hidden spinner status message.
-* `utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
 
-### Attributes:
+<Canvas of={comStories.Spinner} />
+
+## Properties
+<Controls of={comStories.Spinner} />
+
+<Stories of={comStories} />
+
+## Attributes:
 * `attributes`: A list of HTML attributes for the Spinner element.
 * `spinner_status_attributes`: A list of HTML attributes for the Spinner status element.
 
-### Slots:
+## Slots:
 * `content`: Spinner content.
 
 ### Examples
@@ -65,3 +73,6 @@ Indicate the loading state of a component or page with Bootstrap spinners, built
   } %}
 ```
 
+## Source code
+[//]: # (Twig Template source code)
+<Source code={templateSource} />

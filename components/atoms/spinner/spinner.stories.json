@@ -1,0 +1,213 @@
+{
+  "title": "Varbase Components/Atoms/Spinner",
+  "tags": [
+    "autodocs"
+  ],
+  "parameters": {
+    "componentSubtitle": "Bootstrap Spinner Component",
+    "docs": {
+      "description": {
+        "component": "Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML, CSS, and no JavaScript."
+      },
+      "story": {
+        "inline": true
+      }
+    }
+  },
+  "argTypes": {
+    "html_tag": {
+      "name": "HTML tag",
+      "description": "Having the spinner as div or span",
+      "defaultValue": "div",
+      "control": "select",
+      "options": {
+        "div": "div",
+        "span": "span"
+      }
+    },
+    "type": {
+      "name": "Type",
+      "description": "Use the border spinners for a lightweight loading indicator. If you do not fancy a border spinner, switch to the grow spinner. While it does not technically spin, it does repeatedly grow!",
+      "defaultValue": "border",
+      "control": "select",
+      "options": {
+        "'- none -'": "",
+        "Border": "border",
+        "Grow": "grow"
+      }
+    },
+    "color": {
+      "name": "Color",
+      "description": "Built with current Color, so you can easily change its appearance with text color utilities.",
+      "defaultValue": "",
+      "control": "select",
+      "options": {
+        "'- none -'": "",
+        "Primary": "primary",
+        "Secondary": "secondary",
+        "Success": "success",
+        "Danger": "danger",
+        "Warning": "warning",
+        "Info": "info",
+        "Light": "light",
+        "Dark": "dark"
+      }
+    },
+    "size": {
+      "name": "Size",
+      "description": "Make a smaller spinner that can quickly be used within other components.",
+      "defaultValue": "",
+      "control": "select",
+      "options": {
+        "'- none -'": "",
+        "Small": "sm"
+      }
+    },
+    "hidden_status": {
+      "name": "Hidden status",
+      "description": "Hidden spinner status message.",
+      "defaultValue": true,
+      "control": "boolean"
+    },
+    "content": {
+      "name": "Content",
+      "description": "Spinner text",
+      "defaultValue": "",
+      "control": "text"
+    }
+  },
+  "stories": [
+    {
+      "name": "Spinner",
+      "args": {
+        "html_tag": "div",
+        "type": "border",
+        "color": "",
+        "size": "",
+        "hidden_status": true,
+        "content": "Processing ..."
+      }
+    },
+    {
+      "name": "Grow",
+      "args": {
+        "html_tag": "div",
+        "type": "grow",
+        "color": "",
+        "size": "",
+        "hidden_status": true,
+        "content": "Loading ..."
+      }
+    },
+    {
+      "name": "Border - small",
+      "args": {
+        "html_tag": "div",
+        "type": "border",
+        "color": "",
+        "size": "sm",
+        "hidden_status": false,
+        "content": "Saving ..."
+      }
+    },
+    {
+      "name": "Grow - small",
+      "args": {
+        "html_tag": "div",
+        "type": "grow",
+        "color": "",
+        "size": "sm",
+        "hidden_status": false,
+        "content": "Saving ..."
+      }
+    },
+    {
+      "name": "Primary",
+      "args": {
+        "html_tag": "div",
+        "type": "border",
+        "color": "primary",
+        "size": "",
+        "hidden_status": true,
+        "content": "Loading ..."
+      }
+    },
+    {
+      "name": "Secondary",
+      "args": {
+        "html_tag": "div",
+        "type": "border",
+        "color": "secondary",
+        "size": "",
+        "hidden_status": true,
+        "content": "Loading ..."
+      }
+    },
+    {
+      "name": "Success",
+      "args": {
+        "html_tag": "div",
+        "type": "border",
+        "color": "success",
+        "size": "",
+        "hidden_status": true,
+        "content": "Loading ..."
+      }
+    },
+    {
+      "name": "Danger",
+      "args": {
+        "html_tag": "div",
+        "type": "border",
+        "color": "danger",
+        "size": "",
+        "hidden_status": true,
+        "content": "Loading ..."
+      }
+    },
+    {
+      "name": "Warning",
+      "args": {
+        "html_tag": "div",
+        "type": "border",
+        "color": "warning",
+        "size": "",
+        "hidden_status": true,
+        "content": "Loading ..."
+      }
+    },
+    {
+      "name": "Info",
+      "args": {
+        "html_tag": "div",
+        "type": "border",
+        "color": "info",
+        "size": "",
+        "hidden_status": true,
+        "content": "Loading ..."
+      }
+    },
+    {
+      "name": "Dark",
+      "args": {
+        "html_tag": "div",
+        "type": "border",
+        "color": "dark",
+        "size": "",
+        "hidden_status": true,
+        "content": "Loading ..."
+      }
+    },
+    {
+      "name": "Light",
+      "args": {
+        "html_tag": "div",
+        "type": "border",
+        "color": "light",
+        "size": "",
+        "hidden_status": true,
+        "content": "Loading ..."
+      }
+    }
+  ]
+}

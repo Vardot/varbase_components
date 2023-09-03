@@ -3,26 +3,61 @@
  * @file
  * Varbase Components implementation for a Spinner component.
  *
- * Available config:
- * - tag: div | span
- * - type: spinner-border | spinner-grow
- * - color: text-primary | text-secondary | text-success | text-danger | text-warning | text-info | text-dark | text-light
- * - size: sm
- * - attributes: Attributes array.
- * - utility_classes: An array of utility classes.
+ * Available properties:
+ * - html_tag: Having the spinner as div or span.
+ * - type: Use the border spinners for a lightweight loading indicator. If you do not fancy a border spinner, switch to the grow spinner. While it does not technically spin, it does repeatedly grow!
+ * - color: Built with current Color, so you can easily change its appearance with text color utilities.
+ *         (primary|secondary|success|danger|warning|info|dark|light)
+ * - size: Make a smaller spinner that can quickly be used within other components.
+ * - hidden_status: Hidden spinner status message.
+ * - utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
+ *
+ * Available attributes:
+ * - attributes: A list of HTML attributes for the Spinner element.
+ * - spinner_status_attributes: A list of HTML attributes for the Spinner status element.
+ *
+ * Available slots:
+ * - content: Spinner content.
+ *            **Examples:**
+ *               - Processing
+ *               - Saving
+ *               - Loading
+ *
  */
 #}
 
+{% set html_tag = html_tag ? html_tag : 'div' %}
+{% set type = type ?? 'border' %}
+{% set type_classes = type ? ['spinner-' ~ type] : ['spinner-border'] %}
+{% set size_classes = size ? ['spinner-' ~ type ~ '-' ~ size] : []  %}
+{% set color_classes = color ? ['text-' ~ color] : [] %}
+{% set hidden_status = hidden_status ?? true %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
 
-{% set classes = [
-  type ? type : 'spinner-border',
-  color ? color : '',
-  size ? type ~ '-' ~ size : '',
-]|merge(utility_classes) %}
+{% set classes = []|merge(type_classes)|merge(size_classes)|merge(color_classes)|merge(utility_classes) %}
 
-<{{ tag }} {{ attributes.addClass(classes) }} role="status">
-  {% if content %}
-    <span class="visually-hidden">{{ content }}</span>
+{% if not attributes %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+{% set attributes = attributes.addClass(classes) %}
+
+{% if not spinner_status_attributes %}
+  {% set spinner_status_attributes = create_attribute() %}
+{% endif %}
+
+{% if hidden_status %}
+  {% set attributes = attributes.setAttribute('role', 'status') %}
+  {% set attributes = attributes.setAttribute('aria-hidden', 'true') %}
+  {% set spinner_status_attributes = spinner_status_attributes.addClass('visually-hidden') %}
+{% else %}
+  {% set spinner_status_attributes = spinner_status_attributes.setAttribute('role', 'status') %}
+{% endif %}
+
+<{{ html_tag }}{{ attributes }}>{% apply spaceless %}
+  {% if content and hidden_status %}
+    <span{{ spinner_status_attributes }}>{{ content }}</span>
   {% endif %}
-</{{ tag }}>
+{% endapply %}</{{ html_tag }}>
+{% if content and not hidden_status %}{% apply spaceless %}
+  <span{{ spinner_status_attributes }}>{{ content }}</span>
+{% endapply %}{% endif %}

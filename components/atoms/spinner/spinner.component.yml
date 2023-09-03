@@ -9,6 +9,7 @@ props:
       type: string
       title: HTML tag
       description: Having the spinner as div or span
+      default: div
       enum:
         - div
         - span
@@ -16,36 +17,58 @@ props:
       type: string
       title: Type
       description: Use the border spinners for a lightweight loading indicator. If you do not fancy a border spinner, switch to the grow spinner. While it does not technically spin, it does repeatedly grow!
+      default: border
       enum:
-        - spinner-border
-        - spinner-grow
+        - ''
+        - border
+        - grow
     color:
       type: string
       title: Color
-      description: Once again, this spinner is built with currentColor, so you can easily change its appearance with text color utilities. Here it is in blue, along with the supported variants.
+      description: Built with current Color, so you can easily change its appearance with text color utilities.
+      default: ''
       enum:
-        - text-primary
-        - text-secondary
-        - text-success
-        - text-danger
-        - text-warning
-        - text-info
-        - text-dark
-        - text-light
+        - ''
+        - primary
+        - secondary
+        - success
+        - danger
+        - warning
+        - info
+        - dark
+        - light
     size:
       type: string
       title: Size
-      description: Add `.spinner-border-sm` and `.spinner-grow-sm` to make a smaller spinner that can quickly be used within other components.
+      description: Make a smaller spinner that can quickly be used within other components.
+      default: ''
       enum:
         - ''
         - sm
-    content:
-      type: string
-      title: Content
-      description: Spinner text
-      examples:
-        - Processing
-        - Saving
-        - Loading
+    hidden_status:
+      type: boolean
+      title: Hidden status
+      description: Hidden spinner status message.
+      default: true
+    utility_classes:
+      type: array
+      title: Utility Classes
+      default: []
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
     attributes:
       type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: A list of HTML attributes for the Spinner element.
+    spinner_status_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Spinner Status Attributes
+      description: A list of HTML attributes for the Spinner status element.
+slots:
+  content:
+    type: string
+    title: Content
+    description: Spinner content
+    examples:
+      - Processing
+      - Saving
+      - Loading
