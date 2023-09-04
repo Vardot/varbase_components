@@ -1,0 +1,151 @@
+{
+  "title": "Varbase Components/Organisms/Table",
+  "tags": [
+    "autodocs"
+  ],
+  "parameters": {
+    "componentSubtitle": "Bootstrap Table Component",
+    "docs": {
+      "description": {
+        "component": "The Table component with support for Bootstrap"
+      },
+      "story": {
+        "inline": true
+      }
+    }
+  },
+  "argTypes": {
+    "caption": {
+      "name": "Caption",
+      "description": "A localized string for the `<caption>` tag.",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "colgroups": {
+      "name": "Column groups",
+      "description": "Column groups which contains attributes",
+      "control": "object"
+    },
+    "header": {
+      "name": "Table header cells",
+      "description": "Table header cells which contains (tag, attributes, content, field, sort)",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "sticky": {
+      "name": "Sticky",
+      "description": "A flag indicating whether to use a sticky table header.",
+      "control": "boolean",
+      "defaultValue": false
+    },
+    "rows": {
+      "name": "Rows",
+      "description": "Table rows, which each row contains (attributes, data, no_striping, cells). Each cell contains (tag, attributes, content, active_table_sort)",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "footer": {
+      "name": "Footer",
+      "description": "Table footer rows, in the same format as the rows variable.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "empty": {
+      "name": "Empty",
+      "description": "The message to display in an extra row if table does not have any rows.",
+      "control": "text",
+      "defaultValue": ""
+    },
+    "no_striping": {
+      "name": "No Striping",
+      "description": "A boolean indicating that the row should receive no striping.",
+      "control": "boolean",
+      "defaultValue": false
+    },
+    "header_columns": {
+      "name": "Header Columns",
+      "description": "The number of columns in the header.",
+      "control": "number",
+      "min": 1,
+      "step": 1
+    },
+    "color": {
+      "name": "Table Background Color",
+      "description": "Set a background contextual classes to color tables",
+      "defaultValue": "",
+      "control": "select",
+      "options": {
+        "'- none -'": "",
+        "Primary": "primary",
+        "Secondary": "secondary",
+        "Success": "success",
+        "Info": "info",
+        "Warning": "warning",
+        "Danger": "danger",
+        "Light": "light",
+        "Dark": "dark"
+      }
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the table element.",
+      "control": "array",
+      "defaultValue": {}
+    },
+    "thead_utility_classes": {
+      "name": "Table Head Utility Classes",
+      "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the head of the table element.",
+      "control": "array",
+      "defaultValue": {}
+    },
+    "tbody_utility_classes": {
+      "name": "Table Body Utility Classes",
+      "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the body of the table element.",
+      "control": "array",
+      "defaultValue": {}
+    },
+    "tfoot_utility_classes": {
+      "name": "Table Footer Utility Classes",
+      "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the footer of the table element.",
+      "control": "array",
+      "defaultValue": {}
+    }
+  },
+  "stories": [
+    {
+      "name": "Table",
+      "args": {
+        "caption": "Example table caption",
+        "colgroups": {},
+        "header": {
+          "0": {
+            "tag": "th",
+            "content": "#"
+          },
+          "1": {
+            "tag": "th",
+            "content": "First"
+          },
+          "2": {
+            "tag": "th",
+            "content": "Last"
+          },
+          "3": {
+            "tag": "th",
+            "content": "Handle"
+          }
+        },
+        "sticky": false,
+        "rows": {},
+        "footer": {},
+        "empty": "",
+        "no_striping": false,
+        "header_columns": 3,
+        "utility_classes": {},
+        "thead_utility_classes": {},
+        "tbody_utility_classes": {},
+        "tfoot_utility_classes": {}
+      }
+    }
+  ]
+}

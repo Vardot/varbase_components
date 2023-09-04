@@ -1,25 +1,77 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Table 
 status: experimental
-description: Table
+description: The Table component with support for Bootstrap
 props:
   type: object
-  properties:
-    table:
-      type: array
-      title: Table
+  properties: 
     caption:
       type: string
       title: Caption
-    colgroup:
-      type: string
-      title: Column Group
+      description: A localized string for the `<caption>` tag.
+    colgroups:
+      type: array
+      title: Column groups
+      description: Column groups which contains attributes
     header:
-      type: string
-      title: Header
-    body:
-      type: string
-      title: Body
+      type: array
+      title: Table header cells
+      description: Table header cells which contains (tag, attributes, content, field, sort)
+    sticky:
+      type: boolean
+      title: Sticky
+      description: A flag indicating whether to use a sticky table header.
+      default: false
+    rows:
+      type: array
+      title: Table rows
+      description: Table rows, which each row contains (attributes, data, no_striping, cells). Each cell contains (tag, attributes, content, active_table_sort)
     footer:
+      type: array
+      title: Table footer
+      description: Table footer rows, in the same format as the rows variable.
+    empty:
       type: string
-      title: Footer
+      title: Empty
+      description: The message to display in an extra row if table does not have any rows.
+    no_striping:
+      type: boolean
+      title: No Striping
+      description: A boolean indicating that the row should receive no striping.
+    header_columns:
+      type: number
+      title: Header Columns
+      description: The number of columns in the header.
+    color:
+      type: string
+      title: Table Background Color
+      description: Set a background contextual classes to color tables
+      default: ''
+      enum:
+        - ''
+        - primary
+        - secondary
+        - success
+        - info
+        - warning
+        - danger
+        - light
+        - dark
+    utility_classes:
+      type: array
+      title: Utility Classes
+      default: []
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the table element.
+    thead_utility_classes:
+      type: array
+      title: Table Head Utility Classes
+      default: []
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the head of the table element.
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: HTML attributes to apply to the `<table>` tag.
+    thead_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Table head attributes
+      description: HTML attributes to apply to the `<thead>` tag.

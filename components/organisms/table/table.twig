@@ -3,102 +3,138 @@
  * @file
  * Varbase Components implementation for a Table component.
  *
- * Available config:
- * - utility_classes: An array of utility classes.
- * - @see https://getbootstrap.com/docs/5.0/content/tables/
+ * Available properties:
+ * - caption: A localized string for the `<caption>` tag.
+ * - colgroups: Column groups which contains attributes
+ * - header: Table header cells which contains (tag, attributes, content, field, sort)
+ * - sticky: A flag indicating whether to use a sticky table header.
+ * - rows: Table rows, which each row contains (attributes, data, no_striping, cells).
+ *         Each cell contains (tag, attributes, content, active_table_sort)
+ * - footer: Table footer rows, in the same format as the rows variable.
+ * - empty: The message to display in an extra row if table does not have any rows.
+ * - no_striping: A boolean indicating that the row should receive no striping.
+ * - header_columns: The number of columns in the header.
+ * - utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or
+ *                    custom CSS classes over to the table element.
+ * - thead_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or
+ *                          custom CSS classes over to the head of the table element.
+ * - tbody_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or
+ *                          custom CSS classes over to the body of the table element.
+ * - tfoot_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or
+ *                          custom CSS classes over to the footer of the table element.
+ *
+ * Available attributes:
+ * - attributes: HTML attributes to apply to the `<table>` tag.
+ * - thead_attributes: HTML attributes to apply to the `<thead>` tag.
+ * - tbody_attributes: HTML attributes to apply to the `<tbody>` tag.
+ * - tfoot_attributes: HTML attributes to apply to the `<tfoot>` tag.
+ *
+ * Available slots:
+ * - N/A
+ *
  */
 #}
 
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set no_striping_classes = no_striping ? ['table-bordered'] : ['table-striped'] %}
+{% set color_classes = color ? ['table-' ~ color] : [] %}
+{% set utility_classes = utility_classes ?? [] %}
+{% set thead_utility_classes = thead_utility_classes ?? [] %}
+{% set tbody_utility_classes = tbody_utility_classes ?? [] %}
+{% set tfoot_utility_classes = tfoot_utility_classes ?? [] %}
 
-{% block table %}
-  {%
-    set classes = [
-      'table',
-    ]|merge(utility_classes)
-  %}
+{%
+  set table_classes = [
+    'table',
+  ]|merge(color_classes)|merge(no_striping_classes)|merge(utility_classes)
+%}
 
-  <table{{ attributes.addClass(classes) }}>
-    {% if caption %}
-      {% block caption %}
-        <caption>{{ caption }}</caption>
-      {% endblock %}
+<div class="table-responsive">
+{% if not attributes %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+<table{{ attributes.addClass(table_classes) }}>
+  {% if caption %}
+    <caption>{{ caption }}</caption>
+  {% endif %}
+
+  {% for colgroup in colgroups %}
+    {% if colgroup.cols %}
+      <colgroup{{ colgroup.attributes }}>
+        {% for col in colgroup.cols %}
+          <col{{ col.attributes }} />
+        {% endfor %}
+      </colgroup>
+    {% else %}
+      <colgroup{{ colgroup.attributes }} />
+    {% endif %}
+  {% endfor %}
+
+  {% if header %}
+    {% if not thead_attributes %}
+      {% set thead_attributes = create_attribute() %}
     {% endif %}
 
-    {% block colgroup %}
-      {% for colgroup in colgroups %}
-        {% if colgroup.cols %}
-          <colgroup{{ colgroup.attributes }}>
-            {% for col in colgroup.cols %}
-              <col{{ col.attributes }} />
-            {% endfor %}
-          </colgroup>
-        {% else %}
-          <colgroup{{ colgroup.attributes }} />
-        {% endif %}
-      {% endfor %}
-    {% endblock %}
-
-    {% block header %}
-      {% if header %}
-          <thead>
-            <tr>
-              {% for cell in header %}
-                {%
-                  set cell_classes = [
-                  cell.active_table_sort ? 'is-active',
-                ]
-                %}
-                <{{ cell.tag }}{{ cell.attributes.addClass(cell_classes) }}>
-                {{- cell.content -}}
-              </{{ cell.tag }}>
-              {% endfor %}
-            </tr>
-          </thead>
-      {% endif %}
-    {% endblock %}
-
-    {% block body %}
-      {% if rows %}
-        <tbody>
-          {% for row in rows %}
-            {%
-              set row_classes = [
-              not no_striping ? cycle(['odd', 'even'], loop.index0),
+    <thead{{ thead_attributes.addClass(thead_utility_classes) }}>
+      <tr>
+        {% for cell in header %}
+          {%
+            set cell_classes = [
+              cell.active_table_sort ? 'active',
             ]
-            %}
-          <tr{{ row.attributes.addClass(row_classes) }}>
-            {% for cell in row.cells %}
-              <{{ cell.tag }}{{ cell.attributes }}>
-              {{- cell.content -}}
-              </{{ cell.tag }}>
-            {% endfor %}
-            </tr>
-          {% endfor %}
-          </tbody>
-        {% elseif empty %}
-          <tbody>
-          <tr class="odd">
-            <td colspan="{{ header_columns }}" class="empty message">{{ empty }}</td>
-          </tr>
-        </tbody>
-      {% endif %}
-    {% endblock %}
+          %}
+          <{{ cell.tag }}{{ cell.attributes.addClass(cell_classes) }}>
+            {{- cell.content -}}
+          </{{ cell.tag }}>
+        {% endfor %}
+      </tr>
+    </thead>
+  {% endif %}
 
-    {% block footer %}
-      {% if footer %}
-        <tfoot>
-          {% for row in footer %}
-          <tr{{ row.attributes }}>
-            {% for cell in row.cells %}
-              <{{ cell.tag }}{{ cell.attributes }}>
+  {% if rows %}
+    {% if not tbody_attributes %}
+      {% set tbody_attributes = create_attribute() %}
+    {% endif %}
+    <tbody{{ tbody_attributes.addClass(tbody_utility_classes) }}>
+      {% for row in rows %}
+        {%
+          set row_classes = [
+            not no_striping ? cycle(['odd', 'even'], loop.index0),
+          ]
+        %}
+        <tr{{ row.attributes.addClass(row_classes) }}>
+          {% for cell in row.cells %}
+            <{{ cell.tag }}{{ cell.attributes }}>
               {{- cell.content -}}
-              </{{ cell.tag }}>
-            {% endfor %}
-            </tr>
+            </{{ cell.tag }}>
           {% endfor %}
-        </tfoot>
-      {% endif %}
-    {% endblock %}
-  </table>
-{% endblock %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  {% elseif empty %}
+    {% if not tbody_attributes %}
+      {% set tbody_attributes = create_attribute() %}
+    {% endif %}
+    <tbody{{ tbody_attributes.addClass(tbody_utility_classes) }}>
+      <tr class="odd">
+        <td colspan="{{ header_columns }}" class="empty message">{{ empty }}</td>
+      </tr>
+    </tbody>
+  {% endif %}
+  {% if footer %}
+    {% if not tfoot_attributes %}
+      {% set tfoot_attributes = create_attribute() %}
+    {% endif %}
+    <tfoot{{ tfoot_attributes.addClass(tfoot_utility_classes) }}>
+      {% for row in footer %}
+        <tr{{ row.attributes }}>
+          {% for cell in row.cells %}
+            <{{ cell.tag }}{{ cell.attributes }}>
+              {{- cell.content -}}
+            </{{ cell.tag }}>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tfoot>
+  {% endif %}
+</table>
+</div>
