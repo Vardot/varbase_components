@@ -3,32 +3,67 @@
  * @file
  * Varbase Components implementation for a Breadcrumb component.
  *
- * Available config:
- * - utility_classes: An array of utility classes.
+ * Available properites:
+ * - breadcrumb: Breadcrumb trail items.
+ * - divider: Dividers are automatically added in CSS through ::before and content. They can be changed by modifying a local CSS custom property --bs-breadcrumb-divider, or through the $breadcrumb-divider Sass variable — and $breadcrumb-divider-flipped for its RTL counterpart, if needed. 
+ * - utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
+ *
+ * Available attributes:
+ * - attributes: A list of HTML attributes for the breadcrumb nav element.
+ * - items_attributes: A list of HTML attributes for the Breadcrumb trail items element.
+ *
+ * Available slots:
+ * - N/A
+ *
  */
 #}
-
+{% set divider = divider ?? '' %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
-
 {% set classes = []|merge(utility_classes) %}
 
 {% if not attributes %}
   {% set attributes = create_attribute() %}
-  {% set attributes = attributes.setAttribute('aria-label', 'breadcrumb' ) %}
 {% endif %}
 
-{% if breadcrumb %}
-  <nav{{ attributes.addClass(classes) }}>
-    <ol class="breadcrumb bg-light py-2 px-3 my-2">
+{% set attributes = attributes.addClass(classes) %}
+{% set attributes = attributes.setAttribute('role', 'navigation' ) %}
+{% set attributes = attributes.setAttribute('aria-label', 'breadcrumb' ) %}
+
+{% if divider is not empty and divider != '' %}
+  {% set attributes = attributes.setAttribute('style', "--bs-breadcrumb-divider: '" ~ divider ~ "';" ) %}
+{% endif %}
+
+{%
+  set items_classes = [
+    'breadcrumb',
+    'bg-light',
+    'py-2',
+    'px-3',
+    'my-2'
+  ]
+%}
+{% if not items_attributes %}
+  {% set items_attributes = create_attribute() %}
+{% endif %}
+{% set items_attributes = items_attributes.addClass(items_classes) %}
+
+{% if breadcrumb %}{% apply spaceless %}
+  <nav{{ attributes }}>
+    <ol{{ items_attributes }}>
       {% for item in breadcrumb %}
-        <li class="breadcrumb-item {{ not item.url ? 'active' }}">
-          {% if item.url %}
-            <a href="{{ item.url }}">{{ item.text }}</a>
-          {% else %}
+        {% if item.url %}
+          <li class="breadcrumb-item">
+            {% include 'varbase_components:link' with {
+              url: item.url,
+              content: item.text
+            } only %}
+          </li>
+        {% else %}
+          <li class="breadcrumb-item active" aria-current="page">
             {{ item.text }}
-          {% endif %}
-        </li>
+          </li>
+        {% endif %}
       {% endfor %}
     </ol>
   </nav>
-{% endif %}
+{% endapply %}{% endif %}

@@ -56,3 +56,15 @@ Link with Bootstrap Link helpers and utility classes
     utility_classes: ['card-link', 'float-end', 'mt-3', 'read-more']
   } %}
 ```
+
+**Example #3:** Add a link for a breadcrumb item
+```
+  {% if item.url %}
+    <li class="breadcrumb-item">
+      {% include 'varbase_components:link' with {
+        url: item.url,
+        content: item.text
+      } only %}
+    </li>
+  {% else %}
+```

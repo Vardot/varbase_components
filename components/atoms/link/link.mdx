@@ -53,6 +53,17 @@ import templateSource from './link.twig?raw';
   } %}
 ```
 
+**Example #3:** Add a link for a breadcrumb item
+```
+  {% if item.url %}
+    <li class="breadcrumb-item">
+      {% include 'varbase_components:link' with {
+        url: item.url,
+        content: item.text
+      } only %}
+    </li>
+  {% else %}
+```
 
 ## Source code
 [//]: # (Twig Template source code)

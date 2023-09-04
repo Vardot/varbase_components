@@ -1,12 +1,30 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
 name: Breadcrumb
 status: experimental
-description: Breadcrumb component.
+description: Breadcrumb trail items that indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
 props:
   type: object
   properties:
-    content:
+    breadcrumb:
+      type: array
+      title: Breadcrumb
+      description: Breadcrumb trail items
+      default: []
+    divider:
       type: string
-      title: Content
+      title: Divider
+      description: Dividers are automatically added in CSS through ::before and content. They can be changed by modifying a local CSS custom property --bs-breadcrumb-divider, or through the $breadcrumb-divider Sass variable — and $breadcrumb-divider-flipped for its RTL counterpart, if needed. 
+      default: ''
+    utility_classes:
+      type: array
+      title: Utility Classes
+      default: []
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
     attributes:
       type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: A list of HTML attributes for the breadcrumb nav element.
+    items_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Dismiss close button attribute
+      description: A list of HTML attributes for the Breadcrumb trail items element.
