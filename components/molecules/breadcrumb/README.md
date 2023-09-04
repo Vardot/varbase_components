@@ -27,3 +27,11 @@ Breadcrumb trail items that indicate the current page’s location within a navi
   divider: '>'
 } %}
 ```
+
+**Example #3** Have more spacing
+```
+{% include 'varbase_components:breadcrumb' with {
+  breadcrumb: breadcrumb,
+  utility_classes: ['m-sm-2', 'm-md-3', 'm-xxl-5']
+} %}
+```

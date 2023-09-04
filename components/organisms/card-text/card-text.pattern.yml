@@ -1,7 +1,7 @@
 card_text:
   use: 'varbase_components:card-text'
   label: 'Text Card'
-  description: Text card pattern.
+  description: Text card component and pattern with content.
   fields:
     content:
       type: 'textfield'

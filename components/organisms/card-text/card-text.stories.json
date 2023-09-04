@@ -1,6 +1,19 @@
 {
   "title": "Varbase Components/Organisms/Text Card",
-  "description": "Text card component and pattern with content.",
+  "tags": [
+    "autodocs"
+  ],
+  "parameters": {
+    "componentSubtitle": "Bootstrap Text card component",
+    "docs": {
+      "description": {
+        "component": "Text card component and pattern with content."
+      },
+      "story": {
+        "inline": true
+      }
+    }
+  },
   "argTypes": {
     "style_size": {
       "name": "Card style size",

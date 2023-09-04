@@ -1,0 +1,41 @@
+{/* card-hero.mdx */}
+
+import { Canvas, Title, Subtitle, ArgTypes, Source, Meta, Description, Primary, Story, Stories, Controls } from '@storybook/blocks';
+import * as comStories from './card-hero.stories.json';
+import templateSource from './card-hero.twig?raw';
+
+<Meta of={comStories} name="Docs"/>
+
+<Title />
+<Subtitle />
+<Description />
+
+
+<Primary />
+
+## Properties
+<Controls />
+
+
+<Stories of={comStories} />
+
+### Options to custom:
+- Full clone/copy the **Hero Card** component and [customize it in a custom theme](https://docs.varbase.vardot.com/v/10.0.x/developers/theme-development-with-varbase/customize-a-varbase-sdc-component-in-a-custom-theme)
+- Minimal copy of parts of the component and use for targeted selected entity type or bundle, and have the custom changes with styles(`css`) and scripts(`js`), or even with custom props and slots.
+```
+{% include 'varbase_components:card-hero' with {
+  card_border: true,
+  anchor_all: true,
+  horizontal_alignment: 'center',
+  vertical_alignment: 'center',
+  utility_classes: [],
+  media_utility_classes: [],
+  content_utility_classes: [],
+  media: media,
+  content: content,
+} only %}
+```
+
+## Source code
+[//]: # (Twig Template source code)
+<Source code={templateSource} />

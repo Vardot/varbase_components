@@ -51,8 +51,6 @@ slots:
   media:
     title: Card Media
     description: Media for the Card.
-    examples:
-      - "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg\"></picture>"
   content:
     title: Card Content
     description: Content for the Card.

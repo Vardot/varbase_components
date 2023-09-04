@@ -62,7 +62,7 @@ Images in Bootstrap are made responsive with `.img-fluid`. This applies
     responsive: true,
     rounded: true,
     thumbnails: true
-    attributes: ["src": "https://www.vardot.com/sites/default/files/styles/de2e_standard/public/images/2019-12/nik-macmillan-yxemfqipr_e-unsplash-04_3.jpg"]
+    attributes: ["src": "https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg"]
   }
 %}
 ```
