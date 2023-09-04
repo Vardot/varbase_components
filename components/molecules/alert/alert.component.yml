@@ -24,6 +24,11 @@ props:
       type: boolean
       title: Dismissible
       description: It is possible to dismiss any alert inline, When an alert is dismissed, the element is completely removed from the page structure.
+    utility_classes:
+      type: array
+      title: Utility Classes
+      default: []
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
     attributes:
       type: Drupal\Core\Template\Attribute
       title: Attributes
