@@ -64,5 +64,25 @@ inherited in Bootstrap, meaning any nested tables can be styled independent from
 * `thead_attributes`: HTML attributes to apply to the `<thead>` tag.
 * `tbody_attributes`: HTML attributes to apply to the `<tbody>` tag.
 * `tfoot_attributes`: HTML attributes to apply to the `<tfoot>` tag.
+
 ### Slots:
 * N/A
+
+
+## Examples:
+
+**Example #1** Used in the `table.html.twig` in Vartheme BS5
+Only passing variables from Drupal.
+```
+{% include 'varbase_components:table' with {   
+    caption: caption|default(''),
+    colgroups: colgroups|default([]),
+    header: header|default([]),
+    sticky: sticky|default([]),
+    rows: rows|default([]),
+    footer: footer|default([]),
+    empty: empty|default(''),
+    no_striping: no_striping|default(false)
+  }
+%}
+```
