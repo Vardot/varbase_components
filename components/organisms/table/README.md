@@ -30,6 +30,16 @@ inherited in Bootstrap, meaning any nested tables can be styled independent from
 > * [Breakpoint specific](https://getbootstrap.com/docs/5.3/content/tables/#breakpoint-specific)
 
 ### Properties:
+* `responsive`: Responsive tables allow tables to be scrolled horizontally with ease.
+              Make any table responsive across all viewports.
+* `color`: Table Background Color - Set a background contextual classes to color tables.
+* `striped_rows`: Use to add zebra-striping to any table row within the `<tbody>`. Works when `no_striping` is false.
+* `striped_columns`: Use to add zebra-striping to any table column. Works when `no_striping` is false.
+* `hover`: Enable a hover state on table rows within a `<tbody>`.
+* `bordered`: Add borders on all sides of the table and cells.
+* `border_color`: Use the border color utility to change border colors.
+* `borderless`: Add `.table-borderless` for a table without borders.
+* `size`: Use sm for small to make any table more compact by cutting all cell padding in half.
 * `caption`: A localized string for the `<caption>` tag.
 * `colgroups`: Column groups which contains attributes
 * `header`: Table header cells which contains (tag, attributes, content, field, sort)
