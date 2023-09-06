@@ -21,8 +21,10 @@ Images in Bootstrap are made responsive with `.img-fluid`. This applies
 * `thumbnails`: (optional)(true|false) In addition to Bootstrap border-radius utilities, you can
                 use `.img-thumbnail` to give an image a rounded 1px border appearance.
 * `rounded`: (optional)(true/false) Rounded image
-* `utility_classes`: (optional) An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
- *
+* `utility_classes`: An array of utility classes that can
+                    be used to add extra Bootstrap utility classes or custom
+                    classes to this component.
+
 ## Attributes:
 * `attributes`: HTML attributes for the img tag.
 

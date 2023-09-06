@@ -21,7 +21,9 @@ Use Bootstrap’s custom button styles for actions in forms, dialogs, and more w
               background images and colors on any button.
 * `size`: (btn-sm | btn-lg) Bootstrap button size
 * `disabled`: (true|false) Disabled button
-* `utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
+* `utility_classes`: An array of utility classes that can
+                    be used to add extra Bootstrap utility classes or custom
+                    classes to this component.
 
 ## Attributes:
 * `attributes`: Drupal attributes for link.

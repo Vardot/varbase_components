@@ -11,9 +11,10 @@ All HTML headings, `<h1>` through `<h6>`, are available.
                Defaults to h1 (h1|h2|h3|h4|h5|h6)
 * `display`: When you need a heading to stand out, consider using a display
              heading—a larger, slightly more opinionated heading style.
-* `utility_classes`: This property contains an array of utility classes that can
-                     be used to add extra Bootstrap utility classes or custom
-                     classes to this component.
+* `utility_classes`: An array of utility classes that can
+                    be used to add extra Bootstrap utility classes or custom
+                    classes to this component.
+
 ## Attributes:
  * `attributes`: Attributes array.
 

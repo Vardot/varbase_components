@@ -19,11 +19,11 @@ Documentation and examples for badges, our small count and labeling component.
           (primary | secondary | success | info |
           warning | danger | light | dark)
 * `url`: The HTML tag will automatically be set to a if an anchor is added to the URL.
-* `utility_classes`: This property contains an array of utility classes that can
+* `utility_classes`: An array of utility classes that can
                     be used to add extra Bootstrap utility classes or custom
                     classes to this component.
 
-## Aattributes
+## Attributes
 * N/A
 
 ## Slots
