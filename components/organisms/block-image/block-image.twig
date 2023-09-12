@@ -33,7 +33,11 @@
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if title %}
-    <{{ title_tag }}{{ title_attributes }}>{{ title }}</{{ title_tag }}>
+    {% include "varbase_components:heading" with {
+      attributes: title_attributes,
+      content: title,
+      html_tag: title_tag
+    } only %}
   {% endif %}
   {{ title_suffix }}
   {% block content %}

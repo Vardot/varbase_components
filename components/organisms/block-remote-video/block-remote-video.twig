@@ -7,10 +7,9 @@
   {% if title %}
     {% include "varbase_components:heading" with {
       attributes: title_attributes,
-      tag: title_tag,
-      content: title,
-      utility_classes: []
-    } %}
+      html_tag: title_tag,
+      content: title
+    } only %}
   {% endif %}
 
 

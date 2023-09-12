@@ -30,10 +30,8 @@
   {% include 'varbase_components:heading' with {
       html_tag: title_tag,
       content: label,
-      attributes: [],
       utility_classes: ['cta-heading', 'mb-2'],
-    }
-  %}
+    } only %}
   {% endif %}
   {{ title_suffix }}
 

@@ -32,10 +32,8 @@
   {% if heading_text|render|striptags|trim %}
   {% include 'varbase_components:heading' with {
       html_tag: heading_tag,
-      content: heading_text,
-      attributes: create_attribute(),
-    }
-  %}
+      content: heading_text
+    } only %}
   {% endif %}
   {{ title_suffix }}
 </div>

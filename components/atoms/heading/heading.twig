@@ -25,4 +25,9 @@
 
 {% set classes = []|merge(display)|merge(utility_classes) %}
 
-<{{ html_tag }} {{ attributes.addClass(classes) }}>{{ content }}</{{ html_tag }}>
+{% if not attributes %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+{%  set attributes = attributes.addClass(classes) %}
+
+<{{ html_tag }}{{ attributes }}>{{ content }}</{{ html_tag }}>
