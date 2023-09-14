@@ -475,30 +475,6 @@
   }
 }
 
-@media (min-width: 1200px) {
-  .varbase-heroslider-media > .view-empty {
-    padding: 25rem 0 3rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .varbase-heroslider-media > .view-empty {
-    background-position: 50% 5rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .varbase-heroslider-media > .view-empty {
-    background-size: 15rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .varbase-heroslider-media > .view-empty {
-    font-size: 1.75rem;
-  }
-}
-
 @media (max-aspect-ratio: 16/9) {
   [dir=rtl] .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single .varbase-video-player.ratio {
     left: 0;
