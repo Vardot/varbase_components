@@ -1,8 +1,5 @@
 {
   "title": "Varbase Components/Organisms/Hero Card",
-  "tags": [
-    "autodocs"
-  ],
   "parameters": {
     "componentSubtitle": "Bootstrap Hero card component",
     "docs": {

@@ -1,8 +1,5 @@
 {
   "title": "Varbase Components/Organisms/Carousel",
-  "tags": [
-    "autodocs"
-  ],
   "parameters": {
     "componentSubtitle": "Bootstrap Carousel component",
     "docs": {

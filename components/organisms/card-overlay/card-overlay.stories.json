@@ -1,8 +1,5 @@
 {
   "title": "Varbase Components/Organisms/Overlay Card",
-  "tags": [
-    "autodocs"
-  ],
   "parameters": {
     "componentSubtitle": "Bootstrap Overlay card component",
     "docs": {

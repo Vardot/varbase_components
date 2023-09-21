@@ -1,8 +1,5 @@
 {
   "title": "Varbase Components/Organisms/Text Card",
-  "tags": [
-    "autodocs"
-  ],
   "parameters": {
     "componentSubtitle": "Bootstrap Text card component",
     "docs": {

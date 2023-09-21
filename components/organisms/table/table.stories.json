@@ -1,8 +1,5 @@
 {
   "title": "Varbase Components/Organisms/Table",
-  "tags": [
-    "autodocs"
-  ],
   "parameters": {
     "componentSubtitle": "Bootstrap Table Component",
     "docs": {

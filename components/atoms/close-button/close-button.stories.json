@@ -1,6 +1,16 @@
 {
   "title": "Varbase Components/Atoms/Close Button",
-  "description": "A generic close button for dismissing content like modals and alerts.",
+  "parameters": {
+    "componentSubtitle": "Bootstrap Close Button Component",
+    "docs": {
+      "description": {
+        "component": "A generic close button for dismissing content like modals and alerts."
+      },
+      "story": {
+        "inline": true
+      }
+    }
+  },
   "argTypes": {
     "size": {
       "name": "Size",

@@ -1,8 +1,5 @@
 {
   "title": "Varbase Components/Atoms/Link",
-  "tags": [
-    "autodocs"
-  ],
   "parameters": {
     "componentSubtitle": "Bootstrap Link Component",
     "docs": {

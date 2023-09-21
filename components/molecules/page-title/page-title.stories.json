@@ -1,8 +1,5 @@
 {
   "title": "Varbase Components/Molecules/Page Title",
-  "tags": [
-    "autodocs"
-  ],
   "parameters": {
     "componentSubtitle": "Bootstrap Page Title Component",
     "docs": {

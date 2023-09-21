@@ -1,8 +1,5 @@
 {
   "title": "Varbase Components/Molecules/Breadcrumb",
-  "tags": [
-    "autodocs"
-  ],
   "parameters": {
     "componentSubtitle": "Bootstrap Breadcrumb Component",
     "docs": {

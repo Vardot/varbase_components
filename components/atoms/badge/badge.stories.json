@@ -1,8 +1,5 @@
 {
   "title": "Varbase Components/Atoms/Badge",
-  "tags": [
-    "autodocs"
-  ],
   "parameters": {
     "componentSubtitle": "Bootstrap Badge Component",
     "docs": {

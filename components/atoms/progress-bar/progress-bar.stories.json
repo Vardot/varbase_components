@@ -1,6 +1,16 @@
 {
   "title": "Varbase Components/Atoms/Progress Bar",
-  "desc": "Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.",
+  "parameters": {
+    "componentSubtitle": "Bootstrap Progress bar Component",
+    "docs": {
+      "description": {
+        "component": "Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels."
+      },
+      "story": {
+        "inline": true
+      }
+    }
+  },
   "argTypes": {
     "color": {
       "name": "Progress Bar Color",
