@@ -1,13 +1,10 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
-name: Block HTML
+name: Varbase HTML Block
 status: experimental
-description: The HTMl block.
+description: The HTML block.
 props:
   type: object
   properties:
-    label:
-      type: string
-      title: Label
     id:
       type: string
       title: ID
@@ -28,6 +25,9 @@ props:
       type: array
       title: title suffix
 slots:
-  body:
+  label:
     type: string
-    title: body
+    title: Label
+  content:
+    type: string
+    title: Content
