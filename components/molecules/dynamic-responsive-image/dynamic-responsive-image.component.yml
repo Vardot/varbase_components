@@ -1,0 +1,56 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+name: Dynamic Responsive Image
+status: experimental
+description: Generate (nearly) perfectly scaled (or cropped) images on-the-fly assumes the width of images is set in CSS, either directly in the wrapper-div or inherited through a parent element. Any grid system will do just fine for this.
+group: Dynamic Responsive Image
+props:
+  type: object
+  properties:
+    url:
+      type: string
+      title: Optional URL
+      description: An optional URL the image can be linked to.
+    width:
+      type: string
+      title: Original Width
+      description: The original width of the image.
+    height:
+      type: string
+      title: Original Height
+      description: The original height of the image.
+    alt:
+      type: string
+      title: Alt Text
+      description: The alt text for the image.
+    data:
+      type: object
+      title: Data
+      description: json encoded drimage data object
+    utility_classes:
+      type: array
+      title: Utility Classes 
+      default: []
+      description: Use to add extra Bootstrap utility classes for the main wrapper. 
+    item_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: The Dynamic Responsive Image Item Attributes
+      description: A list of HTML attributes for the item wrapper element.
+    picture_source_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Picture Source Attributes
+      description: A list of HTML attributes for the picture source element.
+    picture_img_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Picture Image Attributes
+      description: A list of HTML attributes for the picture image element.
+    url_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: URL Attributes
+      description: A list of HTML attributes for the URL element.
+    noscript_img_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: No JavaScript Image Attributes
+      description: A list of HTML attributes for the No JavaScript Image element.
+libraryOverrides:
+  dependencies:
+    - drimage/drimage
