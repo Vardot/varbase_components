@@ -5,9 +5,6 @@ package: Varbase
 core_version_requirement: ~10.1.0
 dependencies:
   - drupal:sdc
-  - cl_components:cl_components
-  - cl_block:cl_block
-  - cl_selector_field:cl_selector_field
   - ui_patterns:ui_patterns
   - ui_patterns:ui_patterns_field_group
   - ui_patterns:ui_patterns_ds
@@ -16,3 +13,5 @@ dependencies:
   - ui_patterns:ui_patterns_views
   - ui_patterns_settings:ui_patterns_settings
   - ui_patterns_field_formatters:ui_patterns_field_formatters
+install:
+  - cl_components
