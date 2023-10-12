@@ -39,7 +39,6 @@
     "drupal/cl_selector_field": "~2.0",
     "drupal/cl_server": "~2.0",
     "drupal/cl_devel": "~2.0",
-    "drupal/cl_generator": "~2.0",
     "drupal/ui_patterns": "~1.0",
     "drupal/ui_patterns_settings": "~2.0",
     "drupal/ui_patterns_field_formatters": "~2.0.0",
