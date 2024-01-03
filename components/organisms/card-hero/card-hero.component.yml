@@ -1,4 +1,4 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.2.x/core/modules/sdc/src/metadata.schema.json
 name: Hero Card 
 status: experimental
 description: Hero card component for a media and a content over the media
@@ -45,8 +45,12 @@ props:
       description: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
     card_attributes:
       type: Drupal\Core\Template\Attribute
+      title: Card Attributes
+      description: HTML attributes for the card element.
     content_attributes:
       type: Drupal\Core\Template\Attribute
+      title: Content Attributes
+      description: HTML attributes for the content element.
 slots:
   media:
     title: Card Media

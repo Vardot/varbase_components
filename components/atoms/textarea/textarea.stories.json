@@ -7,8 +7,7 @@
         "component": "Textarea type form element."
       },
       "story": {
-        "inline": true,
-        "source": true
+        "inline": true
       }
     }
   },
@@ -86,6 +85,30 @@
         "div": "div",
         "span": "span"
       }
+    },
+    "wrapper_utility_classes": {
+      "name": "Wrapper utility classes",
+      "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the wrapper div to this component.",
+      "control": "array",
+      "defaultValue": []
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.",
+      "control": "array",
+      "defaultValue": []
+    },
+    "wrapper_attributes": {
+      "name": "Wrapper Attributes",
+      "description": "HTML attributes for the wrapper element.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "attributes": {
+      "name": "Attributes",
+      "description": "HTML attributes for the containing element.",
+      "control": "object",
+      "defaultValue": {}
     }
   },
   "stories": [
@@ -101,9 +124,7 @@
         "placeholder": "Type test in this text area",
         "readonly": false,
         "disabled": false,
-        "wrapper_html_tag": "div",
-        "wrapper_utility_classes": {},
-        "utility_classes": {}
+        "wrapper_html_tag": "div"
       }
     },
     {
@@ -118,9 +139,7 @@
         "placeholder": "Type test in this text area",
         "readonly": false,
         "disabled": false,
-        "wrapper_html_tag": "div",
-        "wrapper_utility_classes": {},
-        "utility_classes": {}
+        "wrapper_html_tag": "div"
       }
     },
     {
@@ -135,9 +154,7 @@
         "placeholder": "Type test in this text area",
         "readonly": false,
         "disabled": true,
-        "wrapper_html_tag": "div",
-        "wrapper_utility_classes": {},
-        "utility_classes": {}
+        "wrapper_html_tag": "div"
       }
     },
     {
@@ -153,8 +170,7 @@
         "readonly": false,
         "disabled": false,
         "wrapper_html_tag": "div",
-        "wrapper_utility_classes": {},
-        "utility_classes": {"0": "is-valid"}
+        "utility_classes": ["is-valid"]
       }
     },
     {
@@ -170,8 +186,7 @@
         "readonly": false,
         "disabled": false,
         "wrapper_html_tag": "div",
-        "wrapper_utility_classes": {},
-        "utility_classes": {"0": "is-invalid"}
+        "utility_classes": ["is-invalid"]
       }
     }
   ]

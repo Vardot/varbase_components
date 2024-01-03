@@ -1,4 +1,4 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.2.x/core/modules/sdc/src/metadata.schema.json
 name: Dynamic Responsive Image
 status: experimental
 description: Generate (nearly) perfectly scaled (or cropped) images on-the-fly assumes the width of images is set in CSS, either directly in the wrapper-div or inherited through a parent element. Any grid system will do just fine for this.
@@ -34,23 +34,23 @@ props:
     item_attributes:
       type: Drupal\Core\Template\Attribute
       title: The Dynamic Responsive Image Item Attributes
-      description: A list of HTML attributes for the item wrapper element.
+      description: HTML attributes for the item wrapper element.
     picture_source_attributes:
       type: Drupal\Core\Template\Attribute
       title: Picture Source Attributes
-      description: A list of HTML attributes for the picture source element.
+      description: HTML attributes for the picture source element.
     picture_img_attributes:
       type: Drupal\Core\Template\Attribute
       title: Picture Image Attributes
-      description: A list of HTML attributes for the picture image element.
+      description: HTML attributes for the picture image element.
     url_attributes:
       type: Drupal\Core\Template\Attribute
       title: URL Attributes
-      description: A list of HTML attributes for the URL element.
+      description: HTML attributes for the URL element.
     noscript_img_attributes:
       type: Drupal\Core\Template\Attribute
       title: No JavaScript Image Attributes
-      description: A list of HTML attributes for the No JavaScript Image element.
+      description: HTML attributes for the No JavaScript Image element.
 libraryOverrides:
   dependencies:
     - drimage/drimage

@@ -1,4 +1,4 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.2.x/core/modules/sdc/src/metadata.schema.json
 name: Block CTA
 status: experimental
 description: Call to action (CTA) block component.
@@ -20,6 +20,8 @@ props:
       title: Heading
     attributes:
       type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: HTML attributes for the containing element.
 slots:
   content:
     type: string

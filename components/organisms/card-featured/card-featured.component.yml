@@ -1,4 +1,4 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.2.x/core/modules/sdc/src/metadata.schema.json
 name: Featured Card 
 status: experimental
 description: Featured card component and pattern with media and content.
@@ -155,16 +155,28 @@ props:
       description: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
     card_attributes:
       type: Drupal\Core\Template\Attribute
+      title: Card Attributes
+      description: HTML attributes for the Card element.
     media_attributes:
       type: Drupal\Core\Template\Attribute
+      title: Media Attributes
+      description: HTML attributes for the Media element.
     content_attributes:
       type: Drupal\Core\Template\Attribute
+      title: Content Attributes
+      description: HTML attributes for the content element.
     row_attributes:
       type: Drupal\Core\Template\Attribute
+      title: Row Attributes
+      description: HTML attributes for the row element.
     start_column_attributes:
       type: Drupal\Core\Template\Attribute
+      title: Start Column Attributes
+      description: HTML attributes for the start column element.
     end_column_attributes:
       type: Drupal\Core\Template\Attribute
+      title: End Column Attributes
+      description: HTML attributes for the end column element.
 slots:
   media:
     title: Card Media

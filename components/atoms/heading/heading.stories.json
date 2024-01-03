@@ -46,6 +46,18 @@
       "description": "Content text for the heading.",
       "defaultValue": "",
       "control": "textfield"
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.",
+      "control": "array",
+      "defaultValue": []
+    },
+    "attributes": {
+      "name": "Attributes",
+      "description": "HTML attributes for the heading element.",
+      "control": "object",
+      "defaultValue": {}
     }
   },
   "stories": [
@@ -106,7 +118,7 @@
       }
     },
     {
-      "name": " With Display 2",
+      "name": "With Display 2",
       "args": {
         "html_tag": "h2",
         "display": "display-2",
@@ -114,7 +126,7 @@
       }
     },
     {
-      "name": " With Display 3",
+      "name": "With Display 3",
       "args": {
         "html_tag": "h3",
         "display": "display-3",
@@ -122,7 +134,7 @@
       }
     },
     {
-      "name": " With Display 4",
+      "name": "With Display 4",
       "args": {
         "html_tag": "h4",
         "display": "display-4",
@@ -130,7 +142,7 @@
       }
     },
     {
-      "name": " With Display 5",
+      "name": "With Display 5",
       "args": {
         "html_tag": "h5",
         "display": "display-5",
@@ -138,7 +150,7 @@
       }
     },
     {
-      "name": " With Display 6",
+      "name": "With Display 6",
       "args": {
         "html_tag": "h6",
         "display": "display-6",

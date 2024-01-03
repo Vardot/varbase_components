@@ -112,12 +112,12 @@
     "colgroups": {
       "name": "Column groups",
       "description": "Column groups which contains attributes",
-      "control": "object"
+      "control": "array"
     },
     "header": {
       "name": "Table header cells",
       "description": "Table header cells which contains (tag, attributes, content, field, sort)",
-      "control": "object",
+      "control": "array",
       "defaultValue": {}
     },
     "sticky": {
@@ -129,13 +129,13 @@
     "rows": {
       "name": "Rows",
       "description": "Table rows, which each row contains (attributes, data, no_striping, cells). Each cell contains (tag, attributes, content, active_table_sort)",
-      "control": "object",
+      "control": "array",
       "defaultValue": {}
     },
     "footer": {
       "name": "Footer",
       "description": "Table footer rows, in the same format as the rows variable.",
-      "control": "object",
+      "control": "array",
       "defaultValue": {}
     },
     "empty": {
@@ -161,24 +161,48 @@
       "name": "Utility Classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the table element.",
       "control": "array",
-      "defaultValue": {}
+      "defaultValue": []
     },
     "thead_utility_classes": {
       "name": "Table Head Utility Classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the head of the table element.",
       "control": "array",
-      "defaultValue": {}
+      "defaultValue": []
     },
     "tbody_utility_classes": {
       "name": "Table Body Utility Classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the body of the table element.",
       "control": "array",
-      "defaultValue": {}
+      "defaultValue": []
     },
     "tfoot_utility_classes": {
       "name": "Table Footer Utility Classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the footer of the table element.",
       "control": "array",
+      "defaultValue": []
+    },
+    "attributes": {
+      "name": "Attributes",
+      "description": "HTML attributes to apply to the `<table>` tag.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "thead_attributes": {
+      "name": "Table head attributes",
+      "description": "HTML attributes to apply to the `<thead>` tag.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "tbody_attributes": {
+      "name": "Table body attributes",
+      "description": "HTML attributes to apply to the `<tbody>` tag.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "tfoot_attributes": {
+      "name": "Table footer attributes",
+      "description": "HTML attributes to apply to the `<tfoot>` tag.",
+      "control": "object",
       "defaultValue": {}
     }
   },
@@ -302,11 +326,7 @@
         },
         "empty": "This Table is empty message",
         "no_striping": false,
-        "header_columns": 4,
-        "utility_classes": {},
-        "thead_utility_classes": {},
-        "tbody_utility_classes": {},
-        "tfoot_utility_classes": {}
+        "header_columns": 4
       }
     },
     {
@@ -428,11 +448,7 @@
         },
         "empty": "This Table is empty message",
         "no_striping": false,
-        "header_columns": 4,
-        "utility_classes": {},
-        "thead_utility_classes": {},
-        "tbody_utility_classes": {},
-        "tfoot_utility_classes": {}
+        "header_columns": 4
       }
     },
     {
@@ -554,11 +570,7 @@
         },
         "empty": "This Table is empty message",
         "no_striping": false,
-        "header_columns": 4,
-        "utility_classes": {},
-        "thead_utility_classes": {},
-        "tbody_utility_classes": {},
-        "tfoot_utility_classes": {}
+        "header_columns": 4
       }
     },
     {
@@ -680,11 +692,7 @@
         },
         "empty": "This Table is empty message",
         "no_striping": false,
-        "header_columns": 4,
-        "utility_classes": {},
-        "thead_utility_classes": {},
-        "tbody_utility_classes": {},
-        "tfoot_utility_classes": {}
+        "header_columns": 4
       }
     },
     {
@@ -1405,13 +1413,7 @@
         "footer":  {},
         "empty": "This Table is empty message",
         "no_striping": false,
-        "header_columns": 4,
-        "utility_classes": {},
-        "thead_utility_classes": {
-          "0": ""
-        },
-        "tbody_utility_classes": {},
-        "tfoot_utility_classes": {}
+        "header_columns": 4
       }
     },
     {
@@ -1533,11 +1535,7 @@
         },
         "empty": "This Table is empty message",
         "no_striping": false,
-        "header_columns": 4,
-        "utility_classes": {},
-        "thead_utility_classes": {},
-        "tbody_utility_classes": {},
-        "tfoot_utility_classes": {}
+        "header_columns": 4
       }
     },
     {
@@ -1659,11 +1657,7 @@
         },
         "empty": "This Table is empty message",
         "no_striping": false,
-        "header_columns": 4,
-        "utility_classes": {},
-        "thead_utility_classes": {},
-        "tbody_utility_classes": {},
-        "tfoot_utility_classes": {}
+        "header_columns": 4
       }
     },
     {
@@ -1785,11 +1779,7 @@
         },
         "empty": "This Table is empty message",
         "no_striping": false,
-        "header_columns": 4,
-        "utility_classes": {},
-        "thead_utility_classes": {},
-        "tbody_utility_classes": {},
-        "tfoot_utility_classes": {}
+        "header_columns": 4
       }
     },
     {
@@ -1911,11 +1901,7 @@
         },
         "empty": "This Table is empty message",
         "no_striping": false,
-        "header_columns": 4,
-        "utility_classes": {},
-        "thead_utility_classes": {},
-        "tbody_utility_classes": {},
-        "tfoot_utility_classes": {}
+        "header_columns": 4
       }
     },
     {
@@ -2037,11 +2023,7 @@
         },
         "empty": "This Table is empty message",
         "no_striping": false,
-        "header_columns": 4,
-        "utility_classes": {},
-        "thead_utility_classes": {},
-        "tbody_utility_classes": {},
-        "tfoot_utility_classes": {}
+        "header_columns": 4
       }
     },
     {
@@ -2163,11 +2145,7 @@
         },
         "empty": "This Table is empty message",
         "no_striping": false,
-        "header_columns": 4,
-        "utility_classes": {},
-        "thead_utility_classes": {},
-        "tbody_utility_classes": {},
-        "tfoot_utility_classes": {}
+        "header_columns": 4
       }
     },
     {
@@ -2289,11 +2267,7 @@
         },
         "empty": "This Table is empty message",
         "no_striping": false,
-        "header_columns": 4,
-        "utility_classes": {},
-        "thead_utility_classes": {},
-        "tbody_utility_classes": {},
-        "tfoot_utility_classes": {}
+        "header_columns": 4
       }
     },
     {
@@ -2415,11 +2389,7 @@
         },
         "empty": "This Table is empty message",
         "no_striping": false,
-        "header_columns": 4,
-        "utility_classes": {},
-        "thead_utility_classes": {},
-        "tbody_utility_classes": {},
-        "tfoot_utility_classes": {}
+        "header_columns": 4
       }
     }
   ]

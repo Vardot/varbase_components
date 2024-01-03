@@ -21,8 +21,8 @@ Indicate the loading state of a component or page with Bootstrap spinners, built
                     classes to this component.
 
 ### Attributes:
-* `attributes`: A list of HTML attributes for the Spinner element.
-* `spinner_status_attributes`: A list of HTML attributes for the Spinner status element.
+* `attributes`: HTML attributes for the Spinner element.
+* `spinner_status_attributes`: HTML attributes for the Spinner status element.
 
 ### Slots:
 * `content`: Spinner content.

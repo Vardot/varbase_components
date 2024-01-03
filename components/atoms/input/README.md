@@ -20,7 +20,7 @@ Textual form controls `<input>`s an upgrade with custom styles, sizing, focus st
                     classes to this component.
 
 ## Attributes:
-* `attributes`: A list of HTML attributes for the input element.
+* `attributes`: HTML attributes for the input element.
 * `children`: Optional additional rendered elements.
 
 ## Slots:

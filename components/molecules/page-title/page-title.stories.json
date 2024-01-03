@@ -31,6 +31,18 @@
         "Display5": "display-5",
         "Display6": "display-6"
       }
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.",
+      "control": "array",
+      "defaultValue": []
+    },
+    "title_attributes": {
+      "name": "Title Attributes",
+      "description": "HTML attributes for the title element.",
+      "control": "object",
+      "defaultValue": {}
     }
   },
   "stories": [

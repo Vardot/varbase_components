@@ -1,4 +1,4 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.2.x/core/modules/sdc/src/metadata.schema.json
 name: Checkbox 
 status: experimental
 description: Checkbox
@@ -15,3 +15,5 @@ props:
       title: Children
     attributes:
       type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: HTML attributes for the containing element.

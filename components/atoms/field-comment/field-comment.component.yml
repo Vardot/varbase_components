@@ -1,4 +1,4 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.2.x/core/modules/sdc/src/metadata.schema.json
 name: Field Comment
 status: experimental
 description: Field comment
@@ -7,6 +7,8 @@ props:
   properties:
     attributes:
       type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: HTML attributes for the containing element.
     title_prefix:
       type: array
       title: title prefix

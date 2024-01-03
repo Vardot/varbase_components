@@ -3,7 +3,7 @@
 Text area type form element.
 
 > #### [Bootstrap ~5.3.0 Documentation on Textareas](https://getbootstrap.com/docs/5.3/forms/floating-labels/#textareas)
-> * [Resizable textareas](https://git.drupalcode.org/project/drupal/-/blob/10.1.x/core/modules/system/css/components/resize.module.css) in **Drupal `~10.1.0`**
+> * [Resizable textareas](https://git.drupalcode.org/project/drupal/-/blob/10.1.x/core/modules/system/css/components/resize.module.css) in **Drupal `~10`**
 > * [Utilizing more properties for the Textarea form element](https://git.drupalcode.org/project/drupal/-/blob/10.1.x/core/includes/form.inc#L382)
 > * [The TEXTAREA element by W3](https://www.w3.org/TR/html401/interact/forms.html#h-17.7)
 
@@ -23,8 +23,8 @@ Text area type form element.
 * `utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the form element to this component.
 
 ## Attributes:
-* `wrapper_attributes`: A list of HTML attributes for the wrapper element.
-* `attributes`: A list of HTML attributes for the <textarea> element.
+* `wrapper_attributes`: HTML attributes for the wrapper element.
+* `attributes`: HTML attributes for the `<textarea>` element.
 
 ## Slots:
 * N/A
@@ -40,8 +40,8 @@ Text area type form element.
  * Theme override for a 'textarea' #type form element.
  *
  * Available variables
- * - wrapper_attributes: A list of HTML attributes for the wrapper element.
- * - attributes: A list of HTML attributes for the <textarea> element.
+ * - wrapper_attributes: HTML attributes for the wrapper element.
+ * - attributes: HTML attributes for the <textarea> element.
  * - resizable: An indicator for whether the textarea is resizable.
  * - required: An indicator for whether the textarea is required.
  * - value: The textarea content.

@@ -1,4 +1,4 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.2.x/core/modules/sdc/src/metadata.schema.json
 name: Heading 
 status: experimental
 description: "All HTML headings, `<h1>` through `<h6>`, are available."
@@ -38,7 +38,7 @@ props:
     attributes:
       type: Drupal\Core\Template\Attribute
       title: Attributes
-      description: A list of HTML attributes for the heading element.
+      description: HTML attributes for the heading element.
 slots:
   content:
     type: string

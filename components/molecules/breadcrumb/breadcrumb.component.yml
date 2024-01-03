@@ -1,4 +1,4 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.2.x/core/modules/sdc/src/metadata.schema.json
 name: Breadcrumb
 status: experimental
 description: Breadcrumb trail items that indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
@@ -23,8 +23,8 @@ props:
     attributes:
       type: Drupal\Core\Template\Attribute
       title: Attributes
-      description: A list of HTML attributes for the breadcrumb nav element.
+      description: HTML attributes for the breadcrumb nav element.
     items_attributes:
       type: Drupal\Core\Template\Attribute
       title: Dismiss close button attribute
-      description: A list of HTML attributes for the Breadcrumb trail items element.
+      description: HTML attributes for the Breadcrumb trail items element.

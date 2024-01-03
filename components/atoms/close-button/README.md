@@ -17,7 +17,7 @@ Provide an option to dismiss or close a component with `.btn-close`. Default sty
                     classes to this component.
 
 ## Attributes:
-* `attributes`: A list of HTML attributes for the close button element.
+* `attributes`: HTML attributes for the close button element.
 
 ## Slots:
 * N/A

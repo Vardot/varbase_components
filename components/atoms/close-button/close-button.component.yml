@@ -1,4 +1,4 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.2.x/core/modules/sdc/src/metadata.schema.json
 name: Close button
 status: experimental
 description: A generic close button for dismissing content like modals and alerts.
@@ -26,4 +26,4 @@ props:
     attributes:
       type: Drupal\Core\Template\Attribute
       title: attributes
-      description: A list of HTML attributes for the close button element.
+      description: HTML attributes for the close button element.

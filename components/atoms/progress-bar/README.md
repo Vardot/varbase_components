@@ -32,10 +32,10 @@ and place text labels over them.
 * `message`: A string containing information to be displayed.
 
 ## Attributes:
-* `wrapper_attributes`: A list of HTML attributes for the Progress Bar wrapper element.
-* `indicator_attributes`: A list of HTML attributes for the Progress Bar indicator element.
-* `label_attributes`: A list of HTML attributes for the Progress Bar label element.
-* `message_attributes`: A list of HTML attributes for the Progress Bar message element.
+* `wrapper_attributes`: HTML attributes for the Progress Bar wrapper element.
+* `indicator_attributes`: HTML attributes for the Progress Bar indicator element.
+* `label_attributes`: HTML attributes for the Progress Bar label element.
+* `message_attributes`: HTML attributes for the Progress Bar message element.
 
 ## Slots:
 * - N/A

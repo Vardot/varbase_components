@@ -17,11 +17,11 @@ Created by [Wesley Sandra (weseze)](https://www.drupal.org/u/weseze)
 * `utility_classes`: Use to add extra Bootstrap utility classes for the main wrapper.
 
 ### attributes:
-* `item_attributes`: A list of HTML attributes for the item wrapper element.
-* `picture_source_attributes`: A list of HTML attributes for the picture source element.
-* `picture_img_attributes`: A list of HTML attributes for the picture image element.
-* `url_attributes`: A list of HTML attributes for the URL element.
-* `noscript_img_attributes`: A list of HTML attributes for the No JavaScript Image element.
+* `item_attributes`: HTML attributes for the item wrapper element.
+* `picture_source_attributes`: HTML attributes for the picture source element.
+* `picture_img_attributes`: HTML attributes for the picture image element.
+* `url_attributes`: HTML attributes for the URL element.
+* `noscript_img_attributes`: HTML attributes for the No JavaScript Image element.
 
 ### slots:
  * N/A

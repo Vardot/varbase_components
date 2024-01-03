@@ -66,6 +66,36 @@
       "slots": "The content for card",
       "control": "text",
       "defaultValue": ""
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)",
+      "control": "array",
+      "defaultValue": []
+    },
+    "media_utility_classes": {
+      "name": "Media Utility Classes",
+      "description": "Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)",
+      "control": "array",
+      "defaultValue": []
+    },
+    "content_utility_classes": {
+      "name": "Content Utility Classes",
+      "description": "Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)",
+      "control": "array",
+      "defaultValue": []
+    },
+    "card_attributes": {
+      "name": "Card Attributes",
+      "description": "HTML attributes for the card element.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "content_attributes": {
+      "name": "Content Attributes",
+      "description": "HTML attributes for the content element.",
+      "control": "object",
+      "defaultValue": {}
     }
   },
   "stories": [
@@ -199,7 +229,7 @@
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
         "content": "<div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link\" hreflang=\"en\">Read more</a></div>",
-        "utility_classes": {"0": "shadow-lg"}
+        "utility_classes": ["shadow-lg"]
       }
     },
     {
@@ -212,7 +242,7 @@
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
         "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link\" hreflang=\"en\">Read more</a></div>",
-        "utility_classes": {"0": "shadow-lg"}
+        "utility_classes": ["shadow-lg"]
       }
     },
     {
@@ -225,7 +255,7 @@
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
         "content": "<div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link\" hreflang=\"en\">Read more</a></div>",
-        "utility_classes": {"0": "bg-light", "2": "text-dark", "3": "shadow-lg"}
+        "utility_classes": ["bg-light", "text-dark", "shadow-lg"]
       }
     },
     {
@@ -238,7 +268,7 @@
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
         "content": "<div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link\" hreflang=\"en\">Read more</a></div>",
-        "utility_classes": {"0": "bg-light", "2": "text-dark", "3": "shadow-sm"}
+        "utility_classes": ["bg-light", "text-dark", "shadow-sm"]
       }
     },
     {
@@ -251,7 +281,7 @@
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
         "content": "<div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title text-light\"><a class=\"text-light\" href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link text-light\" hreflang=\"en\">Read more</a></div>",
-        "utility_classes": {"0": "bg-dark", "2": "text-light"}
+        "utility_classes": ["bg-dark", "text-light"]
       }
     },
     {
@@ -264,7 +294,7 @@
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
         "content": "<div class=\"card-author-info small\">Jone Smith 07/10/2023</div><div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title text-light\"><a class=\"text-light\" href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"><a href=\"#\" class=\"card-link text-light\" hreflang=\"en\">Read more</a></div>",
-        "utility_classes": {"0": "bg-dark", "2": "text-light"}
+        "utility_classes": ["bg-dark", "text-light"]
       }
     }
   ]

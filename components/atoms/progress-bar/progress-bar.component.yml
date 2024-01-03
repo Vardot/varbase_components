@@ -1,4 +1,4 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.2.x/core/modules/sdc/src/metadata.schema.json
 name: Progress bar
 status: experimental
 description: Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
@@ -61,20 +61,20 @@ props:
       description: An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.
     wrapper_attributes:
       type: Drupal\Core\Template\Attribute
-      title: Progress Bar Attributes
-      description: A list of HTML attributes for the Progress Bar wrapper element.
+      title: Wrapper Attributes
+      description: HTML attributes for the Progress Bar wrapper element.
     indicator_attributes:
       type: Drupal\Core\Template\Attribute
-      title: Progress Bar Attributes
-      description: A list of HTML attributes for the Progress Bar indicator element.
+      title: Indicator Attributes
+      description: HTML attributes for the Progress Bar indicator element.
     label_attributes:
       type: Drupal\Core\Template\Attribute
-      title: Progress Bar label Attributes
-      description: A list of HTML attributes for the Progress Bar label element.
+      title: label Attributes
+      description: HTML attributes for the Progress Bar label element.
     message_attributes:
       type: Drupal\Core\Template\Attribute
-      title: Progress Bar message Attributes
-      description: A list of HTML attributes for the Progress Bar message element.
+      title: message Attributes
+      description: HTML attributes for the Progress Bar message element.
 libraryOverrides:
   dependencies:
     - core/drupal.progress

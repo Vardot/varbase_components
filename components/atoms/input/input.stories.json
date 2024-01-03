@@ -77,6 +77,12 @@
     "utility_classes": {
       "name": "Utility Classes",
       "description": "An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.",
+      "control": "array",
+      "defaultValue": []
+    },
+    "attributes": {
+      "name": "Attributes",
+      "description": "HTML attributes for the containing element.",
       "control": "object",
       "defaultValue": {}
     }
@@ -91,8 +97,7 @@
         "bs_size": "",
         "placeholder": "Example text",
         "children": " Example input text element",
-        "utility_classes": {"0": "w-50"},
-        "attributes": {}
+        "utility_classes": ["w-50"]
       }
     },
     {
@@ -104,8 +109,7 @@
         "bs_size": "",
         "placeholder": "",
         "children": "",
-        "utility_classes": {"0": "btn", "1": "btn-primary"},
-        "attributes": {}
+        "utility_classes": ["btn", "btn-primary"]
       }
     },
     {
@@ -116,9 +120,7 @@
         "bs_form_control": false,
         "bs_size": "",
         "placeholder": "",
-        "children": " Example input Checkbox element",
-        "utility_classes": {},
-        "attributes": {}
+        "children": " Example input Checkbox element"
       }
     },
     {
@@ -129,9 +131,7 @@
         "bs_form_control": false,
         "bs_size": "",
         "placeholder": "",
-        "children": " Select input Color element",
-        "utility_classes": {},
-        "attributes": {}
+        "children": " Select input Color element"
       }
     },
     {
@@ -143,8 +143,7 @@
         "bs_size": "",
         "placeholder": "example@email.com",
         "children": " Example input Email element",
-        "utility_classes": {"0": "w-50"},
-        "attributes": {}
+        "utility_classes": ["w-50"]
       }
     },
     {
@@ -156,8 +155,7 @@
         "bs_size": "",
         "placeholder": "Example File",
         "children": "Example input File element",
-        "utility_classes": {"0": "w-50"},
-        "attributes": {}
+        "utility_classes": ["w-50"]
       }
     },
     {
@@ -168,9 +166,7 @@
         "bs_form_control": false,
         "bs_size": "",
         "placeholder": "",
-        "children": "Example input hidden element, inspect HTML code to see the code for it",
-        "utility_classes": {},
-        "attributes": {}
+        "children": "Example input hidden element, inspect HTML code to see the code for it"
       }
     },
     {
@@ -182,9 +178,7 @@
         "bs_size": "",
         "placeholder": "",
         "children": " Example input Image element as a submit button",
-        "utility_classes": {
-          "0": "w-25"
-        },
+        "utility_classes": ["w-25"],
         "attributes": {
           "src": "https://git.drupalcode.org/project/vartheme_bs5/-/raw/3.0.x/images/social_auth/social_auth_google/img/google_logo.svg",
           "alt": "Submit to Google",
@@ -202,10 +196,7 @@
         "bs_size": "",
         "placeholder": "Input numbers only",
         "children": " Example input number element",
-        "utility_classes": {
-          "0": "w-25"
-        },
-        "attributes": {}
+        "utility_classes": ["w-25"]
       }
     },
     {
@@ -217,10 +208,7 @@
         "bs_size": "",
         "placeholder": "Type a password",
         "children": " Example input password element",
-        "utility_classes": {
-          "0": "w-25"
-        },
-        "attributes": {}
+        "utility_classes": ["w-25"]
       }
     },
     {
@@ -231,9 +219,7 @@
         "bs_form_control": false,
         "bs_size": "",
         "placeholder": "",
-        "children": " Example input radio button element",
-        "utility_classes": {},
-        "attributes": {}
+        "children": " Example input radio button element"
       }
     },
     {
@@ -245,10 +231,7 @@
         "bs_size": "",
         "placeholder": "",
         "children": " Example input range element",
-        "utility_classes": {
-          "0": "w-25"
-        },
-        "attributes": {}
+        "utility_classes": ["w-25"]
       }
     },
     {
@@ -260,11 +243,7 @@
         "bs_size": "",
         "placeholder": "",
         "children": " Example input reset button element",
-        "utility_classes": {
-          "0": "btn",
-          "1": "btn-primary"
-        },
-        "attributes": {}
+        "utility_classes": ["btn", "btn-primary"]
       }
     },
     {
@@ -276,11 +255,7 @@
         "bs_size": "",
         "placeholder": "",
         "children": " Example input search button element",
-        "utility_classes": {
-          "0": "btn",
-          "1": "btn-primary"
-        },
-        "attributes": {}
+        "utility_classes": ["btn", "btn-primary"]
       }
     },
     {
@@ -292,11 +267,7 @@
         "bs_size": "",
         "placeholder": "",
         "children": " Example input Submit button element",
-        "utility_classes": {
-          "0": "btn",
-          "1": "btn-primary"
-        },
-        "attributes": {}
+        "utility_classes": ["btn", "btn-primary"]
       }
     },
     {
@@ -308,10 +279,7 @@
         "bs_size": "",
         "placeholder": "",
         "children": " Example input Telephone number element",
-        "utility_classes": {
-          "0": "w-25"
-        },
-        "attributes": {}
+        "utility_classes": ["w-25"]
       }
     },
     {
@@ -323,10 +291,7 @@
         "bs_size": "",
         "placeholder": "",
         "children": " Example input time element",
-        "utility_classes": {
-          "0": "w-25"
-        },
-        "attributes": {}
+        "utility_classes": ["w-25"]
       }
     },
     {
@@ -338,10 +303,7 @@
         "bs_size": "",
         "placeholder": "Input a link",
         "children": " Example input URL link element",
-        "utility_classes": {
-          "0": "w-50"
-        },
-        "attributes": {}
+        "utility_classes": ["w-50"]
       }
     },
     {
@@ -353,10 +315,7 @@
         "bs_size": "",
         "placeholder": "",
         "children": " Example input Week element",
-        "utility_classes": {
-          "0": "w-25"
-        },
-        "attributes": {}
+        "utility_classes": ["w-25"]
       }
     },
     {
@@ -368,10 +327,7 @@
         "bs_size": "",
         "placeholder": "",
         "children": " Example input Month input element",
-        "utility_classes": {
-          "0": "w-25"
-        },
-        "attributes": {}
+        "utility_classes": ["w-25"]
       }
     },
     {
@@ -383,8 +339,7 @@
         "bs_size": "",
         "placeholder": "",
         "children": " Example input Date element",
-        "utility_classes": {"0": "w-25"},
-        "attributes": {}
+        "utility_classes": ["w-25"]
       }
     },
     {
@@ -396,8 +351,7 @@
         "bs_size": "",
         "placeholder": "",
         "children": " Example input Datetime local element",
-        "utility_classes": {"0": "w-25"},
-        "attributes": {}
+        "utility_classes": ["w-25"]
       }
     }
   ]

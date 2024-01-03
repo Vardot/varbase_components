@@ -180,6 +180,60 @@
       "slots": "The content for card",
       "control": "text",
       "defaultValue": ""
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)",
+      "control": "array",
+      "defaultValue": []
+    },
+    "media_utility_classes": {
+      "name": "Media Utility Classes",
+      "description": "Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)",
+      "control": "array",
+      "defaultValue": []
+    },
+    "content_utility_classes": {
+      "name": "Content Utility Classes",
+      "description": "Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)",
+      "control": "array",
+      "defaultValue": []
+    },
+    "card_attributes": {
+      "name": "Card Attributes",
+      "description": "HTML attributes for the Card element.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "media_attributes": {
+      "name": "Media Attributes",
+      "description": "HTML attributes for the Media element.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "content_attributes": {
+      "name": "Content Attributes",
+      "description": "HTML attributes for the content element.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "row_attributes": {
+      "name": "Row Attributes",
+      "description": "HTML attributes for the row element.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "start_column_attributes": {
+      "name": "Start Attributes",
+      "description": "HTML attributes for the start column element.",
+      "control": "object",
+      "defaultValue": {}
+    },
+    "end_column_attributes": {
+      "name": "End Column Attributes",
+      "description": "HTML attributes for the end column element.",
+      "control": "object",
+      "defaultValue": {}
     }
   },
   "stories": [
