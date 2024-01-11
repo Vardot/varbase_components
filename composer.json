@@ -40,7 +40,7 @@
     "drupal/cl_server": "~2.0",
     "drupal/cl_devel": "~2.0",
     "drupal/ui_patterns": "~1.0",
-    "drupal/ui_patterns_settings": "~2.0",
+    "drupal/ui_patterns_settings": "2.1.0",
     "drupal/ui_patterns_field_formatters": "~2.0.0",
     "drupal/sdc_display": "~1.0.0",
     "drupal/nomarkup": "~1.0.0",
@@ -59,6 +59,10 @@
         "https://www.drupal.org/files/issues/2023-06-08/3365591-3.patch",
         "Issue #3367477: Fix Error: Call to undefined method getFilteredComponentTypes()":
         "https://www.drupal.org/files/issues/2023-06-18/3367477-11.patch"
+      },
+      "drupal/ui_patterns_settings": {
+        "Issue #3414084: Fix UI Patterns Settings issue of TypeError: array_unshift(): Argument #1 ($array) must be of type array, null given in array_unshift() Caused by Deprecated Hooks in Drupal ~10.2.0":
+        "https://www.drupal.org/files/issues/2024-01-11/ui_patterns_settings--2023-12-17--3409221-3--mr-21--39e896da.patch"
       }
     }
   }
