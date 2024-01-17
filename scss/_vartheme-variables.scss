@@ -1,6 +1,11 @@
 // Vartheme custom variables
 // -----------------------------------------------------------------------------
 
+@import "../node_modules/bootstrap/scss/functions";      // Bootstrap functions.
+@import "../node_modules/bootstrap/scss/mixins";         // Bootstrap mixins.
+@import "../node_modules/bootstrap/scss/variables";      // Bootstrap variables.
+@import "../node_modules/bootstrap/scss/variables-dark"; // Bootstrap variables dark.
+
 // Card's default card-title font size.
 $card-xlarge-title-font-size: 2rem;
 $card-large-title-font-size: 1.8rem;
@@ -9,29 +14,30 @@ $card-small-title-font-size: 1.4rem;
 $card-xsmall-title-font-size: 1.2rem;
 
 // Overlay Card default styles.
-$overlay-card-title-color: #fff;
+$overlay-card-title-color: $white;
 $overlay-card-xlarge-title-font-size: 4rem;
-$overlay-card-content-color: #fff;
+$overlay-card-content-color: $white;
 $overlay-card-content-stop1-location: 65%;
 $overlay-card-content-stop1-color: transparent;
 $overlay-card-content-stop2-location: 105%;
-$overlay-card-content-stop2-color: #000;
+$overlay-card-content-stop2-color: $black;
 $overlay-card-content-hover-opacity: 0.9;
 
 // Hero Card default styles.
-$hero-card-title-color: #fff;
+$hero-card-title-color: $white;
 $hero-card-xlarge-title-font-size: 3rem;
 $hero-card-content-hover-opacity: 0.7;
 $hero-card-content-background-color1: rgb(0,0,0);
 $hero-card-content-background-color2: rgba(0,0,0,0.7);
 
+// -----------------------------------------------------------------------------
 // Custom Varbase Media Hero Slider variables for Vartheme.
 // -----------------------------------------------------------------------------
 
 // Text color.
-$hero-title-text-color: #fff;
-$hero-brief-text-color: #fff;
-$hero-link-text-color: #fff;
+$hero-title-text-color: $white;
+$hero-brief-text-color: $white;
+$hero-link-text-color: $white;
 
 // Font sizes with responsive sizes.
 $hero-xlarge-title-font-size-xs: 3.3rem;
@@ -66,9 +72,8 @@ $hero-max-height-md: 600px;
 $hero-container-v-padding: 60px;
 $hero-container-h-padding-sm: 150px;
 
-
 // -----------------------------------------------------------------------------
-// Varbase Media Header.
+// Custom Varbase Media Header variables for Vartheme.
 // -----------------------------------------------------------------------------
 
 // Varbase Media Header container height.
@@ -86,17 +91,17 @@ $vmh-container-top-margin: 0;
 $vmh-container-bottom-margin: 0.6875rem;
 
 // Varbase Media Header fallback container background color.
-$vmh-fullback-container-background-color: #338ec7;
+$vmh-fullback-container-background-color: $primary;
 
 // Varbase Media Header content text general style.
-$vmh-content-text-color: #fff;
+$vmh-content-text-color: $white;
 
 // Varbase Media Header title style.
-$vmh-title-color: #fff;
+$vmh-title-color: $white;
 $vmh-title-font-size: 1.875rem;
 $vmh-title-font-size-lg: 3.625rem;
 
 // Varbase Media Header breadcrumb style.
-$vmh-breadcrumb-color: #fff;
+$vmh-breadcrumb-color: $white;
 $vmh-breadcrumb-font-size: 0.75rem;
 $vmh-breadcrumb-font-size-lg: 0.875rem;
