@@ -89,7 +89,7 @@
     {
       "name": "Title only",
       "args": {
-        "card_border": true,
+        "card_border": false,
         "horizontal_alignment": "",
         "vertical_alignment": "",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -99,7 +99,7 @@
     {
       "name": "Content",
       "args": {
-        "card_border": true,
+        "card_border": false,
         "horizontal_alignment": "",
         "vertical_alignment": "",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -109,7 +109,7 @@
     {
       "name": "With Read more",
       "args": {
-        "card_border": true,
+        "card_border": false,
         "horizontal_alignment": "",
         "vertical_alignment": "",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -119,7 +119,7 @@
     {
       "name": "Title only - Centered",
       "args": {
-        "card_border": true,
+        "card_border": false,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -129,7 +129,7 @@
     {
       "name": "Content - Centered",
       "args": {
-        "card_border": true,
+        "card_border": false,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -139,7 +139,7 @@
     {
       "name": "With Read more - Centered",
       "args": {
-        "card_border": true,
+        "card_border": false,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",

@@ -104,7 +104,7 @@
       "args": {
         "style_size": "xlarge",
         "media_position": "top",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -116,7 +116,7 @@
       "args": {
         "style_size": "large",
         "media_position": "top",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -128,7 +128,7 @@
       "args": {
         "style_size": "medium",
         "media_position": "top",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -140,7 +140,7 @@
       "args": {
         "style_size": "small",
         "media_position": "top",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -152,7 +152,7 @@
       "args": {
         "style_size": "xsmall",
         "media_position": "top",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -164,7 +164,7 @@
       "args": {
         "style_size": "xlarge",
         "media_position": "top",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -176,7 +176,7 @@
       "args": {
         "style_size": "large",
         "media_position": "top",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -188,7 +188,7 @@
       "args": {
         "style_size": "medium",
         "media_position": "top",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -200,7 +200,7 @@
       "args": {
         "style_size": "small",
         "media_position": "top",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
@@ -212,7 +212,7 @@
       "args": {
         "style_size": "xsmall",
         "media_position": "top",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",

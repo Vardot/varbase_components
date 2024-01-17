@@ -241,7 +241,7 @@
       "name": "xlarge",
       "args": {
         "style_size": "xlarge",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -260,7 +260,7 @@
       "name": "large",
       "args": {
         "style_size": "large",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -279,7 +279,7 @@
       "name": "medium",
       "args": {
         "style_size": "medium",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -298,7 +298,7 @@
       "name": "small",
       "args": {
         "style_size": "small",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -317,7 +317,7 @@
       "name": "xsmall",
       "args": {
         "style_size": "xsmall",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -336,7 +336,7 @@
       "name": "xlarge - with Read more",
       "args": {
         "style_size": "xlarge",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -355,7 +355,7 @@
       "name": "large - with Read more",
       "args": {
         "style_size": "large",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -374,7 +374,7 @@
       "name": "medium - with Read more",
       "args": {
         "style_size": "medium",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",

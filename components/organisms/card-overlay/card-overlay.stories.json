@@ -86,7 +86,7 @@
       "name": "xlarge",
       "args": {
         "style_size": "xlarge",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "",
@@ -99,7 +99,7 @@
       "name": "large",
       "args": {
         "style_size": "large",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "",
@@ -112,7 +112,7 @@
       "name": "medium",
       "args": {
         "style_size": "medium",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "",
@@ -125,7 +125,7 @@
       "name": "small",
       "args": {
         "style_size": "small",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "",
@@ -138,7 +138,7 @@
       "name": "xsmall",
       "args": {
         "style_size": "xsmall",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "",
@@ -151,7 +151,7 @@
       "name": "xlarge - Centered",
       "args": {
         "style_size": "xlarge",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "center",
@@ -164,7 +164,7 @@
       "name": "large - Centered",
       "args": {
         "style_size": "large",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "center",
@@ -177,7 +177,7 @@
       "name": "medium - Centered",
       "args": {
         "style_size": "medium",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "center",
@@ -190,7 +190,7 @@
       "name": "small - Centered",
       "args": {
         "style_size": "small",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "center",
@@ -203,7 +203,7 @@
       "name": "xsmall - Centered",
       "args": {
         "style_size": "xsmall",
-        "card_border": true,
+        "card_border": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "center",
