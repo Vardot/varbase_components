@@ -2,7 +2,7 @@
 
 Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the eight required contextual classes (e.g., .alert-success). 
 
-> ### [Bootstrap ~5.3.0 documentation on Alerts](https://getbootstrap.com/docs/5.3/components/alerts)
+> ### [Bootstrap documentation on Alerts](https://getbootstrap.com/docs/5.3/components/alerts)
 > * [Color](https://getbootstrap.com/docs/5.3/components/alerts/#examples)
 > * [Link color](https://getbootstrap.com/docs/5.3/components/alerts/#link-color)
 > * [Icons](https://getbootstrap.com/docs/5.3/components/alerts/#icons)

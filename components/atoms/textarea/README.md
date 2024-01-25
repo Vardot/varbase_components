@@ -2,7 +2,7 @@
 
 Text area type form element.
 
-> #### [Bootstrap ~5.3.0 Documentation on Textareas](https://getbootstrap.com/docs/5.3/forms/floating-labels/#textareas)
+> #### [Bootstrap Documentation on Textareas](https://getbootstrap.com/docs/5.3/forms/floating-labels/#textareas)
 > * [Resizable textareas](https://git.drupalcode.org/project/drupal/-/blob/10.1.x/core/modules/system/css/components/resize.module.css) in **Drupal `~10`**
 > * [Utilizing more properties for the Textarea form element](https://git.drupalcode.org/project/drupal/-/blob/10.1.x/core/includes/form.inc#L382)
 > * [The TEXTAREA element by W3](https://www.w3.org/TR/html401/interact/forms.html#h-17.7)

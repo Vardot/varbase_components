@@ -2,7 +2,7 @@
 
 Documentation and examples for badges, our small count and labeling component.
 
-> #### [Bootstrap ~5.3.0 Documentation on Badges](https://getbootstrap.com/docs/5.3/components/badge/)
+> #### [Bootstrap Documentation on Badges](https://getbootstrap.com/docs/5.3/components/badge/)
 > * [Headings](https://getbootstrap.com/docs/5.3/components/badge/#headings) Badges scale to match the size of the immediate parent element.
 > * [Background colors](https://getbootstrap.com/docs/5.3/components/badge/#background-colors) to make badges more rounded 
 > * [Pill badges](https://getbootstrap.com/docs/5.3/components/badge/#pill-badges)

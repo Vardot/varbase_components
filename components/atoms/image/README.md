@@ -6,7 +6,7 @@ Images in Bootstrap are made responsive with `.img-fluid`. This applies
  `max-width: 100%;` and `height: auto;` to the image so that it scales
  with the parent width.
 
-> ## [Bootstrap ~5.3.0 Documentation on Images](https://getbootstrap.com/docs/5.3/content/images)
+> ## [Bootstrap Documentation on Images](https://getbootstrap.com/docs/5.3/content/images)
 > * [Images](https://getbootstrap.com/docs/5.3/content/images)
 > * [Responsive Images](https://getbootstrap.com/docs/5.3/content/images/#responsive-images)
 

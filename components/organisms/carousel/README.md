@@ -4,7 +4,7 @@
 A slideshow component for cycling through elements images/media or slides of text—like a carousel.
 
 
-> ### [Bootstrap ~5.3.0 Documentation on Carousel](https://getbootstrap.com/docs/5.3/components/carousel/)
+> ### [Bootstrap Documentation on Carousel](https://getbootstrap.com/docs/5.3/components/carousel/)
 > * [Basic Carousel](https://getbootstrap.com/docs/5.3/components/carousel/#basic-examples)
 > * [Indicators](https://getbootstrap.com/docs/5.3/components/carousel/#indicators)
 > * [Captions](https://getbootstrap.com/docs/5.3/components/carousel/#captions)

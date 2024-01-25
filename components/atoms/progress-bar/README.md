@@ -2,7 +2,7 @@
 
 Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
 
-> ### [Bootstrap ~5.3.0 Documentation on Progress](https://getbootstrap.com/docs/5.3/components/progress/)
+> ### [Bootstrap Documentation on Progress](https://getbootstrap.com/docs/5.3/components/progress/)
 > * [Bar sizing](https://getbootstrap.com/docs/5.3/components/progress/#bar-sizing)
 > * [Height](https://getbootstrap.com/docs/5.3/components/progress/#height)
 > * [Labels](https://getbootstrap.com/docs/5.3/components/progress/#labels)

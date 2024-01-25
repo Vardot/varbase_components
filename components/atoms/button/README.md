@@ -2,7 +2,7 @@
 
 Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
 
-> #### [Bootstrap ~5.3.0 Documentation on Buttons](https://getbootstrap.com/docs/5.3/components/buttons)
+> #### [Bootstrap Documentation on Buttons](https://getbootstrap.com/docs/5.3/components/buttons)
 > * [Button tags](https://getbootstrap.com/docs/5.3/components/buttons/#button-tags)
 > * [Outline buttons](https://getbootstrap.com/docs/5.3/components/buttons/#outline-buttons)
 > * [Disabled state](https://getbootstrap.com/docs/5.3/components/buttons/#disabled-state)

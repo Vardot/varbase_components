@@ -2,7 +2,7 @@
 
 Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML, CSS, and no JavaScript.
 
-> ### [Bootstrap ~5.3.0 Documentation on Spinners](https://getbootstrap.com/docs/5.3/components/spinners/)
+> ### [Bootstrap Documentation on Spinners](https://getbootstrap.com/docs/5.3/components/spinners/)
 > * [Border spinner](https://getbootstrap.com/docs/5.3/components/spinners/#border-spinner)
 > * [Growing spinner](https://getbootstrap.com/docs/5.3/components/spinners/#growing-spinner)
 > * [Colors](https://getbootstrap.com/docs/5.3/components/spinners/#colors)

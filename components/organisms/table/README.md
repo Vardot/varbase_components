@@ -7,7 +7,7 @@ and date pickers, Bootstrap’s tables are opt-in. Add the base class .table to 
 then extend with our optional modifier classes or custom styles. All table styles are not
 inherited in Bootstrap, meaning any nested tables can be styled independent from the parent.
 
-> ### [Bootstrap ~5.3.0 Documentation on Tables](https://getbootstrap.com/docs/5.3/content/tables/)
+> ### [Bootstrap Documentation on Tables](https://getbootstrap.com/docs/5.3/content/tables/)
 > * [Overview](https://getbootstrap.com/docs/5.3/content/tables/#overview)
 > * [Variants](https://getbootstrap.com/docs/5.3/content/tables/#variants)
 > * [Accented tables](https://getbootstrap.com/docs/5.3/content/tables/#accented-tables)

@@ -2,7 +2,7 @@
 
 Textual form controls `<input>`s an upgrade with custom styles, sizing, focus states, and more.
 
-> ### [Bootstrap ~5.3.0 Documentation on Form Input Controls](https://getbootstrap.com/docs/5.3/forms/form-control)
+> ### [Bootstrap Documentation on Form Input Controls](https://getbootstrap.com/docs/5.3/forms/form-control)
 > * [Form controls](https://getbootstrap.com/docs/5.3/forms/form-control/#example)
 > * [Sizing](https://getbootstrap.com/docs/5.3/forms/form-control/#sizing)
 > * [Form text](https://getbootstrap.com/docs/5.3/forms/form-control/#form-text)

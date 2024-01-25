@@ -2,7 +2,7 @@
 
 All HTML headings, `<h1>` through `<h6>`, are available.
 
-> #### [Bootstrap ~5.3.0 Documentation on Heading](https://getbootstrap.com/docs/5.3/content/typography/#headings)
+> #### [Bootstrap Documentation on Heading](https://getbootstrap.com/docs/5.3/content/typography/#headings)
 > * [Headings](https://getbootstrap.com/docs/5.3/content/typography/#headings)
 > * [Display headings](https://getbootstrap.com/docs/5.3/content/typography/#display-headings)
 

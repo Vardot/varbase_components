@@ -3,12 +3,12 @@
 }
 
 #auth-box {
-  padding: calc(1.3125rem + .75vw) 0 0;
+  padding: calc(1.29375rem + .525vw) 0 0;
 }
 
 @media (min-width: 1200px) {
   #auth-box {
-    padding: 1.875rem 0 0;
+    padding: 1.6875rem 0 0;
   }
 }
 

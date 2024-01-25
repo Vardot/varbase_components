@@ -2,7 +2,7 @@
 
 Link with Bootstrap Link helpers and utility classes
 
-> #### [Bootstrap ~5.3.0 Documentation on Buttons](https://getbootstrap.com/docs/5.3/utilities/link/)
+> #### [Bootstrap Documentation on Buttons](https://getbootstrap.com/docs/5.3/utilities/link/)
 > * [Colored links](https://getbootstrap.com/docs/5.3/helpers/colored-links/)
 > * [Link opacity](https://getbootstrap.com/docs/5.3/utilities/link/#link-opacity)
 > * [Link underlines](https://getbootstrap.com/docs/5.3/utilities/link/#link-underlines)
