@@ -18,7 +18,6 @@
  * - label_display: The display settings for the label.
  *
  * @see template_preprocess_field()
- * @see bartik_preprocess_field()
  */
 #}
 {%
@@ -49,7 +48,7 @@
   {% endif %}
   <ul class='links field__items'>
     {% for item in items %}
-      <li{{ item.attributes }}>{{ item.content }}</li>
+      <li{{ item.attributes }}>{% include 'varbase_components:taxonomy' with { content: item.content } only %}</li>
     {% endfor %}
   </ul>
 </div>
