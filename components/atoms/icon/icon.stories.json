@@ -1,0 +1,53 @@
+{
+  "title": "Varbase Components/Atoms/Icon",
+  "parameters": {
+    "componentSubtitle": "Bootstrap Icon Component",
+    "docs": {
+      "description": {
+        "component": "A generic icons for use in the site."
+      },
+      "story": {
+        "inline": true
+      }
+    }
+  },
+  "argTypes": {
+    "name": {
+      "name": "Name",
+      "description": "The name of the icon in Bootstrap Icon library",
+      "defaultValue": "",
+      "control": "select",
+      "options": {
+        "'- none -'": "",
+        "'0 Circle'": "0-circle",
+        "'0 Circle fill'": "0-circle-fill"
+      }
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.",
+      "control": "array",
+      "defaultValue": []
+    },
+    "attributes": {
+      "name": "Attributes",
+      "description": "HTML attributes for the containing element.",
+      "control": "object",
+      "defaultValue": {}
+    }
+  },
+  "stories": [
+    {
+      "name": "0 Circle",
+      "args": {
+        "name": "0-circle"
+      }
+    },
+    {
+      "name": "0 Circle fill",
+      "args": {
+        "name": "0-circle-fill"
+      }
+    }
+  ]
+}
