@@ -48,20 +48,9 @@
       "name": "Breadcrumb",
       "args": {
         "breadcrumb": {
-          "0": {"url": "/", "text": "Home"},
-          "1": {"url": "/blog", "text": "Blog"},
-          "2": {"text": "Example post"}
-        },
-        "divider": ""
-      }
-    },
-    {
-      "name": "Divider",
-      "args": {
-        "breadcrumb": {
-          "0": {"url": "/", "text": "Home"},
-          "1": {"url": "/blog", "text": "Blog"},
-          "2": {"text": "Example post"}
+          "0": {"url": "#", "text": "Home"},
+          "1": {"url": "#", "text": "Library"},
+          "2": {"text": "Book"}
         },
         "divider": ">"
       }
