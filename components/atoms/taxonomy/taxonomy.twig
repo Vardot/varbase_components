@@ -9,4 +9,8 @@
  */
 #}
 
-<span class="vb-tag" >{{ content }}</span>
+{% if content['#type'] == 'link' or content['#type'] == 'text' %}
+  {{ content|render }}
+{% else %}
+  <span class="vb-tag" >{{ content|raw }}</span>
+{% endif %}
