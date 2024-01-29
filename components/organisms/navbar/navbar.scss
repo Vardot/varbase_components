@@ -1,4 +1,20 @@
+@import "../../defaults";   // Global component defaults.
+
+[data-bs-theme=light] {
+  .navbar {
+    background: var(--bs-white);
+  }
+}
+
+[data-bs-theme=dark] {
+  .navbar {
+    background: $blue-700;
+  }
+}
+
 .navbar {
+  height: 5.25rem;
+
   .form-inline {
     .form-actions {
       display: none;

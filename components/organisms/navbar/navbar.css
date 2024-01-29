@@ -1,3 +1,15 @@
+[data-bs-theme=light] .navbar {
+  background: var(--bs-white);
+}
+
+[data-bs-theme=dark] .navbar {
+  background: #084298;
+}
+
+.navbar {
+  height: 5.25rem;
+}
+
 .navbar .form-inline .form-actions {
   display: none;
 }

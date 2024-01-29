@@ -17,6 +17,7 @@ module.exports = {
     'atoms/taxonomy/taxonomy': ['./components/atoms/taxonomy/taxonomy.scss'],
     'molecules/alert/alert': ['./components/molecules/alert/alert.scss'],
     'molecules/tabs/tabs': ['./components/molecules/tabs/tabs.scss'],
+    'organisms/nav/nav': ['./components/organisms/nav/nav.scss'],
     'organisms/navbar/navbar': ['./components/organisms/navbar/navbar.scss'],
     // 'organisms/page-header/page-header': ['./components/organisms/page-header/page-header.scss'],
     'organisms/page-footer/page-footer': ['./components/organisms/page-footer/page-footer.scss'],

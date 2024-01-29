@@ -18,14 +18,35 @@
         "'Fluid Container'": "container-fluid"
       }
     },
-    "color": {
+    "color_mode": {
       "name": "Color",
+      "description": "The default color mode for the navigation bar.",
       "control": "select",
       "defaultValue": "",
       "options": {
         "' - none - '": "",
         "Light": "light",
-        "Dark": "light"
+        "Dark": "dark"
+      }
+    },
+    "color": {
+      "name": "Color",
+      "description": "The default color mode for the navigation bar.",
+      "control": "select",
+      "defaultValue": "",
+      "options": {
+        "' - none - '": "",
+        "transparent": "transparent",
+        "light": "light",
+        "dark": "dark",
+        "black": "black",
+        "white": "white",
+        "primary": "primary",
+        "secondary": "secondary",
+        "success": "success",
+        "danger": "danger",
+        "warning": "warning",
+        "info": "info"
       }
     },
     "placement": {
@@ -57,7 +78,8 @@
       "name": "Light",
       "args": {
         "container": "container-md",
-        "color": "light",
+        "color_mode": "light",
+        "color": "white",
         "placement": "fixed-top",
         "navbar_expand": "md",
         "branding": "<div id=\"block-vartheme-bs5-branding\" class=\"settings-tray-editable block block-system block-system-branding-block\" data-drupal-settingstray=\"editable\" data-component-id=\"varbase_components:block\"><a href=\"#\" class=\"navbar-brand d-flex align-items-center \" aria-label=\"\"><img src=\"https://git.drupalcode.org/project/vartheme_bs5/-/raw/3.0.x/logo.svg\" height=\"auto\" width=\"\" alt=\"dev varbase10c1storybook logo\" class=\"me-2\"></a></div>",
@@ -68,10 +90,11 @@
       "name": "Dark",
       "args": {
         "container": "container-md",
-        "color": "dark",
+        "color_mode": "dark",
+        "color": "primary",
         "placement": "fixed-top",
         "navbar_expand": "md",
-        "branding": "<div id=\"block-vartheme-bs5-branding\" class=\"settings-tray-editable block block-system block-system-branding-block\" data-drupal-settingstray=\"editable\" data-component-id=\"varbase_components:block\"><a href=\"#\" class=\"navbar-brand d-flex align-items-center \" aria-label=\"\"><img src=\"https://git.drupalcode.org/project/vartheme_bs5/-/raw/3.0.x/logo.svg\" height=\"auto\" width=\"\" alt=\"dev varbase10c1storybook logo\" class=\"me-2\"></a></div>",
+        "branding": "<div id=\"block-vartheme-bs5-branding\" class=\"settings-tray-editable block block-system block-system-branding-block\" data-drupal-settingstray=\"editable\" data-component-id=\"varbase_components:block\"><a href=\"#\" class=\"navbar-brand d-flex align-items-center \" aria-label=\"\"><img src=\"https://git.drupalcode.org/project/vartheme_bs5/-/raw/3.0.x/logo-white.svg\" height=\"auto\" width=\"\" alt=\"dev varbase10c1storybook logo\" class=\"me-2\"></a></div>",
         "navigation": "<div class=\"ms-auto\"><div id=\"block-vartheme-bs5-main-menu\" class=\"settings-tray-editable block block-system block-system-menu-blockmain\" data-drupal-settingstray=\"editable\" data-component-id=\"varbase_components:block\"><div class=\"block__content\"><ul data-component-id=\"varbase_components:nav\" class=\"nav navbar-nav\"><li class=\"nav-item\"><a href=\"#\" class=\"nav-link is-active\" data-drupal-link-system-path=\"<front>\">Home</a></li><li class=\"nav-item\"><a href=\"https://www.vardot.com/products-services/product-info/varbase-enterprise-website-platform?%3Futm_source=varbase&amp;utm_campaign=varbase%20default%20links\" class=\"nav-link\" target=\"_blank\" rel=\"noopener\">About Varbase</a></li><li class=\"nav-item\"><a href=\"#\" class=\"nav-link\" data-drupal-link-system-path=\"#\">Blog</a></li><li class=\"nav-item\"><a href=\"#\" class=\"nav-link\" data-drupal-link-system-path=\"webform/contact\">Contact Us</a></li></ul></div></div></div>"
       }
     }

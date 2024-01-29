@@ -23,10 +23,9 @@
 
 {% if page.navbar_branding or page.navigation %}
   {% embed 'varbase_components:navbar' with {
-    placement: '',
     container: container_top_bar,
-    color: 'light',
-    utility_classes: ['bg-light'],
+    color_mode: 'light',
+    color: 'white'
   } %}
 
     {% block branding %}

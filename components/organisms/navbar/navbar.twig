@@ -3,36 +3,33 @@
  * @file
  * Varbase Components implementation for Navbar component.
  *
- * Available config:
- * - attributes: Drupal attributes.
+ * Available properties:
  * - container: fixed | fluid.
  * - placement: '' | fixed-top | fixed-bottom | sticky-top
- * - color: light | dark
+ * - color_mode: light | dark
+ * - color: wight | dark
  * - navbar_expand: sm | md | lg | xl
- * - utility_classes: An array of utility classes.
+ * - utility_classes: An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.
+ * - attributes: HTML attributes for the containing element.
  *
- * Available blocks:
+ * Available slogs:
  * - branding
- * - left
- * - right
+ * - navigation
  */
 #}
 
 {% set container = container ?? false %}
-{% set placement = placement ?? '' %}
-{% set color = color ?? 'light' %}
-{% set navbar_expand = navbar_expand ?? 'lg' %}
+{% set placement = placement ? [placement] : [] %}
+{% set color_mode = color_mode ? ['navbar-' ~ color_mode] : [] %}
+{% set color = color ? ['bg-' ~ color] : [] %}
+{% set navbar_expand = navbar_expand ? ['navbar-expand-' ~ navbar_expand] : ['navbar-expand-lg'] %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
 
 {%
   set classes = [
     'navbar',
-    'navbar-expand-' ~ navbar_expand,
     'justify-content-between',
-    'navbar-' ~ color,
-    'bg-' ~ color,
-    placement
-  ]|merge(utility_classes)
+  ]|merge(placement)|merge(color_mode)|merge(color)|merge(navbar_expand)|merge(utility_classes)
 %}
 
 <nav{{attributes.addClass(classes)}}>
