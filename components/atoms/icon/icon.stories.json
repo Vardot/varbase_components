@@ -16,12 +16,8 @@
       "name": "Name",
       "description": "The name of the icon in Bootstrap Icon library",
       "defaultValue": "",
-      "control": "select",
-      "options": {
-        "'- none -'": "",
-        "'0 Circle'": "0-circle",
-        "'0 Circle fill'": "0-circle-fill"
-      }
+      "control": "text",
+      "default": "chevron-right"
     },
     "utility_classes": {
       "name": "Utility Classes",
@@ -38,15 +34,51 @@
   },
   "stories": [
     {
-      "name": "0 Circle",
+      "name": "Chevron right",
       "args": {
-        "name": "0-circle"
+        "name": "chevron-right"
       }
     },
     {
-      "name": "0 Circle fill",
+      "name": "Chevron left",
       "args": {
-        "name": "0-circle-fill"
+        "name": "chevron-left"
+      }
+    },
+    {
+      "name": "Chevron up",
+      "args": {
+        "name": "chevron-up"
+      }
+    },
+    {
+      "name": "Chevron down",
+      "args": {
+        "name": "chevron-down"
+      }
+    },
+    {
+      "name": "chevron double right",
+      "args": {
+        "name": "chevron-double-right"
+      }
+    },
+    {
+      "name": "chevron double left",
+      "args": {
+        "name": "chevron-double-left"
+      }
+    },
+    {
+      "name": "Chevron double up",
+      "args": {
+        "name": "chevron-double-up"
+      }
+    },
+    {
+      "name": "Chevron double down",
+      "args": {
+        "name": "chevron-double-down"
       }
     }
   ]
