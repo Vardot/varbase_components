@@ -7,8 +7,18 @@ props:
   properties:
     name:
       type: string
-      title: Name
-      description: The name of the icon in Bootstrap Icon library
+      title: Icon name
+      description: The name of the icon in Bootstrap Icon library. (https://icons.getbootstrap.com)
+      default: ''
+    role:
+      type: string
+      title: Role
+      description: The accessibility role for the icon as string. (https://icons.getbootstrap.com/#accessibility)
+      default: ''
+    rtl:
+      type: string
+      title: RTL Icon name
+      description: If needed, The name of the Right to Left (RTL) icon replacement Bootstrap Icon for the default LTR one.
       default: ''
     utility_classes:
       type: array

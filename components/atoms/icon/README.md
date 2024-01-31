@@ -1,29 +1,22 @@
-{/* icon.mdx */}
+# Icon
 
-import { Canvas, Title, Subtitle, ArgTypes, Source, Meta, Description, Primary, Story, Stories, Controls } from '@storybook/blocks';
-import * as comStories from './icon.stories.json';
-import templateSource from './icon.twig?raw';
+> [Bootstrap Icons](https://icons.getbootstrap.com)
 
-<Meta of={comStories} name="Docs"/>
+Varbase implementation for Bootstrap icons.
 
-<Title />
-<Subtitle />
-<Description />
+## Available properties:
+ - `name`: Icon name - The name of the icon in Bootstrap Icon library. (https://icons.getbootstrap.com)
+ - `role`: The accessibility role for the icon as string. (https://icons.getbootstrap.com/#accessibility)
+ - `rtl`: RTL Icon name - If needed, The name of the Right to Left (RTL) icon replacement Bootstrap Icon for the default LTR one.
+ - `utility_classes`: An array of utility classes that can be used to add extra
+                     Bootstrap utility classes or custom classes to this component.
 
-
-
-<Primary />
-
-## Properties
-<Controls />
-
-## Attributes:
+## Available attributes:
 * `attributes`: HTML attributes for the icon element.
 
-## Slots:
+## Available slots:
 * N/A
 
-<Stories of={comStories} />
 
 ## Examples:
 
@@ -52,6 +45,3 @@ Bootstrap Icon for chevron with double down stokes and a role fo scroll.
 {% include 'varbase_components:icon' with { name: 'bi-chevron-double-down', role: 'scroll' } only %}
 ```
 
-## Source code
-[//]: # (Twig Template source code)
-<Source code={templateSource} />

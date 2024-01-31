@@ -13,11 +13,25 @@
   },
   "argTypes": {
     "name": {
-      "name": "Name",
-      "description": "The name of the icon in Bootstrap Icon library",
+      "name": "Icon name",
+      "description": "The name of the icon in Bootstrap Icon library. (https://icons.getbootstrap.com)",
       "defaultValue": "",
       "control": "text",
-      "default": "chevron-right"
+      "default": ""
+    },
+    "role": {
+      "name": "Role",
+      "description": "The accessibility role for the icon as string. (https://icons.getbootstrap.com/#accessibility)",
+      "defaultValue": "",
+      "control": "text",
+      "default": ""
+    },
+    "rtl": {
+      "name": "RTL Icon name",
+      "description": "If needed, The name of the Right to Left (RTL) icon replacement Bootstrap Icon for the default LTR one.",
+      "defaultValue": "",
+      "control": "text",
+      "default": ""
     },
     "utility_classes": {
       "name": "Utility Classes",
@@ -36,49 +50,54 @@
     {
       "name": "Chevron right",
       "args": {
-        "name": "chevron-right"
+        "name": "bi-chevron-right"
       }
     },
     {
       "name": "Chevron left",
       "args": {
-        "name": "chevron-left"
+        "name": "bi-chevron-left"
       }
     },
     {
       "name": "Chevron up",
       "args": {
-        "name": "chevron-up"
+        "name": "bi-chevron-up"
       }
     },
     {
       "name": "Chevron down",
       "args": {
-        "name": "chevron-down"
+        "name": "bi-chevron-down"
       }
     },
     {
       "name": "Chevron double right",
       "args": {
-        "name": "chevron-double-right"
+        "name": "bi-chevron-double-right",
+        "role": "button",
+        "rtl": "bi-chevron-double-left"
       }
     },
     {
       "name": "Chevron double left",
       "args": {
-        "name": "chevron-double-left"
+        "name": "bi-chevron-double-left",
+        "rtl": "bi-chevron-double-right"
       }
     },
     {
       "name": "Chevron double up",
       "args": {
-        "name": "chevron-double-up"
+        "name": "bi-chevron-double-up",
+        "role": "scroll"
       }
     },
     {
       "name": "Chevron double down",
       "args": {
-        "name": "chevron-double-down"
+        "name": "bi-chevron-double-down",
+        "role": "scroll"
       }
     }
   ]
