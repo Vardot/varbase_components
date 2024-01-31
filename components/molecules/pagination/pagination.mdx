@@ -30,27 +30,42 @@ import templateSource from './pagination.twig?raw';
 <Stories of={comStories} />
 
 ### Examples
-Used in the `page-title.html.twig` default theme implementation for a page title.
 
-**Example #1:** Normal Page title 
-```
-  {% include 'varbase_components:page-title' %}
-```
 
-**Example #2:** Have a Bootstrap display class with the page title.
+**Example #1:** Use for displaying a pager.
 ```
-  {% include 'varbase_components:page-title' with {
-      display: 'display-1'
-    }
-  %}
+{% include 'varbase_components:pagination' with {
+  items: items,
+  alignment: 'center',
+  utility_classes: ['mt-3']
+} %}
 ```
 
-**Example #3:** Have custom title class with the page title.
+**Example #2:** Use for large pager.
 ```
-  {% include 'varbase_components:page-title' with {
-      utility_classes: ['custom-section-title1', 'custom-title2']
-    }
-  %}
+{% include 'varbase_components:pagination' with {
+  items: items,
+  size: 'lg',
+  alignment: 'center',
+  utility_classes: ['mt-3']
+} %}
+```
+
+**Example #3:** Use for small pager.
+```
+{% include 'varbase_components:pagination' with {
+  items: items,
+  size: 'sm',
+  alignment: 'center',
+  utility_classes: ['mt-3']
+} %}
+```
+
+**Example #4:** Use in views mini-pager
+```
+{% include 'varbase_components:pagination' with {
+  utility_classes: ['mt-2']
+} %}
 ```
 
 ## Source code

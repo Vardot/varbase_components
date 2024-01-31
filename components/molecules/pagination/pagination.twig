@@ -1,9 +1,9 @@
 {#
 /**
  * @file
- * Varbase Components implementation for a pagination components.
+ * Varbase Components implementation for a pagination component.
  *
- * Available variables:
+ * Available variables (From Drupal views):
  * - heading_id: Pagination heading ID.
  * - items: List of pager items.
  *   The list is keyed by the following elements:
@@ -18,8 +18,8 @@
  *   items.pages contain the following elements:
  *   - href: URL with appropriate query parameters for the item.
  *   - attributes: A keyed list of HTML attributes for the item.
- *   - text: The visible text used for the item link, such as "‹ Previous"
- *     or "Next ›".
+ *   - text: The visible text used for the item link, such as "Previous"
+ *     or "Next".
  * - current: The page number of the current page.
  * - ellipses: If there are more pages than the quantity allows, then an
  *   ellipsis before or after the listed pages may be present.
@@ -35,6 +35,10 @@
  *
  * Available attributes:        
  * - attributes: HTML attributes for the pagination element.
+ *
+ * Available slots:
+ * - N/A 
+ *
  */
 #}
 
