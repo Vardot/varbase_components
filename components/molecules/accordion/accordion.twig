@@ -1,28 +1,91 @@
 {#
-/**
- * @file
- * Varbase Components implementation for the Accordion component.
- *
- * Available config:
- * - accordion_id: An ID of the whole accordion block
- * - heading_id: An ID of accordion header
- * - collapse_id: An ID of collapse div part
- * - heading: Accordion item heading field text
- * - body: Accordion item body field text
- */
-#}
+ /**
+  * @file
+  * Varbase Components implementation for the Accordion component.
+  *
+  * Available properties:
+  * - title: The title of the accordion.
+  * - title_tag: The HTML (h1, h2, h3, h4, h5, or h6) title of the accordion tag.
+  * - accordion_id: Unique ID for the accordion component.
+  * - header_tag: The HTML (h1, h2, h3, h4, h5, or h6) header tag of the accordion items.
+  * - flush: True if the accordion has no background color or borders.
+  * - items: An array of accordion items inside the accordion.
+  *          Each accordion item is an object that has (header, body) slots,
+  *          with (id, header_tag, collapse, expanded, utility_classes, header_utility_classes,
+  *          body_utility_classes, attributes, header_attributes, body_attributes) properties.
+  * - expanded_item_index: The index of the accordion item which is opened by default.
+  *                        (0 = no item, 1 = first item, 2 = second item)
+  * - utility_classes: An array of utility classes that can be used to add extra
+  *                    Bootstrap utility classes or custom classes to the root accordion wrapper.
+  * - title_utility_classes: An array of utility classes that can be used to add extra
+  *                          Bootstrap utility classes or custom classes to the title element.
+  *
+  * Available attributes:
+  * - attributes: HTML attributes for the root accordion wrapper element.
+  * - title_attributes: HTML attributes for the accordion title element.
+  *
+  * Available slots:
+  * - N/A
+  *
+  */
+  #}
+{% apply spaceless %}
 
-<div class="accordion" id="{{ accordion_id }}">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="{{ heading_id }}">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="{{ '#' ~ collapse_id }}" aria-expanded="true" aria-controls="collapseOne">
-        {{ heading }}
-      </button>
-    </h2>
-    <div id="{{ collapse_id }}" class="accordion-collapse collapse show" aria-labelledby="{{ heading_id }}" data-bs-parent="{{ '#' ~ accordion_id }}">
-      <div class="accordion-body">
-        <p>{{ body }}</p>
-      </div>
-    </div>
+{% set accordion_id = accordion_id ? accordion_id : 'accordion-' ~ random(1000) %}
+{% set flush_classes = flush ? ['accordion-flush'] : [] %}
+{% set header_tag = header_tag ?? 'h4' %}
+{% set expanded_item_index = expanded_item_index ? expanded_item_index : 0 %}
+{% set utility_classes = utility_classes ? utility_classes : [] %}
+
+
+{# Accordion wrapper #}
+{%
+  set classes = [
+    'accordion',
+  ]|merge(flush_classes)|merge(utility_classes)
+%}
+
+{% if not attributes %}
+  {% set attributes = create_attribute() %}
+{% endif %}
+
+{%
+  set attributes = attributes.addClass(classes)
+                  .setAttribute('id', accordion_id)
+%}
+
+{% if title %}
+  {% set title_tag = title_tag ? title_tag : 'h2' %}
+  {% set title_utility_classes = title_utility_classes ? title_utility_classes : [] %}
+
+  {%
+    set title_classes = [
+      'accordion-title',
+    ]|merge(title_utility_classes)
+  %}
+
+  {% if not title_attributes %}
+    {% set title_attributes = create_attribute() %}
+  {% endif %}
+
+  {% set title_attributes = attributes.addClass(title_classes) %}
+
+  <{{ title_tag }}{{ title_attributes }}>{{ title }}</{{ title_tag }}> 
+{% endif %}
+
+{% if items is not empty %}
+  <div{{ attributes }}>
+    {% for item in items %}
+      {% include "varbase_components:accordion-item" with {
+        item_id: item.id,
+        accordion_id: accordion_id,
+        header_tag: header_tag,
+        collapsable: item.collapsable,
+        expanded: loop.index == expanded_item_index ? true : false,
+        header: item.header,
+        body: item.body,
+      } only %}
+    {% endfor %}
   </div>
-</div>
+{% endif %}
+{% endapply %}
