@@ -60,7 +60,6 @@ $warning:       $yellow;
 $danger:        $red;
 $light:         $gray-100;
 $dark:          $gray-900;
-// scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
@@ -81,3 +80,37 @@ $theme-colors: (
 // Import the alert style from the Bootstrap 5 package to be compiled with
 // Restricted style and colors in most websites.
 @import "../../../node_modules/bootstrap/scss/alert";
+
+// Generate contextual modifier classes for colorizing the alert dismissible close button.
+.alert-dismissible {
+  .btn-close {
+    --bs-btn-close-opacity: 1;
+    -webkit-mask-image: var(--bs-btn-close-bg);
+    mask-image: var(--bs-btn-close-bg);
+    width: 0.75rem;
+    height: 0.75rem;
+    padding: 0.225rem;
+    margin: 1.22rem;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    &.alert-dismissible {
+
+      @if $color == "light" { 
+        .btn-close {
+          background: shade-color($value, $btn-active-bg-shade-amount);
+        }
+      } @else if $color == "dark" {
+        .btn-close {
+          background: tint-color($value, $btn-active-bg-tint-amount);
+        }
+      } @else {
+        .btn-close {
+          background: if($color == $color-contrast-light, shade-color($value, $btn-active-bg-shade-amount), tint-color($value, $btn-active-bg-tint-amount));
+        }
+      }
+    }
+  }
+}

@@ -105,3 +105,45 @@
   --bs-alert-link-color: var(--bs-dark-text-emphasis);
 }
 
+.alert-dismissible .btn-close {
+  --bs-btn-close-opacity: 1;
+  -webkit-mask-image: var(--bs-btn-close-bg);
+          mask-image: var(--bs-btn-close-bg);
+  width: .75rem;
+  height: .75rem;
+  padding: .225rem;
+  margin: 1.22rem;
+}
+
+.alert-primary.alert-dismissible .btn-close {
+  background: #3d8bfd;
+}
+
+.alert-secondary.alert-dismissible .btn-close {
+  background: #753dce;
+}
+
+.alert-success.alert-dismissible .btn-close {
+  background: #479f76;
+}
+
+.alert-info.alert-dismissible .btn-close {
+  background: #3dd5f3;
+}
+
+.alert-warning.alert-dismissible .btn-close {
+  background: #ffcd39;
+}
+
+.alert-danger.alert-dismissible .btn-close {
+  background: #e35d6a;
+}
+
+.alert-light.alert-dismissible .btn-close {
+  background: #c6c7c8;
+}
+
+.alert-dark.alert-dismissible .btn-close {
+  background: #4d5154;
+}
+
