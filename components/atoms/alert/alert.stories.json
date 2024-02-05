@@ -68,20 +68,11 @@
   },
   "stories": [
     {
-      "name": "Alert",
-      "args": {
-        "type": "alert-info",
-        "dismissible": false,
-        "heading": "",
-        "content": "A simple alert check it out!"
-      }
-    },
-    {
       "name": "Primary",
       "args": {
         "type": "alert-primary",
         "dismissible": true,
-        "heading": "Primary",
+        "heading": "",
         "content": "A simple alert primary check it out!"
       }
     },
@@ -90,7 +81,7 @@
       "args": {
         "type": "alert-secondary",
         "dismissible": true,
-        "heading": "Secondary",
+        "heading": "",
         "content": "A simple alert a secondary check it out!"
       }
     },
@@ -99,7 +90,7 @@
       "args": {
         "type": "alert-success",
         "dismissible": true,
-        "heading": "Success",
+        "heading": "",
         "content": "A simple alert success check it out!"
       }
     },
@@ -108,7 +99,7 @@
       "args": {
         "type": "alert-danger",
         "dismissible": true,
-        "heading": "Error",
+        "heading": "",
         "content": "A simple alert danger check it out!"
       }
     },
@@ -117,7 +108,7 @@
       "args": {
         "type": "alert-warning",
         "dismissible": true,
-        "heading": "Warning",
+        "heading": "",
         "content": "A simple alert warning check it out!"
       }
     },
@@ -131,21 +122,21 @@
       }
     },
     {
-      "name": "Dark",
-      "args": {
-        "type": "alert-dark",
-        "dismissible": true,
-        "heading": "",
-        "content": "A simple alert dark check it out!"
-      }
-    },
-    {
       "name": "Light",
       "args": {
         "type": "alert-light",
         "dismissible": true,
         "heading": "",
         "content": "A simple alert light check it out!"
+      }
+    },
+    {
+      "name": "Dark",
+      "args": {
+        "type": "alert-dark",
+        "dismissible": true,
+        "heading": "",
+        "content": "A simple alert dark check it out!"
       }
     }
   ]
