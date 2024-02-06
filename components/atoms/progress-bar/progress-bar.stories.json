@@ -92,7 +92,7 @@
     },
     "label_attributes": {
       "name": "Label Attributes",
-      "description": "HTML attributes for the Progress Bar label element.",
+      "description": "HTML attributes for the  element.",
       "control": "object",
       "defaultValue": {}
     },
@@ -108,198 +108,264 @@
       "name": "Primary",
       "args": {
         "color": "bg-primary",
+        "striped": false,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Primary striped",
+      "args": {
+        "color": "bg-primary",
+        "striped": true,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Primary animated",
+      "args": {
+        "color": "bg-primary",
         "striped": true,
         "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 35,
-        "message": "More information about this progress bar."
+        "label": "",
+        "percent": 80,
+        "message": ""
       }
     },
     {
       "name": "Secondary",
       "args": {
         "color": "bg-secondary",
+        "striped": false,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Secondary striped",
+      "args": {
+        "color": "bg-secondary",
+        "striped": true,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Secondary animated",
+      "args": {
+        "color": "bg-secondary",
         "striped": true,
         "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 40,
-        "message": "More information about this progress bar."
+        "label": "",
+        "percent": 80,
+        "message": ""
       }
     },
     {
       "name": "Success",
       "args": {
         "color": "bg-success",
+        "striped": false,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Success striped",
+      "args": {
+        "color": "bg-success",
+        "striped": true,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Success animated",
+      "args": {
+        "color": "bg-success",
         "striped": true,
         "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 45,
-        "message": "More information about this progress bar."
+        "label": "",
+        "percent": 80,
+        "message": ""
       }
     },
     {
       "name": "Info",
       "args": {
         "color": "bg-info",
+        "striped": false,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Info striped",
+      "args": {
+        "color": "bg-info",
+        "striped": true,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Info animated",
+      "args": {
+        "color": "bg-info",
         "striped": true,
         "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 50,
-        "message": "More information about this progress bar."
+        "label": "",
+        "percent": 80,
+        "message": ""
       }
     },
     {
       "name": "Warning",
       "args": {
         "color": "bg-warning",
+        "striped": false,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Warning striped",
+      "args": {
+        "color": "bg-warning",
+        "striped": true,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Warning animated",
+      "args": {
+        "color": "bg-warning",
         "striped": true,
         "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 55,
-        "message": "More information about this progress bar."
+        "label": "",
+        "percent": 80,
+        "message": ""
       }
     },
     {
       "name": "Danger",
       "args": {
         "color": "bg-danger",
+        "striped": false,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Danger striped",
+      "args": {
+        "color": "bg-danger",
+        "striped": true,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Danger animated",
+      "args": {
+        "color": "bg-danger",
         "striped": true,
         "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 60,
-        "message": "More information about this progress bar."
+        "label": "",
+        "percent": 80,
+        "message": ""
       }
     },
     {
       "name": "Light",
       "args": {
         "color": "bg-light",
+        "striped": false,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Light striped",
+      "args": {
+        "color": "bg-light",
+        "striped": true,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
+      }
+    },
+    {
+      "name": "Light animated",
+      "args": {
+        "color": "bg-light",
         "striped": true,
         "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 65,
-        "message": "More information about this progress bar."
+        "label": "",
+        "percent": 80,
+        "message": ""
       }
     },
     {
       "name": "Dark",
       "args": {
         "color": "bg-dark",
-        "striped": true,
-        "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 70,
-        "message": "More information about this progress bar."
+        "striped": false,
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
       }
     },
     {
-      "name": "Black",
+      "name": "Dark striped",
       "args": {
-        "color": "bg-black",
+        "color": "bg-dark",
         "striped": true,
-        "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 35,
-        "message": "More information about this progress bar."
+        "animated": false,
+        "label": "",
+        "percent": 80,
+        "message": ""
       }
     },
     {
-      "name": "White",
+      "name": "Dark animated",
       "args": {
-        "color": "bg-white",
+        "color": "bg-dark",
         "striped": true,
         "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 35,
-        "message": "More information about this progress bar."
-      }
-    },
-    {
-      "name": "Body",
-      "args": {
-        "color": "bg-body",
-        "striped": true,
-        "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 35,
-        "message": "More information about this progress bar."
-      }
-    },
-    {
-      "name": "Transparent",
-      "args": {
-        "color": "bg-transparent",
-        "striped": true,
-        "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 35,
-        "message": "More information about this progress bar."
-      }
-    },
-    {
-      "name": "Opacity 10",
-      "args": {
-        "color": "bg-opacity-10",
-        "striped": true,
-        "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 35,
-        "message": "More information about this progress bar."
-      }
-    },
-    {
-      "name": "Opacity 25",
-      "args": {
-        "color": "bg-opacity-25",
-        "striped": true,
-        "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 35,
-        "message": "More information about this progress bar."
-      }
-    },
-    {
-      "name": "Opacity 50",
-      "args": {
-        "color": "bg-opacity-50",
-        "striped": true,
-        "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 35,
-        "message": "More information about this progress bar."
-      }
-    },
-    {
-      "name": "Opacity 75",
-      "args": {
-        "color": "bg-opacity-75",
-        "striped": true,
-        "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 35,
-        "message": "More information about this progress bar."
-      }
-    },
-    {
-      "name": "Opacity 100",
-      "args": {
-        "color": "bg-opacity-100",
-        "striped": true,
-        "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 35,
-        "message": "More information about this progress bar."
-      }
-    },
-    {
-      "name": "Gradient",
-      "args": {
-        "color": "bg-gradient",
-        "striped": true,
-        "animated": true,
-        "label": "Progress Bar Label",
-        "percent": 35,
-        "message": "More information about this progress bar."
+        "label": "",
+        "percent": 80,
+        "message": ""
       }
     }
   ]

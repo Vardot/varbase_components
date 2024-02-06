@@ -1,0 +1,33 @@
+@import "../../defaults";   // Global component defaults.
+
+// Override default bootstrap progress bar variables.
+$progress-height: 1.25rem;
+$progress-font-size: 0.875rem;
+$progress-bg: transparent;
+$progress-border-radius: 0.125rem;
+$progress-box-shadow: none;
+
+@import "../../../node_modules/bootstrap/scss/progress";
+
+// Change default bootstrap progress bar style.
+.progress {
+  border: 1px solid var(--bs-border-color);
+}
+
+// Manage a switched color contrast for the percent.
+.progress-bar {
+  font-weight: 700;
+  line-height: 1.225rem;
+  padding: 0.0625rem 0rem;
+
+  @each $color, $value in $theme-colors {
+    &.bg-#{$color} {
+      color: color-contrast($value) if($enable-important-utilities, null, null);
+    }
+  }
+}
+
+// Change the number of stripes in a Bootstrap 5 progress bar.
+.progress-bar-striped {
+  background-size: 0.75rem 0.75rem;
+}

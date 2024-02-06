@@ -20,16 +20,6 @@ props:
         - bg-danger
         - bg-light
         - bg-dark
-        - bg-black
-        - bg-white
-        - bg-body
-        - bg-transparent
-        - bg-opacity-10
-        - bg-opacity-25
-        - bg-opacity-50
-        - bg-opacity-75
-        - bg-opacity-100
-        - bg-gradient
     striped:
       type: boolean
       title: Striped
