@@ -1,6 +1,6 @@
-// Override bootstrap ~5.3.0 variables with Varbase 10 Branding
+// Override Bootstrap variables with Varbase 10 Branding
 // ----------------------------------------------------------------
-// See more about override Bootstrap ~5.3.0 variables here:
+// See more about override Bootstrap variables here:
 // https://getbootstrap.com/docs/5.3/customize/sass
 // https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss
 
@@ -76,5 +76,47 @@ $link-hover-decoration: none;
 // Override the default Breadcrumbs.
 $breadcrumb-font-size: 1rem;
 $breadcrumb-padding-x: 0.0625rem;
-$breadcrumb-divider: quote(">");
-$breadcrumb-divider-flipped: quote("<");
+$breadcrumb-divider: '\F285';
+$breadcrumb-divider-flipped: '\F284';
+
+// Override the default pagination.
+$pagination-font-size: 1.25rem;
+$pagination-bg: transparent;
+$pagination-focus-bg: transparent;
+$pagination-disabled-bg: transparent;
+$pagination-hover-bg: transparent;
+$pagination-active-bg: transparent;
+$pagination-border-radius: 0;
+$pagination-border-width: 0;
+
+$pagination-focus-color: var(--bs-dark-text-emphasis);
+$pagination-active-color: var(--bs-dark-text-emphasis);
+
+
+// Override the default accordion.
+$accordion-padding-y: 0.9375rem;
+$accordion-padding-x: 0.9375rem;
+$accordion-border-width: 1px;
+$accordion-border-color: var(--bs-primary);
+$accordion-border-radius: 0.125rem;
+$accordion-inner-border-radius: subtract($accordion-border-radius, $accordion-border-width) !default;
+
+$accordion-body-padding-y: $accordion-padding-y;
+$accordion-body-padding-x: $accordion-padding-x;
+
+$accordion-button-padding-y: $accordion-padding-y;
+$accordion-button-padding-x: $accordion-padding-x;
+$accordion-button-active-bg: var(--#{$prefix}primary-bg-subtle) !default;
+$accordion-button-active-color: var(--#{$prefix}primary-text-emphasis) !default;
+
+$accordion-button-focus-border-color: var(--bs-primary);
+$accordion-button-focus-box-shadow: var(--bs-primary);
+
+$accordion-icon-width: 0.9375rem;
+
+
+// Override the default alert.
+$alert-border-width: 0;
+$alert-border-radius: 0.125rem;
+$alert-padding-y: 0.9375rem;
+$alert-padding-x: 0.9375rem;

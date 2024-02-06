@@ -1,12 +1,12 @@
 .alert {
   --bs-alert-bg: transparent;
-  --bs-alert-padding-x: 1rem;
-  --bs-alert-padding-y: 1rem;
+  --bs-alert-padding-x: .9375rem;
+  --bs-alert-padding-y: .9375rem;
   --bs-alert-margin-bottom: 1rem;
   --bs-alert-color: inherit;
   --bs-alert-border-color: transparent;
-  --bs-alert-border: var(--bs-border-width) solid var(--bs-alert-border-color);
-  --bs-alert-border-radius: var(--bs-border-radius);
+  --bs-alert-border: 0 solid var(--bs-alert-border-color);
+  --bs-alert-border-radius: .125rem;
   --bs-alert-link-color: inherit;
   position: relative;
   padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
@@ -27,18 +27,18 @@
 }
 
 [dir="ltr"] .alert-dismissible {
-  padding-right: 3rem;
+  padding-right: 2.8125rem;
 }
 
 [dir="rtl"] .alert-dismissible {
-  padding-left: 3rem;
+  padding-left: 2.8125rem;
 }
 
 .alert-dismissible .btn-close {
   position: absolute;
   top: 0;
   z-index: 2;
-  padding: 1.25rem 1rem;
+  padding: 1.171875rem .9375rem;
 }
 
 [dir="ltr"] .alert-dismissible .btn-close {
