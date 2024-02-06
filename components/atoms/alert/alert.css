@@ -107,28 +107,28 @@
 
 .alert-dismissible .btn-close {
   --bs-btn-close-opacity: 1;
-  -webkit-mask-image: var(--bs-btn-close-bg);
-          mask-image: var(--bs-btn-close-bg);
-  width: .75rem;
-  height: .75rem;
-  padding: .225rem;
-  margin: 1.22rem;
+  -webkit-mask-image: var(--bs-btn-close-bg) !important;
+          mask-image: var(--bs-btn-close-bg) !important;
+  width: .75rem !important;
+  height: .75rem !important;
+  padding: .225rem !important;
+  margin: 1.22rem !important;
 }
 
 .alert-primary.alert-dismissible .btn-close {
-  background: #3d8bfd;
+  background: #0d6efd;
 }
 
 .alert-secondary.alert-dismissible .btn-close {
-  background: #753dce;
+  background: #520dc2;
 }
 
 .alert-success.alert-dismissible .btn-close {
-  background: #479f76;
+  background: #198754;
 }
 
 .alert-info.alert-dismissible .btn-close {
-  background: #3dd5f3;
+  background: #0dcaf0;
 }
 
 .alert-warning.alert-dismissible .btn-close {
@@ -136,7 +136,7 @@
 }
 
 .alert-danger.alert-dismissible .btn-close {
-  background: #e35d6a;
+  background: #b02a37;
 }
 
 .alert-light.alert-dismissible .btn-close {

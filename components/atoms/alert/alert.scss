@@ -85,12 +85,12 @@ $theme-colors: (
 .alert-dismissible {
   .btn-close {
     --bs-btn-close-opacity: 1;
-    -webkit-mask-image: var(--bs-btn-close-bg);
-    mask-image: var(--bs-btn-close-bg);
-    width: 0.75rem;
-    height: 0.75rem;
-    padding: 0.225rem;
-    margin: 1.22rem;
+    -webkit-mask-image: var(--bs-btn-close-bg) !important;
+    mask-image: var(--bs-btn-close-bg) !important;
+    width: 0.75rem !important;
+    height: 0.75rem !important;
+    padding: 0.225rem !important;
+    margin: 1.22rem !important;
   }
 }
 
@@ -106,9 +106,17 @@ $theme-colors: (
         .btn-close {
           background: tint-color($value, $btn-active-bg-tint-amount);
         }
-      } @else {
+      } @else if $color == "warning" {
         .btn-close {
           background: if($color == $color-contrast-light, shade-color($value, $btn-active-bg-shade-amount), tint-color($value, $btn-active-bg-tint-amount));
+        }
+      } @else if $color == "danger" {
+        .btn-close {
+          background: shade-color($value, $btn-active-bg-shade-amount);
+        }
+      } @else {
+        .btn-close {
+          background: $value;
         }
       }
     }
