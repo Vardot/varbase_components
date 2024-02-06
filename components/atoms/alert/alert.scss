@@ -1,11 +1,16 @@
 @import "../../defaults";   // Global component defaults.
 
-// scss-docs-start import-stack
-// Import the alert style from the Bootstrap 5 package to be compiled with
-// Restricted style and colors in most websites.
+// Override default bootstrap alert variables.
+$alert-border-width: 0;
+$alert-border-radius: 0.125rem;
+$alert-padding-y: 0.9375rem;
+$alert-padding-x: 0.9375rem;
+
 @import "../../../node_modules/bootstrap/scss/alert";
 
-// Generate contextual modifier classes for colorizing the alert dismissible close button.
+// Change default bootstrap alert style.
+
+// Custom style for the alert dismissible close button.
 .alert-dismissible {
   .btn-close {
     --bs-btn-close-opacity: 1;
@@ -18,6 +23,8 @@
   }
 }
 
+// Custom color for each alert dismissible alert colors.
+// with default, shade, or tint colors over alert theme colors.
 @each $color, $value in $theme-colors {
   .alert-#{$color} {
     &.alert-dismissible {

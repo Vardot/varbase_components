@@ -27,11 +27,11 @@
 }
 
 [dir="ltr"] .alert-dismissible {
-  padding-right: 2.8125rem;
+  padding-right: 3rem;
 }
 
 [dir="rtl"] .alert-dismissible {
-  padding-left: 2.8125rem;
+  padding-left: 3rem;
 }
 
 .alert-dismissible .btn-close {
