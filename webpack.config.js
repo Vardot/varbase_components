@@ -14,6 +14,7 @@ module.exports = {
     // SCSS
     // ################################################
     // Components
+    'atoms/accordion-item/accordion-item': ['./components/atoms/accordion-item/accordion-item.scss'],
     'atoms/alert/alert': ['./components/atoms/alert/alert.scss'],
     'atoms/taxonomy/taxonomy': ['./components/atoms/taxonomy/taxonomy.scss'],
     'molecules/tabs/tabs': ['./components/molecules/tabs/tabs.scss'],
