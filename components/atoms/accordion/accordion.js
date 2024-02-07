@@ -7,7 +7,7 @@
 (function ($, Drupal) {
 
   /**
-   * The Toggle all behavior for all accordion item in the accordion component.
+   * Toggle all behavior for all accordion items in an Accordion component.
    */
   Drupal.behaviors.varbaseAccordionToggleAll = {
     attach() {
