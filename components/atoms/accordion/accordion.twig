@@ -33,6 +33,7 @@
 
 {% set accordion_id = accordion_id ? accordion_id : 'accordion-' ~ random(1000) %}
 {% set flush_classes = flush ? ['accordion-flush'] : [] %}
+{% set toggle_all = toggle_all ?? false %}
 {% set header_tag = header_tag ?? 'h4' %}
 {% set expanded_item_index = expanded_item_index ? expanded_item_index : 0 %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
@@ -54,23 +55,31 @@
                   .setAttribute('id', accordion_id)
 %}
 
-{% if title %}
-  {% set title_tag = title_tag ? title_tag : 'h2' %}
-  {% set title_utility_classes = title_utility_classes ? title_utility_classes : [] %}
+{% if title or toggle_all %}
+  <div class="accordion-top d-flex flex-wrap {{ title ? 'justify-content-between' : 'justify-content-end' }} align-items-end">
+    {% if title %}
+      {% set title_tag = title_tag ? title_tag : 'h2' %}
+      {% set title_utility_classes = title_utility_classes ? title_utility_classes : [] %}
 
-  {%
-    set title_classes = [
-      'accordion-title',
-    ]|merge(title_utility_classes)
-  %}
+      {%
+        set title_classes = [
+          'accordion-title',
+        ]|merge(title_utility_classes)
+      %}
 
-  {% if not title_attributes %}
-    {% set title_attributes = create_attribute() %}
-  {% endif %}
+      {% if not title_attributes %}
+        {% set title_attributes = create_attribute() %}
+      {% endif %}
 
-  {% set title_attributes = attributes.addClass(title_classes) %}
+      {% set title_attributes = title_attributes.addClass(title_classes) %}
 
-  <{{ title_tag }}{{ title_attributes }}>{{ title }}</{{ title_tag }}> 
+      <{{ title_tag }}{{ title_attributes }}>{{ title }}</{{ title_tag }}> 
+    {% endif %}
+
+    {% if toggle_all %}
+      <button id="{{ accordion_id }}-toggle-all" data-accordion-id="{{ accordion_id }}" class="btn btn-link btn-sm accordion-toggle-all" data-expanded-text="{{ '[expand all]'|t }}" data-collapsed-text="{{ '[collapse all]'|t }}" data-accordion-toggle-status='collapsed'>{{ '[expand all]'|t }}</button>
+    {% endif %}
+  </div>
 {% endif %}
 
 {% if items is not empty %}
@@ -81,7 +90,7 @@
         accordion_id: accordion_id,
         header_tag: header_tag,
         collapsable: item.collapsable,
-        expanded: loop.index == expanded_item_index ? true : false,
+        expanded: (loop.index == expanded_item_index or item.expanded) ? true : false,
         header: item.header,
         body: item.body,
       } only %}

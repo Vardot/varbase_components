@@ -58,6 +58,12 @@
       "defaultValue": true,
       "control": "boolean"
     },
+    "toggle_all": {
+      "name": "Show Toggle All",
+      "description": "Have an expand all or collapse all option as [expand all] or [collapse all]",
+      "defaultValue": true,
+      "control": "boolean"
+    },
     "items": {
       "name": "Items",
       "description": "An array of accordion items inside the accordion. Each accordion item is an object that has (header, body) slots, with (id, header_tag, collapse, expanded, utility_classes, header_utility_classes, body_utility_classes, attributes, header_attributes, body_attributes) properties.",
@@ -95,6 +101,7 @@
         "accordion_id": "accordion-test",
         "header_tag": "h4",
         "flush": false,
+        "toggle_all": false,
         "items": [
           {
             "item_id": "item-1",
@@ -124,7 +131,72 @@
       "args": {
         "header_tag": "h4",
         "flush": false,
+        "toggle_all": false,
         "expanded_item_index": 2,
+        "items": [
+          {
+            "header": "Accordion header",
+            "body": "This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+          },
+          {
+            "header": "Accordion header",
+            "body": "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+          },
+          {
+            "header": "Accordion header",
+            "body": "This is the third item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+          },
+          {
+            "header": "Accordion header",
+            "body": "This is the fourth item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Accordion - All expanded",
+      "args": {
+        "header_tag": "h4",
+        "flush": false,
+        "toggle_all": false,
+        "expanded_item_index": 0,
+        "items": [
+          {
+            "header": "Accordion header",
+            "body": "This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+            "collapsable": true,
+            "expanded": true
+          },
+          {
+            "header": "Accordion header",
+            "body": "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+            "collapsable": true,
+            "expanded": true
+          },
+          {
+            "header": "Accordion header",
+            "body": "This is the third item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+            "collapsable": true,
+            "expanded": true
+          },
+          {
+            "header": "Accordion header",
+            "body": "This is the fourth item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+            "collapsable": true,
+            "expanded": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Accordion - With Toggle All",
+      "args": {
+        "title": "Lorem Ipsum Dolor Sit Amet",
+        "title_tag": "h2",
+        "accordion_id": "accordion-test",
+        "header_tag": "h4",
+        "flush": false,
+        "toggle_all": true,
         "items": [
           {
             "header": "Accordion header",

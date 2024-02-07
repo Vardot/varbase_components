@@ -44,6 +44,11 @@ props:
       title: Flush
       description: True if the accordion has no background color or borders.
       default: false
+    toggle_all:
+      type: boolean
+      title: Show Toggle All
+      description: Have an expand all or collapse all option as [expand all] or [collapse all]
+      default: false
     items:
       type: array
       title: Items
