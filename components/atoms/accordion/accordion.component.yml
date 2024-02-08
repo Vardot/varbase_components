@@ -39,16 +39,6 @@ props:
         - h4
         - h5
         - h6
-    flush:
-      type: boolean
-      title: Flush
-      description: True if the accordion has no background color or borders.
-      default: false
-    toggle_all:
-      type: boolean
-      title: Show Toggle All
-      description: Have an expand all or collapse all option as [expand all] or [collapse all]
-      default: false
     items:
       type: array
       title: Items
@@ -60,6 +50,16 @@ props:
       description: The index of the accordion item which is opened by default. (0 = no item, 1 = first item, 2 = second item)
       default: 0
       min: 0
+    toggle_all:
+      type: boolean
+      title: Show Toggle All
+      description: Have an expand all or collapse all option as [expand all] or [collapse all]
+      default: false
+    flush:
+      type: boolean
+      title: Flush
+      description: True if the accordion has no background color or borders.
+      default: false
     utility_classes:
       type: array
       title: Utility Classes

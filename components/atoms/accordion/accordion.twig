@@ -8,13 +8,14 @@
   * - title_tag: The HTML (h1, h2, h3, h4, h5, or h6) title of the accordion tag.
   * - accordion_id: Unique ID for the accordion component.
   * - header_tag: The HTML (h1, h2, h3, h4, h5, or h6) header tag of the accordion items.
-  * - flush: True if the accordion has no background color or borders.
   * - items: An array of accordion items inside the accordion.
   *          Each accordion item is an object that has (header, body) slots,
   *          with (id, header_tag, collapse, expanded, utility_classes, header_utility_classes,
   *          body_utility_classes, attributes, header_attributes, body_attributes) properties.
   * - expanded_item_index: The index of the accordion item which is opened by default.
   *                        (0 = no item, 1 = first item, 2 = second item)
+  * - toggle_all: Have an expand all or collapse all option as [expand all] or [collapse all].
+  * - flush: True if the accordion has no background color or borders.
   * - utility_classes: An array of utility classes that can be used to add extra
   *                    Bootstrap utility classes or custom classes to the root accordion wrapper.
   * - title_utility_classes: An array of utility classes that can be used to add extra
@@ -73,11 +74,23 @@
 
       {% set title_attributes = title_attributes.addClass(title_classes) %}
 
-      <{{ title_tag }}{{ title_attributes }}>{{ title }}</{{ title_tag }}> 
+      {% include "varbase_components:heading" with {
+          html_tag: title_tag,
+          content: title,
+          attributes: title_attributes
+       } only %}
+
     {% endif %}
 
     {% if toggle_all %}
-      <button id="{{ accordion_id }}-toggle-all" data-accordion-id="{{ accordion_id }}" class="btn btn-link btn-sm accordion-toggle-all" data-expanded-text="{{ '[expand all]'|t }}" data-collapsed-text="{{ '[collapse all]'|t }}" data-accordion-toggle-status='collapsed'>{{ '[expand all]'|t }}</button>
+      {% set all_expanded = true %}
+      {% for item in items %}
+        {% if item.expanded == false %}
+          {% set all_expanded = false %}
+        {% endif %}
+      {% endfor %}
+
+      <button id="{{ accordion_id }}-toggle-all" data-accordion-id="{{ accordion_id }}" class="btn btn-link btn-sm accordion-toggle-all" data-expanded-text="{{ '[expand all]'|t }}" data-collapsed-text="{{ '[collapse all]'|t }}" data-toggle-status='{{ all_expanded ? 'expended' : 'collapsed' }}'>{{ all_expanded ? '[collapse all]'|t : '[expand all]'|t }}</button>
     {% endif %}
   </div>
 {% endif %}

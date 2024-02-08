@@ -14,13 +14,14 @@ Build vertically collapsing accordions in combination with our Collapse JavaScri
 * `title_tag`: The HTML (h1, h2, h3, h4, h5, or h6) title of the accordion tag.
 * `accordion_id`: Unique ID for the accordion component.
 * `header_tag`: The HTML (h1, h2, h3, h4, h5, or h6) header tag of the accordion items.
-* `flush`: True if the accordion has no background color or borders.
 * `items`: An array of accordion items inside the accordion.
          Each accordion item is an object that has (header, body) slots,
          with (id, header_tag, collapse, expanded, utility_classes, header_utility_classes,
          body_utility_classes, attributes, header_attributes, body_attributes) properties.
 * `expanded_item_index`: The index of the accordion item which is opened by default.
                        (0 = no item, 1 = first item, 2 = second item)
+* `toggle_all`: Have an expand all or collapse all option as [expand all] or [collapse all].
+* `flush`: True if the accordion has no background color or borders.
 * `utility_classes`: An array of utility classes that can be used to add extra
                    Bootstrap utility classes or custom classes to the root accordion wrapper.
 * `title_utility_classes`: An array of utility classes that can be used to add extra
