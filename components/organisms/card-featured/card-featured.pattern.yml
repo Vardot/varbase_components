@@ -46,6 +46,15 @@ card_featured:
         '': '- none -'
         start: 'Start'
         end: 'End'
+    content_vertical_alignment:
+      type: 'select'
+      label: 'Content vertical alignment'
+      default_value: 'center'
+      options:
+        '': '- none -'
+        start: 'Top'
+        center: 'Center'
+        end: 'Bottom'
     gutters_between:
       type: 'select'
       label: 'Gutters Between'

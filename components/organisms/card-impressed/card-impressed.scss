@@ -2,6 +2,13 @@
 
 .varbase-impressed-card {
 
+  .card-title {
+    font-weight: 700;
+    line-height: 140%;
+    align-self: stretch;
+    text-transform: capitalize;
+  }
+
   .impressed-card-content {
     &:first-child {
       margin-top: 0;
@@ -61,10 +68,26 @@
 
   &.border-0 {
     .impressed-card-content {
-      margin-left: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &.bordered {
+    .impressed-card-content {
       margin-right: 0;
+      margin-left: 0;
       padding-left: 0;
       padding-right: 0;
+      padding-top: var(--bs-card-spacer-y);
+      padding-bottom: 0;
+    }
+
+    &.flex-column-reverse {
+      .impressed-card-content {
+        padding-top: 0;
+        padding-bottom: var(--bs-card-spacer-y);
+      }
     }
   }
 

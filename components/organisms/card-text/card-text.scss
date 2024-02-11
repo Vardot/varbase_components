@@ -2,6 +2,13 @@
 
 .varbase-text-card {
 
+  .card-title {
+    font-weight: 700;
+    line-height: 140%;
+    align-self: stretch;
+    text-transform: capitalize;
+  }
+
   &.anchor-all {
     position: relative;
 
@@ -58,6 +65,13 @@
       margin-right: 0;
       padding-left: 0;
       padding-right: 0;
+    }
+  }
+
+  &.bordered {
+    .text-card-content {
+      margin: 0;
+      padding: 0;
     }
   }
 

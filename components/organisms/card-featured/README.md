@@ -12,6 +12,7 @@ It is a versatile pattern that contain content such as blog posts, user informat
 * `equal_height`: Equal height (true/false)
 * `anchor_all`: Anchor All (true/false)
 * `media_position`: start|end to determine if the row is reversed or not.
+* `content_vertical_alignment`: Content Vertical alignment
 * `gutters_between`: Gutters Between - (large|small-start|small-end|no) to manage the guttering between the start and end columns.
 * `columns_xs_size`: All Breakpoints - Size of two columns for all devices. Starting from Extra small and up.
 * `columns_sm_size`: Small Breakpoint size (sm) - Size of two columns for Small devices (landscape phones, 576px and up)

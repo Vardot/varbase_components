@@ -26,7 +26,7 @@
 {% set content_utility_classes = content_utility_classes ? content_utility_classes : [] %}
 
 {# Check if the Card has a boarder on not and set needed no border Bootstrap class #}
-{% set card_border = card_border ? ['bordered'] : ['border-0'] %}
+{% set card_border = card_border ? ['bordered', 'p-4'] : ['border-0'] %}
 
 {%
   set card_classes = [

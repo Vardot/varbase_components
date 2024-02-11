@@ -38,6 +38,15 @@ props:
         - ''
         - start
         - end
+    content_vertical_alignment:
+      type: string
+      title: Content Vertical alignment
+      default: 'center'
+      enum:
+        - ''
+        - start
+        - center
+        - end
     gutters_between:
       type: string
       title: Gutters Between

@@ -4,7 +4,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1.2rem;
+  padding: 1.25rem;
   z-index: 3;
   display: flex;
   align-self: flex-end;
@@ -93,34 +93,34 @@
 }
 
 .varbase-overlay-card.xlarge .overlay-card-content {
-  padding: 1.8rem;
+  padding: 2.5rem;
 }
 
 .varbase-overlay-card.large .card-title {
-  font-size: calc(1.305rem + .66vw);
+  font-size: calc(1.375rem + 1.5vw);
 }
 
 @media (min-width: 1200px) {
   .varbase-overlay-card.large .card-title {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 }
 
 .varbase-overlay-card.large .overlay-card-content {
-  padding: 1.8rem;
+  padding: 2.5rem;
 }
 
 .varbase-overlay-card.medium .card-title {
-  font-size: calc(1.265rem + .18vw);
+  font-size: calc(1.3125rem + .75vw);
 }
 
 @media (min-width: 1200px) {
   .varbase-overlay-card.medium .card-title {
-    font-size: 1.4rem;
+    font-size: 1.875rem;
   }
 }
 
 .varbase-overlay-card.medium .overlay-card-content {
-  padding: 1.4rem;
+  padding: 1.875rem;
 }
 

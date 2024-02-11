@@ -9,6 +9,7 @@
  * - equal_height: Equal height (true/false)
  * - anchor_all: Anchor All (true/false)
  * - media_position: start|end to determine if the row is reversed or not.
+ * - content_vertical_alignment: Content Vertical alignment
  * - gutters_between: Gutters Between - (large|small-start|small-end|no) to manage the guttering between the start and end columns.
  * - columns_xs_size: All Breakpoints - Size of two columns for all devices. Starting from Extra small and up.
  * - columns_sm_size: Small Breakpoint size (sm) - Size of two columns for Small devices (landscape phones, 576px and up)
@@ -32,6 +33,7 @@
 
 {% set style_size = style_size ? [style_size]: [] %}
 {% set media_position = media_position == 'end' ? ['flex-row-reverse'] : [] %}
+{% set content_vertical_alignment = content_vertical_alignment ? ['align-self-' ~ content_vertical_alignment] : [] %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
 {% set media_utility_classes = media_utility_classes ? media_utility_classes : [] %}
 {% set content_utility_classes = content_utility_classes ? content_utility_classes : [] %}
@@ -53,7 +55,7 @@
 {% set end_column_xxl_size = columns_xxl_size ? ['col-xxl-' ~ columns_xxl_size|split("_")[1]|trim('0', 'left')] : [] %}
 
 {# Check if the Card has a boarder on not and set needed no border Bootstrap class #}
-{% set card_border = card_border ? ['bordered'] : ['border-0'] %}
+{% set card_border = card_border ? ['bordered', 'p-4'] : ['border-0'] %}
 
 {# Check if the Card is using the Equal height #}
 {% set equal_height = equal_height ? ['h-100'] : [] %}
@@ -82,7 +84,7 @@
 
 {% set end_column_gutters_between = gutters_between == 'small-end' ? (media_position == [] ? ['ps-0'] : ['pe-0']) : [] %}
 {%
-  set end_column_classes = []|merge(end_column_xs_size)|merge(end_column_sm_size)|merge(end_column_md_size)|merge(end_column_lg_size)|merge(end_column_xl_size)|merge(end_column_xxl_size)|merge(end_column_gutters_between)
+  set end_column_classes = []|merge(end_column_xs_size)|merge(end_column_sm_size)|merge(end_column_md_size)|merge(end_column_lg_size)|merge(end_column_xl_size)|merge(end_column_xxl_size)|merge(end_column_gutters_between)|merge(content_vertical_alignment)
 %}
 
 {%
