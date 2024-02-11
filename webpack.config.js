@@ -2,7 +2,6 @@ const path = require('path');
 const isDev = (process.env.NODE_ENV !== 'production');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const postcssRTLCSS = require('postcss-rtlcss');
@@ -46,8 +45,7 @@ module.exports = {
     rules: [
       {
         test: /\.(png|jpe?g|gif|svg)$/,
-        exclude: /sprite\.svg$/,
-        type: 'javascript/auto',
+        type: 'asset/resource',
         use: [{
             loader: 'file-loader',
             options: {
@@ -130,27 +128,8 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.(woff(2))(\?v=\d+\.\d+\.\d+)?$/,
-        type: 'javascript/auto',
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[path][name].[ext]?[hash]',
-            publicPath: (url, resourcePath, context) => {
-              const relativePath = path.relative(context, resourcePath);
-
-              // Settings
-              if (resourcePath.includes('media/font')) {
-                return `../../${relativePath}`;
-              }
-
-              return `../${relativePath}`;
-            },
-          }
-        }],
-      },
     ],
+    noParse: [ path.resolve(__dirname, 'components/atoms/accordion/accordion.js')],
   },
   resolve: {
     alias: {
@@ -177,43 +156,9 @@ module.exports = {
       cleanStaleWebpackAssets: false
     }),
     new MiniCssExtractPlugin(),
-    new SVGSpritemapPlugin(path.resolve(__dirname, 'media/icons/**/*.svg'), {
-      output: {
-        filename: 'media/sprite.svg',
-        svg: {
-          sizes: false
-        },
-        svgo: {
-          plugins: [
-            {
-              name: 'removeAttrs',
-              params: {
-                attrs: '(use|symbol|svg):fill'
-              }
-            }
-          ],
-        },
-      },
-      sprite: {
-        prefix: false,
-        gutter: 0,
-        generate: {
-          title: false,
-          symbol: true,
-          use: true,
-          view: '-view'
-        }
-      },
-      styles: {
-        filename: path.resolve(__dirname, 'styles/helpers/_svg-sprite.scss'),
-        keepAttributes: true,
-        // Fragment now works with Firefox 84+ and 91esr+
-        format: 'fragment',
-      }
-    }),
   ],
   watchOptions: {
     aggregateTimeout: 300,
-    ignored: ['**/*.woff', '**/*.json', '**/*.woff2', '**/*.jpg', '**/*.png', '**/*.svg', 'node_modules'],
+    ignored: ['components/**/**/*.js', '**/*.woff', '**/*.json', '**/*.woff2', '**/*.jpg', '**/*.png', '**/*.svg', 'node_modules'],
   }
 };
