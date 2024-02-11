@@ -4,8 +4,6 @@
 // Override default bootstrap breadcrumb variables.
 $breadcrumb-font-size: 1rem;
 $breadcrumb-padding-x: 0.0625rem;
-$breadcrumb-divider: '\F285';
-$breadcrumb-divider-flipped: '\F284';
 
 @import "../../../node_modules/bootstrap/scss/breadcrumb";
 
@@ -41,8 +39,8 @@ $breadcrumb-divider-flipped: '\F284';
   font-family: 'bootstrap-icons';
   font-size: 1.1rem;
   font-weight: 500;
-  content: '\F285';
+  content: quote("\F285");
 }
 [dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
-  content: '\F284';
+  content: quote("\F285");
 }
