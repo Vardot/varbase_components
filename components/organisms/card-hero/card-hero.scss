@@ -1,6 +1,7 @@
 @import "../../defaults";   // Global component defaults.
 
 .varbase-hero-card {
+  background: linear-gradient(180deg, $hero-card-content-background-color1, $hero-card-content-background-color2);
 
   .hero-card-content {
     position: absolute;
@@ -11,35 +12,20 @@
     right: 0;
     padding: $card-xsmall-title-font-size;
     z-index: 3;
+    color: $hero-brief-text-color;
     
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
       width: 50%;
-      top: 20%;
+      top: 28%;
       bottom: 20%;
-      left: 5%;
-      right: 5%;
+      left: 10%;
+      right: 10%;
     }
 
-    background: $hero-card-content-background-color1;
-    background: $hero-card-content-background-color2;
-    color: $hero-card-title-color;
-
     .card-title {
-      margin: 0;
-      padding: 0;
       color: $hero-card-title-color;
       @include font-size($hero-card-xlarge-title-font-size);
     }
 
-    a {
-      color: $hero-card-title-color;
-      text-decoration: none;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      opacity: $hero-card-content-hover-opacity;
-    }
   }
 }

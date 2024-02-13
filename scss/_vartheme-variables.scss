@@ -25,10 +25,10 @@ $overlay-card-content-hover-opacity: 0.9;
 
 // Hero Card default styles.
 $hero-card-title-color: $white;
-$hero-card-xlarge-title-font-size: 3rem;
+$hero-card-xlarge-title-font-size: 3.5rem;
 $hero-card-content-hover-opacity: 0.7;
-$hero-card-content-background-color1: rgb(0,0,0);
-$hero-card-content-background-color2: rgba(0,0,0,0.7);
+$hero-card-content-background-color1: rgba(0, 0, 0, 0.00) 2.22%; 
+$hero-card-content-background-color2: rgba(0, 0, 0, 0.50) 73.4%;
 
 // -----------------------------------------------------------------------------
 // Custom Varbase Media Hero Slider variables for Vartheme.
@@ -58,16 +58,16 @@ $hero-empty-view-background: #e0e0e0;
 $hero-arrow-gutter: 0.63rem;
 
 // Height for screen size and less.
-$hero-min-height: 300px;
-$hero-max-height: 300px;
+$hero-min-height: 43.75rem;
+$hero-max-height: 43.75rem;
 
 // For screen size sm and more.
-$hero-min-height-sm: 400px;
-$hero-max-height-sm: 400px;
+$hero-min-height-sm: 43.75rem;
+$hero-max-height-sm: 43.75rem;
 
 // For screen size md and more.
-$hero-min-height-md: 600px;
-$hero-max-height-md: 600px;
+$hero-min-height-md: 43.75rem;
+$hero-max-height-md: 43.75rem;
 
 $hero-container-v-padding: 60px;
 $hero-container-h-padding-sm: 150px;

@@ -1,0 +1,44 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/10.2.x/core/modules/sdc/src/metadata.schema.json
+name: heroslider
+status: experimental
+description: A slideshow component for cycling through elements images/media or slides of text—like a heroslider.
+props:
+  type: object
+  properties:
+    id:
+      type: string
+      title: heroslider ID
+      description: Set a unique id on the heroslider for optional controls, especially if you’re using multiple herosliders on a single page.
+    items:
+      type: array
+      title: Items
+      description: An array of slider items, Each item has (caption, media, content)
+      default: []
+    controls:
+      type: boolean
+      title: Controls
+      description: Add the previous/next controls.
+      default: false
+    indicators:
+      type: boolean
+      title: Indicators
+      description: Add indicators to the heroslider, alongside the previous/next controls.
+      default: false
+    utility_classes:
+      type: array
+      title: Utility Classes
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the heroslider element.
+      default: []
+    indicators_utility_classes:
+      type: array
+      title: Indicators Utility Classes
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the indicators element.
+      default: []
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: HTML attributes to apply to the heroslider main wrapper tag.
+    indicators_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: HTML attributes to apply to the indicators wrapper tag.

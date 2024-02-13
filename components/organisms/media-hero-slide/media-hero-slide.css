@@ -52,8 +52,8 @@
 }
 
 .varbase-heroslider-media .slick__arrow {
-  top: 300px;
-  transform: translateY(-150px);
+  top: 43.75rem;
+  transform: translateY(-21.875rem);
 }
 
 .varbase-heroslider-media .slick__arrow .slick-arrow::before {
@@ -64,8 +64,8 @@
 
 @media screen and (min-width: 768px) {
   .varbase-heroslider-media .slick__arrow {
-    top: 600px;
-    transform: translateY(-300px);
+    top: 43.75rem;
+    transform: translateY(-21.875rem);
   }
 }
 
@@ -102,21 +102,21 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  min-height: 300px;
-  max-height: 300px;
+  min-height: 43.75rem;
+  max-height: 43.75rem;
 }
 
 @media screen and (min-width: 768px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media {
-    min-height: 600px;
-    max-height: 600px;
+    min-height: 43.75rem;
+    max-height: 43.75rem;
   }
 }
 
 @media screen and (max-width: 576px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media {
-    min-height: 400px;
-    max-height: 400px;
+    min-height: 43.75rem;
+    max-height: 43.75rem;
   }
 }
 
@@ -246,15 +246,15 @@
 
 .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single {
   overflow: hidden;
-  min-height: 300px;
-  max-height: 300px;
+  min-height: 43.75rem;
+  max-height: 43.75rem;
   /* 1. No object-fit support: *//* 2. If supporting object-fit, overriding (1): */
 }
 
 @media screen and (min-width: 768px) {
   .varbase-heroslider-media .node--type-varbase-heroslider-media .field--name-field-media-single {
-    min-height: 600px;
-    max-height: 600px;
+    min-height: 43.75rem;
+    max-height: 43.75rem;
   }
 }
 

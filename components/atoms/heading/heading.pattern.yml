@@ -1,0 +1,45 @@
+heading:
+  use: varbase_components:heading
+  label: Heading
+  description: All HTML headings, `<h1>` through `<h6>`, are available.
+  fields:
+    content:
+      type: 'textfield'
+      label: 'Content'
+      description: 'Content text for the heading.'
+      preview: 'Content'
+  settings:
+    html_tag:
+      type: 'select'
+      label: 'HTML tag'
+      default_value: 'h1'
+      options:
+        h1: 'h1'
+        h2: 'h2'
+        h3: 'h3'
+        h4: 'h4'
+        h5: 'h5'
+        h6: 'h6'
+    display:
+      type: 'select'
+      label: 'Display Heading'
+      default_value: ''
+      options:
+        '': '- none -'
+        display-1: 'display-1'
+        display-2: 'display-2'
+        display-3: 'display-3'
+        display-5: 'display-5'
+        display-6: 'display-6'
+        display-7: 'display-7'
+    extra_utility_classes:
+      type: 'group'
+      label: 'Utility classes'
+      description: '<b>Bootstrap </b> has a big list of <b><a href="https://getbootstrap.com/docs/5.3/utilities/api/">Utility API</a></b> which brings out <b>Utility Classes</b> for all Bootstrap Components.'
+      group_type: 'details'
+    utility_classes:
+      type: 'utility_classes'
+      label: 'Utility classes'
+      description: 'An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.'
+      default_value: { }
+      group: 'extra_utility_classes'
