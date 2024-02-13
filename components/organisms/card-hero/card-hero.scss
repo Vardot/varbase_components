@@ -1,7 +1,7 @@
 @import "../../defaults";   // Global component defaults.
 
 .varbase-hero-card {
-  background: linear-gradient(180deg, $hero-card-content-background-color1, $hero-card-content-background-color2);
+  background-image: linear-gradient(180deg, $hero-card-content-background-color1, $hero-card-content-background-color2);
 
   .hero-card-content {
     position: absolute;

@@ -23,6 +23,7 @@
  *
  */
 #}
+{% set heroslider_id = id ? id : 'heroslider-' ~ random(1000) %}
 {% set utility_classes = utility_classes ?? [] %}
 {% set indicators_utility_classes = indicators_utility_classes ?? [] %}
 
@@ -39,7 +40,7 @@
 {% endif %}
 
 {% set attributes = attributes.addClass(heroslider_classes) %}
-{% set attributes = attributes.setAttribute('id', id) %}
+{% set attributes = attributes.setAttribute('id', heroslider_id) %}
 {% set attributes = attributes.setAttribute('data-bs-ride', 'true') %}
 
 <div{{ attributes }}>
@@ -61,7 +62,8 @@
 
       <div{{ indicators_attributes}}>
         {% for key, item in items %}
-          <button type="button" data-bs-target="#{{ id }}" data-bs-slide-to="{{ key }}" class="{{ (key == 0) ? 'active' }}" aria-label="{{ item.indicator_label }}" aria-current="{{ (key == 0) ? 'true' }}"></button>
+          {% set item_id = heroslider_id ~ '--item-' ~ key %}
+          <button id="indicator--{{ item_id }}" type="button" data-bs-target="#{{ heroslider_id }}" data-bs-slide-to="{{ key }}" class="{{ (key == 0) ? 'active' }}" aria-label="{{ item.indicator_label }}" aria-current="{{ (key == 0) ? 'true' }}"></button>
         {% endfor %}
       </div>
     {% endif %}
@@ -69,7 +71,8 @@
     {# Add carousel itmes #}
     <div class="carousel-inner">
       {% for key, item in items %}
-        <div class="carousel-item {{ (key == 0) ? 'active' }}">
+        {% set item_id = heroslider_id ~ '--item-' ~ key %}
+        <div id="{{ item_id }}" class="carousel-item {{ (key == 0) ? 'active' }}">
           {{ item }}
         </div>
       {% endfor %}
