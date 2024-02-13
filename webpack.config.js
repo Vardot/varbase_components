@@ -14,10 +14,10 @@ module.exports = {
     // ################################################
     // Components
     'atoms/accordion-item/accordion-item': ['./components/atoms/accordion-item/accordion-item.scss'],
-    'atoms/alert/alert': ['./components/atoms/alert/alert.scss'],
-    'atoms/pagination/pagination': ['./components/atoms/pagination/pagination.scss'],
     'atoms/progress-bar/progress-bar': ['./components/atoms/progress-bar/progress-bar.scss'],
     'atoms/taxonomy/taxonomy': ['./components/atoms/taxonomy/taxonomy.scss'],
+    'molecules/alert/alert': ['./components/molecules/alert/alert.scss'],
+    'molecules/pagination/pagination': ['./components/molecules/pagination/pagination.scss'],
     'molecules/breadcrumb/breadcrumb': ['./components/molecules/breadcrumb/breadcrumb.scss'],
     'molecules/tabs/tabs': ['./components/molecules/tabs/tabs.scss'],
     'organisms/nav/nav': ['./components/organisms/nav/nav.scss'],

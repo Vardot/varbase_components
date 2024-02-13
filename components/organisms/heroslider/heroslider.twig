@@ -28,7 +28,8 @@
 
 {%
   set heroslider_classes = [
-    'heroslider',
+    'varbase-heroslider',
+    'carousel',
     'slide',
   ]|merge(utility_classes)
 %}
@@ -44,7 +45,7 @@
 <div{{ attributes }}>
   {% if items %}
 
-    {# Add indicators for the heroslider #}
+    {# Add indicators for the carousel #}
     {% if indicators %}
       {% if not indicators_attributes %}
         {% set indicators_attributes = create_attribute() %}
@@ -52,7 +53,7 @@
 
       {%
         set indicators_classes = [
-          'heroslider-indicators'
+          'carousel-indicators'
         ]|merge(indicators_utility_classes)
       %}
 
@@ -65,23 +66,23 @@
       </div>
     {% endif %}
 
-    {# Add heroslider itmes #}
-    <div class="heroslider-inner">
+    {# Add carousel itmes #}
+    <div class="carousel-inner">
       {% for key, item in items %}
-        <div class="heroslider-item {{ (key == 0) ? 'active' }}">
+        <div class="carousel-item {{ (key == 0) ? 'active' }}">
           {{ item }}
         </div>
       {% endfor %}
     </div>
 
-    {# Add controls for the heroslider #}
+    {# Add controls for the carousel #}
     {% if controls %}
-      <button class="heroslider-control-prev" type="button" data-bs-target="#{{ id }}" data-bs-slide="prev">
-        <span class="heroslider-control-prev-icon" aria-hidden="true"></span>
+      <button class="carousel-control-prev" type="button" data-bs-target="#{{ id }}" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">{{ 'Previous'|t }}</span>
       </button>
-      <button class="heroslider-control-next" type="button" data-bs-target="#{{ id }}" data-bs-slide="next">
-        <span class="heroslider-control-next-icon" aria-hidden="true"></span>
+      <button class="carousel-control-next" type="button" data-bs-target="#{{ id }}" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">{{ 'Next'|t }}</span>
       </button>
     {% endif %}
