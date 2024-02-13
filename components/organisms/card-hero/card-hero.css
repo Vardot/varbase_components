@@ -1,11 +1,3 @@
-[dir="ltr"] .varbase-hero-card {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.22%, rgba(0, 0, 0, .5) 73.4%);
-}
-
-[dir="rtl"] .varbase-hero-card {
-  background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 2.22%, rgba(0, 0, 0, .5) 73.4%);
-}
-
 .varbase-hero-card .hero-card-content {
   position: absolute;
   width: 100%;
@@ -13,18 +5,46 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1.25rem;
+  padding: 1.88rem;
   z-index: 3;
   color: #fff;
 }
 
+[dir="ltr"] .varbase-hero-card .hero-card-content {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.22%, rgba(0, 0, 0, .5) 73.4%);
+}
+
+[dir="rtl"] .varbase-hero-card .hero-card-content {
+  background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 2.22%, rgba(0, 0, 0, .5) 73.4%);
+}
+
+@media screen and (min-width: 576px) {
+  .varbase-hero-card .hero-card-content {
+    padding: 12% 14%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .varbase-hero-card .hero-card-content {
+    padding: 12% 15%;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .varbase-hero-card .hero-card-content {
-    width: 50%;
-    top: 28%;
-    bottom: 20%;
-    left: 10%;
-    right: 10%;
+    padding: 12% 16%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .varbase-hero-card .hero-card-content {
+    padding: 12% 17%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .varbase-hero-card .hero-card-content {
+    padding: 12% 18%;
   }
 }
 

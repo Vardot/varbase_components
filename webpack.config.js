@@ -129,8 +129,7 @@ module.exports = {
           },
         ],
       },
-    ],
-    noParse: [ path.resolve(__dirname, 'components/atoms/accordion/accordion.js')],
+    ]
   },
   resolve: {
     alias: {

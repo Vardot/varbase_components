@@ -35,11 +35,93 @@
   }
 }
 
+.carousel.varbase-heroslider .carousel-controls {
+  position: absolute;
+  right: 25%;
+  bottom: 0;
+  left: 25%;
+  z-index: 5;
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+  width: 53rem;
+  height: 2.1875rem;
+  margin-bottom: 6.25rem;
+}
+
+.carousel.varbase-heroslider .carousel-indicators {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel.varbase-heroslider .carousel-indicators button {
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='11' viewBox='0 0 10 11' fill='none'><circle cx='5' cy='5.5' r='4.5' stroke='white'/></svg>") no-repeat;
+}
+
+.carousel.varbase-heroslider .carousel-indicators button.active {
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='11' viewBox='0 0 10 11' fill='none'><circle cx='5' cy='5.5' r='4.5' fill='white' stroke='white'/></svg>") no-repeat;
+}
+
+.carousel.varbase-heroslider .carousel-control-buttons {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+}
+
+.carousel.varbase-heroslider .carousel-control-prev,
+.carousel.varbase-heroslider .carousel-control-next,
+.carousel.varbase-heroslider .carousel-control-pause {
+  position: relative;
+  display: block;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  padding: 0;
+  margin: 0;
+  align-self: flex-end;
+}
+
+.carousel.varbase-heroslider .carousel-control-pause {
+  background: none;
+  border: 0;
+  opacity: 1;
+}
+
+.carousel.varbase-heroslider .carousel-control-pause .carousel-control-pause-icon {
+  display: inline-block;
+  width: .75rem;
+  height: .75rem;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='13' viewBox='0 0 12 13' fill='none'><path d='M0 3C0 1.61929 1.11929 0.5 2.5 0.5C3.88071 0.5 5 1.61929 5 3V10C5 11.3807 3.88071 12.5 2.5 12.5C1.11929 12.5 0 11.3807 0 10V3ZM7 3C7 1.61929 8.11929 0.5 9.5 0.5C10.8807 0.5 12 1.61929 12 3V10C12 11.3807 10.8807 12.5 9.5 12.5C8.11929 12.5 7 11.3807 7 10V3Z' fill='white'/></svg>");
+}
+
+.carousel.varbase-heroslider .ratio .drimage {
+  position: absolute;
+  top: -25%;
+  bottom: -25%;
+  width: 100%;
+  height: 100%;
+}
+
+[dir="ltr"] .carousel.varbase-heroslider .ratio .drimage {
+  left: 0;
+}
+
+[dir="rtl"] .carousel.varbase-heroslider .ratio .drimage {
+  right: 0;
+}
+
 .carousel.varbase-heroslider .carousel-item .varbase-hero-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+  padding: 12%;
   height: 43.75rem !important;
   min-height: 43.75rem;
   max-height: 43.75rem;

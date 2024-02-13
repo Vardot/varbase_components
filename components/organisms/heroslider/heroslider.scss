@@ -15,11 +15,87 @@
     background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMjEuNDk0IDMyMS40OTQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyMS40OTQgMzIxLjQ5NDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNTZweCIgaGVpZ2h0PSIyNTZweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTY2Ljg4LDIwOC43NDd2NzcuNzVsNjcuMzY3LTM4LjgxN0w2Ni44OCwyMDguNzQ3eiBNODAuNzQ3LDIzMi44NTRsMjUuODEzLDE0LjkzM2wtMjUuODEzLDE0LjgyN1YyMzIuODU0eiIgZmlsbD0iI2E4YThhOCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTAsMTczLjg2N3YxNDcuNjI3aDE4Ny43MzNWMTczLjg2N0gweiBNMTczLjg2NywzMDcuNjI3aC0xNjBWMTg3LjczNGgxNjBWMzA3LjYyN3oiIGZpbGw9IiNhOGE4YTgiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik02Ni44OCwwdjE2MC45NmgyNTQuNjEzVjBINjYuODh6IE0zMDcuNjI4LDE0Ny4wOTRIODAuNzQ3VjEzLjg2N2gyMjYuODhWMTQ3LjA5NHoiIGZpbGw9IiNhOGE4YTgiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0xNTkuMjU1LDIwLjY5NGMtMTEuOTQ3LDAtMjEuNzYsOS44MTMtMjEuNzYsMjEuNzZjMCwxMS45NDcsOS44MTMsMjEuNzYsMjEuNzYsMjEuNzZjMTEuOTQ2LDAsMjEuNzYtOS44MTMsMjEuNzYtMjEuNzYgICAgQzE4MS4wMTUsMzAuNTA3LDE3MS4yMDEsMjAuNjk0LDE1OS4yNTUsMjAuNjk0eiBNMTU5LjI1NSw1MC4zNDZjLTQuMzczLDAtNy44OTMtMy41Mi03Ljg5My03Ljg5M3MzLjUyLTcuODkzLDcuODkzLTcuODkzICAgIHM3Ljg5MywzLjUyLDcuODkzLDcuODkzUzE2My42MjgsNTAuMzQ2LDE1OS4yNTUsNTAuMzQ2eiIgZmlsbD0iI2E4YThhOCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBvbHlnb24gcG9pbnRzPSIzMDkuNzYsMjkuOTc0IDI1MS43MzQsODUuNTQ3IDIxNy43MDgsNTIuOTA3IDE2Mi43NzUsMTA1LjQ5NCAxMjYuMTg3LDcwLjUwNyA2OS4wMTUsMTI1LjEyIDc4LjYxNCwxMzUuMTQ3ICAgICAxMjYuMTg3LDg5LjcwNyAxNjIuNzc1LDEyNC42OTQgMjE3LjcwOCw3Mi4xMDcgMjUxLjczNCwxMDQuNzQ3IDMxOS4zNjEsNDAgICAiIGZpbGw9IiNhOGE4YTgiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
   }
 
+  .carousel-controls {
+    position: absolute;
+    right: 25%;
+    bottom: 0;
+    left: 25%;
+    z-index: 5;
+    display: flex;
+    align-items: baseline;
+    justify-content: end;
+    width: 53rem;
+    height: 2.1875rem;
+    margin-bottom: 6.25rem;
+  }
+
+  .carousel-indicators {
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+
+    button {
+      background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='11' viewBox='0 0 10 11' fill='none'><circle cx='5' cy='5.5' r='4.5' stroke='white'/></svg>") no-repeat;
+
+      &.active {
+        background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='11' viewBox='0 0 10 11' fill='none'><circle cx='5' cy='5.5' r='4.5' fill='white' stroke='white'/></svg>") no-repeat;
+      }
+    }
+  }
+
+  .carousel-control-buttons {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next,
+  .carousel-control-pause {
+    position: relative;
+    display: block;
+    width: 2.1875rem;
+    height: 2.1875rem;
+    padding: 0;
+    margin: 0;
+    align-self: flex-end;
+  }
+
+  .carousel-control-pause {
+    background: none;
+    border: 0;
+    opacity: 1;
+
+    .carousel-control-pause-icon {
+      display: inline-block;
+      width: 0.75rem;
+      height: 0.75rem;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 100% 100%;
+      background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='13' viewBox='0 0 12 13' fill='none'><path d='M0 3C0 1.61929 1.11929 0.5 2.5 0.5C3.88071 0.5 5 1.61929 5 3V10C5 11.3807 3.88071 12.5 2.5 12.5C1.11929 12.5 0 11.3807 0 10V3ZM7 3C7 1.61929 8.11929 0.5 9.5 0.5C10.8807 0.5 12 1.61929 12 3V10C12 11.3807 10.8807 12.5 9.5 12.5C8.11929 12.5 7 11.3807 7 10V3Z' fill='white'/></svg>");
+    }
+  }
+
+  .ratio .drimage {
+    position: absolute;
+    top: -25%;
+    bottom: -25%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   .carousel-item .varbase-hero-card {
+    position: relative;
+    overflow: hidden;
+
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
+
+    padding: 12%;
 
     height: $hero-min-height !important;
 

@@ -41,33 +41,10 @@
 
 {% set attributes = attributes.addClass(heroslider_classes) %}
 {% set attributes = attributes.setAttribute('id', heroslider_id) %}
-{% set attributes = attributes.setAttribute('data-bs-ride', 'true') %}
+{% set attributes = attributes.setAttribute('data-bs-ride', 'carousel') %}
 
-<div{{ attributes }}>
-  {% if items %}
-
-    {# Add indicators for the carousel #}
-    {% if indicators %}
-      {% if not indicators_attributes %}
-        {% set indicators_attributes = create_attribute() %}
-      {% endif %}
-
-      {%
-        set indicators_classes = [
-          'carousel-indicators'
-        ]|merge(indicators_utility_classes)
-      %}
-
-      {% set indicators_attributes = indicators_attributes.addClass(indicators_classes) %}
-
-      <div{{ indicators_attributes}}>
-        {% for key, item in items %}
-          {% set item_id = heroslider_id ~ '--item-' ~ key %}
-          <button id="indicator--{{ item_id }}" type="button" data-bs-target="#{{ heroslider_id }}" data-bs-slide-to="{{ key }}" class="{{ (key == 0) ? 'active' }}" aria-label="{{ item.indicator_label }}" aria-current="{{ (key == 0) ? 'true' }}"></button>
-        {% endfor %}
-      </div>
-    {% endif %}
-
+{% if items %}
+  <div{{ attributes }}>
     {# Add carousel itmes #}
     <div class="carousel-inner">
       {% for key, item in items %}
@@ -78,16 +55,49 @@
       {% endfor %}
     </div>
 
-    {# Add controls for the carousel #}
-    {% if controls %}
-      <button class="carousel-control-prev" type="button" data-bs-target="#{{ id }}" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">{{ 'Previous'|t }}</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#{{ id }}" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">{{ 'Next'|t }}</span>
-      </button>
+    {% if indicators or controls %}
+    <div class="carousel-controls">
+
+      {# Add indicators for the carousel #}
+      {% if indicators %}
+        {% if not indicators_attributes %}
+          {% set indicators_attributes = create_attribute() %}
+        {% endif %}
+
+        {%
+          set indicators_classes = [
+            'carousel-indicators'
+          ]|merge(indicators_utility_classes)
+        %}
+
+        {% set indicators_attributes = indicators_attributes.addClass(indicators_classes) %}
+
+        <div{{ indicators_attributes}}>
+          {% for key, item in items %}
+            {% set item_id = heroslider_id ~ '--item-' ~ key %}
+            <button id="indicator--{{ item_id }}" type="button" data-bs-target="#{{ heroslider_id }}" data-bs-slide-to="{{ key }}" class="{{ (key == 0) ? 'active' }}" aria-label="{{ item.indicator_label }}" aria-current="{{ (key == 0) ? 'true' }}"></button>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {# Add controls for the carousel #}
+      {% if controls %}
+        <div class="carousel-control-buttons">
+          <button class="carousel-control-prev" type="button" data-bs-target="#{{ heroslider_id }}" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">{{ 'Previous'|t }}</span>
+          </button>
+          <button class="carousel-control-pause" type="button" data-bs-target="#{{ heroslider_id }}" data-bs-slide="pause">
+            <span class="carousel-control-pause-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">{{ 'Pause'|t }}</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#{{ heroslider_id }}" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">{{ 'Next'|t }}</span>
+          </button>
+        </div>
+      {% endif %}
+    </div>
     {% endif %}
-  {% endif %}
-</div>
+  </div>
+{% endif %}
