@@ -8,11 +8,11 @@ props:
     id:
       type: string
       title: heroslider ID
-      description: Set a unique id on the heroslider for optional controls, especially if you’re using multiple herosliders on a single page.
+      description: Set a unique id on the heroslider for optional controls, especially if the single page is using multiple hero sliders.
     items:
       type: array
       title: Items
-      description: An array of slider items, with a formatted.
+      description: n array of slider items, with a formatted UI Pattern for Cards.
       default: []
     controls:
       type: boolean
@@ -40,5 +40,11 @@ props:
       description: HTML attributes to apply to the heroslider main wrapper tag.
     indicators_attributes:
       type: Drupal\Core\Template\Attribute
-      title: Attributes
+      title: Indicators Attributes
       description: HTML attributes to apply to the indicators wrapper tag.
+slots:
+  empty:
+    type: string
+    title: Empty
+    description: The HTML message when the Hero Slider has no slides
+    default: '' 

@@ -98,7 +98,7 @@
   background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='13' viewBox='0 0 12 13' fill='none'><path d='M0 3C0 1.61929 1.11929 0.5 2.5 0.5C3.88071 0.5 5 1.61929 5 3V10C5 11.3807 3.88071 12.5 2.5 12.5C1.11929 12.5 0 11.3807 0 10V3ZM7 3C7 1.61929 8.11929 0.5 9.5 0.5C10.8807 0.5 12 1.61929 12 3V10C12 11.3807 10.8807 12.5 9.5 12.5C8.11929 12.5 7 11.3807 7 10V3Z' fill='white'/></svg>");
 }
 
-.carousel.varbase-heroslider .ratio .drimage {
+.carousel.varbase-heroslider .ratio .drimage picture {
   position: absolute;
   top: -25%;
   bottom: -25%;
@@ -106,11 +106,11 @@
   height: 100%;
 }
 
-[dir="ltr"] .carousel.varbase-heroslider .ratio .drimage {
+[dir="ltr"] .carousel.varbase-heroslider .ratio .drimage picture {
   left: 0;
 }
 
-[dir="rtl"] .carousel.varbase-heroslider .ratio .drimage {
+[dir="rtl"] .carousel.varbase-heroslider .ratio .drimage picture {
   right: 0;
 }
 
