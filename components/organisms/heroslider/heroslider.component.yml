@@ -12,7 +12,7 @@ props:
     items:
       type: array
       title: Items
-      description: An array of slider items, Each item has (caption, media, content)
+      description: An array of slider items, with a formatted.
       default: []
     controls:
       type: boolean
