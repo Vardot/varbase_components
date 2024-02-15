@@ -32,6 +32,12 @@
       "defaultValue": true,
       "control": "boolean"
     },
+    "padded": {
+      "name": "Padded",
+      "description": "Add a default padding to the card.",
+      "defaultValue": false,
+      "control": "boolean"
+    },
     "equal_height": {
       "name": "Equal height",
       "description": "Equal height",
@@ -81,6 +87,7 @@
       "args": {
         "style_size": "xlarge",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": false,
         "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</p>",
@@ -94,6 +101,7 @@
       "args": {
         "style_size": "large",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": false,
         "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</p>",
@@ -107,6 +115,7 @@
       "args": {
         "style_size": "medium",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": false,
         "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</p>",
@@ -120,6 +129,7 @@
       "args": {
         "style_size": "small",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": false,
         "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</p>",
@@ -133,6 +143,7 @@
       "args": {
         "style_size": "xsmall",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": false,
         "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</p>",
@@ -146,6 +157,7 @@
       "args": {
         "style_size": "xlarge",
         "card_border": true,
+        "padded": true,
         "equal_height": true,
         "anchor_all": false,
         "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</div>",
@@ -159,6 +171,7 @@
       "args": {
         "style_size": "large",
         "card_border": true,
+        "padded": true,
         "equal_height": true,
         "anchor_all": false,
         "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</div>",
@@ -172,6 +185,7 @@
       "args": {
         "style_size": "medium",
         "card_border": true,
+        "padded": true,
         "equal_height": true,
         "anchor_all": false,
         "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</div>",
@@ -185,6 +199,7 @@
       "args": {
         "style_size": "small",
         "card_border": true,
+        "padded": true,
         "equal_height": true,
         "anchor_all": false,
         "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</div>",
@@ -198,6 +213,7 @@
       "args": {
         "style_size": "xsmall",
         "card_border": true,
+        "padded": true,
         "equal_height": true,
         "anchor_all": false,
         "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</div>",

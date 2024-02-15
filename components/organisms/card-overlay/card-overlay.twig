@@ -5,9 +5,10 @@
  *
  * Available config:
  * - style_size: Card style size.
- * - card_border: Card Boarder (true/false)
- * - equal_height: Equal height (true/false)
- * - anchor_all: Anchor All (true/false)
+ * - card_border: Card Boarder (true|false)
+ * - padded: Add a default padding to the card. (true|false)
+ * - equal_height: Equal height (true|false)
+ * - anchor_all: Anchor All (true|false)
  * - horizontal_alignment: Horizontal alignment (start, center, end)
  * - vertical_alignment: Vertical alignment (start, center, end)
  * - card_attributes: Drupal attributes for featured card wrapper.
@@ -22,6 +23,10 @@
 #}
 
 {% set style_size = style_size ? [style_size]: [] %}
+{% set card_border = card_border ? ['bordered'] : ['border-0'] %}
+{% set padded = padded ? ['p-4'] : [''] %}
+{% set equal_height = equal_height ? ['h-100'] : [] %}
+{% set anchor_all = anchor_all ? ['anchor-all'] : [] %}
 {% set vertical_alignment = vertical_alignment == '' ? [] : ['justify-content-' ~ vertical_alignment] %}
 {% set contnet_horizontal_alignment = horizontal_alignment == '' ? [] : ['align-items-' ~ horizontal_alignment] %}
 {% set text_horizontal_alignment = horizontal_alignmentv == '' ? [] : ['align-items-' ~ horizontal_alignment] %}
@@ -29,20 +34,11 @@
 {% set media_utility_classes = media_utility_classes ? media_utility_classes : [] %}
 {% set content_utility_classes = content_utility_classes ? content_utility_classes : [] %}
 
-{# Check if the Card has a boarder on not and set needed no border Bootstrap class #}
-{% set card_border = card_border ? ['bordered', 'p-4'] : ['border-0'] %}
-
-{# Check if the Card is using the Equal height #}
-{% set equal_height = equal_height ? ['h-100'] : [] %}
-
-{# Check if the Card is using the Anchor All #}
-{% set anchor_all = anchor_all ? ['anchor-all'] : [] %}
-
 {%
   set card_classes = [
     'card',
     'varbase-overlay-card'
-  ]|merge(style_size)|merge(card_border)|merge(equal_height)|merge(anchor_all)|merge(utility_classes)
+  ]|merge(style_size)|merge(card_border)|merge(padded)|merge(equal_height)|merge(anchor_all)|merge(utility_classes)
 %}
 
 {%

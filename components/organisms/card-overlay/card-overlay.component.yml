@@ -22,6 +22,11 @@ props:
       type: boolean
       title: Card Boarder
       default: true
+    padded:
+      type: boolean
+      title: Padded
+      default: false
+      description: Add a default padding to the card.
     equal_height:
       type: boolean
       title: Equal height

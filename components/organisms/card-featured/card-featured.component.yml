@@ -23,16 +23,16 @@ props:
       title: Card Boarder
       default: false
       description: Add a border for the card.
-    equal_height:
-      type: boolean
-      title: Equal height
-      default: true
-      description: Manage an equal height for this card with other cards in the same grid rows.
     padded:
       type: boolean
       title: Padded
       default: false
       description: Add a default padding to the card.
+    equal_height:
+      type: boolean
+      title: Equal height
+      default: true
+      description: Manage an equal height for this card with other cards in the same grid rows.
     anchor_all:
       type: boolean
       title: Anchor All

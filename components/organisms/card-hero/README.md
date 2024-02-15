@@ -3,8 +3,9 @@
 Hero card component for a media and a text over the media.
 
 ### Properties:
-* `card_border`: Card Boarder (true/false)
-* `anchor_all`: Anchor All (true/false)
+* `card_border`: Card Boarder (true|false)
+* `padded`: Add a default padding to the card. (true|false)
+* `anchor_all`: Anchor All (true|false)
 * `horizontal_alignment`: Horizontal alignment (start, center, end).
 * `vertical_alignment`: Vertical alignment (start, center, end).
 * `card_attributes`: Drupal attributes for featured card wrapper.
@@ -24,6 +25,7 @@ Hero card component for a media and a text over the media.
 ```
 {% include 'varbase_components:card-hero' with {
   card_border: true,
+  padded: true,
   anchor_all: true,
   horizontal_alignment: 'center',
   vertical_alignment: 'center',

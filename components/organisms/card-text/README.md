@@ -4,9 +4,10 @@ Text card component and pattern.
 
 ### Properties:
 * `style_size`: Card style size (xsmall|small|medium|large|xlarge).
-* `card_border`: Card Boarder (true/false)
-* `equal_height`: Equal height (true/false)
-* `anchor_all`: Anchor All (true/false)
+* `card_border`: Card Boarder (true|false)
+* `padded`: Add a default padding to the card. (true|false)
+* `equal_height`: Equal height (true|false)
+* `anchor_all`: Anchor All (true|false)
 * `card_attributes`: Drupal attributes for featured card wrapper.
 * `content_attributes`: Drupal attributes for card content slot region.
 * `utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)
@@ -22,6 +23,7 @@ Text card component and pattern.
 {% include 'varbase_components:card-text' with {
   style_size: small,
   card_border: false,
+  padded: false,
   equal_height: false,
   anchor_all: false,
   utility_classes: [],

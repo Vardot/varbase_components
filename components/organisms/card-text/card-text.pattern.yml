@@ -24,6 +24,11 @@ card_text:
       type: 'switcher'
       label: Card Boarder
       default_value: true
+    padded:
+      type: 'switcher'
+      label: Padded
+      description: 'Add a default padding to the card.'
+      default_value: false
     equal_height:
       type: 'switcher'
       label: Equal height

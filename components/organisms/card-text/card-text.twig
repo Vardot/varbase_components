@@ -5,9 +5,10 @@
  *
  * Available config:
  * - style_size: Card style size (xsmall|small|medium|large|xlarge).
- * - card_border: Card Boarder (true/false)
- * - equal_height: Equal height (true/false)
- * - anchor_all: Anchor All (true/false)
+ * - card_border: Card Boarder (true|false)
+ * - padded: Add a default padding to the card. (true|false)
+ * - equal_height: Equal height (true|false)
+ * - anchor_all: Anchor All (true|false)
  * - card_attributes: Drupal attributes for featured card wrapper.
  * - content_attributes: Drupal attributes for card content slot region.
  * - utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)
@@ -17,23 +18,18 @@
 #}
 
 {% set style_size = style_size ? [style_size]: [] %}
+{% set card_border = card_border ? ['bordered'] : ['border-0'] %}
+{% set padded = padded ? ['p-4'] : [''] %}
+{% set equal_height = equal_height ? ['h-100'] : [] %}
+{% set anchor_all = anchor_all ? ['anchor-all'] : [] %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
 {% set content_utility_classes = content_utility_classes ? content_utility_classes : [] %}
-
-{# Check if the Card has a boarder on not and set needed no border Bootstrap class #}
-{% set card_border = card_border ? ['bordered', 'p-4'] : ['border-0'] %}
-
-{# Check if the Card is using the Equal height #}
-{% set equal_height = equal_height ? ['h-100'] : [] %}
-
-{# Check if the Card is using the Anchor All #}
-{% set anchor_all = anchor_all ? ['anchor-all'] : [] %}
 
 {%
   set card_classes = [
     'card',
     'varbase-text-card',
-  ]|merge(style_size)|merge(card_border)|merge(equal_height)|merge(anchor_all)|merge(utility_classes)
+  ]|merge(style_size)|merge(card_border)|merge(padded)|merge(equal_height)|merge(anchor_all)|merge(utility_classes)
 %}
 
 {%

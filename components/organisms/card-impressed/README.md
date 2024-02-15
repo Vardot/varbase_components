@@ -8,9 +8,10 @@ It is a versatile pattern that contain content such as blog posts, user informat
 
 ### Properties:
 * `style_size`: Card style size (xsmall|small|medium|large|xlarge).
-* `card_border`: Card Boarder (true/false)
-* `equal_height`: Equal height (true/false)
-* `anchor_all`: Anchor All (true/false)
+* `card_border`: Card Boarder (true|false)
+* `padded`: Add a default padding to the card. (true|false)
+* `equal_height`: Equal height (true|false)
+* `anchor_all`: Anchor All (true|false)
 * `media_position`: Media position - (top|bottom) to determine if the column is reversed or not.
 * `card_attributes`: Drupal attributes for featured card wrapper.
 * `media_attributes`: Drupal attributes for card media slot region.
@@ -30,6 +31,7 @@ It is a versatile pattern that contain content such as blog posts, user informat
 {% include 'varbase_components:card-impressed' with {
   style_size: medium,
   card_border: false,
+  padded: false,
   equal_height: true,
   anchor_all: true,
   media_position: 'top',

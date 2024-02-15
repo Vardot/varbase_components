@@ -9,7 +9,12 @@ props:
     card_border:
       type: boolean
       title: Card Boarder
-      default: true
+      default: false
+    padded:
+      type: boolean
+      title: Padded
+      default: false
+      description: Add a default padding to the card.
     horizontal_alignment:
       type: string
       title: Horizontal alignment

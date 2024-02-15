@@ -8,9 +8,10 @@ It is a versatile pattern that contain content such as blog posts, user informat
 
 ### Properties:
 * `style_size`: Card style size (xsmall|small|medium|large|xlarge).
-* `card_border`: Card Boarder (true/false)
-* `equal_height`: Equal height (true/false)
-* `anchor_all`: Anchor All (true/false)
+* `card_border`: Card Boarder (true|false)
+* `padded`: Add a default padding to the card. (true|false)
+* `equal_height`: Equal height (true|false)
+* `anchor_all`: Anchor All (true|false)
 * `media_position`: start|end to determine if the row is reversed or not.
 * `content_vertical_alignment`: Content Vertical alignment
 * `gutters_between`: Gutters Between - (large|small-start|small-end|no) to manage the guttering between the start and end columns.
@@ -45,6 +46,7 @@ It is a versatile pattern that contain content such as blog posts, user informat
 {% include 'varbase_components:card-featured' with {
   style_size: medium,
   card_border: true,
+  padded: true,
   equal_height: true,
   anchor_all: true,
   media_position: 'start',

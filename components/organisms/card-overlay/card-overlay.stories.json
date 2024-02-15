@@ -32,6 +32,12 @@
       "defaultValue": true,
       "control": "boolean"
     },
+    "padded": {
+      "name": "Padded",
+      "description": "Add a default padding to the card.",
+      "defaultValue": false,
+      "control": "boolean"
+    },
     "equal_height": {
       "name": "Equal height",
       "description": "Equal height",
@@ -87,6 +93,7 @@
       "args": {
         "style_size": "xlarge",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "",
@@ -100,6 +107,7 @@
       "args": {
         "style_size": "large",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "",
@@ -113,6 +121,7 @@
       "args": {
         "style_size": "medium",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "",
@@ -126,6 +135,7 @@
       "args": {
         "style_size": "small",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "",
@@ -139,6 +149,7 @@
       "args": {
         "style_size": "xsmall",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "",
@@ -152,6 +163,7 @@
       "args": {
         "style_size": "xlarge",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "center",
@@ -165,6 +177,7 @@
       "args": {
         "style_size": "large",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "center",
@@ -178,6 +191,7 @@
       "args": {
         "style_size": "medium",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "center",
@@ -191,6 +205,7 @@
       "args": {
         "style_size": "small",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "center",
@@ -204,6 +219,7 @@
       "args": {
         "style_size": "xsmall",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": true,
         "horizontal_alignment": "center",

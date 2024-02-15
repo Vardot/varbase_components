@@ -29,7 +29,13 @@
     "card_border": {
       "name": "Card Boarder",
       "description": "Card Boarder",
-      "defaultValue": true,
+      "defaultValue": false,
+      "control": "boolean"
+    },
+    "padded": {
+      "name": "Padded",
+      "description": "Add a default padding to the card.",
+      "defaultValue": false,
       "control": "boolean"
     },
     "equal_height": {
@@ -254,6 +260,7 @@
       "args": {
         "style_size": "xlarge",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -277,6 +284,7 @@
       "args": {
         "style_size": "large",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -300,6 +308,7 @@
       "args": {
         "style_size": "medium",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -323,6 +332,7 @@
       "args": {
         "style_size": "small",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -346,6 +356,7 @@
       "args": {
         "style_size": "xsmall",
         "card_border": false,
+        "padded": false,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -369,6 +380,7 @@
       "args": {
         "style_size": "xlarge",
         "card_border": true,
+        "padded": true,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -392,6 +404,7 @@
       "args": {
         "style_size": "large",
         "card_border": true,
+        "padded": true,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",
@@ -415,6 +428,7 @@
       "args": {
         "style_size": "medium",
         "card_border": true,
+        "padded": true,
         "equal_height": true,
         "anchor_all": false,
         "media_position": "start",

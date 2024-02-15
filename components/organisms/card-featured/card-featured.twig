@@ -5,9 +5,10 @@
  *
  * Available config:
  * - style_size: Card style size (xsmall|small|medium|large|xlarge).
- * - card_border: Card Boarder (true/false)
- * - equal_height: Equal height (true/false)
- * - anchor_all: Anchor All (true/false)
+ * - card_border: Card Boarder (true|false)
+ * - padded: Add a default padding to the card. (true|false)
+ * - equal_height: Equal height (true|false)
+ * - anchor_all: Anchor All (true|false)
  * - media_position: start|end to determine if the row is reversed or not.
  * - content_vertical_alignment: Content Vertical alignment
  * - gutters_between: Gutters Between - (large|small-start|small-end|no) to manage the guttering between the start and end columns.
@@ -30,8 +31,11 @@
  * - content: Card Content slot region.
  */
 #}
-
 {% set style_size = style_size ? [style_size]: [] %}
+{% set card_border = card_border ? ['bordered'] : ['border-0'] %}
+{% set padded = padded ? ['p-4'] : [''] %}
+{% set equal_height = equal_height ? ['h-100'] : [] %}
+{% set anchor_all = anchor_all ? ['anchor-all'] : [] %}
 {% set media_position = media_position == 'end' ? ['flex-row-reverse'] : [] %}
 {% set content_vertical_alignment = content_vertical_alignment ? ['align-self-' ~ content_vertical_alignment] : [] %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
@@ -54,20 +58,11 @@
 {% set end_column_xl_size = columns_xl_size ? ['col-xl-' ~ columns_xl_size|split("_")[1]|trim('0', 'left')] : [] %}
 {% set end_column_xxl_size = columns_xxl_size ? ['col-xxl-' ~ columns_xxl_size|split("_")[1]|trim('0', 'left')] : [] %}
 
-{# Check if the Card has a boarder on not and set needed no border Bootstrap class #}
-{% set card_border = card_border ? ['bordered', 'p-4'] : ['border-0'] %}
-
-{# Check if the Card is using the Equal height #}
-{% set equal_height = equal_height ? ['h-100'] : [] %}
-
-{# Check if the Card is using the Anchor All #}
-{% set anchor_all = anchor_all ? ['anchor-all'] : [] %}
-
 {%
   set card_classes = [
     'card',
     'varbase-featured-card',
-  ]|merge(style_size)|merge(card_border)|merge(equal_height)|merge(anchor_all)|merge(utility_classes)
+  ]|merge(style_size)|merge(card_border)|merge(padded)|merge(equal_height)|merge(anchor_all)|merge(utility_classes)
 %}
 
 {% set row_gutters_between = gutters_between == 'no' ? ['gx-0'] : [] %}

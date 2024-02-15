@@ -22,11 +22,11 @@ and place text labels over them.
           bg-opacity-25|bg-opacity-50|bg-opacity-75|bg-opacity-100|bg-gradient)
 * `striped`: Add .progress-bar-striped to any .progress-bar to
             apply a stripe via CSS gradient over the background color.
-            (true/false)
+            (true|false)
 * `animated`: The striped gradient can also be animated.
              Add .progress-bar-animated to .progress-bar to animate
              the stripes right to left via CSS3 animations.
-             (true/false)
+             (true|false)
 * `label`: The label of the working task.
 * `percent`: [1 to 100] The percentage of the progress.
 * `message`: A string containing information to be displayed.

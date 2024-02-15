@@ -4,7 +4,8 @@
  * Varbase Components implementation for a Hero Card component.
  *
  * Available config:
- * - card_border: Card Boarder (true/false)
+ * - card_border: Card Boarder (true|false)
+ * - padded: Add a default padding to the card. (true|false)
  * - horizontal_alignment: Horizontal alignment (start, center, end)
  * - vertical_alignment: Vertical alignment (start, center, end)
  * - card_attributes: Drupal attributes for featured card wrapper.
@@ -17,7 +18,8 @@
  * - content: Card Content slot region.
  */
 #}
-
+{% set card_border = card_border ? ['bordered'] : ['border-0'] %}
+{% set padded = padded ? ['p-4'] : [''] %}
 {% set vertical_alignment = vertical_alignment == '' ? [] : ['justify-content-' ~ vertical_alignment] %}
 {% set contnet_horizontal_alignment = horizontal_alignmentv == '' ? [] : ['align-items-' ~ horizontal_alignment] %}
 {% set text_horizontal_alignment = horizontal_alignment == '' ? [] : ['align-items-' ~ horizontal_alignment] %}
@@ -25,15 +27,12 @@
 {% set media_utility_classes = media_utility_classes ? media_utility_classes : [] %}
 {% set content_utility_classes = content_utility_classes ? content_utility_classes : [] %}
 
-{# Check if the Card has a boarder on not and set needed no border Bootstrap class #}
-{% set card_border = card_border ? ['bordered', 'p-4'] : ['border-0'] %}
-
 {%
   set card_classes = [
     'card',
     'varbase-hero-card',
     'clearfix',
-  ]|merge(card_border)|merge(utility_classes)
+  ]|merge(card_border)|merge(padded)|merge(utility_classes)
 %}
 
 {%

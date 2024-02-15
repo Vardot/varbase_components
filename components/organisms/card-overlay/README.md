@@ -4,8 +4,9 @@ Overlay card component for a media and a content over the media with sizes
 
 ### Properties:
 * `style_size`: Card style size (xsmall|small|medium|large|xlarge).
-* `card_border`: Card Boarder (true/false)
-* `equal_height`: Equal height (true/false)
+* `card_border`: Card Boarder (true|false)
+* `padded`: Add a default padding to the card. (true|false)
+* `equal_height`: Equal height (true|false)
 * `horizontal_alignment`: Horizontal alignment (start, center, end).
 * `vertical_alignment`: Vertical alignment (start, center, end).
 * `card_attributes`: Drupal attributes for featured card wrapper.
@@ -26,6 +27,7 @@ Overlay card component for a media and a content over the media with sizes
 {% include 'varbase_components:card-overlay' with {
   style_size: medium,
   card_border: true,
+  padded: true,
   equal_height: true,
   anchor_all: true,
   horizontal_alignment: 'center',

@@ -18,6 +18,11 @@ card_hero:
       type: 'switcher'
       label: Card Boarder
       default_value: true
+    padded:
+      type: 'switcher'
+      label: Padded
+      description: 'Add a default padding to the card.'
+      default_value: false
     horizontal_alignment:
       type: 'select'
       label: 'Horizontal alignment'
