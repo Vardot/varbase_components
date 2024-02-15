@@ -51,7 +51,7 @@
       {% endfor %}
     </div>
 
-    {% if indicators or controls %}
+    {% if (indicators or controls) and items|length >= 2 %}
     <div class="carousel-controls">
 
       {# Add indicators for the carousel #}
