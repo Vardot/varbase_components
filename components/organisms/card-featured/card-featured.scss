@@ -56,25 +56,6 @@
     }
   }
 
-  &.border-0 {
-    .featured-card-content {
-      padding: 0;
-    }
-  }
-
-  &.bordered {
-    .featured-card-content {
-      padding-left: 0;
-    }
-
-    .flex-row-reverse {
-      .featured-card-content {
-        padding-left: auto;
-        padding-right: 0;
-      }
-    }
-  }
-
   &.xlarge {
     .card-title {
       @include font-size($card-xlarge-title-font-size);

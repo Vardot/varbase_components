@@ -58,7 +58,7 @@ props:
       type: string
       title: Gutters Between
       description: Manage the guttering between the start and end columns.
-      default: large
+      default: no
       enum:
         - large
         - small-start
