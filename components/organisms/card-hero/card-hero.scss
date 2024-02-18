@@ -15,28 +15,34 @@
     background-image: linear-gradient(180deg, $hero-card-content-background-color1, $hero-card-content-background-color2);
 
     @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
-      padding: 12% 14%;
+      padding: 12% calc((100vw - map-get($container-max-widths, "sm")) / 2);
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "md")) {
-      padding: 12% 15%;
+      padding: 12% calc((100vw - map-get($container-max-widths, "md")) / 2);
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-      padding: 12% 16%;
+      padding: 12% calc((100vw - map-get($container-max-widths, "lg")) / 2);
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
-      padding: 12% 17%;
+      padding: 12% calc((100vw - map-get($container-max-widths, "xl")) / 2);
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "xxl")) {
-      padding: 12% 18%;
+      padding: 12% calc((100vw - map-get($container-max-widths, "xxl")) / 2);
     }
 
     .card-title {
       color: $hero-card-title-color;
       @include font-size($hero-card-xlarge-title-font-size);
+
+      a {
+        color: $hero-card-title-color;
+        text-transform: none;
+      }
+
     }
 
   }
