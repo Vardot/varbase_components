@@ -38,7 +38,34 @@
 
 {% set attributes = attributes.addClass(heroslider_classes) %}
 {% set attributes = attributes.setAttribute('id', heroslider_id) %}
-{% set attributes = attributes.setAttribute('data-bs-ride', 'carousel') %}
+
+{% set interval = interval ?? 5000 %}
+{% set attributes = attributes.setAttribute('data-bs-interval', interval) %}
+
+{% set keyboard = keyboard ?? true %}
+{% if keyboard == true %}
+  {% set attributes = attributes.setAttribute('data-bs-keyboard', 'true') %}
+{% endif %}
+
+{% set pause = pause ?? '' %}
+{% if pause and pause != '' %}
+  {% set attributes = attributes.setAttribute('data-bs-pause', pause) %}
+{% endif %}
+
+{% set ride = ride ?? '' %}
+{% if ride and ride != '' %}
+  {% set attributes = attributes.setAttribute('data-bs-ride', ride) %}
+{% endif %}
+
+{% set touch = touch ?? true %}
+{% if touch == true %}
+  {% set attributes = attributes.setAttribute('data-bs-touch', 'true') %}
+{% endif %}
+
+{% set wrap = wrap ?? true %}
+{% if wrap == true %}
+  {% set attributes = attributes.setAttribute('data-bs-wrap', 'true') %}
+{% endif %}
 
 {% if items and items|length >= 1 -%}
   <div{{ attributes }}>

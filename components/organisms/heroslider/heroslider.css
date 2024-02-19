@@ -37,19 +37,50 @@
 
 .carousel.varbase-heroslider .carousel-controls {
   position: absolute;
-  right: 25%;
+  right: 0;
   bottom: 0;
-  left: 25%;
+  left: 0;
   z-index: 5;
   display: flex;
   align-items: baseline;
-  justify-content: end;
-  width: 53rem;
+  justify-content: space-between;
   height: 2.1875rem;
-  margin-bottom: 6.25rem;
+  margin-bottom: 1.88rem;
+}
+
+@media screen and (min-width: 576px) {
+  .carousel.varbase-heroslider .carousel-controls {
+    padding: 0 calc((100vw - 540px) / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .carousel.varbase-heroslider .carousel-controls {
+    padding: 0 calc((100vw - 720px) / 2);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .carousel.varbase-heroslider .carousel-controls {
+    margin-bottom: 6.25rem;
+    padding: 0 calc((100vw - 960px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .carousel.varbase-heroslider .carousel-controls {
+    padding: 0 calc((100vw - 1140px) / 2);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .carousel.varbase-heroslider .carousel-controls {
+    padding: 0 calc((100vw - 1320px) / 2);
+  }
 }
 
 .carousel.varbase-heroslider .carousel-indicators {
+  position: relative;
   width: -moz-fit-content;
   width: fit-content;
   padding: 0;
@@ -100,8 +131,8 @@
 
 .carousel.varbase-heroslider .ratio .drimage picture {
   position: absolute;
-  top: -25%;
-  bottom: -25%;
+  top: -26%;
+  bottom: -26%;
   width: 100%;
   height: 100%;
 }
@@ -112,6 +143,23 @@
 
 [dir="rtl"] .carousel.varbase-heroslider .ratio .drimage picture {
   right: 0;
+}
+
+@media (max-width: 1199.98px) {
+  .carousel.varbase-heroslider .ratio.vw-100.ratio-16x9 {
+    height: 177.7777777778vh !important;
+    width: 316.049382716vh !important;
+  }
+
+  .carousel.varbase-heroslider .ratio.vw-100.ratio-21x9 {
+    height: 233.3333333333vh !important;
+    width: 544.4444444444vh !important;
+  }
+
+  .carousel.varbase-heroslider .ratio.vw-100.ratio-4x3 {
+    height: 133.3333333333vh !important;
+    width: 177.7777777778vh !important;
+  }
 }
 
 .carousel.varbase-heroslider .carousel-item .varbase-hero-card {

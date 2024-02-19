@@ -17,19 +17,40 @@
 
   .carousel-controls {
     position: absolute;
-    right: 25%;
+    right: 0;
     bottom: 0;
-    left: 25%;
+    left: 0;
     z-index: 5;
     display: flex;
     align-items: baseline;
-    justify-content: end;
-    width: 53rem;
+    justify-content: space-between;
     height: 2.1875rem;
-    margin-bottom: 6.25rem;
+    margin-bottom: 1.88rem;
+
+    @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
+      padding: 0 calc((100vw - map-get($container-max-widths, "sm")) / 2);
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+      padding: 0 calc((100vw - map-get($container-max-widths, "md")) / 2);
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+      margin-bottom: 6.25rem;
+      padding: 0 calc((100vw - map-get($container-max-widths, "lg")) / 2);
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
+      padding: 0 calc((100vw - map-get($container-max-widths, "xl")) / 2);
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, "xxl")) {
+      padding: 0 calc((100vw - map-get($container-max-widths, "xxl")) / 2);
+    }
   }
 
   .carousel-indicators {
+    position: relative;
     width: fit-content;
     padding: 0;
     margin: 0;
@@ -77,13 +98,34 @@
     }
   }
 
-  .ratio .drimage picture {
-    position: absolute;
-    top: -25%;
-    bottom: -25%;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  .ratio {
+    .drimage picture {
+      position: absolute;
+      top: -26%;
+      bottom: -26%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @include media-breakpoint-down(xl) {
+      &.vw-100 {
+        &.ratio-16x9 {
+          height: calc(100vh * (16/9)) !important;
+          width: calc(100vh * (16/9) * (16/9)) !important;
+        }
+    
+        &.ratio-21x9 {
+          height: calc(100vh * (21/9)) !important;
+          width: calc(100vh * (21/9) * (21/9)) !important;
+        }
+    
+        &.ratio-4x3 {
+          height: calc(100vh * (4/3)) !important;
+          width: calc(100vh * (4/3) * (4/3)) !important;
+        }
+      }
+    }
   }
 
   .carousel-item .varbase-hero-card {

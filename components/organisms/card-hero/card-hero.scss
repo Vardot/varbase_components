@@ -14,24 +14,28 @@
     color: $hero-brief-text-color;
     background-image: linear-gradient(180deg, $hero-card-content-background-color1, $hero-card-content-background-color2);
 
+    > * {
+      max-width: 53rem;
+    }
+
     @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
-      padding: 12% calc((100vw - map-get($container-max-widths, "sm")) / 2);
+      padding: 1.88rem calc((100vw - map-get($container-max-widths, "sm")) / 2) 3.88rem;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "md")) {
-      padding: 12% calc((100vw - map-get($container-max-widths, "md")) / 2);
+      padding: 1.88rem calc((100vw - map-get($container-max-widths, "md")) / 2) 3.88rem;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-      padding: 12% calc((100vw - map-get($container-max-widths, "lg")) / 2);
+      padding: 1.88rem calc((100vw - map-get($container-max-widths, "lg")) / 2) 9.375rem;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
-      padding: 12% calc((100vw - map-get($container-max-widths, "xl")) / 2);
+      padding: 1.88rem calc((100vw - map-get($container-max-widths, "xl")) / 2) 9.375rem;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "xxl")) {
-      padding: 12% calc((100vw - map-get($container-max-widths, "xxl")) / 2);
+      padding: 1.88rem calc((100vw - map-get($container-max-widths, "xxl")) / 2) 9.375rem;
     }
 
     .card-title {
@@ -41,8 +45,13 @@
       a {
         color: $hero-card-title-color;
         text-transform: none;
+
       }
 
+    }
+
+    .btn.btn-lg {
+      font-weight: 700 !important;
     }
 
   }
