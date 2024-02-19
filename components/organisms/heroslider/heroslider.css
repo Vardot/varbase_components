@@ -56,26 +56,26 @@
 
 @media screen and (min-width: 768px) {
   .carousel.varbase-heroslider .carousel-controls {
-    padding: 0 calc((100vw - 720px) / 2);
+    padding: 0 calc((100vw - 720px) / 2 + .75rem);
   }
 }
 
 @media screen and (min-width: 992px) {
   .carousel.varbase-heroslider .carousel-controls {
     margin-bottom: 6.25rem;
-    padding: 0 calc((100vw - 960px) / 2);
+    padding: 0 calc((100vw - 960px) / 2 + .75rem);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .carousel.varbase-heroslider .carousel-controls {
-    padding: 0 calc((100vw - 1140px) / 2);
+    padding: 0 calc((100vw - 1140px) / 2 + .75rem);
   }
 }
 
 @media screen and (min-width: 1400px) {
   .carousel.varbase-heroslider .carousel-controls {
-    padding: 0 calc((100vw - 1320px) / 2);
+    padding: 0 calc((100vw - 1320px) / 2 + .75rem);
   }
 }
 

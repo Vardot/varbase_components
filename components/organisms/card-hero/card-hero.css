@@ -30,25 +30,25 @@
 
 @media screen and (min-width: 768px) {
   .varbase-hero-card .hero-card-content {
-    padding: 1.88rem calc((100vw - 720px) / 2) 3.88rem;
+    padding: 1.88rem calc((100vw - 720px) / 2 + .75rem) 3.88rem;
   }
 }
 
 @media screen and (min-width: 992px) {
   .varbase-hero-card .hero-card-content {
-    padding: 1.88rem calc((100vw - 960px) / 2) 9.375rem;
+    padding: 1.88rem calc((100vw - 960px) / 2 + .75rem) 9.375rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .varbase-hero-card .hero-card-content {
-    padding: 1.88rem calc((100vw - 1140px) / 2) 9.375rem;
+    padding: 1.88rem calc((100vw - 1140px) / 2 + .75rem) 9.375rem;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .varbase-hero-card .hero-card-content {
-    padding: 1.88rem calc((100vw - 1320px) / 2) 9.375rem;
+    padding: 1.88rem calc((100vw - 1320px) / 2 + .75rem) 9.375rem;
   }
 }
 

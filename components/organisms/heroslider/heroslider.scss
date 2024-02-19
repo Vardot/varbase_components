@@ -28,24 +28,24 @@
     margin-bottom: 1.88rem;
 
     @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
-      padding: 0 calc((100vw - map-get($container-max-widths, "sm")) / 2);
+      padding: 0 calc((100vw - map-get($container-max-widths, "sm"))/2);
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "md")) {
-      padding: 0 calc((100vw - map-get($container-max-widths, "md")) / 2);
+      padding: 0 calc(((100vw - map-get($container-max-widths, "md"))/2) + $grid-gutter-width/2);
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
       margin-bottom: 6.25rem;
-      padding: 0 calc((100vw - map-get($container-max-widths, "lg")) / 2);
+      padding: 0 calc(((100vw - map-get($container-max-widths, "lg"))/2) + $grid-gutter-width/2);
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
-      padding: 0 calc((100vw - map-get($container-max-widths, "xl")) / 2);
+      padding: 0 calc(((100vw - map-get($container-max-widths, "xl"))/2) + $grid-gutter-width/2);
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "xxl")) {
-      padding: 0 calc((100vw - map-get($container-max-widths, "xxl")) / 2);
+      padding: 0 calc(((100vw - map-get($container-max-widths, "xxl"))/2) + $grid-gutter-width/2);
     }
   }
 

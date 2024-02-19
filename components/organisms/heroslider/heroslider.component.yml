@@ -12,7 +12,7 @@ props:
     items:
       type: array
       title: Items
-      description: n array of slider items, with a formatted UI Pattern for Cards.
+      description: An array of slider items, with a formatted UI Pattern for Cards.
       default: []
     controls:
       type: boolean

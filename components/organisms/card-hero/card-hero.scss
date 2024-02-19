@@ -19,23 +19,23 @@
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
-      padding: 1.88rem calc((100vw - map-get($container-max-widths, "sm")) / 2) 3.88rem;
+      padding: 1.88rem calc((100vw - map-get($container-max-widths, "sm"))/2) 3.88rem;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "md")) {
-      padding: 1.88rem calc((100vw - map-get($container-max-widths, "md")) / 2) 3.88rem;
+      padding: 1.88rem calc(((100vw - map-get($container-max-widths, "md"))/2) + $grid-gutter-width/2) 3.88rem;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-      padding: 1.88rem calc((100vw - map-get($container-max-widths, "lg")) / 2) 9.375rem;
+      padding: 1.88rem calc(((100vw - map-get($container-max-widths, "lg"))/2) + $grid-gutter-width/2) 9.375rem;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "xl")) {
-      padding: 1.88rem calc((100vw - map-get($container-max-widths, "xl")) / 2) 9.375rem;
+      padding: 1.88rem calc(((100vw - map-get($container-max-widths, "xl"))/2) + $grid-gutter-width/2) 9.375rem;
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "xxl")) {
-      padding: 1.88rem calc((100vw - map-get($container-max-widths, "xxl")) / 2) 9.375rem;
+      padding: 1.88rem calc(((100vw - map-get($container-max-widths, "xxl"))/2) + $grid-gutter-width/2) 9.375rem;
     }
 
     .card-title {
