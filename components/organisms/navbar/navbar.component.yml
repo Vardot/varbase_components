@@ -82,3 +82,6 @@ slots:
   navigation:
     title: Navigation
     description: site navigation.
+libraryOverrides:
+  dependencies:
+    - varbase_components/bs-dropdown-script

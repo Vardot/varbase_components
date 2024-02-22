@@ -35,3 +35,6 @@ slots:
     type: array
     name: Items
     description: Navigation items.
+libraryOverrides:
+  dependencies:
+    - varbase_components/bs-dropdown-script
