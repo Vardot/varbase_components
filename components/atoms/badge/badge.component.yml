@@ -45,3 +45,6 @@ slots:
     type: string
     title: Content
     description: Content for Badge.
+libraryOverrides:
+  dependencies:
+    - varbase_components:bs-base-component-script

@@ -87,4 +87,7 @@ slots:
     type: string
     title: Empty
     description: The HTML message when the Hero Slider has no slides
-    default: '' 
+    default: ''
+libraryOverrides:
+  dependencies:
+    - varbase_components/bs-carousel-script

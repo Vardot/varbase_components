@@ -68,3 +68,5 @@ props:
 libraryOverrides:
   dependencies:
     - core/drupal.progress
+    - varbase_components:bs-base-component-script
+    - varbase_components/bs-button-script

@@ -93,3 +93,7 @@ slots:
     title: Accordion body
     description: The content body part of the accordion item.
     default: ''
+libraryOverrides:
+  dependencies:
+    - varbase_components/bs-collapse-script
+    - varbase_components/bs-dropdown-script

@@ -8,6 +8,7 @@
     "node": ">= 18.0"
   },
   "scripts": {
+    "bootstrap:init": "webpack --progress --config  webpack.config.init.js",
     "components:build": "webpack --progress --config webpack.config.build.js",
     "theme:watch": "webpack --progress --config webpack.config.dev.js --watch",
     "theme:build": "webpack --progress --config webpack.config.build.js",

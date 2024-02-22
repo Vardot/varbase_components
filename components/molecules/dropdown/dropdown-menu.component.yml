@@ -12,3 +12,7 @@ props:
       type: Drupal\Core\Template\Attribute
       title: Attributes
       description: HTML attributes for the containing element.
+libraryOverrides:
+  dependencies:
+    - varbase_components/bs-collapse-script
+    - varbase_components/bs-dropdown-script

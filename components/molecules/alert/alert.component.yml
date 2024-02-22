@@ -46,3 +46,6 @@ slots:
     type: string
     title: Alert heading
     description: Alerts can also contain primary alert heading.
+libraryOverrides:
+  dependencies:
+    - varbase_components/bs-alert-script

@@ -47,3 +47,6 @@ props:
       type: Drupal\Core\Template\Attribute
       title: Attributes
       description: HTML attributes to apply to the indicators wrapper tag.
+libraryOverrides:
+  dependencies:
+    - varbase_components/bs-carousel-script
