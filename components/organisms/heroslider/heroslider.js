@@ -3,7 +3,7 @@
  * JavaScript behaviors for Varbase Hero Slider.
  */
 
-(function (Drupal, once, bootstrap) {
+(function (Drupal, once, global) {
 
   'use strict';
 
@@ -16,12 +16,12 @@
     attach: function (context) {
       once("pause-heroslider", ".carousel-control-pause", context).forEach((element => {
         element.addEventListener("click", (e => {
-          bootstrap.Carousel.getInstance(document.querySelector(element.dataset.bsTarget)).pause();
+          global.bootstrap.Carousel.getInstance(document.querySelector(element.dataset.bsTarget)).pause();
         }));
       }));
     }
   };
-  
+
   /**
    * Varbase Hero Slider integration with drimage.
    *
@@ -34,4 +34,4 @@
       }));
     }
   };
-})(Drupal, once, bootstrap);
+})(Drupal, once, global);
