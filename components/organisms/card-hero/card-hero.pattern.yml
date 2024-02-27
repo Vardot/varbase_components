@@ -14,6 +14,18 @@ card_hero:
       description: 'Content description.'
       preview: 'Card Content'
   settings:
+    hero_style:
+      type: 'select'
+      label: "Hero Style"
+      description: 'Select the style for the hero, by choosing the location of the media from (overlay, start, end, top, bottom)'
+      default_value: 'overlay'
+      options:
+        '': '- none -'
+        overlay: 'Overlay'
+        start: 'Start'
+        end: 'End'
+        top: 'Top'
+        bottom: 'Bottom'
     card_border:
       type: 'switcher'
       label: Card Boarder

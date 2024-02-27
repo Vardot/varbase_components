@@ -2,7 +2,7 @@
 
 .varbase-heroslider-media {
   &> .view-empty {
-    background-color: $hero-empty-view-background;
+    background-color: #e0e0e0;
     @include rfs(25rem 0 3rem, padding);
     text-align: center;
     color: #666;

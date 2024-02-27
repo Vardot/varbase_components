@@ -9,12 +9,24 @@ props:
     card_border:
       type: boolean
       title: Card Boarder
+      description: Add a default border to the card.
       default: false
     padded:
       type: boolean
       title: Padded
-      default: false
       description: Add a default padding to the card.
+      default: false
+    hero_style:
+      type: string
+      title: Hero Style
+      description: Select the style for the hero, by choosing the location of the media from (overlay, start, end, top, bottom)
+      default: 'overlay'
+      enum:
+        - overlay
+        - start
+        - end
+        - top
+        - bottom
     horizontal_alignment:
       type: string
       title: Horizontal alignment

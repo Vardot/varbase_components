@@ -1,5 +1,15 @@
 @import "../../defaults";   // Global component defaults.
 
+// Overlay Card default styles.
+$overlay-card-title-color: $white;
+$overlay-card-xlarge-title-font-size: 4rem;
+$overlay-card-content-color: $white;
+$overlay-card-content-stop1-location: 65%;
+$overlay-card-content-stop1-color: transparent;
+$overlay-card-content-stop2-location: 105%;
+$overlay-card-content-stop2-color: $black;
+$overlay-card-content-hover-opacity: 0.9;
+
 .varbase-overlay-card {
   .overlay-card-content {
     position: absolute;

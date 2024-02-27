@@ -12,8 +12,22 @@
     }
   },
   "argTypes": {
+    "hero_style": {
+      "name": "Hero Style",
+      "description": "Select the style for the hero, by choosing the location of the media from (overlay, start, end, top, bottom)",
+      "control": "select",
+      "defaultValue": "overlay",
+      "options": {
+        "' - none - '": "",
+        "Overlay": "overlay",
+        "Start": "start",
+        "End": "end",
+        "Top": "top",
+        "Bottom": "bottom"
+      }
+    },
     "id": {
-      "name": "heroslider ID",
+      "name": "Hero Slider ID",
       "description": "Set a unique id on the heroslider for optional controls, especially if the single page is using multiple hero sliders.",
       "control": "text",
       "defaultValue": ""
@@ -119,6 +133,7 @@
     {
       "name": "Hero Slider - Three slides",
       "args": {
+        "hero_style": "overlay",
         "id": "test-heroslider-with-3-slides",
         "controls": true,
         "indicators": true,
@@ -139,6 +154,7 @@
     {
       "name": "Hero Slider - One slide",
       "args": {
+        "hero_style": "overlay",
         "id": "test-heroslider-1-slide",
         "controls": true,
         "indicators": true,

@@ -124,6 +124,7 @@ module.exports = {
               additionalData: `
                 @use "sass:color";
                 @use "sass:math";
+                @use "sass:string";
               `,
             },
           },

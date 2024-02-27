@@ -12,6 +12,20 @@
     }
   },
   "argTypes": {
+    "hero_style": {
+      "name": "Hero Style",
+      "description": "Select the style for the hero, by choosing the location of the media from (overlay, start, end, top, bottom)",
+      "control": "select",
+      "defaultValue": "overlay",
+      "options": {
+        "' - none - '": "",
+        "Overlay": "overlay",
+        "Start": "start",
+        "End": "end",
+        "Top": "top",
+        "Bottom": "bottom"
+      }
+    },
     "card_border": {
       "name": "Card Boarder",
       "description": "Card Boarder",
@@ -95,6 +109,7 @@
     {
       "name": "Hero Card",
       "args": {
+        "hero_style": "overlay",
         "card_border": false,
         "padded": false,
         "horizontal_alignment": "start",
@@ -104,57 +119,61 @@
       }
     },
     {
-      "name": "Title only",
+      "name": "Hero Card - Media Start",
       "args": {
+        "hero_style": "start",
         "card_border": false,
         "padded": false,
-        "horizontal_alignment": "",
-        "vertical_alignment": "",
+        "horizontal_alignment": "start",
+        "vertical_alignment": "center",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\">Varbase; better than ever</h3>"
+        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\">Varbase; better than ever</h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div><div class=\"mt-5\"><a href=\"\" class=\"btn btn-primary btn-lg\">Learn More</a></div>"
       }
     },
     {
-      "name": "Content",
+      "name": "Hero Card - Media End",
       "args": {
+        "hero_style": "end",
         "card_border": false,
         "padded": false,
-        "horizontal_alignment": "",
-        "vertical_alignment": "",
+        "horizontal_alignment": "start",
+        "vertical_alignment": "center",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\">Varbase; better than ever</h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div>"
+        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\">Varbase; better than ever</h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div><div class=\"mt-5\"><a href=\"\" class=\"btn btn-primary btn-lg\">Learn More</a></div>"
       }
     },
     {
-      "name": "Title only - Centered",
+      "name": "Hero Card - Media Top",
       "args": {
+        "hero_style": "top",
         "card_border": false,
         "padded": false,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\">Varbase; better than ever</h3>"
+        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\">Varbase; better than ever</h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div><div class=\"mt-5\"><a href=\"\" class=\"btn btn-primary btn-lg\">Learn More</a></div>"
       }
     },
     {
-      "name": "Content - Centered",
+      "name": "Hero Card - Media Bottom",
       "args": {
+        "hero_style": "bottom",
         "card_border": false,
         "padded": false,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
         "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\">Varbase; better than ever</h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div>"
+        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\">Varbase; better than ever</h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div><div class=\"mt-5\"><a href=\"\" class=\"btn btn-primary btn-lg\">Learn More</a></div>"
       }
     },
     {
-      "name": "With Read more - Centered",
+      "name": "Hero Card - Content",
       "args": {
+        "hero_style": "top",
         "card_border": false,
         "padded": false,
-        "horizontal_alignment": "center",
+        "horizontal_alignment": "start",
         "vertical_alignment": "center",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
         "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\">Varbase; better than ever</h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div><div class=\"mt-5\"><a href=\"\" class=\"btn btn-primary btn-lg\">Learn More</a></div>"
       }
     }

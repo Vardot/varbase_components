@@ -5,6 +5,17 @@ description: A slideshow component for cycling through elements images/media or 
 props:
   type: object
   properties:
+    hero_style:
+      type: string
+      title: Hero Style
+      description: Select the style for the hero, by choosing the location of the media from (overlay, start, end, top, bottom)
+      default: 'overlay'
+      enum:
+        - overlay
+        - start
+        - end
+        - top
+        - bottom
     id:
       type: string
       title: heroslider ID
@@ -69,6 +80,11 @@ props:
       title: Utility Classes
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the heroslider element.
       default: []
+    controls_utility_classes:
+      type: array
+      title: Controls Utility Classes
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the controls element.
+      default: []
     indicators_utility_classes:
       type: array
       title: Indicators Utility Classes
@@ -78,6 +94,10 @@ props:
       type: Drupal\Core\Template\Attribute
       title: Attributes
       description: HTML attributes to apply to the heroslider main wrapper tag.
+    controls_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Controls Attributes
+      description: HTML attributes to apply to the controls wrapper tag.
     indicators_attributes:
       type: Drupal\Core\Template\Attribute
       title: Indicators Attributes
