@@ -12,9 +12,9 @@
     }
   },
   "argTypes": {
-    "hero_style": {
-      "name": "Hero Style",
-      "description": "Select the style for the hero, by choosing the location of the media from (overlay, start, end, top, bottom)",
+    "media_position": {
+      "name": "Media position",
+      "description": "Choose the location of the media from (overlay|start|end|top|bottom).",
       "control": "select",
       "defaultValue": "overlay",
       "options": {
@@ -133,7 +133,7 @@
     {
       "name": "Hero Slider - Three slides",
       "args": {
-        "hero_style": "overlay",
+        "media_position": "overlay",
         "id": "test-heroslider-with-3-slides",
         "controls": true,
         "indicators": true,
@@ -154,7 +154,7 @@
     {
       "name": "Hero Slider - One slide",
       "args": {
-        "hero_style": "overlay",
+        "media_position": "overlay",
         "id": "test-heroslider-1-slide",
         "controls": true,
         "indicators": true,

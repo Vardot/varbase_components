@@ -12,9 +12,21 @@
     }
   },
   "argTypes": {
-    "hero_style": {
-      "name": "Hero Style",
-      "description": "Select the style for the hero, by choosing the location of the media from (overlay, start, end, top, bottom)",
+    "card_border": {
+      "name": "Card Border",
+      "description": "Add a default border to the card.",
+      "control": "boolean",
+      "defaultValue": true
+    },
+    "padded": {
+      "name": "Padded",
+      "description": "Add a default padding to the card.",
+      "control": "boolean",
+      "defaultValue": false
+    },
+    "media_position": {
+      "name": "Media position",
+      "description": "Choose the location of the media from (overlay|start|end|top|bottom).",
       "control": "select",
       "defaultValue": "overlay",
       "options": {
@@ -26,21 +38,9 @@
         "Bottom": "bottom"
       }
     },
-    "card_border": {
-      "name": "Card Boarder",
-      "description": "Card Boarder",
-      "defaultValue": true,
-      "control": "boolean"
-    },
-    "padded": {
-      "name": "Padded",
-      "description": "Add a default padding to the card.",
-      "defaultValue": false,
-      "control": "boolean"
-    },
     "horizontal_alignment": {
       "name": "Horizontal Alignment",
-      "description": "Horizontal alignment of the content",
+      "description": "Horizontal alignment of the content.",
       "control": "select",
       "defaultValue": "",
       "options": {
@@ -52,7 +52,7 @@
     },
     "vertical_alignment": {
       "name": "Vertical Alignment",
-      "description": "Vertical alignment of the content",
+      "description": "Vertical alignment of the content.",
       "control": "select",
       "defaultValue": "",
       "options": {
@@ -64,31 +64,31 @@
     },
     "media": {
       "name": "Card media",
-      "description": "The content for card",
+      "description": "The media image/video slot for the card.",
       "control": "text",
       "defaultValue": ""
     },
     "content": {
       "name": "Card content",
-      "slots": "The content for card",
+      "slots": "The content slot for the card.",
       "control": "text",
       "defaultValue": ""
     },
     "utility_classes": {
       "name": "Utility Classes",
-      "description": "Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)",
+      "description": "Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add `card`).",
       "control": "array",
       "defaultValue": []
     },
     "media_utility_classes": {
       "name": "Media Utility Classes",
-      "description": "Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)",
+      "description": "Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add `card-img`).",
       "control": "array",
       "defaultValue": []
     },
     "content_utility_classes": {
       "name": "Content Utility Classes",
-      "description": "Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)",
+      "description": "Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`).",
       "control": "array",
       "defaultValue": []
     },
@@ -109,7 +109,7 @@
     {
       "name": "Hero Card",
       "args": {
-        "hero_style": "overlay",
+        "media_position": "overlay",
         "card_border": false,
         "padded": false,
         "horizontal_alignment": "start",
@@ -121,7 +121,7 @@
     {
       "name": "Hero Card - Media Start",
       "args": {
-        "hero_style": "start",
+        "media_position": "start",
         "card_border": false,
         "padded": false,
         "horizontal_alignment": "start",
@@ -133,7 +133,7 @@
     {
       "name": "Hero Card - Media End",
       "args": {
-        "hero_style": "end",
+        "media_position": "end",
         "card_border": false,
         "padded": false,
         "horizontal_alignment": "start",
@@ -145,7 +145,7 @@
     {
       "name": "Hero Card - Media Top",
       "args": {
-        "hero_style": "top",
+        "media_position": "top",
         "card_border": false,
         "padded": false,
         "horizontal_alignment": "center",
@@ -157,7 +157,7 @@
     {
       "name": "Hero Card - Media Bottom",
       "args": {
-        "hero_style": "bottom",
+        "media_position": "bottom",
         "card_border": false,
         "padded": false,
         "horizontal_alignment": "center",
@@ -169,7 +169,7 @@
     {
       "name": "Hero Card - Content",
       "args": {
-        "hero_style": "top",
+        "media_position": "top",
         "card_border": false,
         "padded": false,
         "horizontal_alignment": "start",

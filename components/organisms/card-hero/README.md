@@ -2,20 +2,22 @@
 
 Hero card component for a media and a text over the media.
 
-### Properties:
-* `hero_style`: Select the style for the hero, by choosing the location of the media from (overlay, start, end, top, bottom)
-* `card_border`: Add a default border to the card. (true|false)
-* `padded`: Add a default padding to the card. (true|false)
-* `horizontal_alignment`: Horizontal alignment (start, center, end).
-* `vertical_alignment`: Vertical alignment (start, center, end).
-* `card_attributes`: Drupal attributes for featured card wrapper.
-* `media_attributes`: Drupal attributes for card media slot region.
-* `content_attributes`: Drupal attributes for card content slot region.
-* `utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)
-* `media_utility_classes`: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)
-* `content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
+## Properties:
+* `card_border`: Add a default border to the card. (`true`|`false`)
+* `padded`: Add a default padding to the card. (`true`|`false`)
+* `media_position`: Choose the location of the media from (`overlay`|`start`|`end`|`top`|`bottom`).
+* `horizontal_alignment`: Horizontal alignment of the content. (`start`|`center`|`end`)
+* `vertical_alignment`: Vertical alignment of the content. (`start`|`center`|`end`)
+* `utility_classes`: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add `card`)
+* `media_utility_classes`: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add `card-img`)
+* `content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`)
 
-### Slots:
+## Attributes:
+* `card_attributes`: HTML attributes for the card element.
+* `media_attributes`: HTML attributes for the content element.
+* `content_attributes`: HTML attributes for the media element.
+
+## Slots:
 * `media`: Card Media slot region.
 * `content`: Card Content slot region.
 
@@ -26,7 +28,7 @@ Hero card component for a media and a text over the media.
 {% include 'varbase_components:card-hero' with {
   card_border: true,
   padded: true,
-  anchor_all: true,
+  media_position: 'overlay',
   horizontal_alignment: 'center',
   vertical_alignment: 'center',
   utility_classes: [],

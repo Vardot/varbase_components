@@ -1,10 +1,23 @@
-.carousel.varbase-heroslider.hero-style-overlay, .carousel.varbase-heroslider.hero-style-start, .carousel.varbase-heroslider.hero-style-end {
+.carousel.varbase-heroslider.hero-style-overlay {
   max-height: 43.75rem;
   min-height: 43.75rem;
 }
 
-.carousel.varbase-heroslider.hero-style-top, .carousel.varbase-heroslider.hero-style-bottom {
-  min-height: 43.75rem;
+@media screen and (max-width: 576px) {
+  .carousel.varbase-heroslider.hero-style-overlay .carousel-controls {
+    margin: 1.88rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .carousel.varbase-heroslider.hero-style-start, .carousel.varbase-heroslider.hero-style-end {
+    max-height: 43.75rem;
+    min-height: 43.75rem;
+  }
+
+  .carousel.varbase-heroslider.hero-style-top, .carousel.varbase-heroslider.hero-style-bottom {
+    min-height: 43.75rem;
+  }
 }
 
 .carousel.varbase-heroslider .carousel-controls {
@@ -101,6 +114,19 @@
   }
 }
 
+.carousel.varbase-heroslider.hero-style-top .carousel-controls, .carousel.varbase-heroslider.hero-style-bottom .carousel-controls {
+  position: relative;
+  margin-top: 1.88rem;
+  margin-bottom: 1.88rem;
+}
+
+@media screen and (max-width: 992px) {
+  .carousel.varbase-heroslider.hero-style-start .carousel-controls, .carousel.varbase-heroslider.hero-style-end .carousel-controls, .carousel.varbase-heroslider.hero-style-top .carousel-controls, .carousel.varbase-heroslider.hero-style-bottom .carousel-controls {
+    position: relative;
+    margin: 1.88rem;
+  }
+}
+
 .carousel.varbase-heroslider.hero-style-start .carousel-indicators button, .carousel.varbase-heroslider.hero-style-end .carousel-indicators button, .carousel.varbase-heroslider.hero-style-top .carousel-indicators button, .carousel.varbase-heroslider.hero-style-bottom .carousel-indicators button {
   background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 11' fill='none'><circle cx='5' cy='5.5' r='4.5' stroke='%230d6efd'/></svg>") no-repeat !important;
 }
@@ -121,38 +147,38 @@
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 35 35' fill='none'><path d='M17.5 0C27.165 0 35 7.83502 35 17.5C35 27.165 27.165 35 17.5 35C7.83502 35 0 27.165 0 17.5C0 7.83502 7.83502 0 17.5 0ZM9.84375 16.4062C9.23969 16.4062 8.75 16.8959 8.75 17.5C8.75 18.1041 9.23969 18.5938 9.84375 18.5938H22.5157L17.8204 23.2891C17.3932 23.7162 17.3932 24.4088 17.8204 24.8359C18.2475 25.263 18.94 25.263 19.3671 24.8359L25.9296 18.2734C26.3568 17.8463 26.3568 17.1537 25.9296 16.7266L19.3671 10.1641C18.94 9.73697 18.2475 9.73697 17.8204 10.1641C17.3932 10.5912 17.3932 11.2838 17.8204 11.7109L22.5157 16.4062H9.84375Z' fill='%230d6efd'/></svg>");
 }
 
-.carousel.varbase-heroslider.hero-style-top .carousel-controls, .carousel.varbase-heroslider.hero-style-bottom .carousel-controls {
-  position: relative;
-  margin-top: 1.88rem;
-  margin-bottom: 1.88rem;
+@media screen and (min-width: 992px) {
+  .carousel.varbase-heroslider.hero-style-start .carousel-controls {
+    position: absolute;
+    width: calc(50vw - 11.125rem);
+  }
+
+  [dir="ltr"] .carousel.varbase-heroslider.hero-style-start .carousel-controls {
+    right: 9.375rem;
+    left: auto;
+  }
+
+  [dir="rtl"] .carousel.varbase-heroslider.hero-style-start .carousel-controls {
+    left: 9.375rem;
+    right: auto;
+  }
 }
 
-.carousel.varbase-heroslider.hero-style-start .carousel-controls {
-  width: calc(50vw - 11.125rem);
-}
+@media screen and (min-width: 992px) {
+  .carousel.varbase-heroslider.hero-style-end .carousel-controls {
+    position: absolute;
+    width: calc(50vw - 11.125rem);
+  }
 
-[dir="ltr"] .carousel.varbase-heroslider.hero-style-start .carousel-controls {
-  right: 9.375rem;
-  left: auto;
-}
+  [dir="ltr"] .carousel.varbase-heroslider.hero-style-end .carousel-controls {
+    right: auto;
+    left: 9.375rem;
+  }
 
-[dir="rtl"] .carousel.varbase-heroslider.hero-style-start .carousel-controls {
-  left: 9.375rem;
-  right: auto;
-}
-
-.carousel.varbase-heroslider.hero-style-end .carousel-controls {
-  width: calc(50vw - 11.125rem);
-}
-
-[dir="ltr"] .carousel.varbase-heroslider.hero-style-end .carousel-controls {
-  right: auto;
-  left: 9.375rem;
-}
-
-[dir="rtl"] .carousel.varbase-heroslider.hero-style-end .carousel-controls {
-  left: auto;
-  right: 9.375rem;
+  [dir="rtl"] .carousel.varbase-heroslider.hero-style-end .carousel-controls {
+    left: auto;
+    right: 9.375rem;
+  }
 }
 
 .carousel.varbase-heroslider > .view-empty {

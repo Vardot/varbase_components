@@ -157,6 +157,11 @@ $hero-card-min-height-md: 43.75rem;
 
 
     .hero-card-content {
+
+      @media screen and (max-width: map-get($grid-breakpoints, "sm")) {
+        padding-bottom: 9.375rem;
+      }
+
       @media screen and (min-width: map-get($grid-breakpoints, "sm")) {
         padding: 1.88rem calc((100vw - map-get($container-max-widths, "sm"))/2) 3.88rem;
       }
@@ -255,6 +260,11 @@ $hero-card-min-height-md: 43.75rem;
         min-height: $hero-card-min-height-md;
         max-height: $hero-card-max-height-md;
       }
+    }
+
+    @media screen and (max-width: map-get($grid-breakpoints, "lg")) {
+      margin-right: 1.88rem;
+      margin-left: 1.88rem;
     }
   }
 

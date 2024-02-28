@@ -3,8 +3,7 @@
 A slideshow component for cycling through elements images/media or slides of text—like a heroslider.
 
 ## Available properties:
-* `hero_style`: Select the style for the hero, by choosing the location of the media
-                from (overlay, start, end, top, bottom)
+* `media_position`: Choose the location of the media from (overlay|start|end|top|bottom).
 * `id`: Set a unique id on the heroslider for optional controls,
  especially if the single page is using multiple hero sliders.
 * `items`: An array of slider items, with a formatted UI Pattern for Cards.
@@ -23,7 +22,7 @@ A slideshow component for cycling through elements images/media or slides of tex
 * `touch`: Whether the carousel should support left/right swipe interactions on touchscreen devices. (true|false)
 * `wrap`: Whether the carousel should cycle continuously or have hard stops. (true|false)
 * `utility_classes`: An array of utility classes. Use to add extra Bootstrap
- utility classes or custom CSS classes over to the heroslider element.
+  utility classes or custom CSS classes over to the heroslider element.
 * `controls_utility_classes`: An array of utility classes. Use to add extra 
   Bootstrap utility classes or custom CSS classes over to the controls element.
 * `indicators_utility_classes`: An array of utility classes. Use to add extra
@@ -46,7 +45,7 @@ Pass rows for the Hero Slider content type from an unformatted view display whic
 ```
 {%
   include "varbase_components:heroslider" with {
-    hero_style: 'overlay',
+    media_position: 'overlay',
     id: id,
     controls: true,
     indicators: true,
@@ -66,7 +65,7 @@ Pass rows for the Hero Slider content type from an unformatted view display whic
 ```
 {%
   include "varbase_components:heroslider" with {
-    hero_style: 'start',
+    media_position: 'start',
     id: id,
     controls: true,
     indicators: true,

@@ -28,17 +28,32 @@ $carousel-control-pause-icon-dark: url("data:image/svg+xml,<svg xmlns='http://ww
 
 .carousel.varbase-heroslider {
 
-  &.hero-style-overlay,
-  &.hero-style-start,
-  &.hero-style-end {
+
+  &.hero-style-overlay {
     max-height: $varbase-heroslider-max-height-md;
     min-height: $varbase-heroslider-min-height-md;
+
+    @media screen and (max-width: map-get($grid-breakpoints, "sm")) {
+      .carousel-controls {
+        margin: 1.88rem;
+      }
+    }
   }
 
-  &.hero-style-top,
-  &.hero-style-bottom {
-    min-height: $varbase-heroslider-min-height-md;
+  @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+    &.hero-style-start,
+    &.hero-style-end {
+      max-height: $varbase-heroslider-max-height-md;
+      min-height: $varbase-heroslider-min-height-md;
+    }
+
+    &.hero-style-top,
+    &.hero-style-bottom {
+      min-height: $varbase-heroslider-min-height-md;
+    }
+  
   }
+
 
   .carousel-controls {
     position: absolute;
@@ -129,10 +144,27 @@ $carousel-control-pause-icon-dark: url("data:image/svg+xml,<svg xmlns='http://ww
     }
   }
 
+  &.hero-style-top,
+  &.hero-style-bottom {
+    .carousel-controls {
+      position: relative;
+      margin-top: 1.88rem;
+      margin-bottom: 1.88rem;
+    }
+  }  
+
   &.hero-style-start,
   &.hero-style-end,
   &.hero-style-top,
   &.hero-style-bottom {
+
+    @media screen and (max-width: map-get($grid-breakpoints, "lg")) {
+      .carousel-controls {
+        position: relative;
+        margin: 1.88rem;
+      }
+    }
+
     .carousel-indicators {
       button {
         background: $carousel-indicators-button-icon-dark !important;
@@ -162,28 +194,25 @@ $carousel-control-pause-icon-dark: url("data:image/svg+xml,<svg xmlns='http://ww
     }
   }
 
-  &.hero-style-top,
-  &.hero-style-bottom {
-    .carousel-controls {
-      position: relative;
-      margin-top: 1.88rem;
-      margin-bottom: 1.88rem;
-    }
-  }
-
   &.hero-style-start {
-    .carousel-controls {
-      right: 9.375rem;
-      left: auto;
-      width: calc(50vw - 11.125rem);
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+      .carousel-controls {
+        position: absolute;
+        right: 9.375rem;
+        left: auto;
+        width: calc(50vw - 11.125rem);
+      }
     }
   }
 
   &.hero-style-end {
-    .carousel-controls {
-      right: auto;
-      left: 9.375rem;
-      width: calc(50vw - 11.125rem);
+    @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+      .carousel-controls {
+        position: absolute;
+        right: auto;
+        left: 9.375rem;
+        width: calc(50vw - 11.125rem);
+      }
     }
   }
 

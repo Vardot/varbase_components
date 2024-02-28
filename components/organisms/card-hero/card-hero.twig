@@ -1,25 +1,29 @@
 {#
 /**
  * @file
- * Varbase Components implementation for a Hero Card component.
+ * Varbase Components implementation for the Hero Card component.
  *
- * Available config:
- * - hero_style: Select the style for the hero, by choosing the location of the media from (overlay, start, end, top, bottom)
+ * Available properties:
  * - card_border: Add a default border to the card. (true|false)
  * - padded: Add a default padding to the card. (true|false)
- * - horizontal_alignment: Horizontal alignment (start, center, end)
- * - vertical_alignment: Vertical alignment (start, center, end)
+ * - media_position: Choose the location of the media from (overlay|start|end|top|bottom).
+ * - horizontal_alignment: Horizontal alignment of the content. (start|center|end)
+ * - vertical_alignment: Vertical alignment of the content. (start|center|end)
+ * - utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add `card`)
+ * - media_utility_classes: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add `card-img`)
+ * - content_utility_classes: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`)
+ *
+ * Available attributes:
  * - card_attributes: Drupal attributes for featured card wrapper.
- * - media_attributes: Drupal attributes for card media slot reagion.
+ * - media_attributes: Drupal attributes for card media slot region.
  * - content_attributes: Drupal attributes for card content slot region.
- * - utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)
- * - media_utility_classes: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)
- * - content_utility_classes: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
+ *
+ * Available slots:
  * - media: Card Media slot region.
  * - content: Card Content slot region.
  */
 #}
-{% set hero_style = hero_style ?? 'overlay' %}
+{% set media_position = media_position ?? 'overlay' %}
 {% set card_border = card_border ? ['bordered'] : ['border-0'] %}
 {% set padded = padded ? ['p-4'] : [''] %}
 {% set vertical_alignment = vertical_alignment == '' ? [] : ['justify-content-' ~ vertical_alignment] %}
@@ -44,21 +48,24 @@
   set card_classes = [
     'card',
     'varbase-hero-card',
-    'hero-style-' ~ hero_style,
+    'hero-style-' ~ media_position,
     'clearfix',
   ]|merge(card_border)|merge(padded)|merge(utility_classes)
 %}
 
-{# Hero Style of media overlay #}
-{% if hero_style == 'overlay' %}
+{# Media position of media overlay #}
+{% if media_position == 'overlay' %}
 
-  {% set media_classes = []|merge(media_utility_classes) %}
+  {%
+    set media_classes = [
+      'card-img',
+    ]|merge(media_utility_classes)
+  %}
 
   {%
     set content_classes = [
       'card-body',
       'hero-card-content',
-      'card-img-overlay',
       'd-flex',
       'flex-column',
     ]|merge(vertical_alignment)|merge(horizontal_alignment)|merge(content_utility_classes)
@@ -79,12 +86,13 @@
     </div>
   </div>
 
-{# Hero Style of media start or end #}
-{% elseif hero_style == 'start' or hero_style == 'end' %}
+{# Media position of media start or end #}
+{% elseif media_position == 'start' or media_position == 'end' %}
 
   {%
     set media_classes = [
       'card-img',
+      'card-img-' ~ media_position,
     ]|merge(media_utility_classes)
   %}
 
@@ -105,7 +113,7 @@
     ]
   %}
 
-  {% if hero_style == 'end' %}
+  {% if media_position == 'end' %}
     {% set row_classes = row_classes|merge(['flex-row-reverse']) %}
   {% endif %}
 
@@ -145,12 +153,13 @@
     </div>
   </div>
 
-{# Hero Style of media top or bottom #}
-{% elseif hero_style == 'top' or hero_style == 'bottom' %}
+{# Media position of media top or bottom #}
+{% elseif media_position == 'top' or media_position == 'bottom' %}
 
   {%
     set media_classes = [
       'card-img',
+      'card-img-' ~ media_position,
     ]|merge(media_utility_classes)
   %}
 
@@ -163,7 +172,7 @@
     ]|merge(vertical_alignment)|merge(horizontal_alignment)|merge(content_utility_classes)
   %}
 
-  {% if hero_style == 'bottom' %}
+  {% if media_position == 'bottom' %}
     {% set card_classes = card_classes|merge(['flex-column-reverse']) %}
   {% endif %}
 
