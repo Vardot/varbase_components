@@ -4,19 +4,18 @@ card_overlay:
   description: Overlay card pattern for a media and a content over the media
   fields:
     media:
-      type: media
-      label: Media
-      description: 'Media description.'
+      label: 'Media slot'
+      description: 'The media image/video slot for the card'
       preview: 'Card media'
     content:
-      type: 'textfield'
-      label: 'Content'
-      description: 'Content description.'
+      label: 'Content slot'
+      description: 'The content slot for card.'
       preview: 'Card Content'
   settings:
     style_size:
       type: 'select'
-      label: Card style size
+      label: 'Card style size'
+      description: 'Card style size. (xsmall|small|medium|large|xlarge).'
       default_value: ''
       options:
         '': '- none -'
@@ -27,8 +26,8 @@ card_overlay:
         xlarge: 'X-large'
     card_border:
       type: 'switcher'
-      label: Card Boarder
-      default_value: true
+      label: Card Border
+      default_value: false
     padded:
       type: 'switcher'
       label: Padded
@@ -45,7 +44,8 @@ card_overlay:
     horizontal_alignment:
       type: 'select'
       label: 'Horizontal alignment'
-      default_value: 'center'
+      description: 'Horizontal alignment of the content.'
+      default_value: ''
       options:
         '': '- none -'
         start: 'Start'
@@ -54,6 +54,7 @@ card_overlay:
     vertical_alignment:
       type: 'select'
       label: 'Vertical alignment'
+      description: 'Vertical alignment of the content.'
       default_value: ''
       options:
         '': '- none -'
@@ -63,7 +64,7 @@ card_overlay:
     extra_utility_classes:
       type: 'group'
       label: 'Utility classes'
-      description: '<b>Bootstrap </b> has a big list of <b><a href="https://getbootstrap.com/docs/5.3/utilities/api/">Utility API</a></b> which brings out <b>Utility Classes</b> for all Bootstrap Components.'
+      description: '<b>Bootstrap</b> has a big list of <b><a href="https://getbootstrap.com/docs/5.3/utilities/api/">Utility API</a></b> which brings out <b>Utility Classes</b> for all Bootstrap Components.'
       group_type: 'details'
     utility_classes:
       type: 'utility_classes'
@@ -74,10 +75,12 @@ card_overlay:
     media_utility_classes:
       type: 'utility_classes'
       label: 'Media region Utility classes'
-      description: 'Use to add extra Bootstrap utility classes for the Card Media region wrapper.<br /> E.g. bg-secondary mb-3 <br /><b>( Do not add card-image)</b>'
+      description: 'Use to add extra Bootstrap utility classes for the Card Media region wrapper.<br /> E.g. bg-secondary mb-3 <br /><b>( Do not add card-img)</b>'
+      default_value: { }
       group: 'extra_utility_classes'
     content_utility_classes:
       type: 'utility_classes'
       label: 'Content region Utility classes'
       description: 'Use to add extra Bootstrap utility classes for the Card Content region wrapper.<br /> E.g. w-75 mb-3 overflow-y-hidden <br /><b>( Do not add card-body)</b>'
+      default_value: { }
       group: 'extra_utility_classes'

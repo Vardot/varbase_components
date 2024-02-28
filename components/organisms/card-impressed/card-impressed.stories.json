@@ -38,56 +38,56 @@
       }
     },
     "card_border": {
-      "name": "Card Boarder",
-      "description": "Card Boarder",
-      "defaultValue": true,
-      "control": "boolean"
+      "name": "Card Border",
+      "description": "Add a default border to the card.",
+      "control": "boolean",
+      "defaultValue": true
     },
     "padded": {
       "name": "Padded",
       "description": "Add a default padding to the card.",
-      "defaultValue": false,
-      "control": "boolean"
+      "control": "boolean",
+      "defaultValue": false
     },
     "equal_height": {
       "name": "Equal height",
       "description": "Equal height",
-      "defaultValue": true,
-      "control": "boolean"
+      "control": "boolean",
+      "defaultValue": true
     },
     "anchor_all": {
       "name": "Anchor All",
       "description": "Anchor All",
-      "defaultValue": false,
-      "control": "boolean"
+      "control": "boolean",
+      "defaultValue": false
     },
     "media": {
       "name": "Card media",
-      "description": "The content for card",
+      "description": "Choose the location of the media from (top|bottom).",
       "control": "text",
       "defaultValue": ""
     },
     "content": {
       "name": "Card content",
-      "slots": "The content for card",
+      "slots": "The content slot for the card.",
       "control": "text",
       "defaultValue": ""
     },
     "utility_classes": {
       "name": "Utility Classes",
-      "description": "Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)",
+      "description": "Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add `card`).",
       "control": "array",
       "defaultValue": []
     },
     "media_utility_classes": {
       "name": "Media Utility Classes",
-      "description": "Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)",
+      "description": "Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add `card-img`).",
       "control": "array",
       "defaultValue": []
     },
     "content_utility_classes": {
       "name": "Content Utility Classes",
-      "description": "Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)",
+      "description": "Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`).",
       "control": "array",
       "defaultValue": []
     },

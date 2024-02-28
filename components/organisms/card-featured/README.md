@@ -6,33 +6,43 @@ It contains a media element — typically an image — on the left with a headli
 
 It is a versatile pattern that contain content such as blog posts, user information, and other content types.
 
-### Properties:
-* `style_size`: Card style size (xsmall|small|medium|large|xlarge).
-* `card_border`: Card Boarder (true|false)
-* `padded`: Add a default padding to the card. (true|false)
+## Properties:
+* `style_size`: Card style size. (xsmall|small|medium|large|xlarge).
+* `card_border`: Add a default border for the card. (true|false).
+* `padded`: Add a default padding to the card. (true|false).
 * `equal_height`: Equal height (true|false)
 * `anchor_all`: Anchor All (true|false)
-* `media_position`: start|end to determine if the row is reversed or not.
-* `content_vertical_alignment`: Content Vertical alignment
+* `media_position`: Choose the location of the media from (start|end).
+* `content_vertical_alignment`: Vertical alignment of the content.
 * `gutters_between`: Gutters Between - (large|small-start|small-end|no) to manage the guttering between the start and end columns.
-* `columns_xs_size`: All Breakpoints - Size of two columns for all devices. Starting from Extra small and up.
-* `columns_sm_size`: Small Breakpoint size (sm) - Size of two columns for Small devices (landscape phones, 576px and up)
-* `columns_md_size`: Medium Breakpoint size (md) - Size of two columns for Medium devices (tablets, 768px and up)
-* `columns_lg_size`: Large Breakpoint size (lg) - Size of two columns for Large devices (desktops, 992px and up)
-* `columns_xl_size`: Extra Large Breakpoint size (xl) - Size of two columns for X-Large devices (large desktops, 1200px and up)
-* `columns_xxl_size`: Extra Extra Large Breakpoint size (xxl) - Size of two columns for XX-Large devices (larger desktops, 1400px and up)
-* `card_attributes`: Drupal attributes for featured card wrapper.
-* `row_attributes`: Drupal attributes for row.
-* `start_column_attributes`: Drupal attributes for start column.
-* `end_column_attributes`: Drupal attributes for end column.
-* `media_attributes`: Drupal attributes for card media slot region.
-* `content_attributes`: Drupal attributes for card content slot region.
-* `utility_classes`: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)
-* `media_utility_classes`: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)
-* `content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
+* `columns_xs_size`: All Breakpoints - Size of two columns for all devices.
+                    Starting from Extra small and up.
+* `columns_sm_size`: Small Breakpoint size (sm) - Size of two columns for Small devices
+                    (landscape phones, 576px and up)
+* `columns_md_size`: Medium Breakpoint size (md) - Size of two columns for Medium devices
+                    (tablets, 768px and up)
+* `columns_lg_size`: Large Breakpoint size (lg) - Size of two columns for Large devices
+                    (desktops, 992px and up)
+* `columns_xl_size`: Extra Large Breakpoint size (xl) - Size of two columns for X-Large devices
+                    (large desktops, 1200px and up)
+* `columns_xxl_size`: Extra Extra Large Breakpoint size (xxl) - Size of two columns for XX-Large devices
+                      (larger desktops, 1400px and up)
+* `utility_classes`: Use to add extra Bootstrap utility classes for the main Card wrapper.
+                    E.g. `mb-3 shadow-lg` ( Do not add `card`).
+* `media_utility_classes`: Use to add extra Bootstrap utility classes for the Card Media region wrapper.
+                          E.g. `bg-secondary mb-3` ( Do not add `card-img`).
+* `content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper.
+                            E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`).
 
+## Attributes:
+* `card_attributes`: HTML attributes for the card element.
+* `media_attributes`: HTML attributes for the media element.
+* `content_attributes`: HTML attributes for the content element.
+* `row_attributes`: HTML attributes for the row element.
+* `start_column_attributes`: HTML attributes for the start column element.
+* `end_column_attributes`: HTML attributes for the end column element.
 
-### Slots:
+## Slots:
 * `media`: Card Media slot region.
 * `content`: Card Content slot region.
 

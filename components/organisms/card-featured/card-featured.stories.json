@@ -27,8 +27,8 @@
       }
     },
     "card_border": {
-      "name": "Card Boarder",
-      "description": "Card Boarder",
+      "name": "Card Border",
+      "description": "Card Border",
       "defaultValue": false,
       "control": "boolean"
     },
@@ -52,7 +52,7 @@
     }, 
     "media_position": {
       "name": "Media position",
-      "description": "Media position",
+      "description": "Choose the location of the media from (start|end).",
       "control": "select",
       "defaultValue": "",
       "options": {
@@ -207,7 +207,7 @@
     },
     "media_utility_classes": {
       "name": "Media Utility Classes",
-      "description": "Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)",
+      "description": "Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-img)",
       "control": "array",
       "defaultValue": []
     },

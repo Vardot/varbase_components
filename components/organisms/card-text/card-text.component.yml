@@ -1,15 +1,15 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.2.x/core/modules/sdc/src/metadata.schema.json
-name: Text Card 
+name: 'Text Card' 
 status: experimental
-description: Text card component and pattern with content.
+description: 'Text card component and pattern with content.'
 group: Cards
 props:
   type: object
   properties:
     style_size:
       type: string
-      title: Card style size
-      description: Card style size (xsmall|small|medium|large|xlarge).
+      title: 'Card style size'
+      description: 'Card style size (xsmall|small|medium|large|xlarge).'
       default: ''
       enum:
         - ''
@@ -20,40 +20,41 @@ props:
         - xlarge
     card_border:
       type: boolean
-      title: Card Boarder
-      default: true
+      title: 'Card Border'
+      description: 'Add a default border to the card.'
+      default: false
     padded:
       type: boolean
-      title: Padded
+      title: 'Padded'
+      description: 'Add a default padding to the card.'
       default: false
-      description: Add a default padding to the card.
     equal_height:
       type: boolean
-      title: Equal height
+      title: 'Equal height'
       default: true
     anchor_all:
       type: boolean
-      title: Anchor All
+      title: 'Anchor All'
       default: false
     utility_classes:
       type: array
-      title: Utility Classes 
+      title: 'Utility Classes' 
+      description: 'Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add `card`).' 
       default: []
-      description: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card) 
     content_utility_classes:
       type: array
-      title: Content Utility Classes 
+      title: 'Content Utility Classes' 
+      description: 'Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`).'
       default: []
-      description: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
     card_attributes:
       type: Drupal\Core\Template\Attribute
-      title: Card attributes
-      description: HTML attributes for the Card element.
+      title: 'Card attributes'
+      description: 'HTML attributes for the Card element.'
     content_attributes:
       type: Drupal\Core\Template\Attribute
-      title: Content Attributes
-      description: HTML attributes for the content element.
+      title: 'Content Attributes'
+      description: 'HTML attributes for the content element.'
 slots:
   content:
-    title: Card Content
-    description: Content for the Card.
+    title: 'Card Content'
+    description: 'The content slot for the card.'

@@ -1,23 +1,30 @@
 {#
 /**
  * @file
- * Varbase Components implementation for a Impressed Card component.
+ * Varbase Components implementation for the Impressed Card component.
  *
- * Available config:
- * - style_size: Card style size (xsmall|small|medium|large|xlarge).
- * - card_border: Card Boarder (true|false)
- * - padded: Add a default padding to the card. (true|false)
- * - equal_height: Equal height (true|false)
- * - anchor_all: Anchor All (true|false)
- * - media_position: Media position - (top|bottom) to determine if the column is reversed or not.
- * - card_attributes: Drupal attributes for featured card wrapper.
- * - media_attributes: Drupal attributes for card media slot region.
- * - content_attributes: Drupal attributes for card content slot region.
- * - utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)
- * - media_utility_classes: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)
- * - content_utility_classes: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
- * - media: Card Media slot region.
- * - content: Card Content slot region.
+ * Available properties:
+ * - style_size: Card style size. (xsmall|small|medium|large|xlarge).
+ * - card_border: Add a default padding to the card. (true|false).
+ * - padded: Add a default padding to the card. (true|false).
+ * - equal_height: Equal height. (true|false).
+ * - anchor_all: Anchor All (true|false).
+ * - media_position: Choose the location of the media from (top|bottom).
+ * - utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper.
+ *                    E.g. `mb-3 shadow-lg` ( Do not add `card`).
+ * - media_utility_classes: Use to add extra Bootstrap utility classes for the Card Media region wrapper.
+ *                          E.g. `bg-secondary mb-3` ( Do not add `card-img`).
+ * - content_utility_classes: Use to add extra Bootstrap utility classes for the Card Content region wrapper.
+ *                            E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`).
+ *
+ * Available attributes:
+ * - card_attributes: HTML attributes for the card element.
+ * - media_attributes: HTML attributes for the media element.
+ * - content_attributes: HTML attributes for the content element.
+ *
+ * Available slots:
+ * - media: The media image/video slot for the card.
+ * - content: The content slot for the card.
  */
 #}
 
@@ -26,7 +33,8 @@
 {% set padded = padded ? ['p-4'] : [''] %}
 {% set equal_height = equal_height ? ['h-100'] : [] %}
 {% set anchor_all = anchor_all ? ['anchor-all'] : [] %}
-{% set media_position = media_position == 'bottom' ? ['flex-column-reverse'] : [] %}
+{% set media_position = media_position ?? 'top' %}
+{% set media_position_classes = media_position == 'bottom' ? ['flex-column-reverse'] : [] %}
 {% set utility_classes = utility_classes ? utility_classes : [] %}
 {% set media_utility_classes = media_utility_classes ? media_utility_classes : [] %}
 {% set content_utility_classes = content_utility_classes ? content_utility_classes : [] %}
@@ -35,11 +43,14 @@
   set card_classes = [
     'card',
     'varbase-impressed-card',
-  ]|merge(style_size)|merge(card_border)|merge(padded)|merge(equal_height)|merge(anchor_all)|merge(media_position)|merge(utility_classes)
+  ]|merge(style_size)|merge(card_border)|merge(padded)|merge(equal_height)|merge(anchor_all)|merge(media_position_classes)|merge(utility_classes)
 %}
 
 {%
-  set media_classes = []|merge(media_utility_classes)
+  set media_classes = [
+    'card-img',
+    'card-img-' ~ media_position,
+  ]|merge(media_utility_classes)
 %}
 
 {%
@@ -57,18 +68,21 @@
   {% set content_attributes = create_attribute() %}
 {% endif %}
 
-<div{{ card_attributes.addClass(card_classes) }}>
-  {% if media_classes is not empty %}
-    {% if not media_attributes %}
-      {% set media_attributes = create_attribute() %}
-    {% endif %}
-    <div{{ media_attributes.addClass(media_classes) }}>
-  {% endif %}
+{% if not media_attributes %}
+  {% set media_attributes = create_attribute() %}
+{% endif %}
+
+{% set card_attributes = card_attributes.addClass(card_classes) %}
+{% set content_attributes = content_attributes.addClass(content_classes) %}
+{% set media_attributes = media_attributes.addClass(media_classes) %}
+
+<div{{ card_attributes }}>
+  {% if media is not empty %}
+    {% if media_classes|length > 0 %}<div{{ media_attributes }}>{% endif %}
     {{ media }}
-  {% if media_classes is not empty %}
-    </div>
+    {% if media_classes|length > 0 %}</div>{% endif %}
   {% endif %}
-  <div{{ content_attributes.addClass(content_classes) }}>
+  <div{{ content_attributes }}>
     {{ content }}
   </div>
 </div>

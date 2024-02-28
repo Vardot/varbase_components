@@ -27,28 +27,28 @@
       }
     },
     "card_border": {
-      "name": "Card Boarder",
-      "description": "Card Boarder",
-      "defaultValue": true,
-      "control": "boolean"
+      "name": "Card Border",
+      "description": "Add a default border to the card.",
+      "control": "boolean",
+      "defaultValue": true
     },
     "padded": {
       "name": "Padded",
       "description": "Add a default padding to the card.",
-      "defaultValue": false,
-      "control": "boolean"
+      "control": "boolean",
+      "defaultValue": false
     },
     "equal_height": {
       "name": "Equal height",
       "description": "Equal height",
-      "defaultValue": true,
-      "control": "boolean"
+      "control": "boolean",
+      "defaultValue": true
     },
     "anchor_all": {
       "name": "Anchor All",
       "description": "Anchor All",
-      "defaultValue": false,
-      "control": "boolean"
+      "control": "boolean",
+      "defaultValue": false
     },
     "content": {
       "name": "Card content",

@@ -1,22 +1,20 @@
 card_featured:
   use: 'varbase_components:card-featured'
-  label: Featured Card
-  description: Featured card component and pattern for media and content.
+  label: 'Featured Card'
+  description: 'Featured card component and pattern for media and content.'
   fields:
     media:
-      type: media
-      label: Media
-      description: Media description.
+      label: 'Media slot'
+      description: 'The media image/video slot for the card.'
       preview: 'Card Media'
     content:
-      type: 'textfield'
-      label: 'Content'
-      description: 'Content description.'
+      label: 'Content slot'
+      description: 'The content slot for the card.'
       preview: 'Card Content'
   settings:
     style_size:
       type: 'select'
-      label: Card style size
+      label: 'Card style size'
       description: 'Select the size'
       default_value: ''
       options:
@@ -28,7 +26,7 @@ card_featured:
         xlarge: 'X-large'
     card_border:
       type: 'switcher'
-      label: Card Boarder
+      label: Card Border
       default_value: true
     padded:
       type: 'switcher'
@@ -46,6 +44,7 @@ card_featured:
     media_position:
       type: 'select'
       label: 'Media position'
+      description: 'Choose the location of the media from (start|end).'
       default_value: ''
       options:
         '': '- none -'
@@ -163,7 +162,7 @@ card_featured:
     extra_utility_classes:
       type: 'group'
       label: 'Utility classes'
-      description: '<b>Bootstrap </b> has a big list of <b><a href="https://getbootstrap.com/docs/5.3/utilities/api/">Utility API</a></b> which brings out <b>Utility Classes</b> for all Bootstrap Components.'
+      description: '<b>Bootstrap</b> has a big list of <b><a href="https://getbootstrap.com/docs/5.3/utilities/api/">Utility API</a></b> which brings out <b>Utility Classes</b> for all Bootstrap Components.'
       group_type: 'details'
     utility_classes:
       type: 'utility_classes'
@@ -174,7 +173,7 @@ card_featured:
     media_utility_classes:
       type: 'utility_classes'
       label: 'Media region Utility classes'
-      description: 'Use to add extra Bootstrap utility classes for the Card Media region wrapper.<br /> E.g. bg-secondary mb-3 <br /><b>( Do not add card-image)</b>'
+      description: 'Use to add extra Bootstrap utility classes for the Card Media region wrapper.<br /> E.g. bg-secondary mb-3 <br /><b>( Do not add card-img)</b>'
       group: 'extra_utility_classes'
     content_utility_classes:
       type: 'utility_classes'

@@ -1,19 +1,23 @@
 # Text Card
 
-Text card component and pattern.
+Text card component and pattern with content.
 
-### Properties:
-* `style_size`: Card style size (xsmall|small|medium|large|xlarge).
-* `card_border`: Card Boarder (true|false)
-* `padded`: Add a default padding to the card. (true|false)
-* `equal_height`: Equal height (true|false)
-* `anchor_all`: Anchor All (true|false)
-* `card_attributes`: Drupal attributes for featured card wrapper.
-* `content_attributes`: Drupal attributes for card content slot region.
-* `utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)
-* `content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
+## Properties:
+* - `style_size`: Card style size. (xsmall|small|medium|large|xlarge).
+* - `card_border`: Add a default border to the card. (true|false)
+* - `padded`: Add a default padding to the card. (true|false)
+* - `equal_height`: Equal height. (true|false)
+* - `anchor_all`: Anchor All. (true|false)
+* - `utility_classes`: Use to add extra Bootstrap utility classes for the main Card wrapper.
+                       E.g. `mb-3 shadow-lg` ( Do not add `card`).
+* - `content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper.
+                               E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`).
 
-### Slots:
+## Attributes:
+* `card_attributes`: HTML attributes for the Card element.
+* `content_attributes`: HTML attributes for the content element.
+
+## Slots:
 * `content`: Card Content slot region.
 
 ### Options to custom:

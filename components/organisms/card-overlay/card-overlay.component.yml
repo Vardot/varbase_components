@@ -1,15 +1,15 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/10.2.x/core/modules/sdc/src/metadata.schema.json
-name: Overlay Card 
+name: 'Overlay Card'
 status: experimental
-description: Overlay card component for a media and a content over the media with sizes
+description: 'Overlay card component for a media and a content over the media with sizes.'
 group: Cards
 props:
   type: object
   properties:
     style_size:
       type: string
-      title: Card style size
-      description: Card style size (xsmall|small|medium|large|xlarge).
+      title: 'Card style size'
+      description: 'Card style size. (xsmall|small|medium|large|xlarge).'
       default: ''
       enum:
         - ''
@@ -20,24 +20,26 @@ props:
         - xlarge
     card_border:
       type: boolean
-      title: Card Boarder
+      title: 'Card Border'
+      description: 'Add a default border to the card.'
       default: true
     padded:
       type: boolean
-      title: Padded
+      title: 'Padded'
+      description: 'Add a default padding to the card.'
       default: false
-      description: Add a default padding to the card.
     equal_height:
       type: boolean
-      title: Equal height
+      title: 'Equal height'
       default: true
     anchor_all:
       type: boolean
-      title: Anchor All
+      title: 'Anchor All'
       default: false
     horizontal_alignment:
       type: string
-      title: Horizontal alignment
+      title: 'Horizontal alignment'
+      description: 'Horizontal alignment of the content.'
       default: ''
       enum:
         - ''
@@ -46,7 +48,8 @@ props:
         - end
     vertical_alignment:
       type: string
-      title: Vertical alignment
+      title: 'Vertical alignment'
+      description: 'Vertical alignment of the content.'
       default: ''
       enum:
         - ''
@@ -55,27 +58,35 @@ props:
         - end
     utility_classes:
       type: array
-      title: Utility Classes
+      title: 'Utility Classes'
+      description: 'Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add `card`).' 
       default: []
-      description: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card) 
     media_utility_classes:
       type: array
-      title: Media Utility Classes
+      title: 'Media Utility Classes'
+      description: 'Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add `card-img`).'
       default: []
-      description: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-image)
     content_utility_classes:
       type: array
-      title: Content Utility Classes
+      title: 'Content Utility Classes'
+      description: 'Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`).'
       default: []
-      description: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
     card_attributes:
       type: Drupal\Core\Template\Attribute
+      title: 'Card Attributes'
+      description: 'HTML attributes for the card element.'
+    media_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: 'Media Attributes'
+      description: 'HTML attributes for the media element.'
     content_attributes:
       type: Drupal\Core\Template\Attribute
+      title: 'Content Attributes'
+      description: 'HTML attributes for the content element.'
 slots:
   media:
-    title: Card Media
-    description: Media for the Card.
+    title: 'Card Media'
+    description: 'The media image/video slot for the card.'
   content:
-    title: Card Content
-    description: Content for the Card.
+    title: 'Card Content'
+    description: 'The content slot for the card.'

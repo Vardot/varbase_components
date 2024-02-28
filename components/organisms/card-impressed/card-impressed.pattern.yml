@@ -1,22 +1,20 @@
 card_impressed:
   use: 'varbase_components:card-impressed'
   label: 'Impressed Card'
-  description: Impressed card component description.
+  description: 'Impressed card component description.'
   fields:
     media:
-      type: media
-      label: Media
-      description: 'Media description.'
-      preview: 'Card Media region'
+      label: 'Media slot'
+      description: 'The media image/video slot for the card.'
+      preview: 'Card Media'
     content:
-      type: 'textfield'
-      label: 'Content'
-      description: 'Content description.'
+      label: 'Content slot'
+      description: 'The content slot for the card.'
       preview: 'Card Content'
   settings:
     style_size:
       type: 'select'
-      label: Card style size
+      label: 'Card style size'
       default_value: ''
       options:
         '': '- none -'
@@ -27,24 +25,25 @@ card_impressed:
         xlarge: 'X-large'
     card_border:
       type: 'switcher'
-      label: Card Boarder
+      label: 'Card Border'
       default_value: true
     padded:
       type: 'switcher'
-      label: Padded
+      label: 'Padded'
       description: 'Add a default padding to the card.'
       default_value: false
     equal_height:
       type: 'switcher'
-      label: Equal height
+      label: 'Equal height'
       default_value: true
     anchor_all:
       type: 'switcher'
-      label: Anchor All
+      label: 'Anchor All'
       default_value: false
     media_position:
       type: 'select'
       label: 'Media position'
+      description: 'Choose the location of the media from (top|bottom).'
       default_value: ''
       options:
         '': '- none -'
@@ -53,7 +52,7 @@ card_impressed:
     extra_utility_classes:
       type: 'group'
       label: 'Utility classes'
-      description: '<b>Bootstrap </b> has a big list of <b><a href="https://getbootstrap.com/docs/5.3/utilities/api/">Utility API</a></b> which brings out <b>Utility Classes</b> for all Bootstrap Components.'
+      description: '<b>Bootstrap</b> has a big list of <b><a href="https://getbootstrap.com/docs/5.3/utilities/api/">Utility API</a></b> which brings out <b>Utility Classes</b> for all Bootstrap Components.'
       group_type: 'details'
     utility_classes:
       type: 'utility_classes'
@@ -64,10 +63,12 @@ card_impressed:
     media_utility_classes:
       type: 'utility_classes'
       label: 'Media region Utility classes'
-      description: 'Use to add extra Bootstrap utility classes for the Card Media region wrapper.<br /> E.g. bg-secondary mb-3 <br /><b>( Do not add card-image)</b>'
+      description: 'Use to add extra Bootstrap utility classes for the Card Media region wrapper.<br /> E.g. bg-secondary mb-3 <br /><b>( Do not add card-img)</b>'
+      default_value: { }
       group: 'extra_utility_classes'
     content_utility_classes:
       type: 'utility_classes'
       label: 'Content region Utility classes'
       description: 'Use to add extra Bootstrap utility classes for the Card Content region wrapper.<br /> E.g. w-75 mb-3 overflow-y-hidden <br /><b>( Do not add card-body)</b>'
+      default_value: { }
       group: 'extra_utility_classes'
