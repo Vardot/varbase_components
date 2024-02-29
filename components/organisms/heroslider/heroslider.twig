@@ -136,15 +136,15 @@
         {# Add controls for the carousel #}
         {% if controls %}
           <div class="carousel-control-buttons">
-            <button class="carousel-control-prev" type="button" data-bs-target="#{{ heroslider_id }}" data-bs-slide="prev">
+            <button class="carousel-control-prev js-carousel-control-prev" type="button" data-bs-target="#{{ heroslider_id }}" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">{{ 'Previous'|t }}</span>
             </button>
-            <button class="carousel-control-pause" type="button" data-bs-target="#{{ heroslider_id }}" data-bs-slide="pause">
+            <button class="carousel-control-pause js-carousel-control-pause" type="button" data-bs-target="#{{ heroslider_id }}" data-bs-slide="pause">
               <span class="carousel-control-pause-icon" aria-hidden="true"></span>
               <span class="visually-hidden">{{ 'Pause'|t }}</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#{{ heroslider_id }}" data-bs-slide="next">
+            <button class="carousel-control-next js-carousel-control-next" type="button" data-bs-target="#{{ heroslider_id }}" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">{{ 'Next'|t }}</span>
             </button>
