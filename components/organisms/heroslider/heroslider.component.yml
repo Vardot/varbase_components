@@ -111,3 +111,6 @@ slots:
 libraryOverrides:
   dependencies:
     - varbase_components/bs-carousel-script
+    - varbase_components/local-video-slider
+    - varbase_components/youtube-video-slider
+    - varbase_components/vimeo-video-slider

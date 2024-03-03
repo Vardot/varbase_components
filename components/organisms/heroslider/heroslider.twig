@@ -34,6 +34,8 @@
  *
  */
 #}
+{% apply spaceless %}
+
 {% set media_position = media_position ? ['hero-style-' ~ media_position] : ['hero-style-overlay'] %}
 {% set heroslider_id = id ? id : 'heroslider-' ~ random(1000) %}
 {% set utility_classes = utility_classes ?? [] %}
@@ -161,3 +163,5 @@
     </div>
   </div>
 {% endif %}
+
+{% endapply %}

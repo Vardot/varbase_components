@@ -22,8 +22,8 @@ $hero-card-content-background-color2: rgba(0, 0, 0, 0.50) 73.4%;
 $hero-card-max-height-xs: auto;
 $hero-card-min-height-xs: auto;
 
-$hero-card-max-height-md: 43.75rem;
-$hero-card-min-height-md: 43.75rem;
+$hero-card-max-height-lg: 43.75rem;
+$hero-card-min-height-lg: 43.75rem;
 
 .varbase-hero-card {
 
@@ -32,7 +32,7 @@ $hero-card-min-height-md: 43.75rem;
       top: 0;
       left: 0;
       width: 100%;
-      min-height: $hero-card-min-height-md;
+      min-height: $hero-card-min-height-lg;
       object-fit: cover;
     }
 
@@ -48,7 +48,7 @@ $hero-card-min-height-md: 43.75rem;
         top: 0;
         left: 0;
         width: 100%;
-        min-height: $hero-card-min-height-md;
+        min-height: $hero-card-min-height-lg;
         object-fit: cover;
       }
 
@@ -56,7 +56,7 @@ $hero-card-min-height-md: 43.75rem;
         top: 0;
         left: 0;
         width: 100%;
-        min-height: $hero-card-min-height-md;
+        min-height: $hero-card-min-height-lg;
         object-fit: cover;
       }
 
@@ -85,8 +85,8 @@ $hero-card-min-height-md: 43.75rem;
 
   &.hero-style-overlay {
 
-    min-height: $hero-card-min-height-md;
-    max-height: $hero-card-max-height-md;
+    min-height: $hero-card-min-height-lg;
+    max-height: $hero-card-max-height-lg;
 
     .ratio {
       width: 100vw;
@@ -150,7 +150,7 @@ $hero-card-min-height-md: 43.75rem;
 
       &.card-body {
         @media screen and (min-width: map-get($grid-breakpoints, "md")) {
-          min-height: $hero-card-min-height-md;
+          min-height: $hero-card-min-height-lg;
         }
       }
     }
@@ -215,18 +215,18 @@ $hero-card-min-height-md: 43.75rem;
       width: 100%;
 
       @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-        min-height: $hero-card-min-height-md;
-        max-height: $hero-card-max-height-md;
+        min-height: $hero-card-min-height-lg;
+        max-height: $hero-card-max-height-lg;
       }
     }
 
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-      min-height: $hero-card-min-height-md;
+      min-height: $hero-card-min-height-lg;
     }
 
     .drimage picture {
       @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-        max-height: $hero-card-max-height-md;
+        max-height: $hero-card-max-height-lg;
       }
     }
   }
@@ -234,22 +234,22 @@ $hero-card-min-height-md: 43.75rem;
   &.hero-style-start,
   &.hero-style-end {
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-      min-height: $hero-card-min-height-md;
-      max-height: $hero-card-max-height-md;
+      min-height: $hero-card-min-height-lg;
+      max-height: $hero-card-max-height-lg;
     }
 
     .hero-card-content {
       &.card-body {
         @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-          min-height: $hero-card-min-height-md;
+          min-height: $hero-card-min-height-lg;
         }
       }
     }
 
     .card-body {
       @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-        min-height: $hero-card-min-height-md;
-        max-height: $hero-card-max-height-md;
+        min-height: $hero-card-min-height-lg;
+        max-height: $hero-card-max-height-lg;
       }
     }
 
@@ -257,8 +257,8 @@ $hero-card-min-height-md: 43.75rem;
       .card-img {
         overflow: hidden;
         width: 100%;
-        min-height: $hero-card-min-height-md;
-        max-height: $hero-card-max-height-md;
+        min-height: $hero-card-min-height-lg;
+        max-height: $hero-card-max-height-lg;
       }
     }
 
