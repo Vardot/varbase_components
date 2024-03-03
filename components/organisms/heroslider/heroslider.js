@@ -28,31 +28,7 @@
       )
       .on('click', (event) => {
         const target_heroslider = $($(event.currentTarget).data('bs-target'));
-        target_heroslider.carousel({
-          interval: target_heroslider.data('bs-interval'),
-          pause: false,
-        });
         target_heroslider.carousel('pause');
-        event.preventDefault();
-        event.stopPropagation();
-      });
-
-      // When clicking on next slide or previous slide buttons.
-      // reset the pause to on the default data-bs-pause value (hover)
-      // and slide.
-      $(
-        once(
-          'varbase-heroslider-carousel',
-          '.js-carousel-control-next , .js-carousel-control-prev',
-          context,
-        ),
-      ).on('click', (event) => {
-        const target_heroslider = $($(event.currentTarget).data('bs-target'));
-        target_heroslider.carousel({
-          interval: target_heroslider.data('bs-interval'),
-          pause: target_heroslider.data('bs-pause'),
-        });
-        target_heroslider.carousel($(event.currentTarget).data('bs-slide'));
       });
     }
   };
@@ -67,9 +43,24 @@
    */
   Drupal.behaviors.varbaseHeroSliderDrimage = {
     attach: function (context, settings) {
-      document.querySelector(".carousel.varbase-heroslider", context).addEventListener("slid.bs.carousel", (event => {
-        Drupal.drimage.init(document.querySelector(".carousel.varbase-heroslider", context));
-      }));
+
+      var timer;
+
+      $(
+        once(
+          'varbase-heroslider-drimage',
+          '.js-varbase-heroslider',
+          context,
+        ),
+      )
+      .on('slid.bs.carousel', (event) => {
+        clearTimeout(timer);
+        timer = setTimeout(Drupal.drimage.init, 100, event.currentTarget);
+      })
+      .on('slide.bs.carousel', (event) => {
+        clearTimeout(timer);
+        timer = setTimeout(Drupal.drimage.init, 100, event.currentTarget);
+      });
     }
   };
 })(jQuery, Drupal, once);
