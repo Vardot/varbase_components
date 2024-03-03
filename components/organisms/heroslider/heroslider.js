@@ -55,7 +55,7 @@
       )
       .on('slid.bs.carousel', (event) => {
         clearTimeout(timer);
-        timer = setTimeout(Drupal.drimage.init, 100, event.currentTarget);
+        timer = setTimeout(Drupal.drimage.init, 5, event.currentTarget);
       })
       .on('slide.bs.carousel', (event) => {
         clearTimeout(timer);
