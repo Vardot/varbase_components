@@ -6,6 +6,12 @@ $varbase-heroslider-min-height-xs: auto;
 $varbase-heroslider-max-height-md: 43.75rem;
 $varbase-heroslider-min-height-md: 43.75rem;
 
+$hero-card-max-height-xs: auto;
+$hero-card-min-height-xs: auto;
+
+$hero-card-max-height-lg: 43.75rem;
+$hero-card-min-height-lg: 43.75rem;
+
 // Text color.
 $hero-title-text-color: $white;
 $hero-brief-text-color: $white;
@@ -194,6 +200,39 @@ $carousel-control-pause-icon-dark: url("data:image/svg+xml,<svg xmlns='http://ww
     }
   }
 
+  &.hero-style-start,
+  &.hero-style-end {
+    .varbase-hero-card {
+      @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        min-height: $hero-card-min-height-lg;
+        max-height: $hero-card-max-height-lg;
+      }
+  
+      .card-body,
+      .media {
+        @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+          min-height: $hero-card-min-height-lg;
+          max-height: $hero-card-max-height-lg;
+        }
+      }
+
+      @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
+        .card-img {
+          .ratio {
+            height: 81vh;
+          }
+        }
+
+        .media {
+          iframe {
+            height: 81vh;
+            width: 100vw;
+          }
+        }
+      }
+    }
+  }
+
   &.hero-style-start {
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
       .carousel-controls {
@@ -201,6 +240,10 @@ $carousel-control-pause-icon-dark: url("data:image/svg+xml,<svg xmlns='http://ww
         right: 9.375rem;
         left: auto;
         width: calc(50vw - 11.125rem);
+      }
+
+      .card-body {
+        margin-right: 9.375rem;
       }
     }
   }
@@ -213,7 +256,13 @@ $carousel-control-pause-icon-dark: url("data:image/svg+xml,<svg xmlns='http://ww
         left: 9.375rem;
         width: calc(50vw - 11.125rem);
       }
+
+      .card-body {
+        margin-left: 9.375rem;
+      }
     }
+
+
   }
 
   &> .view-empty {

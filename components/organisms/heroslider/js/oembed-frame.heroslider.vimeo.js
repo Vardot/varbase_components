@@ -1,83 +1,38 @@
-/**
- * @file
- * Behaviors of Vimeo player in the Heroslider OEmbed iframe.
- */
+const tag = document.createElement("script");
 
-function ready(fn) {
-  if (document.readyState !== 'loading') {
-    fn();
-  } else if (document.addEventListener) {
-    document.addEventListener('DOMContentLoaded', fn);
-  } else {
-    document.attachEvent('onreadystatechange', function () {
-      if (document.readyState !== 'loading') {
-        fn();
-      }
-    });
-  }
-}
+tag.src = "//player.vimeo.com/api/player.js";
 
-// Load the Vimeo API library.
-const tag = document.createElement('script');
-tag.src = '//player.vimeo.com/api/player.js';
-const firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+const firstScriptTag = document.getElementsByTagName("script")[0];
 
-ready(function () {
-  const mediaIframe = document.querySelector('iframe');
-  mediaIframe.setAttribute('id', 'media-oembed-iframe');
+var fn;
 
-  let playerConfgured = false;
-  let videoLoop = false;
-  let vimeoPlayer;
-
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag), fn = function() {
+  document.querySelector("iframe").setAttribute("id", "media-oembed-iframe");
+  let vimeoPlayer, playerConfgured = !1, videoLoop = !1;
   function actionProcessor(evt) {
-    // Manage Vimeo video.
-    if (evt.data === 'play') {
+    if ("play" === evt.data) {
       if (!playerConfgured) {
-        const vimeoIframe = document.querySelector('iframe[src*="vimeo.com"]');
-
-        const vimeoOptions = {
-          background: true,
-          autoplay: true,
-          muted: true,
-          controls: false,
+        const vimeoIframe = document.querySelector('iframe[src*="vimeo.com"]'), vimeoOptions = {
+          background: !0,
+          autoplay: !0,
+          muted: !0,
+          controls: !1
         };
-
-        vimeoPlayer = new window.Vimeo.Player(vimeoIframe, vimeoOptions);
-        vimeoPlayer.setVolume(0);
-        vimeoPlayer.setLoop(videoLoop);
-        vimeoPlayer.on('ended', function () {
-          window.parent.postMessage('endedVimeo', '*');
-          vimeoPlayer.pause();
-        });
-
-        vimeoPlayer.on('play', function () {
-          window.parent.postMessage('playingVimeo', '*');
-        });
-        playerConfgured = true;
+        vimeoPlayer = new window.Vimeo.Player(vimeoIframe, vimeoOptions), vimeoPlayer.setVolume(0), 
+        vimeoPlayer.setLoop(videoLoop), vimeoPlayer.on("ended", (function() {
+          window.parent.postMessage("endedVimeo", "*"), vimeoPlayer.pause();
+        })), vimeoPlayer.on("play", (function() {
+          window.parent.postMessage("playingVimeo", "*");
+        })), playerConfgured = !0;
       }
-
-      vimeoPlayer.ready().then(function () {
-        vimeoPlayer.getPaused().then(function (paused) {
-          if (paused) {
-            vimeoPlayer.play();
-          }
-        });
-      });
-    } else if (evt.data === 'pause') {
-      if (playerConfgured) {
-        vimeoPlayer.pause();
-      }
-    } else if (evt.data === 'loop') {
-      videoLoop = true;
-    }
+      vimeoPlayer.ready().then((function() {
+        vimeoPlayer.getPaused().then((function(paused) {
+          paused && vimeoPlayer.play();
+        }));
+      }));
+    } else "pause" === evt.data ? playerConfgured && vimeoPlayer.pause() : "loop" === evt.data && (videoLoop = !0);
   }
-
-  // Setup the event listener for messaging.
-  if (window.addEventListener) {
-    window.addEventListener('message', actionProcessor, false);
-  } else {
-    window.attachEvent('onmessage', actionProcessor);
-  }
-});
+  window.addEventListener ? window.addEventListener("message", actionProcessor, !1) : window.attachEvent("onmessage", actionProcessor);
+}, "loading" !== document.readyState ? fn() : document.addEventListener ? document.addEventListener("DOMContentLoaded", fn) : document.attachEvent("onreadystatechange", (function() {
+  "loading" !== document.readyState && fn();
+}));

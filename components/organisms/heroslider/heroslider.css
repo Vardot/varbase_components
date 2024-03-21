@@ -148,6 +148,33 @@
 }
 
 @media screen and (min-width: 992px) {
+  .carousel.varbase-heroslider.hero-style-start .varbase-hero-card, .carousel.varbase-heroslider.hero-style-end .varbase-hero-card {
+    min-height: 43.75rem;
+    max-height: 43.75rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .carousel.varbase-heroslider.hero-style-start .varbase-hero-card .card-body,
+  .carousel.varbase-heroslider.hero-style-start .varbase-hero-card .media, .carousel.varbase-heroslider.hero-style-end .varbase-hero-card .card-body,
+  .carousel.varbase-heroslider.hero-style-end .varbase-hero-card .media {
+    min-height: 43.75rem;
+    max-height: 43.75rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .carousel.varbase-heroslider.hero-style-start .varbase-hero-card .card-img .ratio, .carousel.varbase-heroslider.hero-style-end .varbase-hero-card .card-img .ratio {
+    height: 81vh;
+  }
+
+  .carousel.varbase-heroslider.hero-style-start .varbase-hero-card .media iframe, .carousel.varbase-heroslider.hero-style-end .varbase-hero-card .media iframe {
+    height: 81vh;
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
   .carousel.varbase-heroslider.hero-style-start .carousel-controls {
     position: absolute;
     width: calc(50vw - 11.125rem);
@@ -161,6 +188,14 @@
   [dir="rtl"] .carousel.varbase-heroslider.hero-style-start .carousel-controls {
     left: 9.375rem;
     right: auto;
+  }
+
+  [dir="ltr"] .carousel.varbase-heroslider.hero-style-start .card-body {
+    margin-right: 9.375rem;
+  }
+
+  [dir="rtl"] .carousel.varbase-heroslider.hero-style-start .card-body {
+    margin-left: 9.375rem;
   }
 }
 
@@ -178,6 +213,14 @@
   [dir="rtl"] .carousel.varbase-heroslider.hero-style-end .carousel-controls {
     left: auto;
     right: 9.375rem;
+  }
+
+  [dir="ltr"] .carousel.varbase-heroslider.hero-style-end .card-body {
+    margin-left: 9.375rem;
+  }
+
+  [dir="rtl"] .carousel.varbase-heroslider.hero-style-end .card-body {
+    margin-right: 9.375rem;
   }
 }
 
