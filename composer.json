@@ -20,15 +20,11 @@
     "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-    },
-    "assets": {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
     }
   },
   "require": {
     "drupal/core": "~10",
-    "vardot/varbase-patches": "~10.0.0",
+    "vardot/varbase-patches": "~10",
     "vardot/entity-definition-update-manager": "~1",
     "vardot/module-installer-factory": "~1",
     "drupal/cl_components": "~1",
