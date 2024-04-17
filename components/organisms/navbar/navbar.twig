@@ -32,9 +32,20 @@
   ]|merge(placement)|merge(color_mode)|merge(color)|merge(navbar_expand)|merge(utility_classes)
 %}
 
-<nav{{attributes.addClass(classes)}}>
+<nav{{ attributes.addClass(classes) }}>
   {% if container %}
-    <div class="{{ container }}">
+    {%
+      set container_classes = [
+        container,
+        'z-3',
+      ]|merge(color)
+    %}
+
+    {% if not container_attributes %}
+      {% set container_attributes = create_attribute() %}
+    {% endif %}
+
+    <div{{ container_attributes.addClass(container_classes) }}>
   {% endif %}
 
   {% block branding %}
