@@ -21,6 +21,15 @@
   right: 0;
 }
 
+@media screen and (max-width: 992px) {
+  .varbase-hero-card.hero-style-overlay .ratio > .drimage,
+  .varbase-hero-card.hero-style-overlay .ratio > video,
+  .varbase-hero-card.hero-style-overlay .ratio > iframe {
+    position: fixed;
+    top: 20%;
+  }
+}
+
 .varbase-hero-card.hero-style-overlay .hero-card-content {
   position: absolute;
   width: 100%;
