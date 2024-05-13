@@ -1,22 +1,40 @@
-.site-footer section.region-footer > * {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  font-size: .65rem;
-  padding: 1rem 1rem 0 1rem;
+footer.footer {
+  background-color: #084298;
+  color: var(--bs-white);
 }
 
-@media screen and (min-width: 992px) {
-  .site-footer section.region-footer > * {
-    flex: 1 0 0;
-  }
+footer.footer a {
+  color: var(--bs-white);
+  text-decoration: none;
 }
 
-.site-footer .menu--footer ul.nav {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: center;
+footer.footer a:hover, footer.footer a:focus, footer.footer a:active, footer.footer a.active {
+  color: var(--bs-white);
+  text-decoration: underline;
+}
+
+footer.footer .footer-logo-image {
+  height: 1.88rem;
+}
+
+.social-media-menu-icons li.nav-item > a {
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.social-media-menu-icons li.nav-item > a::before {
+  text-indent: 0;
+}
+
+[dir="ltr"] .social-media-menu-icons li.nav-item > a::before {
+  float: left;
+}
+
+[dir="rtl"] .social-media-menu-icons li.nav-item > a::before {
+  float: right;
+}
+
+.social-media-menu-icons li.nav-item > a:hover, .social-media-menu-icons li.nav-item > a:focus, .social-media-menu-icons li.nav-item > a:active, .social-media-menu-icons li.nav-item > a.active {
+  color: #cfe2ff;
 }
 

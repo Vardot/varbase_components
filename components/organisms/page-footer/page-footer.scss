@@ -1,27 +1,41 @@
 // Page footer styles.
 @import "../../defaults";   // Global component defaults.
 
-.site-footer {
-  section.region-footer {
-    > * {
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      justify-content: center;
-      @include font-size(0.65rem);
-      @include padding($spacer $spacer 0 $spacer);
-      @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
-        flex: 1 0 0;
-      }
+footer.footer {
+  background-color: shade-color($primary, 40%);
+  color: var(--bs-white);
+
+  a {
+    color: var(--bs-white);
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.is-active {
+      color: var(--bs-white);
+      text-decoration: underline;
     }
   }
 
-  .menu--footer {
-    ul.nav {
-      display: flex;
-      flex-flow: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+  .footer-logo-image {
+    height: 1.88rem;
+  }
+}
+
+.social-media-menu-icons li.nav-item > a {
+  overflow: hidden;
+  text-indent: -9999px;  
+
+  &::before {
+    text-indent: 0;
+    float: left;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: tint-color($primary, 80%);
   }
 }
