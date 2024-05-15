@@ -32,3 +32,16 @@ function varbase_components_preprocess_media_oembed_iframe__remote_video__herosl
   $variables['base_path'] = base_path();
   $variables['varbase_components_path'] = \Drupal::service('module_handler')->getModule('varbase_components')->getPath();
 }
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function varbase_components_library_info_alter(array &$libraries, $module) {
+  if ($module === 'sitewide_alert' && isset($libraries['init'])) {
+      // Add the dependency only if it's not already present.
+      if (!in_array('sdc/varbase_components--alert', $libraries['init']['dependencies'])) {
+        $libraries['init']['dependencies'][] = 'sdc/varbase_components--alert';
+      }
+    unset($libraries['init']['css']);
+  }
+}
