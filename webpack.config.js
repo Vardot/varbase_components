@@ -20,6 +20,7 @@ module.exports = {
     'molecules/pagination/pagination': ['./components/molecules/pagination/pagination.scss'],
     'molecules/breadcrumb/breadcrumb': ['./components/molecules/breadcrumb/breadcrumb.scss'],
     'molecules/tabs/tabs': ['./components/molecules/tabs/tabs.scss'],
+    'molecules/navbar-brand/navbar-brand': ['./components/molecules/navbar-brand/navbar-brand.scss'],
     'organisms/nav/nav': ['./components/organisms/nav/nav.scss'],
     'organisms/navbar/navbar': ['./components/organisms/navbar/navbar.scss'],
     // 'organisms/page-header/page-header': ['./components/organisms/page-header/page-header.scss'],

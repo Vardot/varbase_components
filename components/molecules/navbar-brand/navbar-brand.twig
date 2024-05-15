@@ -21,7 +21,7 @@
 
 {# Declare a function called image that return an image tag with all its attributes #}
 {% macro image(src, width, height, alt) %}
-  <img src="{{ src }}" height="{{ height }}" width="{{ width }}" alt="{{ alt|default('') }}" class="me-2" />
+  <img src="{{ src }}" height="{{ height }}" width="{{ width }}" alt="{{ alt|default('') }}" class="brand-logo-image" />
 {% endmacro %}
 
 {% set utility_classes = utility_classes|join(' ') %}

@@ -1,23 +1,97 @@
 @import "../../defaults";   // Global component defaults.
 
-[data-bs-theme=light] {
-  .navbar {
-    background: var(--bs-white);
+.navbar {
+  height: 5.25rem;
+  background: var(--bs-white);
+
+  .form-inline {
+    .form-actions {
+      display: none;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      a.nav-link {
+        position: relative;
+        font-weight: bold;
+        color: var(--bs-gray-900);
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--bs-primary) !important;
+
+          &:after {
+            content: "";
+            position: absolute;
+            transition: left 0.3s;
+            transition: right 0.3s;
+            left: 15% !important;
+            right: 15% !important;
+            height: 1px;
+            bottom: 0;
+            background-color: var(--bs-primary);
+          }
+        }
+
+        &.is-active {
+          &:after {
+            content: "";
+            position: absolute;
+            left: 30%;
+            right: 30%;
+            height: 1px;
+            bottom: 0;
+            background-color: var(--bs-primary);
+          }
+        }
+      }
+    }
   }
 }
 
 [data-bs-theme=dark] {
   .navbar {
     background: $blue-700;
-  }
-}
 
-.navbar {
-  height: 5.25rem;
+    .navbar-nav {
+      .nav-item {
+        a.nav-link {
+          position: relative;
+          color: var(--bs-white);
 
-  .form-inline {
-    .form-actions {
-      display: none;
+          &:hover,
+          &:focus,
+          &:active {
+            color: var(--bs-white) !important;
+  
+            &:after {
+              content: "";
+              left: 15% !important;
+              right: 15% !important;
+              position: absolute;
+              height: 1px;
+              bottom: 0;
+              background-color: var(--bs-white);
+            }
+          }
+  
+          &.is-active {
+            &:after {
+              content: "";
+              position: absolute;
+              left: 30%;
+              right: 30%;
+              height: 1px;
+              bottom: 0;
+              background-color: var(--bs-white);
+            }
+
+            border-bottom: 1px var(--bs-white);
+          }
+        }
+      }
     }
   }
 }
