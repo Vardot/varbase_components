@@ -3,53 +3,6 @@ footer.footer {
   color: var(--bs-white);
 }
 
-footer.footer .block-menu-blockmain .nav-item a.nav-link {
-  position: relative;
-  color: var(--bs-white);
-  text-decoration: none;
-}
-
-footer.footer .block-menu-blockmain .nav-item a.nav-link:hover, footer.footer .block-menu-blockmain .nav-item a.nav-link:focus, footer.footer .block-menu-blockmain .nav-item a.nav-link:active {
-  color: var(--bs-white);
-}
-
-footer.footer .block-menu-blockmain .nav-item a.nav-link:hover:after, footer.footer .block-menu-blockmain .nav-item a.nav-link:focus:after, footer.footer .block-menu-blockmain .nav-item a.nav-link:active:after {
-  position: absolute;
-  content: "";
-  top: 80%;
-  transition: width .3s;
-  width: 2.4rem !important;
-  height: 1px;
-  bottom: 0;
-  background-color: var(--bs-white);
-}
-
-[dir="ltr"] footer.footer .block-menu-blockmain .nav-item a.nav-link:hover:after, [dir="ltr"] footer.footer .block-menu-blockmain .nav-item a.nav-link:focus:after, [dir="ltr"] footer.footer .block-menu-blockmain .nav-item a.nav-link:active:after {
-  left: 0;
-}
-
-[dir="rtl"] footer.footer .block-menu-blockmain .nav-item a.nav-link:hover:after, [dir="rtl"] footer.footer .block-menu-blockmain .nav-item a.nav-link:focus:after, [dir="rtl"] footer.footer .block-menu-blockmain .nav-item a.nav-link:active:after {
-  right: 0;
-}
-
-footer.footer .block-menu-blockmain .nav-item a.nav-link.is-active:after {
-  position: absolute;
-  content: "";
-  top: 80%;
-  width: 1.3rem;
-  height: 1px;
-  bottom: 0;
-  background-color: var(--bs-white);
-}
-
-[dir="ltr"] footer.footer .block-menu-blockmain .nav-item a.nav-link.is-active:after {
-  left: 0;
-}
-
-[dir="rtl"] footer.footer .block-menu-blockmain .nav-item a.nav-link.is-active:after {
-  right: 0;
-}
-
 footer.footer a {
   color: var(--bs-white);
   text-decoration: none;
@@ -60,8 +13,66 @@ footer.footer a:hover, footer.footer a:focus, footer.footer a:active {
   text-decoration: underline;
 }
 
+footer.footer p a {
+  text-decoration: underline;
+}
+
+footer.footer p a:hover, footer.footer p a:focus, footer.footer p a:active {
+  transition: -webkit-text-decoration .4s;
+  transition: text-decoration .4s;
+  transition: text-decoration .4s, -webkit-text-decoration .4s;
+  text-decoration: none;
+}
+
 footer.footer .footer-logo-image {
   height: 1.88rem;
+}
+
+.sitemap-menu .nav-item a.nav-link {
+  position: relative;
+  color: var(--bs-white);
+  text-decoration: none;
+}
+
+.sitemap-menu .nav-item a.nav-link:hover, .sitemap-menu .nav-item a.nav-link:focus, .sitemap-menu .nav-item a.nav-link:active {
+  color: var(--bs-white);
+}
+
+.sitemap-menu .nav-item a.nav-link:hover:after, .sitemap-menu .nav-item a.nav-link:focus:after, .sitemap-menu .nav-item a.nav-link:active:after {
+  position: absolute;
+  content: "";
+  top: 80%;
+  transition: width .3s;
+  width: 2.4rem !important;
+  height: 1px;
+  bottom: 0;
+  background-color: var(--bs-white);
+}
+
+[dir="ltr"] .sitemap-menu .nav-item a.nav-link:hover:after, [dir="ltr"] .sitemap-menu .nav-item a.nav-link:focus:after, [dir="ltr"] .sitemap-menu .nav-item a.nav-link:active:after {
+  left: 0;
+}
+
+[dir="rtl"] .sitemap-menu .nav-item a.nav-link:hover:after, [dir="rtl"] .sitemap-menu .nav-item a.nav-link:focus:after, [dir="rtl"] .sitemap-menu .nav-item a.nav-link:active:after {
+  right: 0;
+}
+
+.sitemap-menu .nav-item a.nav-link.is-active:after {
+  position: absolute;
+  content: "";
+  top: 80%;
+  width: 1.3rem;
+  height: 1px;
+  bottom: 0;
+  background-color: var(--bs-white);
+}
+
+[dir="ltr"] .sitemap-menu .nav-item a.nav-link.is-active:after {
+  left: 0;
+}
+
+[dir="rtl"] .sitemap-menu .nav-item a.nav-link.is-active:after {
+  right: 0;
 }
 
 .social-media-menu-icons li.nav-item > a {
