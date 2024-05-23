@@ -33,7 +33,7 @@ props:
       description: The list is keyed by the following elements (first, previous, next, last, pages) which they have href, attributes, text)
       default: []
     current:
-      type: string
+      type: number
       title: Current page
       description: The page number of the current page.
     ellipses:

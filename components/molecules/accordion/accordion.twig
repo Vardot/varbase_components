@@ -99,13 +99,13 @@
   <div{{ attributes }}>
     {% for item in items %}
       {% include "varbase_components:accordion-item" with {
-        item_id: item.id,
+        item_id: item.id ? item.id : '',
         accordion_id: accordion_id,
         header_tag: header_tag,
-        collapsable: item.collapsable,
+        collapsable: item.collapsable ? item.collapsable : false,
         expanded: (loop.index == expanded_item_index or item.expanded) ? true : false,
-        header: item.header,
-        body: item.body,
+        header: item.header ? item.header : '',
+        body: item.body ? item.body : '',
       } only %}
     {% endfor %}
   </div>
