@@ -74,5 +74,5 @@ slots:
       - Read more
 libraryOverrides:
   dependencies:
-    - varbase_components:bs-base-component-script
+    - varbase_components/bs-base-component-script
     - varbase_components/bs-button-script
