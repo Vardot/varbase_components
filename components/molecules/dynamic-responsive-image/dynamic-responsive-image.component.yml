@@ -53,4 +53,4 @@ props:
       description: HTML attributes for the No JavaScript Image element.
 libraryOverrides:
   dependencies:
-    - drimage/drimage
+    - drimage_improved/drimage_improved

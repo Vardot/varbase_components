@@ -9,9 +9,9 @@
     attach: function(context, settings) {
       var timer;
       $(once("varbase-heroslider-drimage", ".js-varbase-heroslider", context)).on("slid.bs.carousel", (event => {
-        clearTimeout(timer), timer = setTimeout(Drupal.drimage.init, 5, event.currentTarget);
+        clearTimeout(timer), timer = setTimeout(Drupal.drimage_improved.init, 5, event.currentTarget);
       })).on("slide.bs.carousel", (event => {
-        clearTimeout(timer), timer = setTimeout(Drupal.drimage.init, 100, event.currentTarget);
+        clearTimeout(timer), timer = setTimeout(Drupal.drimage_improved.init, 100, event.currentTarget);
       }));
     }
   };

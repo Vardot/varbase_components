@@ -32,7 +32,7 @@
   {% set item_attributes = create_attribute() %}
 {% endif %}
 {% set item_attributes = item_attributes.addClass(utility_classes) %}
-{% set item_attributes = item_attributes.setAttribute('data-drimage', data|json_encode) %}
+{% set item_attributes = item_attributes.setAttribute('data-drimage_improved', data|json_encode) %}
 
 {# Picture Source Attributes #}
 {% if not picture_source_attributes %}
@@ -70,7 +70,7 @@
     <a{{ url_attributes }}>
   {% endif %}
   <picture>
-  {% if imageapi_optimize_webp %}
+  {% if data.core_webp or data.imageapi_optimize_webp %}
     <source{{ picture_source_attributes }}>
   {% endif %}
     <img{{ picture_img_attributes }}/>
