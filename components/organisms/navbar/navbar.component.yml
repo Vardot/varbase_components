@@ -85,4 +85,4 @@ slots:
 libraryOverrides:
   dependencies:
     - varbase_components/bs-dropdown-script
-    - sdc/varbase_components--navbar-brand
+    - core/components.varbase_components--navbar-brand
