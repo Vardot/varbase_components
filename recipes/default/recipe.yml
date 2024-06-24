@@ -1,0 +1,8 @@
+name: Varbase Components - Default
+description: A recipe to manage default installed modules, configs and permissions.
+type: install
+install:
+  - cl_components
+config:
+  import:
+    cl_components: '*'

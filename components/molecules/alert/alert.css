@@ -107,8 +107,7 @@
 
 .alert-dismissible .btn-close {
   --bs-btn-close-opacity: 1;
-  -webkit-mask-image: var(--bs-btn-close-bg) !important;
-          mask-image: var(--bs-btn-close-bg) !important;
+  mask-image: var(--bs-btn-close-bg) !important;
   width: .75rem !important;
   height: .75rem !important;
   padding: .225rem !important;
