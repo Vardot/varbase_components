@@ -71,13 +71,13 @@
     "card_attributes": {
       "name": "Card Attributes",
       "description": "HTML attributes for the Card element.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     },
     "content_attributes": {
       "name": "Content Attributes",
       "description": "HTML attributes for the content element.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     }
   },

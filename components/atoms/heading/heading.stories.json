@@ -56,7 +56,7 @@
     "attributes": {
       "name": "Attributes",
       "description": "HTML attributes for the heading element.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     }
   },

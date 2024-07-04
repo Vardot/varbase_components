@@ -64,19 +64,19 @@
     "attributes": {
       "name": "Attributes",
       "description": "HTML attributes for the field tags element.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     },
     "title_attributes": {
       "name": "Attributes",
       "description": "HTML attributes for the label.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     },
     "content_attributes": {
       "name": "Attributes",
       "description": "HTML attributes for the content.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     }
   },

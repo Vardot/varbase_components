@@ -81,13 +81,13 @@
     "attributes": {
       "name": "Attributes",
       "description": "HTML attributes for the Spinner element.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     },
     "spinner_status_attributes": {
       "name": "Attributes",
       "description": "HTML attributes for the Spinner status element.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     }
   },

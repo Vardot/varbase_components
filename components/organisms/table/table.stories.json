@@ -184,25 +184,25 @@
     "attributes": {
       "name": "Attributes",
       "description": "HTML attributes to apply to the `<table>` tag.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     },
     "thead_attributes": {
       "name": "Table head attributes",
       "description": "HTML attributes to apply to the `<thead>` tag.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     },
     "tbody_attributes": {
       "name": "Table body attributes",
       "description": "HTML attributes to apply to the `<tbody>` tag.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     },
     "tfoot_attributes": {
       "name": "Table footer attributes",
       "description": "HTML attributes to apply to the `<tfoot>` tag.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     }
   },

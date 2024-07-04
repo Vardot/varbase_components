@@ -113,13 +113,13 @@
     "attributes": {
       "name": "Attributes",
       "description": "HTML attributes to apply to the heroslider main wrapper tag.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     },
     "indicators_attributes": {
       "name": "Indicators Attributes",
       "description": "HTML attributes to apply to the indicators wrapper tag.",
-      "control": "object",
+      "control": "Drupal\\Core\\Template\\Attribute",
       "defaultValue": {}
     },
     "empty": {
