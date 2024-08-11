@@ -1,0 +1,69 @@
+{
+  "title": "Varbase Components/Molecules/Callout",
+  "parameters": {
+    "componentSubtitle": "Callout Component",
+    "docs": {
+      "description": {
+        "component": "Callouts are available for any length of text. For proper styling, use one of the eight required contextual classes (e.g., .bs-callout-info)."
+      },
+      "story": {
+        "inline": true
+      }
+    }
+  },
+  "argTypes": {
+    "type": {
+      "name": "Callout type",
+      "description": "Bootstrap includes several predefined callout type styles.",
+      "defaultValue": "",
+      "control": "select",
+      "options": {
+        "'- none -'": "",
+        "Danger": "bs-callout-danger",
+        "Warning": "bs-callout-warning",
+        "Info": "bs-callout-info"
+      }
+    },
+    "content": {
+      "name": "Callout content",
+      "description": "The content of the callout.",
+      "defaultValue": "",
+      "control": "text"
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.",
+      "control": "array",
+      "defaultValue": []
+    },
+    "attributes": {
+      "name": "Attributes",
+      "description": "HTML attributes for the callout element.",
+      "control": "Drupal\\Core\\Template\\Attribute",
+      "defaultValue": {}
+    }
+  },
+  "stories": [
+    {
+      "name": "Danger",
+      "args": {
+        "type": "bs-callout-danger",
+        "content": "A simple callout danger check it out!"
+      }
+    },
+    {
+      "name": "Warning",
+      "args": {
+        "type": "bs-callout-warning",
+        "content": "A simple callout warning check it out!"
+      }
+    },
+    {
+      "name": "Info",
+      "args": {
+        "type": "bs-callout-info",
+        "content": "A simple callout info check it out!"
+      }
+    }
+  ]
+}

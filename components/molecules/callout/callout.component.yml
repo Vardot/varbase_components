@@ -1,0 +1,31 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Callout
+status: experimental
+description: Callout are available for any length of text. For proper styling, use one of the three required contextual classes (e.g., .bs-callout-info).
+props:
+  type: object
+  properties:
+    type:
+      type: string
+      title: Alert type
+      description: Bootstrap includes several predefined alert type styles.
+      default: ''
+      enum:
+        - ''
+        - bs-callout-danger
+        - bs-callout-warning
+        - bs-callout-info
+    utility_classes:
+      type: array
+      title: Utility Classes
+      default: []
+      description: An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: HTML attributes for the alert element.
+slots:
+  content:
+    type: string
+    title: Alert content
+    description: The content of the callout.
