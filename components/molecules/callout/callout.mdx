@@ -24,6 +24,39 @@ import templateSource from './callout.twig?raw';
 <Stories of={comStories} />
 
 
+### Examples:
+
+**Example #1** Default callout
+```
+{% include 'varbase_components:callout' with {
+  content: '<h4>Default callout.</h4> Example text to show it in action.'
+} %}
+```
+
+**Example #2** Info callout
+```
+{% include 'varbase_components:callout' with {
+  type: 'bs-callout-info',
+  content: '<h4>This is an info callout.</h4> Example text to show it in action.'
+} %}
+```
+
+**Example #3** Warning callout
+```
+{% include 'varbase_components:callout' with {
+  type: 'bs-callout-warning',
+  content: '<h4>This is a warning callout.</h4> Example text to show it in action.'
+} %}
+```
+
+**Example #3** Danger callout
+```
+{% include 'varbase_components:callout' with {
+  type: 'bs-callout-danger',
+  content: '<h4>This is a danger callout.</h4> Example text to show it in action.'
+} %}
+```
+
 ## Source code
 [//]: # (Twig Template source code)
 <Source code={templateSource} />

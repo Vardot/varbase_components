@@ -1,11 +1,12 @@
 # Callout
 
-Callout are available for any length of text. For proper styling, use one of the three required contextual classes (e.g., .bs-callout-info). 
+Call out specific text from the content. These are intended to draw priority attention to that text.
+
+Callout is not part of Bootstrap 5, It is part of [Creating your own](https://getbootstrap.com/docs/5.3/customize/components/#creating-your-own). They built it as a custom for thier docs so thier messages to you stand out. It has three variants via modifier classes.
 
 ### Properties:
-* `type`: Includes several callout type styles.
-         (bs-callout|bs-callout-info|
-          bs-callout-warning|bs-callout-danger)
+* `type`: Predefined callout type styles.
+         (''|bs-callout-info|bs-callout-warning|bs-callout-danger), If not provided the fallback default callout style will apply.
 * `utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
 
 ### Attributes:
@@ -13,3 +14,37 @@ Callout are available for any length of text. For proper styling, use one of the
 
 ### Slots:
 * `content`: The content of the callout.
+
+
+### Examples:
+
+**Example #1** Default callout
+```
+{% include 'varbase_components:callout' with {
+  content: '<h4>Default callout.</h4> Example text to show it in action.'
+} %}
+```
+
+**Example #2** Info callout
+```
+{% include 'varbase_components:callout' with {
+  type: 'bs-callout-info',
+  content: '<h4>This is an info callout.</h4> Example text to show it in action.'
+} %}
+```
+
+**Example #3** Warning callout
+```
+{% include 'varbase_components:callout' with {
+  type: 'bs-callout-warning',
+  content: '<h4>This is a warning callout.</h4> Example text to show it in action.'
+} %}
+```
+
+**Example #3** Danger callout
+```
+{% include 'varbase_components:callout' with {
+  type: 'bs-callout-danger',
+  content: '<h4>This is a danger callout.</h4> Example text to show it in action.'
+} %}
+```

@@ -57,7 +57,7 @@ function varbase_components_library_info_alter(array &$libraries, $module) {
 function varbase_components_preprocess_field(&$variables) {
   $ckeditor5_fields = [
     'text_with_summary',
-    'text_long'
+    'text_long',
   ];
 
   // Check if the field type is in the list of CKEditor5 fields.

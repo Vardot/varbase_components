@@ -4,9 +4,8 @@
  * Varbase Components implementation for the Callout component.
  *
  * Available properties:
- * - type: Includes several callout type styles.
- *         (bs-callout|bs-callout-info|
- *          bs-callout-warning|bs-callout-danger)
+ * - type: Predefined callout type styles.
+ *         (''|bs-callout-info|bs-callout-warning|bs-callout-danger), If not provided the fallback default callout style will apply.
  * - utility_classes: An array of utility classes. Use to add extra utility classes or custom CSS classes over to this component.
  *
  * Available attributes:
@@ -27,7 +26,7 @@
   {% set attributes = create_attribute() %}
 {% endif %}
 {% set attributes = attributes.addClass(classes) %}
-{% set attributes = attributes.setAttribute('role', 'bs-callout') %}
+{% set attributes = attributes.setAttribute('role', 'note') %}
 
 <div{{ attributes }}>
   {% block content %}

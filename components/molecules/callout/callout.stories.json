@@ -4,7 +4,7 @@
     "componentSubtitle": "Callout Component",
     "docs": {
       "description": {
-        "component": "Callouts are available for any length of text. For proper styling, use one of the eight required contextual classes (e.g., .bs-callout-info)."
+        "component": "Call out specific text from the content. These are intended to draw priority attention to that text."
       },
       "story": {
         "inline": true
@@ -45,24 +45,30 @@
   },
   "stories": [
     {
-      "name": "Danger",
+      "name": "Default",
       "args": {
-        "type": "bs-callout-danger",
-        "content": "A simple callout danger check it out!"
-      }
-    },
-    {
-      "name": "Warning",
-      "args": {
-        "type": "bs-callout-warning",
-        "content": "A simple callout warning check it out!"
+        "content": "<h4>Default callout.</h4> Example text to show it in action."
       }
     },
     {
       "name": "Info",
       "args": {
         "type": "bs-callout-info",
-        "content": "A simple callout info check it out!"
+        "content": "<h4>This is an info callout.</h4> Example text to show it in action."
+      }
+    },
+    {
+      "name": "Warning",
+      "args": {
+        "type": "bs-callout-warning",
+        "content": "<h4>This is a warning callout.</h4> Example text to show it in action."
+      }
+    },
+    {
+      "name": "Danger",
+      "args": {
+        "type": "bs-callout-danger",
+        "content": "<h4>This is a danger callout.</h4> Example text to show it in action."
       }
     }
   ]
