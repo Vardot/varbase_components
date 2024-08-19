@@ -21,7 +21,7 @@ Callout is not part of Bootstrap 5, It is part of [Creating your own](https://ge
 **Example #1** Default callout
 ```
 {% include 'varbase_components:callout' with {
-  content: '<h4>Default callout.</h4> Example text to show it in action.'
+  content: '<strong>Default callout.</strong> Example text to show it in action.'
 } %}
 ```
 
@@ -29,7 +29,7 @@ Callout is not part of Bootstrap 5, It is part of [Creating your own](https://ge
 ```
 {% include 'varbase_components:callout' with {
   type: 'bs-callout-info',
-  content: '<h4>This is an info callout.</h4> Example text to show it in action.'
+  content: '<strong>This is an info callout.</strong> Example text to show it in action.'
 } %}
 ```
 
@@ -37,7 +37,7 @@ Callout is not part of Bootstrap 5, It is part of [Creating your own](https://ge
 ```
 {% include 'varbase_components:callout' with {
   type: 'bs-callout-warning',
-  content: '<h4>This is a warning callout.</h4> Example text to show it in action.'
+  content: '<strong>This is a warning callout.</strong> Example text to show it in action.'
 } %}
 ```
 
@@ -45,6 +45,6 @@ Callout is not part of Bootstrap 5, It is part of [Creating your own](https://ge
 ```
 {% include 'varbase_components:callout' with {
   type: 'bs-callout-danger',
-  content: '<h4>This is a danger callout.</h4> Example text to show it in action.'
+  content: '<strong>This is a danger callout.</strong> Example text to show it in action.'
 } %}
 ```
