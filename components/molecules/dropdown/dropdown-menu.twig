@@ -4,7 +4,7 @@
  * Varbase Components implementation for the Dropdown menu component.
  */
 #}
-<div class="dropdown-menu">
+<ul class="dropdown-menu level-{{ menu_level }}">
   {% for item in items %}
     {% set nav_link_classes = [
       'dropdown-item',
@@ -15,6 +15,18 @@
     {% elseif item.url.options.attributes.class %}
       {% set nav_link_classes = nav_link_classes|merge([item.url.options.attributes.class]) %}
     {% endif %}
-    <a href="{{ item.url }}" class="{{ nav_link_classes|join(' ') }}">{{ item.title }}</a>
+    <li class="{{ nav_item_classes|join(' ') }}">
+      {% if item.is_expanded and item.below %}
+        <a href="{{ item.url }}" class="{{ nav_link_classes|merge(['dropdown-toggle'])|join(' ') }}" data-bs-toggle="dropdown">{{ item.title }}</a>
+        {% if item.below %}
+          {% include 'varbase_components:dropdown-menu' with {
+            items: item.below,
+            menu_level: (item.below|first).menu_link_level
+          } %}
+        {% endif %}
+      {% else %}
+        {{ link(item.title, item.url, { 'class': nav_link_classes }) }}
+      {% endif %}
+    </li>
   {% endfor %}
-</div>
+</ul>

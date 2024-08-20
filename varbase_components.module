@@ -66,3 +66,26 @@ function varbase_components_preprocess_field(&$variables) {
     $variables['#attached']['library'][] = 'varbase_components/ckeditor5-styles';
   }
 }
+
+/**
+* Implements hook_preprocess().
+*/
+function varbase_components_preprocess_menu(&$variables, $hook, $info) {
+  // Checks the nested level of a menu.
+  varbase_components_process_menu_level($variables['items']);
+}
+
+/**
+* Add menu_link_level to menus.
+*/
+function varbase_components_process_menu_level(&$menu_items, $menu_level = 1) {
+  foreach ($menu_items as $menu_index => &$menu_item) {
+    // Set the menu level for the current item.
+    $menu_item['menu_link_level'] = $menu_level;
+
+    // If there are child items, process them recursively.
+    if (!empty($menu_item['below'])) {
+      varbase_components_process_menu_level($menu_item['below'], $menu_level + 1);
+    }
+  }
+}

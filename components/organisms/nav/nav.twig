@@ -30,6 +30,7 @@
 {%
   set nav_classes = [
     'nav',
+    'level-1',
     style,
     alignment,
     fill
@@ -42,8 +43,8 @@
       {% for item in items %}
         {% set nav_item_classes = [
           'nav-item',
-          item.in_active_trail ? 'active' : '',
-          item.is_expanded and item.below ? 'dropdown' : ''
+          item.is_expanded and item.below ? 'dropdown' : '',
+          item.in_active_trail ? 'active',
         ] %}
         {% set nav_link_classes = ['nav-link'] %}
         {% if item.url.options.attributes.class is iterable %}
@@ -51,14 +52,20 @@
         {% elseif item.url.options.attributes.class %}
           {% set nav_link_classes = nav_link_classes|merge([item.url.options.attributes.class]) %}
         {% endif %}
-        <li class="{{ nav_item_classes|join(' ') }}">
+        <li class="{{ nav_item_classes|merge(['menu-item--expanded'])|join(' ') }}">
           {% if item.is_expanded and item.below %}
             <a href="{{ item.url }}" class="{{ nav_link_classes|merge(['dropdown-toggle'])|join(' ') }}" data-bs-toggle="dropdown">{{ item.title }}</a>
             {% if item.below %}
+            {% set second_level = 2 %}
               {% include 'varbase_components:dropdown-menu' with {
-                items: item.below
+                items: item.below,
+                menu_level: (item.below|first).menu_link_level,
+                parent_item: item
               } %}
             {% endif %}
+            <div class="field-image-background d-none d-lg-block"> 
+              {{ item.content.field_media }}  
+            </div>
           {% else %}
             {{ link(item.title, item.url, { 'class': nav_link_classes }) }}
           {% endif %}
