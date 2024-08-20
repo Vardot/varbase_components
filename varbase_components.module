@@ -10,8 +10,8 @@
  */
 function varbase_components_theme($existing, $type, $theme, $path) {
   return [
-    'media_oembed_iframe__remote_video__heroslider' => [
-      'template' => 'media-oembed-iframe--remote-video--heroslider',
+    'media_oembed_iframe__remote_video__varbase_heroslider' => [
+      'template' => 'media-oembed-iframe--remote-video--varbase-heroslider',
       'variables' => [
         'provider' => NULL,
         'media' => NULL,
@@ -23,7 +23,7 @@ function varbase_components_theme($existing, $type, $theme, $path) {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function varbase_components_preprocess_media_oembed_iframe__remote_video__heroslider(&$variables) {
+function varbase_components_preprocess_media_oembed_iframe__remote_video__varbase_heroslider(&$variables) {
   // Send variables for the remote_video varbase heroslier oembed iframe.
   $query = \Drupal::request()->query;
   $variables['type'] = $query->get('type');
