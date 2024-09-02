@@ -99,6 +99,30 @@
         "name": "bi-chevron-double-down",
         "role": "scroll"
       }
+    },
+    {
+      "name": "Box arrow in right",
+      "args": {
+        "name": "bi-box-arrow-in-right"
+      }
+    },
+    {
+      "name": "Box arrow in left",
+      "args": {
+        "name": "bi-box-arrow-in-left"
+      }
+    },
+    {
+      "name": "Person fill",
+      "args": {
+        "name": "bi-person-fill"
+      }
+    },
+    {
+      "name": "House door fill",
+      "args": {
+        "name": "bi-house-door-fill"
+      }
     }
   ]
 }
