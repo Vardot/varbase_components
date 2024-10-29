@@ -50,14 +50,16 @@ function varbase_components_library_info_alter(array &$libraries, $module) {
     $libraries['internal.drupal.ckeditor5.stylesheets']['dependencies'][] = 'varbase_components/ckeditor5-styles';
   }
 
-  // Drop the Popper.js library file from the Responsive Theme preview module.
-  // Varbase Components and Vartheme BS5 are providing that using Node.js with Bootstrap 5.
+  // Replace the Popper.js library file from the Responsive Theme preview module.
+  // Varbase Components and Vartheme BS5 need a different version which still
+  // works for the Responsive Theme preview module.
   if ($module === 'responsive_preview'
     && isset($libraries['drupal.responsive-preview'])
     && isset($libraries['drupal.responsive-preview']['js'])
     && isset($libraries['drupal.responsive-preview']['js']['js/popperjs/popper.min.js'])) {
 
     unset($libraries['drupal.responsive-preview']['js']['js/popperjs/popper.min.js']);
+    $libraries['drupal.responsive-preview']['dependencies'][] = 'varbase_components/popper-script';
   }
 }
 
