@@ -1,5 +1,5 @@
 {
-  "title": "Varbase Components/Organisms/Navbar",
+  "title": "Organisms/Navbar",
   "description": "Navbar component.",
   "argTypes": {
     "container": {

@@ -1,5 +1,5 @@
 {
-  "title": "Varbase Components/Molecules/Input Checkbox",
+  "title": "Molecules/Input Checkbox",
   "description": "Checkbox input component",
   "argTypes": {
     "utility_classes": {

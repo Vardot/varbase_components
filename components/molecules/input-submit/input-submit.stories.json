@@ -1,5 +1,5 @@
 {
-  "title": "Varbase Components/Molecules/Input Submit",
+  "title": "Molecules/Input Submit",
   "description": "Input Submit component",
   "argTypes": {
     "utility_classes": {
