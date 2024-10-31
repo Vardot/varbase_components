@@ -5,7 +5,6 @@ package: Varbase
 core_version_requirement: ~10.3.0 || ~11.0.0
 dependencies:
   - ui_patterns:ui_patterns
-  - ui_patterns:ui_patterns_ds
   - ui_patterns:ui_patterns_layouts
   - ui_patterns:ui_patterns_library
   - ui_patterns:ui_patterns_views
