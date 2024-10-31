@@ -32,7 +32,6 @@
     "drupal/cl_server": "~2",
     "drupal/cl_devel": "~2",
     "drupal/ui_patterns": "~2",
-    "drupal/ui_patterns_settings": "~2",
     "drupal/ui_patterns_field_group-ui_patterns_field_group": "2.0.x-dev",
     "drupal/sdc_display": "~1",
     "drupal/nomarkup": "~1",

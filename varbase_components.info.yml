@@ -9,5 +9,4 @@ dependencies:
   - ui_patterns:ui_patterns_library
   - ui_patterns:ui_patterns_views
   - ui_patterns:ui_patterns_field_formatters
-  - ui_patterns_settings:ui_patterns_settings
   - ui_patterns_field_group:ui_patterns_field_group
