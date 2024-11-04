@@ -1,10 +1,3 @@
-.varbase-impressed-card .card-title {
-  font-weight: 700;
-  line-height: 140%;
-  align-self: stretch;
-  text-transform: capitalize;
-}
-
 .varbase-impressed-card .impressed-card-content:first-child {
   margin-top: 0;
   padding-top: 0;
@@ -78,49 +71,5 @@
 .varbase-impressed-card.bordered.flex-column-reverse .impressed-card-content {
   padding-top: 0;
   padding-bottom: var(--bs-card-spacer-y);
-}
-
-.varbase-impressed-card.xlarge .card-title {
-  font-size: calc(1.375rem + 1.5vw);
-}
-
-@media (min-width: 1200px) {
-  .varbase-impressed-card.xlarge .card-title {
-    font-size: 2.5rem;
-  }
-}
-
-.varbase-impressed-card.large .card-title {
-  font-size: calc(1.375rem + 1.5vw);
-}
-
-@media (min-width: 1200px) {
-  .varbase-impressed-card.large .card-title {
-    font-size: 2.5rem;
-  }
-}
-
-.varbase-impressed-card.medium .card-title {
-  font-size: calc(1.3125rem + .75vw);
-}
-
-@media (min-width: 1200px) {
-  .varbase-impressed-card.medium .card-title {
-    font-size: 1.875rem;
-  }
-}
-
-.varbase-impressed-card.small .card-title {
-  font-size: calc(1.275rem + .3vw);
-}
-
-@media (min-width: 1200px) {
-  .varbase-impressed-card.small .card-title {
-    font-size: 1.5rem;
-  }
-}
-
-.varbase-impressed-card.xsmall .card-title {
-  font-size: 1.25rem;
 }
 

@@ -92,9 +92,6 @@ $overlay-card-content-hover-opacity: 0.9;
   }
 
   &.xlarge {
-    .card-title {
-      @include font-size($overlay-card-xlarge-title-font-size);
-    }
 
     .overlay-card-content {
       padding: $card-large-title-font-size;
@@ -102,20 +99,12 @@ $overlay-card-content-hover-opacity: 0.9;
   }
 
   &.large {
-    .card-title {
-      @include font-size($card-large-title-font-size);
-    }
-
     .overlay-card-content {
       padding: $card-large-title-font-size;
     }
   }
 
   &.medium {
-    .card-title {
-      @include font-size($card-medium-title-font-size);
-    } 
-
     .overlay-card-content {
       padding: $card-medium-title-font-size;
     }

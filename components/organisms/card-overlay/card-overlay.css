@@ -82,42 +82,12 @@
   position: relative;
 }
 
-.varbase-overlay-card.xlarge .card-title {
-  font-size: calc(1.525rem + 3.3vw);
-}
-
-@media (min-width: 1200px) {
-  .varbase-overlay-card.xlarge .card-title {
-    font-size: 4rem;
-  }
-}
-
 .varbase-overlay-card.xlarge .overlay-card-content {
   padding: 2.5rem;
 }
 
-.varbase-overlay-card.large .card-title {
-  font-size: calc(1.375rem + 1.5vw);
-}
-
-@media (min-width: 1200px) {
-  .varbase-overlay-card.large .card-title {
-    font-size: 2.5rem;
-  }
-}
-
 .varbase-overlay-card.large .overlay-card-content {
   padding: 2.5rem;
-}
-
-.varbase-overlay-card.medium .card-title {
-  font-size: calc(1.3125rem + .75vw);
-}
-
-@media (min-width: 1200px) {
-  .varbase-overlay-card.medium .card-title {
-    font-size: 1.875rem;
-  }
 }
 
 .varbase-overlay-card.medium .overlay-card-content {

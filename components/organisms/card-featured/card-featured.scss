@@ -4,10 +4,6 @@
 
   .card-title {
     margin-top: 0;
-    font-weight: 700;
-    line-height: 140%;
-    align-self: stretch;
-    text-transform: capitalize;
   }
 
   &.anchor-all {
@@ -53,36 +49,6 @@
     a {
       z-index: 3;
       position: relative;
-    }
-  }
-
-  &.xlarge {
-    .card-title {
-      @include font-size($card-xlarge-title-font-size);
-    }
-  }
-
-  &.large {
-    .card-title {
-      @include font-size($card-large-title-font-size);
-    }
-  }
-
-  &.medium {
-    .card-title {
-      @include font-size($card-medium-title-font-size);
-    }
-  }
-
-  &.small {
-    .card-title {
-      @include font-size($card-small-title-font-size);
-    }
-  }
-
-  &.xsmall {
-    .card-title {
-      @include font-size($card-xsmall-title-font-size);
     }
   }
 

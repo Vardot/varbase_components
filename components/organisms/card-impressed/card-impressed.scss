@@ -2,13 +2,6 @@
 
 .varbase-impressed-card {
 
-  .card-title {
-    font-weight: 700;
-    line-height: 140%;
-    align-self: stretch;
-    text-transform: capitalize;
-  }
-
   .impressed-card-content {
     &:first-child {
       margin-top: 0;
@@ -88,36 +81,6 @@
         padding-top: 0;
         padding-bottom: var(--bs-card-spacer-y);
       }
-    }
-  }
-
-  &.xlarge {
-    .card-title {
-      @include font-size($card-xlarge-title-font-size);
-    }
-  }
-
-  &.large {
-    .card-title {
-      @include font-size($card-large-title-font-size);
-    }
-  }
-
-  &.medium {
-    .card-title {
-      @include font-size($card-medium-title-font-size);
-    }
-  }
-
-  &.small {
-    .card-title {
-      @include font-size($card-small-title-font-size);
-    }
-  }
-
-  &.xsmall {
-    .card-title {
-      @include font-size($card-xsmall-title-font-size);
     }
   }
 
