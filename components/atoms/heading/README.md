@@ -11,6 +11,7 @@ All HTML headings, `<h1>` through `<h6>`, are available.
                Defaults to h1 (h1|h2|h3|h4|h5|h6)
 * `display`: When you need a heading to stand out, consider using a display
              heading—a larger, slightly more opinionated heading style.
+* `url`: Simple URL link for heading. 
 * `utility_classes`: An array of utility classes that can
                     be used to add extra Bootstrap utility classes or custom
                     classes to this component.
@@ -73,4 +74,14 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 			utility_classes: ['alert-heading']
 		} only %}
 	{% endif %}
+```
+
+**Example #6** Have title with URL link
+```
+{% include "varbase_components:heading" with {
+  attributes: heading_attributes,
+  html_tag: 'h2',
+  content: heading,
+  url: '#'
+} %}
 ```

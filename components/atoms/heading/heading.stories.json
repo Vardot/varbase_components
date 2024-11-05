@@ -41,6 +41,12 @@
         "Display6": "display-6"
       }
     },
+    "url": {
+      "name": "URL Link",
+      "description": "Simple URL link for heading.",
+      "defaultValue": "",
+      "control": "textfield"
+    },
     "content": {
       "name": "Content",
       "description": "Content text for the heading.",

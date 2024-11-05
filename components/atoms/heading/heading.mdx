@@ -80,6 +80,15 @@ import templateSource from './heading.twig?raw';
 		} only %}
 	{% endif %}
 ```
+**Example #6** Have title with URL link
+```
+{% include "varbase_components:heading" with {
+  attributes: heading_attributes,
+  html_tag: 'h2',
+  content: heading,
+  url: '#'
+} %}
+```
 
 ## Source code
 [//]: # (Twig Template source code)
