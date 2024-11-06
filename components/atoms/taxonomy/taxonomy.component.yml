@@ -4,7 +4,11 @@ status: experimental
 description: Taxonomy terms as taxonomy tags.
 props:
   type: object
-  properties: { }
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
 slots:
   content:
     type: string

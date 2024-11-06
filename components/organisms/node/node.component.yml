@@ -7,10 +7,13 @@ props:
   properties:
     title_attributes:
       type: Drupal\Core\Template\Attribute
+      description: 'HTML attributes for the node title element.'
     attributes:
       type: Drupal\Core\Template\Attribute
+      description: 'HTML attributes for the node.'
     content_attributes:
       type: Drupal\Core\Template\Attribute
+      description: 'HTML attributes for the content element.'
     title_prefix:
       type: array
       title: title prefix
