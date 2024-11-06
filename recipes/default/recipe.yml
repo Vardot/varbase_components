@@ -2,7 +2,7 @@ name: Varbase Components - Default
 description: A recipe to manage default installed modules, configs and permissions.
 type: install
 install:
-  - cl_components
+  - ui_patterns_field_group
 config:
   import:
-    cl_components: '*'
+    ui_patterns_field_group: '*'
