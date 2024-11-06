@@ -272,8 +272,8 @@
         "columns_lg_size": "",
         "columns_xl_size": "",
         "columns_xxl_size": "",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>",
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Lorem Ipsum Dolor Sit Amet', display : 'display-3',  utility_classes: [ 'card-title'], url:'#'} %} {% include \"varbase_components:text\" with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',  utility_classes: [ 'card-text']} %}",
         "utility_classes": [
           "col-12"
         ]
@@ -296,8 +296,8 @@
         "columns_lg_size": "",
         "columns_xl_size": "",
         "columns_xxl_size": "",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>",
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Lorem Ipsum Dolor Sit Amet', display : 'display-3', utility_classes: [ 'card-title'], url:'#'} %}{% include \"varbase_components:text\" with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',  utility_classes: [ 'card-text']} %}",
         "utility_classes": [
           "col-9"
         ]
@@ -320,8 +320,8 @@
         "columns_lg_size": "",
         "columns_xl_size": "",
         "columns_xxl_size": "",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>",
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Lorem Ipsum Dolor Sit Amet', display : 'display-4', utility_classes: [ 'card-title'], url:'#'} %}{% include \"varbase_components:text\" with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',  utility_classes: [ 'card-text']} %}",
         "utility_classes": [
           "col-6"
         ]
@@ -344,8 +344,8 @@
         "columns_lg_size": "",
         "columns_xl_size": "",
         "columns_xxl_size": "",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>",
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Lorem Ipsum Dolor Sit Amet', display: 'display-5', utility_classes: [ 'card-title'], url:'#'} %}{% include \"varbase_components:text\" with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',  utility_classes: [ 'card-text']} %}",
         "utility_classes": [
           "col-4"
         ]
@@ -368,8 +368,8 @@
         "columns_lg_size": "",
         "columns_xl_size": "",
         "columns_xxl_size": "",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem ipsum dolor sit amet</a></h3>",
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Lorem Ipsum Dolor Sit Amet', display : 'display-6', utility_classes: [ 'card-title'], url:'#'} %}",
         "utility_classes": [
           "col-3"
         ]
@@ -392,8 +392,8 @@
         "columns_lg_size": "",
         "columns_xl_size": "",
         "columns_xxl_size": "",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at ...</div>",
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus', display : 'display-3', utility_classes: [ 'card-title'], url:'#'} %}{% include \"varbase_components:text\" with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at ...',  utility_classes: [ 'card-text']} %}",
         "utility_classes": [
           "col-12"
         ]
@@ -416,8 +416,8 @@
         "columns_lg_size": "",
         "columns_xl_size": "",
         "columns_xxl_size": "",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at ...</div>",
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus', display : 'display-3', utility_classes: [ 'card-title'], url:'#'} %}{% include \"varbase_components:text\" with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at ...',  utility_classes: [ 'card-text']} %}",
         "utility_classes": [
           "col-9"
         ]
@@ -440,8 +440,8 @@
         "columns_lg_size": "",
         "columns_xl_size": "",
         "columns_xxl_size": "",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at ...</div>",
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Amet Brevitas Dolore Jugis Pertineo Pneum Ratis Refoveo Scisco Sed Sino Validus', display : 'display-4', utility_classes: [ 'card-title'], url:'#'} %}{% include \"varbase_components:text\" with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at ...',  utility_classes: [ 'card-text']} %}",
         "utility_classes": [
           "col-6"
         ]

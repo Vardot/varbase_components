@@ -98,8 +98,8 @@
         "anchor_all": true,
         "horizontal_alignment": "",
         "vertical_alignment": "",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Example title', display : 'display-3', utility_classes: [ 'card-title'], url:'#'} %}{% include 'varbase_components:text' with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',utility_classes: [ 'card-text']} %}"
       }
     },
     {
@@ -112,8 +112,8 @@
         "anchor_all": true,
         "horizontal_alignment": "",
         "vertical_alignment": "",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Example title', display : 'display-3', utility_classes: [ 'card-title'], url:'#'} %}{% include 'varbase_components:text' with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',utility_classes: [ 'card-text']} %}"
       }
     },
     {
@@ -126,8 +126,8 @@
         "anchor_all": true,
         "horizontal_alignment": "",
         "vertical_alignment": "",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Example title', display : 'display-4', utility_classes: [ 'card-title'], url:'#'} %}{% include 'varbase_components:text' with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',utility_classes: [ 'card-text']} %}"
       }
     },
     {
@@ -140,8 +140,8 @@
         "anchor_all": true,
         "horizontal_alignment": "",
         "vertical_alignment": "",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Example title', display : 'display-5', utility_classes: [ 'card-title'], url:'#'} %}{% include 'varbase_components:text' with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',utility_classes: [ 'card-text']} %}"
       }
     },
     {
@@ -154,8 +154,8 @@
         "anchor_all": true,
         "horizontal_alignment": "",
         "vertical_alignment": "",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Example title</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Example title', display : 'display-6', utility_classes: [ 'card-title'], url:'#'} %}{% include 'varbase_components:text' with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',utility_classes: [ 'card-text']} %}"
       }
     },
     {
@@ -168,8 +168,8 @@
         "anchor_all": true,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Amet Brevitas Dolore Jugis</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Amet Brevitas Dolore Jugis', display : 'display-3', utility_classes: [ 'card-title'], url:'#'} %}{% include 'varbase_components:text' with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',utility_classes: [ 'card-text']} %}"
       }
     },
     {
@@ -182,8 +182,8 @@
         "anchor_all": true,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Amet Brevitas Dolore Jugis</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Amet Brevitas Dolore Jugis', display : 'display-3', utility_classes: [ 'card-title'], url:'#'} %}{% include 'varbase_components:text' with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',utility_classes: [ 'card-text']} %}"
       }
     },
     {
@@ -196,8 +196,8 @@
         "anchor_all": true,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Amet Brevitas Dolore Jugis</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Amet Brevitas Dolore Jugis', display : 'display-3', utility_classes: [ 'card-title'], url:'#'} %}{% include 'varbase_components:text' with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',utility_classes: [ 'card-text']} %}"
       }
     },
     {
@@ -210,8 +210,8 @@
         "anchor_all": true,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Amet Brevitas Dolore Jugis</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Amet Brevitas Dolore Jugis', display : 'display-3', utility_classes: [ 'card-title'], url:'#'} %}{% include 'varbase_components:text' with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',utility_classes: [ 'card-text']} %}"
       }
     },
     {
@@ -224,8 +224,8 @@
         "anchor_all": true,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<h3 class=\"card-title\"><a href=\"#\">Amet Brevitas Dolore Jugis</a></h3><p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum</p>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Amet Brevitas Dolore Jugis', display : 'display-3', utility_classes: [ 'card-title'], url:'#'} %}{% include 'varbase_components:text' with { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor dignissim risus, et congue lectus placerat nec. Donec congue diam leo, in faucibus sem facilisis tempus. Duis congue leo interdum',utility_classes: [ 'card-text']} %}"
       }
     }
   ]

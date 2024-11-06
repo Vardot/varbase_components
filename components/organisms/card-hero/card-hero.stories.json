@@ -114,8 +114,8 @@
         "padded": false,
         "horizontal_alignment": "start",
         "vertical_alignment": "end",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\">Varbase; better than ever</h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div><div class=\"mt-5\"><a href=\"\" class=\"btn btn-primary btn-lg\">Learn More</a></div>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Varbase; Better Than Ever', utility_classes: [ 'card-title']} %}{% include 'varbase_components:text' with { content: \"Elevate your digital experience with Varbase\\'s dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.\"} %}{% include 'varbase_components:button' with {html_tag: 'a', color: 'primary', content: 'Learn More', url: '#', size: 'btn-lg', utility_classes: ['mt-4']} %}"
       }
     },
     {
@@ -126,8 +126,8 @@
         "padded": false,
         "horizontal_alignment": "start",
         "vertical_alignment": "center",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\">Varbase; better than ever</h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div><div class=\"mt-5\"><a href=\"\" class=\"btn btn-primary btn-lg\">Learn More</a></div>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Varbase; Better Than Ever', utility_classes: [ 'card-title']} %}{% include 'varbase_components:text' with { content: \"Elevate your digital experience with Varbase\\'s dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.\"} %}{% include 'varbase_components:button' with {html_tag: 'a', color: 'primary', content: 'Learn More', url: '#', size: 'btn-lg', utility_classes: ['mt-4']} %}"
       }
     },
     {
@@ -138,8 +138,8 @@
         "padded": false,
         "horizontal_alignment": "start",
         "vertical_alignment": "center",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\">Varbase; better than ever</h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div><div class=\"mt-5\"><a href=\"\" class=\"btn btn-primary btn-lg\">Learn More</a></div>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Varbase; Better Than Ever', utility_classes: [ 'card-title']} %}{% include 'varbase_components:text' with { content: \"Elevate your digital experience with Varbase\\'s dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.\"} %}{% include 'varbase_components:button' with {html_tag: 'a', color: 'primary', content: 'Learn More', url: '#', size: 'btn-lg', utility_classes: ['mt-4']} %}"
       }
     },
     {
@@ -150,8 +150,8 @@
         "padded": false,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\">Varbase; better than ever</h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div><div class=\"mt-5\"><a href=\"\" class=\"btn btn-primary btn-lg\">Learn More</a></div>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Varbase; Better Than Ever', utility_classes: [ 'card-title']} %}{% include 'varbase_components:text' with { content: \"Elevate your digital experience with Varbase\\'s dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.\"} %}{% include 'varbase_components:button' with {html_tag: 'a', color: 'primary', content: 'Learn More', url: '#', size: 'btn-lg', utility_classes: ['mt-4']} %}"
       }
     },
     {
@@ -162,8 +162,8 @@
         "padded": false,
         "horizontal_alignment": "center",
         "vertical_alignment": "center",
-        "media": "<picture class=\"card-img img-fluid \"><img class=\"card-img img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
-        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\">Varbase; better than ever</h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div><div class=\"mt-5\"><a href=\"\" class=\"btn btn-primary btn-lg\">Learn More</a></div>"
+        "media": "{% include 'varbase_components:image' with { align: 'center', responsive: true, utility_classes: [ 'card-img img-fluid'],attributes: create_attribute({ \"src\": \"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"})} %}",
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Varbase; Better Than Ever', utility_classes: [ 'card-title']} %}{% include 'varbase_components:text' with { content: \"Elevate your digital experience with Varbase\\'s dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.\"} %}{% include 'varbase_components:button' with {html_tag: 'a', color: 'primary', content: 'Learn More', url: '#', size: 'btn-lg', utility_classes: ['mt-4']} %}"
       }
     },
     {
@@ -174,7 +174,7 @@
         "padded": false,
         "horizontal_alignment": "start",
         "vertical_alignment": "center",
-        "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\">Varbase; better than ever</h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div><div class=\"mt-5\"><a href=\"\" class=\"btn btn-primary btn-lg\">Learn More</a></div>"
+        "content": "{% include \"varbase_components:heading\" with { html_tag: 'h3',content: 'Varbase; Better Than Ever', utility_classes: [ 'card-title']} %}{% include 'varbase_components:text' with { content: \"Elevate your digital experience with Varbase\\'s dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.\"} %}{% include 'varbase_components:button' with {html_tag: 'a', color: 'primary', content: 'Learn More', url: '#', size: 'btn-lg', utility_classes: ['mt-4']} %}"
       }
     }
   ]
