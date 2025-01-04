@@ -36,6 +36,6 @@
     "drupal/ui_patterns_field_formatters": "~2",
     "drupal/sdc_display": "~2",
     "drupal/nomarkup": "~1",
-    "league/commonmark": "~2.4.0"
+    "league/commonmark": "~2"
   }
 }
