@@ -32,7 +32,6 @@ props:
       type: Drupal\Core\Template\Attribute
 slots:
   items:
-    type: array
     name: Items
     description: Navigation items.
 libraryOverrides:

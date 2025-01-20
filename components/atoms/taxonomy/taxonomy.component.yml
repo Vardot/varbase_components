@@ -2,13 +2,6 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 name: Taxonomy
 status: experimental
 description: Taxonomy terms as taxonomy tags.
-props:
-  type: object
-  properties:
-    attributes:
-      type: Drupal\Core\Template\Attribute
-      title: Attributes
-      description: Wrapper attributes.
 slots:
   content:
     type: string

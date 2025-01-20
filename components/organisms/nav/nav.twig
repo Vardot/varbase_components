@@ -63,9 +63,12 @@
                 parent_item: item
               } %}
             {% endif %}
+            <div class="field-image-background d-none d-lg-block"> 
+              {{ item.content.field_media }}  
+            </div>
           {% else %}
             {% if item.url %}
-              {{ link(item.title, item.url, { 'class': nav_link_classes }) }}
+            {{ link(item.title, item.url, { 'class': nav_link_classes }) }}
             {% endif %}
           {% endif %}
         </li>

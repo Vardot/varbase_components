@@ -82,10 +82,6 @@ props:
       title: Utility Classes
       default: []
       description: An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.
-    attributes:
-      type: Drupal\Core\Template\Attribute
-      title: Attributes
-      description: HTML attributes for the containing element.
 slots:
   content:
     type: string
