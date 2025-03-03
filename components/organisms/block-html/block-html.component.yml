@@ -15,13 +15,15 @@ props:
       type: string
       title: HTML tag
     attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Attributes
       description: HTML attributes for the containing element.
+      $ref: 'ui-patterns://attributes'
     title_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Title Attributes
       description: HTML attributes for the title element.
+      $ref: 'ui-patterns://attributes'
     title_prefix:
       type: array
       title: title prefix

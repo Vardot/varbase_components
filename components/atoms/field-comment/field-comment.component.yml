@@ -6,9 +6,10 @@ props:
   type: object
   properties:
     attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Attributes
       description: HTML attributes for the containing element.
+      $ref: 'ui-patterns://attributes'
     title_prefix:
       type: array
       title: title prefix

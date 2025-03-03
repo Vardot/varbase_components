@@ -9,8 +9,17 @@ props:
       type: string
       title: Title
     attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
+      title: Attributes
+      description: HTML attributes for the containing element.
+      $ref: 'ui-patterns://attributes'
     summary_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
+      title: Attributes
+      description: HTML attributes for the summary element.
+      $ref: 'ui-patterns://attributes'
     content_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
+      title: Attributes
+      description: HTML attributes for the content element.
+      $ref: 'ui-patterns://attributes'

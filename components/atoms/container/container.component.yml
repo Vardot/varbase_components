@@ -10,6 +10,7 @@ props:
       title: children
       description: children for the container.
     attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Attributes
       description: HTML attributes for the containing element.
+      $ref: 'ui-patterns://attributes'

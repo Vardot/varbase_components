@@ -40,13 +40,15 @@ props:
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the indicators element.
       default: []
     attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Attributes
       description: HTML attributes to apply to the carousel main wrapper tag.
+      $ref: 'ui-patterns://attributes'
     indicators_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Attributes
       description: HTML attributes to apply to the indicators wrapper tag.
+      $ref: 'ui-patterns://attributes'
 libraryOverrides:
   dependencies:
     - varbase_components/bs-carousel-script

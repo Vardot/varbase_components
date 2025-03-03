@@ -172,29 +172,35 @@ props:
       default: []
       description: 'Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`).'
     card_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: 'Card Attributes'
       description: 'HTML attributes for the card element.'
+      $ref: 'ui-patterns://attributes'
     media_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: 'Media Attributes'
       description: 'HTML attributes for the media element.'
+      $ref: 'ui-patterns://attributes'
     content_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: 'Content Attributes'
       description: 'HTML attributes for the content element.'
+      $ref: 'ui-patterns://attributes'
     row_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: 'Row Attributes'
       description: 'HTML attributes for the row element.'
+      $ref: 'ui-patterns://attributes'
     start_column_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: 'Start Column Attributes'
       description: 'HTML attributes for the start column element.'
+      $ref: 'ui-patterns://attributes'
     end_column_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: 'End Column Attributes'
       description: 'HTML attributes for the end column element.'
+      $ref: 'ui-patterns://attributes'
 slots:
   media:
     title: 'Media'

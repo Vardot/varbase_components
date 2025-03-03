@@ -14,6 +14,7 @@ props:
       type: string
       title: Children
     attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Attributes
       description: HTML attributes for the containing element.
+      $ref: 'ui-patterns://attributes'

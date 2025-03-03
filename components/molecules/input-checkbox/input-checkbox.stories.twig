@@ -1,0 +1,35 @@
+{% stories InputCheckbox with {
+  "title": "Molecules/Input Checkbox",
+  "description": "Checkbox input component",
+  "argTypes": {
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.",
+      "control": "object",
+      "defaultValue": []
+    },
+    "children": {
+      "name": "children",
+      "defaultValue": "",
+      "control": "text"
+    },
+    "attributes": {
+      "name": "Attributes",
+      "description": "HTML attributes for the containing element.",
+      "control": "Drupal\\Core\\Template\\Attribute",
+      "defaultValue": {}
+    }
+  }
+} %}
+
+{% story InputCheckbox with {
+  "name": "Input Checkbox",
+  "args": {
+    "children": " Checkbox"
+  }
+} %}
+{{ include('varbase_components:input-checkbox') }}
+{% endstory %}
+
+
+{% endstories %}

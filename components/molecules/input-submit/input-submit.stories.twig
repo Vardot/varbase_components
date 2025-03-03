@@ -1,0 +1,36 @@
+{% stories InputSubmit with {
+  "title": "Molecules/Input Submit",
+  "description": "Input Submit component",
+  "argTypes": {
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.",
+      "control": "array",
+      "defaultValue": []
+    },
+    "children": {
+      "name": "children",
+      "defaultValue": "",
+      "control": "text"
+    },
+    "attributes": {
+      "name": "Attributes",
+      "description": "HTML attributes for the containing element.",
+      "control": "Drupal\\Core\\Template\\Attribute",
+      "defaultValue": {}
+    }
+  }
+} %}
+
+{% story InputSubmit with {
+  "name": "Input Submit",
+  "args": {
+    "children": " Example input Submit button element",
+    "utility_classes": ["btn", "btn-primary"]
+  }
+} %}
+{{ include('varbase_components:field-tags') }}
+{% endstory %}
+
+
+{% endstories %}

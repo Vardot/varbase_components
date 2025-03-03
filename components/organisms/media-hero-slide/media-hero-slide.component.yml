@@ -42,21 +42,25 @@ props:
       title: Display Submitted
       description: Whether submission information should be displayed.
     attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Attributes
       description: HTML attributes for the containing element.
+      $ref: 'ui-patterns://attributes'
     title_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Title Attributes
       description: Same as attributes, except applied to the main title tag that appears in the template.
+      $ref: 'ui-patterns://attributes'
     content_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Content Attributes
       description: Same as attributes, except applied to the main content tag that appears in the template.
+      $ref: 'ui-patterns://attributes'
     author_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Author Attributes
       description: Same as attributes, except applied to the author of the node tag that appears in the template.
+      $ref: 'ui-patterns://attributes'
     title_prefix:
       type: array
       title: Title Prefix

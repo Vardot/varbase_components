@@ -1,0 +1,164 @@
+{% stories Icon with {
+  "title": "Atoms/Icon",
+  "parameters": {
+    "componentSubtitle": "Bootstrap Icon Component",
+    "docs": {
+      "description": {
+        "component": "A generic icons for use in the site."
+      },
+      "story": {
+        "inline": true
+      }
+    }
+  },
+  "argTypes": {
+    "name": {
+      "name": "Icon name",
+      "description": "The name of the icon in Bootstrap Icon library. (https://icons.getbootstrap.com)",
+      "defaultValue": "",
+      "control": "text",
+      "default": ""
+    },
+    "role": {
+      "name": "Role",
+      "description": "The accessibility role for the icon as string. (https://icons.getbootstrap.com/#accessibility)",
+      "defaultValue": "",
+      "control": "text",
+      "default": ""
+    },
+    "rtl": {
+      "name": "RTL Icon name",
+      "description": "If needed, The name of the Right to Left (RTL) icon replacement Bootstrap Icon for the default LTR one.",
+      "defaultValue": "",
+      "control": "text",
+      "default": ""
+    },
+    "utility_classes": {
+      "name": "Utility Classes",
+      "description": "An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.",
+      "control": "array",
+      "defaultValue": []
+    },
+    "attributes": {
+      "name": "Attributes",
+      "description": "HTML attributes for the containing element.",
+      "control": "object",
+      "defaultValue": {}
+    }
+  }
+} %}
+
+{% story ChevronRight with {
+  "name": "Chevron right",
+  "args": {
+    "name": "bi-chevron-right"
+  }
+} %}
+{{ include('varbase_components:icon') }}
+{% endstory %}
+
+{% story ChevronLeft with {
+  "name": "Chevron left",
+  "args": {
+    "name": "bi-chevron-left"
+  }
+} %}
+{{ include('varbase_components:icon') }}
+{% endstory %}
+
+{% story ChevronUp with {
+  "name": "Chevron up",
+  "args": {
+    "name": "bi-chevron-up"
+  }
+} %}
+{{ include('varbase_components:icon') }}
+{% endstory %}
+
+{% story ChevronDown with {
+  "name": "Chevron down",
+  "args": {
+    "name": "bi-chevron-down"
+  }
+} %}
+{{ include('varbase_components:icon') }}
+{% endstory %}
+
+{% story ChevronDoubleRight with {
+  "name": "Chevron double right",
+  "args": {
+    "name": "bi-chevron-double-right",
+    "role": "button",
+    "rtl": "bi-chevron-double-left"
+  }
+} %}
+{{ include('varbase_components:icon') }}
+{% endstory %}
+
+{% story ChevronDoubleLeft with {
+  "name": "Chevron double left",
+  "args": {
+    "name": "bi-chevron-double-left",
+    "rtl": "bi-chevron-double-right"
+  }
+} %}
+{{ include('varbase_components:icon') }}
+{% endstory %}
+
+{% story ChevronDoubleUp with {
+  "name": "Chevron double up",
+  "args": {
+    "name": "bi-chevron-double-up",
+    "role": "scroll"
+  }
+} %}
+{{ include('varbase_components:icon') }}
+{% endstory %}
+
+{% story ChevronDoubleDown with {
+  "name": "Chevron double down",
+  "args": {
+    "name": "bi-chevron-double-down",
+    "role": "scroll"
+  }
+} %}
+{{ include('varbase_components:icon') }}
+{% endstory %}
+
+{% story BoxArrowInRight with {
+  "name": "Box arrow in right",
+  "args": {
+    "name": "bi-box-arrow-in-right"
+  }
+} %}
+{{ include('varbase_components:icon') }}
+{% endstory %}
+
+{% story BoxArrowInLeft with {
+  "name": "Box arrow in left",
+  "args": {
+    "name": "bi-box-arrow-in-left"
+  }
+} %}
+{{ include('varbase_components:icon') }}
+{% endstory %}
+
+{% story PersonFill with {
+  "name": "Person fill",
+  "args": {
+    "name": "bi-person-fill"
+  }
+} %}
+{{ include('varbase_components:icon') }}
+{% endstory %}
+
+{% story HouseDoorFill with {
+  "name": "House door fill",
+  "args": {
+    "name": "bi-house-door-fill"
+  }
+} %}
+{{ include('varbase_components:icon') }}
+{% endstory %}
+
+{% endstories %}

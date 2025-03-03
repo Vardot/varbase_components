@@ -6,9 +6,10 @@ props:
   type: object
   properties:
     attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Attributes
-      description: Remaining HTML attributes for the element.
+      description: HTML attributes for the containing element.
+      $ref: 'ui-patterns://attributes'
     css_name:
       type: string
       title: CSS name

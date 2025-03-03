@@ -148,18 +148,22 @@ props:
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the root of the table element.
       default: []
     attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Attributes
       description: HTML attributes to apply to the `<table>` tag.
+      $ref: 'ui-patterns://attributes'
     thead_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Table head attributes
       description: HTML attributes to apply to the `<thead>` tag.
+      $ref: 'ui-patterns://attributes'
     tbody_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Table body attributes
       description: HTML attributes to apply to the `<tbody>` tag.
+      $ref: 'ui-patterns://attributes'
     tfoot_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Table footer attributes
       description: HTML attributes to apply to the `<tfoot>` tag.
+      $ref: 'ui-patterns://attributes'

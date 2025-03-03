@@ -71,10 +71,12 @@ props:
       default: []
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the form element to this component.
     wrapper_attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Wrapper Attributes
       description: HTML attributes for the wrapper element.
+      $ref: 'ui-patterns://attributes'
     attributes:
-      type: Drupal\Core\Template\Attribute
+      type: object
       title: Attributes
       description: HTML attributes for the containing element.
+      $ref: 'ui-patterns://attributes'
