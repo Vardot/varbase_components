@@ -3,9 +3,3 @@ description: This is the components handler module for Varbase distribution.
 type: module
 package: Varbase
 core_version_requirement: '>=11.1'
-dependencies:
-  - ui_patterns:ui_patterns
-  - ui_patterns:ui_patterns_layouts
-  - ui_patterns:ui_patterns_library
-  - ui_patterns:ui_patterns_views
-  - ui_patterns:ui_patterns_field_formatters

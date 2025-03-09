@@ -27,6 +27,7 @@
     "vardot/varbase-patches": "10.1.x-dev",
     "drupal/ui_patterns": "~2",
     "drupal/ui_patterns_field_group-ui_patterns_field_group": "~2",
+    "drupal/ui_patterns_ds-ui_patterns_ds": "~1",
     "drupal/storybook": "~1"
   }
 }
