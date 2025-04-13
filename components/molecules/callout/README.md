@@ -7,7 +7,7 @@ Callout is not part of Bootstrap 5, It is part of [Creating your own](https://ge
 ### Properties:
 * `type`: Predefined callout type styles.
          (''|bs-callout-info|bs-callout-warning|bs-callout-danger), If not provided the fallback default callout style will apply.
-* `utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
+* `callout_utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
 
 ### Attributes:
  * `attributes`: HTML attributes for the callout element.

@@ -12,7 +12,7 @@
  *   - width: The width of the image
  *   - height: The height of the image
  *   - alt: The alternative text of the image
- * - utility_classes: An array of utility classes.
+ * - navbar_brand_utility_classes: An array of utility classes.
  */
 #}
 
@@ -24,10 +24,10 @@
   <img src="{{ src }}" height="{{ height }}" width="{{ width }}" alt="{{ alt|default('') }}" class="brand-logo-image" />
 {% endmacro %}
 
-{% set utility_classes = utility_classes|join(' ') %}
+{% set navbar_brand_utility_classes = navbar_brand_utility_classes|join(' ') %}
 
 {% if path %}
-  <a href="{{ path }}" class="navbar-brand d-flex align-items-center {{ utility_classes }}" aria-label="{{ text }}">
+  <a href="{{ path }}" class="navbar-brand d-flex align-items-center {{ navbar_brand_utility_classes }}" aria-label="{{ text }}">
     {% if image_path %}
       {# Call image function that declared above #}
       {{ navbar_brand.image(image_path, width, height, alt) }}
@@ -35,7 +35,7 @@
     {{ text }}
   </a>
 {% else %}
-  <span class="navbar-brand h1 mb-0 {{ utility_classes }}" aria-label="{{ text }}">
+  <span class="navbar-brand h1 mb-0 {{ navbar_brand_utility_classes }}" aria-label="{{ text }}">
     {% if image_path %}
       {# Call image function that declared above #}
       {{ navbar_brand.image(image_path, width, height, alt) }}

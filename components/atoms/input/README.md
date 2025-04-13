@@ -15,7 +15,7 @@ Textual form controls `<input>`s an upgrade with custom styles, sizing, focus st
 * `placeholder`: The input placeholder attribute specifies a short hint that describes
                  the expected value of an input field (a sample value or a short
                  description of the expected format).
-* `utility_classes`: An array of utility classes that can
+* `input_utility_classes`: An array of utility classes that can
                     be used to add extra Bootstrap utility classes or custom
                     classes to this component.
 
@@ -35,7 +35,7 @@ Textual form controls `<input>`s an upgrade with custom styles, sizing, focus st
   type: 'checkbox',
   bs_form_control: false,
   bs_size: '',
-  utility_classes: ['form-check-input'],
+  input_utility_classes: ['form-check-input'],
   attributes: attributes
 } %}
 ```

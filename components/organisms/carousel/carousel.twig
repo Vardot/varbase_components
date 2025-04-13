@@ -11,8 +11,8 @@
  *    - content: The content slot for the slide_component
  * - controls: Add the previous/next controls.
  * - indicators: Add indicators to the carousel, alongside the previous/next controls.
- * - utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the carousel element.
- * - indicators_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the indicators element.
+ * - carousel_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the carousel element.
+ * - carousel_indicators_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the indicators element.
  *
  * Available attributes:
  * - attributes: HTML attributes to apply to the carousel main wrapper tag.
@@ -24,14 +24,14 @@
  */
 #}
 {% set slide_component = slide_component ?? 'varbase_components:card-hero' %}
-{% set utility_classes = utility_classes ?? [] %}
-{% set indicators_utility_classes = indicators_utility_classes ?? [] %}
+{% set carousel_utility_classes = carousel_utility_classes ?? [] %}
+{% set carousel_indicators_utility_classes = carousel_indicators_utility_classes ?? [] %}
 
 {%
   set carousel_classes = [
     'carousel',
     'slide',
-  ]|merge(utility_classes)
+  ]|merge(carousel_utility_classes)
 %}
 
 {% if not attributes %}
@@ -54,7 +54,7 @@
       {%
         set indicators_classes = [
           'carousel-indicators'
-        ]|merge(indicators_utility_classes)
+        ]|merge(carousel_indicators_utility_classes)
       %}
 
       {% set indicators_attributes = indicators_attributes.addClass(indicators_classes) %}

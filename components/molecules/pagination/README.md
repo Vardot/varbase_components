@@ -31,7 +31,7 @@ Show pagination to indicate a series of related content exists across multiple p
 ## Available properties:
 * `size`: `sm`, `lg`
 * `alignment`: `start` | `end` | `center` | `vertical`.
-* `utility_classes`: An array of utility classes. Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.
+* `pagination_utility_classes`: An array of utility classes. Use this property to add extra Bootstrap utility classes or your custom class over to this to this component.
 
 ## Available attributes:        
 * `attributes`: HTML attributes for the pagination element.
@@ -45,7 +45,7 @@ Show pagination to indicate a series of related content exists across multiple p
 {% include 'varbase_components:pagination' with {
   items: items,
   alignment: 'center',
-  utility_classes: ['mt-3']
+  pagination_utility_classes: ['mt-3']
 } %}
 ```
 
@@ -55,7 +55,7 @@ Show pagination to indicate a series of related content exists across multiple p
   items: items,
   size: 'lg',
   alignment: 'center',
-  utility_classes: ['mt-3']
+  pagination_utility_classes: ['mt-3']
 } %}
 ```
 
@@ -65,13 +65,13 @@ Show pagination to indicate a series of related content exists across multiple p
   items: items,
   size: 'sm',
   alignment: 'center',
-  utility_classes: ['mt-3']
+  pagination_utility_classes: ['mt-3']
 } %}
 ```
 
 **Example #4:** Use in views mini-pager
 ```
 {% include 'varbase_components:pagination' with {
-  utility_classes: ['mt-2']
+  pagination_utility_classes: ['mt-2']
 } %}
 ```

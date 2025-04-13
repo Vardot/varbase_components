@@ -6,7 +6,7 @@
  * Available properties:
  * - type: Predefined callout type styles.
  *         (''|bs-callout-info|bs-callout-warning|bs-callout-danger), If not provided the fallback default callout style will apply.
- * - utility_classes: An array of utility classes. Use to add extra utility classes or custom CSS classes over to this component.
+ * - callout_utility_classes: An array of utility classes. Use to add extra utility classes or custom CSS classes over to this component.
  *
  * Available attributes:
  * - attributes: HTML attributes for the callout element.
@@ -16,11 +16,11 @@
  */
 #}
 {% set type_classes = type ? [type] : [] %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set callout_utility_classes = callout_utility_classes ? callout_utility_classes : [] %}
 
 {% set classes = [
   'bs-callout',
-]|merge(type_classes)|merge(utility_classes) %}
+]|merge(type_classes)|merge(callout_utility_classes) %}
 
 {% if not attributes %}
   {% set attributes = create_attribute() %}

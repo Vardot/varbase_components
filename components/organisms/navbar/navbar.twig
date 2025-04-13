@@ -9,7 +9,7 @@
  * - color_mode: light | dark
  * - color: wight | dark
  * - navbar_expand: sm | md | lg | xl
- * - utility_classes: An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.
+ * - navbar_utility_classes: An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.
  * - attributes: HTML attributes for the containing element.
  *
  * Available slogs:
@@ -23,13 +23,13 @@
 {% set color_mode = color_mode ? ['navbar-' ~ color_mode] : [] %}
 {% set color = color ? ['bg-' ~ color] : [] %}
 {% set navbar_expand = navbar_expand ? ['navbar-expand-' ~ navbar_expand] : ['navbar-expand-lg'] %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set navbar_utility_classes = navbar_utility_classes ? navbar_utility_classes : [] %}
 
 {%
   set classes = [
     'navbar',
     'justify-content-between',
-  ]|merge(placement)|merge(color_mode)|merge(color)|merge(navbar_expand)|merge(utility_classes)
+  ]|merge(placement)|merge(color_mode)|merge(color)|merge(navbar_expand)|merge(navbar_utility_classes)
 %}
 
 <nav{{ attributes.addClass(classes) }}>

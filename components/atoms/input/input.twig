@@ -11,7 +11,7 @@
  * - placeholder: The input placeholder attribute specifies a short hint that describes
  *                the expected value of an input field (a sample value or a short
  *                description of the expected format).
- * - utility_classes: An array of utility classes that can be used to add extra
+ * - input_utility_classes: An array of utility classes that can be used to add extra
  *                    Bootstrap utility classes or custom classes to this component.
  * 
  * Available attributes:
@@ -27,8 +27,8 @@
 
 {% set bs_form_control = bs_form_control ? ['form-control'] : [] %}
 {% set bs_size = bs_size ? [bs_size] : [] %}
-{% set utility_classes = utility_classes ?? [] %}
-{% set classes = []|merge(bs_form_control)|merge(bs_size|merge(utility_classes)) %}
+{% set input_utility_classes = input_utility_classes ?? [] %}
+{% set classes = []|merge(bs_form_control)|merge(bs_size|merge(input_utility_classes)) %}
 
 {# Change the type for the HTML <input> element. #}
 {% if type %}

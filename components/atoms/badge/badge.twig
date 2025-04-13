@@ -12,7 +12,7 @@
  *				  which you still may use if you prefer.
  *          (primary|secondary|success|info|warning|danger|light|dark)
  * - url: The HTML tag will automatically be set to a if an anchor is added to the URL.
- * - utility_classes: An array of utility classes that can be used to add extra
+ * - badge_utility_classes: An array of utility classes that can be used to add extra
  *                    Bootstrap utility classes or custom classes to this component.
  *
  * Available attributes
@@ -24,12 +24,12 @@
 #}
 {% set html_tag = html_tag ?? 'span' %}
 {% set color = color ? ['text-bg-' ~ color] : ['text-bg-secondary'] %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set badge_utility_classes = badge_utility_classes ? badge_utility_classes : [] %}
 
 {%
   set classes = [
     'badge',
-  ]|merge(color)|merge(utility_classes)
+  ]|merge(color)|merge(badge_utility_classes)
 %}
 
 {% if not attributes %}

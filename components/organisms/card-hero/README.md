@@ -8,9 +8,9 @@ Hero card component for a media and a text over the media.
 * `media_position`: Choose the location of the media from (`overlay`|`start`|`end`|`top`|`bottom`).
 * `horizontal_alignment`: Horizontal alignment of the content. (`start`|`center`|`end`)
 * `vertical_alignment`: Vertical alignment of the content. (`start`|`center`|`end`)
-* `utility_classes`: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add `card`)
-* `media_utility_classes`: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add `card-img`)
-* `content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`)
+* `card_hero_utility_classes`: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add `card`)
+* `card_hero_media_utility_classes`: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add `card-img`)
+* `card_hero_content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`)
 
 ## Attributes:
 * `card_attributes`: HTML attributes for the card element.
@@ -31,9 +31,9 @@ Hero card component for a media and a text over the media.
   media_position: 'overlay',
   horizontal_alignment: 'center',
   vertical_alignment: 'center',
-  utility_classes: [],
-  media_utility_classes: [],
-  content_utility_classes: [],
+  card_hero_utility_classes: [],
+  card_hero_media_utility_classes: [],
+  card_hero_content_utility_classes: [],
   media: media,
   content: content,
 } only %}

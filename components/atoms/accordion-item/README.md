@@ -12,19 +12,19 @@
 * `header_tag`: The HTML (h1, h2, h3, h4, h5, or h6) header tag.
 * `collapsable`: Have a collapsed or collapsable accordion item.
 * `expanded`: Set the accordion item as expanded.
-* `utility_classes`: An array of utility classes that can be used to
+* `accordion_item_utility_classes`: An array of utility classes that can be used to
                     add extra Bootstrap utility classes or custom
                     classes to the root accordion item wrapper.
-* `header_utility_classes`: An array of utility classes that can be used to
+* `accordion_item_header_utility_classes`: An array of utility classes that can be used to
                     add extra Bootstrap utility classes or custom
                     classes to the accordion header wrapper.
-* `body_utility_classes`: An array of utility classes that can be used to
+* `accordion_item_body_utility_classes`: An array of utility classes that can be used to
                     add extra Bootstrap utility classes or custom
                     classes to the accordion body wrapper.
-* `button_utility_classes`: An array of utility classes that can be used to
+* `accordion_item_button_utility_classes`: An array of utility classes that can be used to
                     add extra Bootstrap utility classes or custom
                     classes to the accordion header button.
-* `collapse_utility_classes`: An array of utility classes that can be used to
+* `accordion_item_collapse_utility_classes`: An array of utility classes that can be used to
                     add extra Bootstrap utility classes or custom
                     classes to the accordion body collapse wrapper.
 

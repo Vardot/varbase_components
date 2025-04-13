@@ -4,14 +4,14 @@
  * Varbase Components implementation for the Figure component.
  *
  * Available config:
- * - utility_classes: An array of utility classes.
+ * - figure_utility_classes: An array of utility classes.
  * - align: left|right|center
  * - responsive: true|false
  */
 #}
 {% set classes = [
   'figure',
-]|merge(utility_classes ? utility_classes : []) %}
+]|merge(figure_utility_classes ? figure_utility_classes : []) %}
 
 <figure{{ attributes.addClass(classes) }}>
   {{ image }}

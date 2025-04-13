@@ -12,7 +12,7 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 * `display`: When you need a heading to stand out, consider using a display
              heading—a larger, slightly more opinionated heading style.
 * `url`: Simple URL link for heading. 
-* `utility_classes`: An array of utility classes that can
+* `heading_utility_classes`: An array of utility classes that can
                     be used to add extra Bootstrap utility classes or custom
                     classes to this component.
 
@@ -30,7 +30,7 @@ All HTML headings, `<h1>` through `<h6>`, are available.
     html_tag: 'h1',
     content: title|render|striptags|trim,
     attributes: title_attributes,
-    utility_classes: classes
+    heading_utility_classes: classes
   }
 %}
 ```
@@ -61,7 +61,7 @@ All HTML headings, `<h1>` through `<h6>`, are available.
   attributes: heading_attributes,
   html_tag: 'h2',
   content: heading,
-  utility_classes: ['rich-heading', 'mb-2']
+  heading_utility_classes: ['rich-heading', 'mb-2']
 } %}
 ```
 
@@ -71,7 +71,7 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 		{% include "varbase_components:heading" with {
 			html_tag: 'h4',
 			content: heading|render|striptags|trim,
-			utility_classes: ['alert-heading']
+			heading_utility_classes: ['alert-heading']
 		} only %}
 	{% endif %}
 ```

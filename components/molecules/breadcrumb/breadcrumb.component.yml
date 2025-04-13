@@ -15,7 +15,7 @@ props:
       title: Divider
       description: Dividers are automatically added in CSS through ::before and content. They can be changed by modifying a local CSS custom property --bs-breadcrumb-divider, or through the $breadcrumb-divider Sass variable — and $breadcrumb-divider-flipped for its RTL counterpart, if needed. 
       default: ''
-    utility_classes:
+    breadcrumb_utility_classes:
       type: array
       title: Utility Classes
       default: []

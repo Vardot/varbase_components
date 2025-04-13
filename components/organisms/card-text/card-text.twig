@@ -9,9 +9,9 @@
  * - padded: Add a default padding to the card. (true|false)
  * - equal_height: Equal height. (true|false)
  * - anchor_all: Anchor All. (true|false)
- * - utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper.
+ * - card_text_utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper.
  *                    E.g. `mb-3 shadow-lg` ( Do not add `card`).
- * - content_utility_classes: Use to add extra Bootstrap utility classes for the Card Content region wrapper.
+ * - card_text_content_utility_classes: Use to add extra Bootstrap utility classes for the Card Content region wrapper.
  *                            E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`).
  *
  * Available attributes:
@@ -28,21 +28,21 @@
 {% set padded = padded ? ['p-4'] : [''] %}
 {% set equal_height = equal_height ? ['h-100'] : [] %}
 {% set anchor_all = anchor_all ? ['anchor-all'] : [] %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
-{% set content_utility_classes = content_utility_classes ? content_utility_classes : [] %}
+{% set card_text_utility_classes = card_text_utility_classes ? card_text_utility_classes : [] %}
+{% set card_text_content_utility_classes = card_text_content_utility_classes ? card_text_content_utility_classes : [] %}
 
 {%
   set card_classes = [
     'card',
     'varbase-text-card',
-  ]|merge(style_size)|merge(card_border)|merge(padded)|merge(equal_height)|merge(anchor_all)|merge(utility_classes)
+  ]|merge(style_size)|merge(card_border)|merge(padded)|merge(equal_height)|merge(anchor_all)|merge(card_text_utility_classes)
 %}
 
 {%
   set content_classes = [
     'text-card-content',
     'card-body'
-  ]|merge(content_utility_classes)
+  ]|merge(card_text_content_utility_classes)
 %}
 
 {% if not card_attributes %}

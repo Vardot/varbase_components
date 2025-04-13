@@ -5,7 +5,7 @@ description: Navbar Branding log
 props:
   type: object
   properties:
-    utility_classes:
+    navbar_brand_utility_classes:
       type: array
       title: Utility Classes
       default: []

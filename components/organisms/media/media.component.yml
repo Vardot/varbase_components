@@ -23,7 +23,7 @@ props:
       title: Title Suffix
       default: []
       description: Additional output populated by modules, intended to be displayed after the main title tag that appears in the template.
-    utility_classes:
+    media_utility_classes:
       type: array
       title: Utility Classes
       default: []

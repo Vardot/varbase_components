@@ -18,7 +18,7 @@ props:
     heading:
       type: string
       title: Heading
-    utility_classes:
+    block_accordion_utility_classes:
       type: array
       title: Utility Classes
       default: [] 

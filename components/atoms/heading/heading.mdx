@@ -35,7 +35,7 @@ import templateSource from './heading.twig?raw';
     html_tag: 'h1',
     content: title|render|striptags|trim,
     attributes: title_attributes,
-    utility_classes: classes
+    heading_utility_classes: classes
   }
 %}
 ```
@@ -66,7 +66,7 @@ import templateSource from './heading.twig?raw';
   attributes: heading_attributes,
   html_tag: 'h2',
   content: heading,
-  utility_classes: ['rich-heading', 'mb-2']
+  heading_utility_classes: ['rich-heading', 'mb-2']
 } %}
 ```
 
@@ -76,7 +76,7 @@ import templateSource from './heading.twig?raw';
 		{% include "varbase_components:heading" with {
 			html_tag: 'h4',
 			content: heading|render|striptags|trim,
-			utility_classes: ['alert-heading']
+			heading_utility_classes: ['alert-heading']
 		} only %}
 	{% endif %}
 ```

@@ -19,7 +19,7 @@ When you need a heading to stand out, consider using a display
 heading—a larger, slightly more opinionated heading style.
 optional values are: ( display-1, display-2, display-3, display-4, display-5, display-6)
 
-#### Utility Classes (`utility_classes`):
+#### Utility Classes (`block_heading_utility_classes`):
 This property contains an array of utility classes that can be used to
 add extra Bootstrap utility classes or custom classes to this component.
 

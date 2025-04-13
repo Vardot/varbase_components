@@ -33,9 +33,9 @@
 {% set size_classes = size ? ['spinner-' ~ type ~ '-' ~ size] : []  %}
 {% set color_classes = color ? ['text-' ~ color] : [] %}
 {% set hidden_status = hidden_status ?? true %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set spinner_utility_classes = spinner_utility_classes ? spinner_utility_classes : [] %}
 
-{% set classes = []|merge(type_classes)|merge(size_classes)|merge(color_classes)|merge(utility_classes) %}
+{% set classes = []|merge(type_classes)|merge(size_classes)|merge(color_classes)|merge(spinner_utility_classes) %}
 
 {% if not attributes %}
   {% set attributes = create_attribute() %}

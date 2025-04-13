@@ -9,7 +9,7 @@ The Media component is designed to display a media item with customizable stylin
 * `view_mode`: The view mode of the media item; for example, `media_01_01` or `media_16_09`.
 * `title_prefix`: Additional output displayed before the main title tag.
 * `title_suffix`: Additional output displayed after the main title tag.
-* `utility_classes`: An array of utility classes for the root element.
+* `media_utility_classes`: An array of utility classes for the root element.
 
 ### Attributes
 
@@ -25,7 +25,7 @@ The Media component is designed to display a media item with customizable stylin
 ```
 {% include 'varbase_components:media' with {
   media: media,
-  utility_classes: [],
+  media_utility_classes: [],
   content: content,
 } only %}
 ```

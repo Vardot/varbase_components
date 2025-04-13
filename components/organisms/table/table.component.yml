@@ -127,7 +127,7 @@ props:
       type: number
       title: Header Columns
       description: The number of columns in the header.
-    utility_classes:
+    table_utility_classes:
       type: array
       title: Utility Classes
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the table element.

@@ -29,7 +29,7 @@ props:
       type: boolean
       title: Rounded image
       default: false
-    utility_classes:
+    image_utility_classes:
       type: array
       title: Utility Classes
       default: []

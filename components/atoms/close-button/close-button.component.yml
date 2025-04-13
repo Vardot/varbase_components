@@ -18,7 +18,7 @@ props:
       title: Disabled
       description: Disabled button
       default: false
-    utility_classes:
+    close_button_utility_classes:
       type: array
       title: Utility Classes
       default: []

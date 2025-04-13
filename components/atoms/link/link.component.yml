@@ -77,7 +77,7 @@ props:
         - '50'
         - '75'
         - '100'
-    utility_classes:
+    link_utility_classes:
       type: array
       title: Utility Classes
       default: []

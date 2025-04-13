@@ -10,7 +10,7 @@
  * - responsive: (optional) Images in Bootstrap are made responsive with `.img-fluid`. This applies max-width with 100% and height with auto to the image so that it scales with the parent width.
  * - thumbnails: (optional) In addition to Bootstrap border-radius utilities, you can use `.img-thumbnail` to give an image a rounded 1px border appearance.
  * - rounded: (optional) Rounded image
- * - utility_classes: An array of utility classes that can be used to add extra
+ * - image_utility_classes: An array of utility classes that can be used to add extra
  *                    Bootstrap utility classes or custom classes to this component.
  *
  * Available attributes:
@@ -31,8 +31,8 @@
 {% set responsive = responsive ? ['img-fluid'] : [] %}
 {% set thumbnails = thumbnails ? ['img-thumbnail'] : [] %}
 {% set rounded = rounded ? ['rounded'] : [] %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set image_utility_classes = image_utility_classes ? image_utility_classes : [] %}
 
-{% set classes = []|merge(align)|merge(responsive)|merge(thumbnails)|merge(rounded)|merge(utility_classes) %}
+{% set classes = []|merge(align)|merge(responsive)|merge(thumbnails)|merge(rounded)|merge(image_utility_classes) %}
 
 <img{{ attributes.addClass(classes) }} />

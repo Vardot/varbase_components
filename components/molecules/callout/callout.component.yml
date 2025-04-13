@@ -15,7 +15,7 @@ props:
         - bs-callout-info
         - bs-callout-warning
         - bs-callout-danger
-    utility_classes:
+    callout_utility_classes:
       type: array
       title: Utility Classes
       default: []

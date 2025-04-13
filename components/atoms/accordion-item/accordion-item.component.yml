@@ -37,27 +37,27 @@ props:
       title: Expanded
       description: Set the accordion item as expanded.
       default: true
-    utility_classes:
+    accordion_item_utility_classes:
       type: array
       title: Utility Classes
       default: []
       description: An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to the root accordion item wrapper.
-    header_utility_classes:
+    accordion_item_header_utility_classes:
       type: array
       title: Header Utility Classes
       default: []
       description: An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to the accordion header wrapper.
-    body_utility_classes:
+    accordion_item_body_utility_classes:
       type: array
       title: Body Utility Classes
       default: []
       description: An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to the accordion body wrapper.
-    button_utility_classes:
+    accordion_item_button_utility_classes:
       type: array
       title: Header Button Utility Classes
       default: []
       description: An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to the accordion header button.
-    collapse_utility_classes:
+    accordion_item_collapse_utility_classes:
       type: array
       title: Body collapse Utility Classes
       default: []

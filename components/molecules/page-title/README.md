@@ -12,7 +12,7 @@ The Page Title component is responsible for rendering the page's main heading us
    heading—a larger, slightly more opinionated heading style.
    optional values are:
    ( display-1, display-2, display-3, display-4, display-5, display-6)
-* `utility_classes`: An array of utility classes. Use this property to add
+* `page_title_utility_classes`: An array of utility classes. Use this property to add
    extra Bootstrap utility classes or your custom class over to this to this component.
 
 ## Attributes:        
@@ -46,7 +46,7 @@ Used in the `page-title.html.twig` default theme implementation for a page title
 **Example #3:** Have custom title class with the page title.
 ```
   {% include 'varbase_components:page-title' with {
-      utility_classes: ['custom-section-title1', 'custom-title2']
+      page_title_utility_classes: ['custom-section-title1', 'custom-title2']
     }
   %}
 ```

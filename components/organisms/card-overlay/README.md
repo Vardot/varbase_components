@@ -15,11 +15,11 @@ Overlay card component for a media and a content over the media with sizes.
 * `card_attributes`: Drupal attributes for featured card wrapper.
 * `media_attributes`: Drupal attributes for card media slot region.
 * `content_attributes`: Drupal attributes for card content slot region.
-* `utility_classes`: Use to add extra Bootstrap utility classes for the main Card wrapper.
+* `card_overlay_utility_classes`: Use to add extra Bootstrap utility classes for the main Card wrapper.
                    E.g. `mb-3 shadow-lg` ( Do not add `card`).
-* `media_utility_classes`: Use to add extra Bootstrap utility classes for the Card Media region wrapper.
+* `card_overlay_media_utility_classes`: Use to add extra Bootstrap utility classes for the Card Media region wrapper.
                          E.g. `bg-secondary mb-3` ( Do not add `card-img`).
-* `content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper.
+* `card_overlay_content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper.
                              E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`)
 
 ## Slots:
@@ -39,9 +39,9 @@ Overlay card component for a media and a content over the media with sizes.
   anchor_all: true,
   horizontal_alignment: 'center',
   vertical_alignment: 'center',
-  utility_classes: [],
-  media_utility_classes: [],
-  content_utility_classes: [],
+  card_overlay_utility_classes: [],
+  card_overlay_media_utility_classes: [],
+  card_overlay_content_utility_classes: [],
   media: media,
   content: content,
 } only %}

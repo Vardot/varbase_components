@@ -5,7 +5,7 @@ description: Checkbox
 props:
   type: object
   properties:
-    utility_classes:
+    input_checkbox_utility_classes:
       type: array
       title: Utility Classes
       default: [] 

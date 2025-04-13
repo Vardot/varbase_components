@@ -18,7 +18,7 @@ props:
     heading_text:
       type: string
       title: Heading Text
-    utility_classes:
+    block_heading_utility_classes:
       type: array
       title: Utility Classes
       default: [] 

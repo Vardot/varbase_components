@@ -16,9 +16,9 @@ It is a versatile pattern that contain content such as blog posts, user informat
 * `card_attributes`: Drupal attributes for featured card wrapper.
 * `media_attributes`: Drupal attributes for card media slot region.
 * `content_attributes`: Drupal attributes for card content slot region.
-* `utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)
-* `media_utility_classes`: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-img)
-* `content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
+* `card_impressed_utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)
+* `card_impressed_media_utility_classes`: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add card-img)
+* `card_impressed_content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)
 
 ### Slots:
 * `media`: Card Media slot region.
@@ -35,9 +35,9 @@ It is a versatile pattern that contain content such as blog posts, user informat
   equal_height: true,
   anchor_all: true,
   media_position: 'top',
-  utility_classes: [],
-  media_utility_classes: [],
-  content_utility_classes: [],
+  card_impressed_utility_classes: [],
+  card_impressed_media_utility_classes: [],
+  card_impressed_content_utility_classes: [],
   media: media,
   content: content,
 } only %}

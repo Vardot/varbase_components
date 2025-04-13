@@ -18,7 +18,7 @@
  * - label: The label of the working task.
  * - percent: [1 to 100] The percentage of the progress.
  * - message: A string containing information to be displayed.
- * - utility_classes: An array of utility classes that can be used to add extra
+ * - progress_bar_utility_classes: An array of utility classes that can be used to add extra
  *                    Bootstrap utility classes or custom classes to this component.
  *
  * Available attributes:
@@ -35,7 +35,7 @@
 {% set color = color ? [color] : [] %}
 {% set striped = striped ? ['progress-bar-striped'] : [] %}
 {% set animated = animated ? ['progress-bar-animated'] : [] %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set progress_bar_utility_classes = progress_bar_utility_classes ? progress_bar_utility_classes : [] %}
 
 {# Progress Bar wrapper #}
 {%
@@ -54,7 +54,7 @@
 {%
   set indicator_classes = [
     'progress-bar'
-  ]|merge(color)|merge(striped)|merge(animated)|merge(utility_classes)
+  ]|merge(color)|merge(striped)|merge(animated)|merge(progress_bar_utility_classes)
 %}
 {% if not indicator_attributes %}
   {% set indicator_attributes = create_attribute() %}

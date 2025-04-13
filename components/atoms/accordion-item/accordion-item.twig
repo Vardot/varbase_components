@@ -8,19 +8,19 @@
  * - header_tag: The HTML (h1, h2, h3, h4, h5, or h6) header tag.
  * - collapsable: Have a collapsed or collapsable accordion item.
  * - expanded: Set the accordion item as expanded.
- * - utility_classes: An array of utility classes that can be used to
+ * - accordion_item_utility_classes: An array of utility classes that can be used to
  *                    add extra Bootstrap utility classes or custom
  *                    classes to the root accordion item wrapper.
- * - header_utility_classes: An array of utility classes that can be used to
+ * - accordion_item_header_utility_classes: An array of utility classes that can be used to
  *                    add extra Bootstrap utility classes or custom
  *                    classes to the accordion header wrapper.
- * - body_utility_classes: An array of utility classes that can be used to
+ * - accordion_item_body_utility_classes: An array of utility classes that can be used to
  *                    add extra Bootstrap utility classes or custom
  *                    classes to the accordion body wrapper.
- * - button_utility_classes: An array of utility classes that can be used to
+ * - accordion_item_button_utility_classes: An array of utility classes that can be used to
  *                    add extra Bootstrap utility classes or custom
  *                    classes to the accordion header button.
- * - collapse_utility_classes: An array of utility classes that can be used to
+ * - accordion_item_collapse_utility_classes: An array of utility classes that can be used to
  *                    add extra Bootstrap utility classes or custom
  *                    classes to the accordion body collapse wrapper.
  *
@@ -43,16 +43,16 @@
 
 {% set header_tag = header_tag ? header_tag : 'h4' %}
 {% set collapsable = collapsable ? collapsable : true %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
-{% set header_utility_classes = header_utility_classes ? header_utility_classes : [] %}
-{% set body_utility_classes = body_utility_classes ? body_utility_classes : [] %}
-{% set button_utility_classes = button_utility_classes ? button_utility_classes : [] %}
-{% set collapse_utility_classes = collapse_utility_classes ? collapse_utility_classes : [] %}
+{% set accordion_item_utility_classes = accordion_item_utility_classes ? accordion_item_utility_classes : [] %}
+{% set accordion_item_header_utility_classes = accordion_item_header_utility_classes ? accordion_item_header_utility_classes : [] %}
+{% set accordion_item_body_utility_classes = accordion_item_body_utility_classes ? accordion_item_body_utility_classes : [] %}
+{% set accordion_item_button_utility_classes = accordion_item_button_utility_classes ? accordion_item_button_utility_classes : [] %}
+{% set accordion_item_collapse_utility_classes = accordion_item_collapse_utility_classes ? accordion_item_collapse_utility_classes : [] %}
 
 {# Accordion item wrapper #}
 {% set classes = [
   'accordion-item',
-]|merge(utility_classes) %}
+]|merge(accordion_item_utility_classes) %}
 
 {% if not attributes %}
   {% set attributes = create_attribute() %}
@@ -63,7 +63,7 @@
 {%
   set header_classes = [
     'accordion-header',
-  ]|merge(header_utility_classes)
+  ]|merge(accordion_item_header_utility_classes)
 %}
 
 {% if not header_attributes %}
@@ -78,7 +78,7 @@
 {%
   set body_classes = [
     'accordion-body',
-  ]|merge(body_utility_classes)
+  ]|merge(accordion_item_body_utility_classes)
 %}
 
 {% if not body_attributes %}
@@ -93,7 +93,7 @@
 {%
   set button_classes = [
     'accordion-button',
-  ]|merge(button_collapsed_classs)|merge(button_utility_classes)
+  ]|merge(button_collapsed_classs)|merge(accordion_item_button_utility_classes)
 %}
 
 {% if not button_attributes %}
@@ -115,7 +115,7 @@
 {%
   set collapse_classes = [
     'accordion-collapse',
-  ]|merge(collapsable_classs)|merge(expanded_classs)|merge(collapse_utility_classes)
+  ]|merge(collapsable_classs)|merge(expanded_classs)|merge(accordion_item_collapse_utility_classes)
 %}
 
 {% if not collapse_attributes %}

@@ -5,6 +5,11 @@ description: Form
 props:
   type: object
   properties:
+    form_utility_classes:
+      type: array
+      title: Utility Classes
+      default: []
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
     attributes:
       type: object
       title: Attributes

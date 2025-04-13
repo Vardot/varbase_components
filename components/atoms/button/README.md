@@ -21,7 +21,7 @@ Use Bootstrap’s custom button styles for actions in forms, dialogs, and more w
               background images and colors on any button.
 * `size`: (btn-sm | btn-lg) Bootstrap button size
 * `disabled`: (true|false) Disabled button
-* `utility_classes`: An array of utility classes that can
+* `button_utility_classes`: An array of utility classes that can
                     be used to add extra Bootstrap utility classes or custom
                     classes to this component.
 
@@ -49,7 +49,7 @@ Use Bootstrap’s custom button styles for actions in forms, dialogs, and more w
   content: 'Read more'|t,
   color: 'primary',
   outline: true,
-  utility_classes: ['card-link', 'float-end', 'mt-3', 'read-more']
+  button_utility_classes: ['card-link', 'float-end', 'mt-3', 'read-more']
 } %}
 ```
 

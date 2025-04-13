@@ -8,7 +8,7 @@ Varbase implementation for Bootstrap icons.
  - `name`: Icon name - The name of the icon in Bootstrap Icon library. (https://icons.getbootstrap.com)
  - `role`: The accessibility role for the icon as string. (https://icons.getbootstrap.com/#accessibility)
  - `rtl`: RTL Icon name - If needed, The name of the Right to Left (RTL) icon replacement Bootstrap Icon for the default LTR one.
- - `utility_classes`: An array of utility classes that can be used to add extra
+ - `icon_utility_classes`: An array of utility classes that can be used to add extra
                      Bootstrap utility classes or custom classes to this component.
 
 ## Available attributes:

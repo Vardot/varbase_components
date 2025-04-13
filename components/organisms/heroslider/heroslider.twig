@@ -20,9 +20,9 @@
  *         If set to `carousel`, autoplays the carousel on load.
  * - touch: Whether the carousel should support left/right swipe interactions on touchscreen devices. (true|false)
  * - wrap: Whether the carousel should cycle continuously or have hard stops. (true|false)
- * - utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the heroslider element.
- * - controls_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the controls element.
- * - indicators_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the indicators element.
+ * - heroslider_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the heroslider element.
+ * - heroslider_controls_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the controls element.
+ * - heroslider_indicators_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the indicators element.
  *
  * Available attributes:
  * - attributes: HTML attributes to apply to the heroslider main wrapper tag.
@@ -38,9 +38,9 @@
 
 {% set media_position = media_position ? ['hero-style-' ~ media_position] : ['hero-style-overlay'] %}
 {% set heroslider_id = id ? id : 'heroslider-' ~ random(1000) %}
-{% set utility_classes = utility_classes ?? [] %}
-{% set controls_utility_classes = controls_utility_classes ?? [] %}
-{% set indicators_utility_classes = indicators_utility_classes ?? [] %}
+{% set heroslider_utility_classes = heroslider_utility_classes ?? [] %}
+{% set heroslider_controls_utility_classes = heroslider_controls_utility_classes ?? [] %}
+{% set heroslider_indicators_utility_classes = heroslider_indicators_utility_classes ?? [] %}
 
 {%
   set heroslider_classes = [
@@ -48,7 +48,7 @@
     'js-varbase-heroslider',
     'carousel',
     'slide',
-  ]|merge(utility_classes)|merge(media_position)
+  ]|merge(heroslider_utility_classes)|merge(media_position)
 %}
 
 {% if not attributes %}

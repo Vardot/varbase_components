@@ -24,7 +24,7 @@ props:
       type: boolean
       title: Dismissible
       description: It is possible to dismiss any alert inline, When an alert is dismissed, the element is completely removed from the page structure.
-    utility_classes:
+    alert_utility_classes:
       type: array
       title: Utility Classes
       default: []

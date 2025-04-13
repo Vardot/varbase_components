@@ -12,7 +12,7 @@ Provide an option to dismiss or close a component with `.btn-close`. Default sty
 ## Properties:
 * `size`: (btn-sm|btn-lg) Bootstrap button size class.
 * `disabled`: (true|false) Disabled button.
-* `utility_classes`: An array of utility classes that can
+* `close_button_utility_classes`: An array of utility classes that can
                     be used to add extra Bootstrap utility classes or custom
                     classes to this component.
 

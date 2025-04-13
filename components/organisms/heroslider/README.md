@@ -21,11 +21,11 @@ A slideshow component for cycling through elements images/media or slides of tex
          If set to `carousel`, autoplays the carousel on load.
 * `touch`: Whether the carousel should support left/right swipe interactions on touchscreen devices. (true|false)
 * `wrap`: Whether the carousel should cycle continuously or have hard stops. (true|false)
-* `utility_classes`: An array of utility classes. Use to add extra Bootstrap
+* `heroslider_utility_classes`: An array of utility classes. Use to add extra Bootstrap
   utility classes or custom CSS classes over to the heroslider element.
-* `controls_utility_classes`: An array of utility classes. Use to add extra 
+* `heroslider_controls_utility_classes`: An array of utility classes. Use to add extra 
   Bootstrap utility classes or custom CSS classes over to the controls element.
-* `indicators_utility_classes`: An array of utility classes. Use to add extra
+* `heroslider_indicators_utility_classes`: An array of utility classes. Use to add extra
   Bootstrap utility classes or custom CSS classes over to the indicators element.
 
 

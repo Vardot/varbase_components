@@ -14,7 +14,7 @@ Created by [Wesley Sandra (weseze)](https://www.drupal.org/u/weseze)
 * `height`: The original height of the image.
 * `alt`: The alt text for the image.
 * `data`: json encoded drimage data object
-* `utility_classes`: Use to add extra Bootstrap utility classes for the main wrapper.
+* `dynamic_responsive_image_utility_classes`: Use to add extra Bootstrap utility classes for the main wrapper.
 
 ### attributes:
 * `item_attributes`: HTML attributes for the item wrapper element.

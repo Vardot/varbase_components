@@ -13,13 +13,13 @@
  */
 #}
 
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set form_utility_classes = form_utility_classes ? form_utility_classes : [] %}
 
 {%
   set classes = [
     'form',
     isInline ? 'form-inline',
-  ]|merge(utility_classes)
+  ]|merge(form_utility_classes)
 %}
 
 <form{{ attributes.addClass(classes) }}>

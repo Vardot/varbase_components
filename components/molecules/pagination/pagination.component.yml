@@ -40,7 +40,7 @@ props:
       type: array
       title: Ellipses
       description: If there are more pages than the quantity allows, then an ellipsis before or after the listed pages may be present. (previous, next)
-    utility_classes:
+    pagination_utility_classes:
       type: array
       title: Utility Classes
       default: []

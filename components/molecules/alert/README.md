@@ -13,7 +13,7 @@ Alerts are available for any length of text, as well as an optional close button
          (alert-primary|alert-secondary|alert-success|alert-info|
           alert-warning|alert-danger|alert-light|alert-dark)
 * `dismissible`: It is possible to dismiss any alert inline, When an alert is dismissed, the element is completely removed from the page structure.
-* `utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
+* `alert_utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
 
 ### Attributes:
  * `attributes`: HTML attributes for the alert element.

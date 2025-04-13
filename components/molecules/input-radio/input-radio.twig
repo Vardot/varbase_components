@@ -9,17 +9,17 @@
  *
  * @see template_preprocess_input()
   * for checkboxes and radio buttons.
-  * - utility_classes: An array of utility classes.
+  * - input_radio_utility_classes: An array of utility classes.
   * - bs_form_control: A class 'form-control' related to input type.
  */
 #}
 
 {% set bs_form_control = bs_form_control ? ['form-control'] : [] %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set input_radio_utility_classes = input_radio_utility_classes ? input_radio_utility_classes : [] %}
 {% set type = type ?? 'text' %}
 {% set size = size ?? '' %}
 {% set placeholder = placeholder ?? '' %}
-{% set classes = []|merge(bs_form_control)|merge(utility_classes)|merge([size]) %}
+{% set classes = []|merge(bs_form_control)|merge(input_radio_utility_classes)|merge([size]) %}
 
 {# To render drupal Input component #}
 {% if attributes %}

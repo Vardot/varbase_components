@@ -6,7 +6,7 @@
  * Available properties:
  * - breadcrumb: Breadcrumb trail items.
  * - divider: Dividers are automatically added in CSS through ::before and content. They can be changed by modifying a local CSS custom property --bs-breadcrumb-divider, or through the $breadcrumb-divider Sass variable — and $breadcrumb-divider-flipped for its RTL counterpart, if needed. 
- * - utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
+ * - breadcrumb_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
  *
  * Available attributes:
  * - attributes: HTML attributes for the breadcrumb nav element.
@@ -18,8 +18,8 @@
  */
 #}
 {% set divider = divider ?? '' %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
-{% set classes = []|merge(utility_classes) %}
+{% set breadcrumb_utility_classes = breadcrumb_utility_classes ? breadcrumb_utility_classes : [] %}
+{% set classes = []|merge(breadcrumb_utility_classes) %}
 
 {% if not attributes %}
   {% set attributes = create_attribute() %}

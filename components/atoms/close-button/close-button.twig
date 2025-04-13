@@ -8,7 +8,7 @@
  * Available properties:
  * - size: (btn-sm|btn-lg) Bootstrap button size class.
  * - disabled: (true|false) Disabled button.
- * - utility_classes: An array of utility classes that can be used to add extra
+ * - close_button_utility_classes: An array of utility classes that can be used to add extra
  *                    Bootstrap utility classes or custom classes to this component.
  *
  * Available attributes:
@@ -21,12 +21,12 @@
 #}
 {% set size = size ? [size] : [] %}
 {% set disabled_classes = disabled ? ['disabled'] : [] %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set close_button_utility_classes = close_button_utility_classes ? close_button_utility_classes : [] %}
 
 {% set classes = [
   'btn',
   'btn-close',
-]|merge(size)|merge(disabled_classes)|merge(utility_classes) %}
+]|merge(size)|merge(disabled_classes)|merge(close_button_utility_classes) %}
 
 {# Include text for screen readers, using aria-label #}
 {% set attributes = attributes.setAttribute('aria-label', 'Close'|t ) %}

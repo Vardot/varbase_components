@@ -28,7 +28,7 @@ Link with Bootstrap Link helpers and utility classes
 * `underline_opacity`: Change the underline’s opacity. Requires adding .link-underline to
                       first set an rgba() color we use to then modify the alpha opacity.
                       (0|10|25|50|75|100)
-* `utility_classes`: An array of utility classes that can
+* `link_utility_classes`: An array of utility classes that can
                     be used to add extra Bootstrap utility classes or custom
                     classes to this component.
 
@@ -54,7 +54,7 @@ Link with Bootstrap Link helpers and utility classes
     url: '/blog/blog-test1',
     content: 'Read more'|t,
     color: 'primary',
-    utility_classes: ['card-link', 'float-end', 'mt-3', 'read-more']
+    link_utility_classes: ['card-link', 'float-end', 'mt-3', 'read-more']
   } %}
 ```
 

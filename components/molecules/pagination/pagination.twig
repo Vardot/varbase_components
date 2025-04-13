@@ -30,7 +30,7 @@
  * Available properties:
  * - size: sm, lg
  * - alignment: start | end | center | vertical.
- * - utility_classes: An array of utility classes. Use this property to add
+ * - pagination_utility_classes: An array of utility classes. Use this property to add
  *   extra Bootstrap utility classes or your custom class over to this to this component.
  *
  * Available attributes:        
@@ -50,9 +50,9 @@
 {% else %}
   {% set alignment = [] %}
 {% endif %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set pagination_utility_classes = pagination_utility_classes ? pagination_utility_classes : [] %}
 
-{% set classes = []|merge(utility_classes) %}
+{% set classes = []|merge(pagination_utility_classes) %}
 
 {% if not attributes %}
   {% set attributes = create_attribute() %}
@@ -66,7 +66,7 @@
     'pagination',
     'pager__items',
     'js-pager__items',
-  ]|merge(size)|merge(alignment)|merge(utility_classes)
+  ]|merge(size)|merge(alignment)|merge(pagination_utility_classes)
 %}
 
 {% if not pagination_attributes %}

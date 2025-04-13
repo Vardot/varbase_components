@@ -44,7 +44,7 @@ props:
       type: string
       title: Message
       description: A string containing information to be displayed.
-    utility_classes:
+    progress_bar_utility_classes:
       type: array
       title: Utility Classes
       default: []

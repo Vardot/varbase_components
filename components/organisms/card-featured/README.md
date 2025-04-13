@@ -27,11 +27,11 @@ It is a versatile pattern that contain content such as blog posts, user informat
                     (large desktops, 1200px and up)
 * `columns_xxl_size`: Extra Extra Large Breakpoint size (xxl) - Size of two columns for XX-Large devices
                       (larger desktops, 1400px and up)
-* `utility_classes`: Use to add extra Bootstrap utility classes for the main Card wrapper.
+* `card_featured_utility_classes`: Use to add extra Bootstrap utility classes for the main Card wrapper.
                     E.g. `mb-3 shadow-lg` ( Do not add `card`).
-* `media_utility_classes`: Use to add extra Bootstrap utility classes for the Card Media region wrapper.
+* `card_featured_media_utility_classes`: Use to add extra Bootstrap utility classes for the Card Media region wrapper.
                           E.g. `bg-secondary mb-3` ( Do not add `card-img`).
-* `content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper.
+* `card_featured_content_utility_classes`: Use to add extra Bootstrap utility classes for the Card Content region wrapper.
                             E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`).
 
 ## Attributes:
@@ -67,9 +67,9 @@ It is a versatile pattern that contain content such as blog posts, user informat
   columns_lg_size: '',
   columns_xl_size: '06_06',
   columns_xxl_size: '',
-  utility_classes: ['bg-light', 'shadow-lg'],
-  media_utility_classes: ['bg-secondary'],
-  content_utility_classes: ['overflow-y-hidden'],
+  card_featured_utility_classes: ['bg-light', 'shadow-lg'],
+  card_featured_media_utility_classes: ['bg-secondary'],
+  card_featured_content_utility_classes: ['overflow-y-hidden'],
   media: media,
   content: content,
 } only %}

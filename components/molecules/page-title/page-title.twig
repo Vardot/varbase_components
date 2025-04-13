@@ -9,7 +9,7 @@
  *   heading—a larger, slightly more opinionated heading style.
  *   optional values are:
  *   ( display-1, display-2, display-3, display-4, display-5, display-6)
- * - utility_classes: An array of utility classes. Use this property to add
+ * - page_title_utility_classes: An array of utility classes. Use this property to add
  *   extra Bootstrap utility classes or your custom class over to this to this component.
  *
  * Available attributes:        
@@ -22,14 +22,14 @@
  *   displayed after the main title tag that appears in the template.
  */
 #}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set page_title_utility_classes = page_title_utility_classes ? page_title_utility_classes : [] %}
 {% set display = display ? display : '' %}
 
 {%
   set classes = [
     'title',
     'page-title',
-  ]|merge(utility_classes)
+  ]|merge(page_title_utility_classes)
 %}
 
 {{ title_prefix }}
@@ -39,7 +39,7 @@
       content: title,
       display: display,
       attributes: title_attributes,
-      utility_classes: classes
+      page_title_utility_classes: classes
     } only
   %}
 {% endif %}

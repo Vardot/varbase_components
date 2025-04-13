@@ -30,8 +30,8 @@ Text card component and pattern with content.
   padded: false,
   equal_height: false,
   anchor_all: false,
-  utility_classes: [],
-  content_utility_classes: [],
+  card_text_utility_classes: [],
+  card_text_content_utility_classes: [],
   content: content,
 } only %}
 ```

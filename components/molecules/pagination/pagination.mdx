@@ -37,7 +37,7 @@ import templateSource from './pagination.twig?raw';
 {% include 'varbase_components:pagination' with {
   items: items,
   alignment: 'center',
-  utility_classes: ['mt-3']
+  pagination_utility_classes: ['mt-3']
 } %}
 ```
 
@@ -47,7 +47,7 @@ import templateSource from './pagination.twig?raw';
   items: items,
   size: 'lg',
   alignment: 'center',
-  utility_classes: ['mt-3']
+  pagination_utility_classes: ['mt-3']
 } %}
 ```
 
@@ -57,14 +57,14 @@ import templateSource from './pagination.twig?raw';
   items: items,
   size: 'sm',
   alignment: 'center',
-  utility_classes: ['mt-3']
+  pagination_utility_classes: ['mt-3']
 } %}
 ```
 
 **Example #4:** Use in views mini-pager
 ```
 {% include 'varbase_components:pagination' with {
-  utility_classes: ['mt-2']
+  pagination_utility_classes: ['mt-2']
 } %}
 ```
 

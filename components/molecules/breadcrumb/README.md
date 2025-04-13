@@ -11,7 +11,7 @@ s
 ### Properties:
 * `breadcrumb`: Breadcrumb trail items.
 * `divider`: Dividers are automatically added in CSS through ::before and content. They can be changed by modifying a local CSS custom property --bs-breadcrumb-divider, or through the $breadcrumb-divider Sass variable — and $breadcrumb-divider-flipped for its RTL counterpart, if needed. 
-* `utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
+* `breadcrumb_utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
 
 ### Available attributes:
 * `attributes`: HTML attributes for the breadcrumb nav element.
@@ -38,6 +38,6 @@ s
 ```
 {% include 'varbase_components:breadcrumb' with {
   breadcrumb: breadcrumb,
-  utility_classes: ['m-sm-2', 'm-md-3', 'm-xxl-5']
+  breadcrumb_utility_classes: ['m-sm-2', 'm-md-3', 'm-xxl-5']
 } %}
 ```

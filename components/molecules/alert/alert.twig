@@ -8,7 +8,7 @@
  *         (alert-primary|alert-secondary|alert-success|alert-info|
  *          alert-warning|alert-danger|alert-light|alert-dark)
  * - dismissible: It is possible to dismiss any alert inline, When an alert is dismissed, the element is completely removed from the page structure.
- * - utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
+ * - alert_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this component.
  *
  * Available attributes:
  * - attributes: HTML attributes for the alert element.
@@ -22,11 +22,11 @@
 {% set type_classes = type ? [type] : [] %}
 {% set dismissible = dismissible ?? true %}
 {% set dismissible_classes = dismissible ? ['alert-dismissible', 'fade', 'show'] : [] %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set alert_utility_classes = alert_utility_classes ? alert_utility_classes : [] %}
 
 {% set classes = [
   'alert',
-]|merge(type_classes)|merge(dismissible_classes)|merge(utility_classes) %}
+]|merge(type_classes)|merge(dismissible_classes)|merge(alert_utility_classes) %}
 
 {% if not attributes %}
   {% set attributes = create_attribute() %}
@@ -39,7 +39,7 @@
     {% include "varbase_components:heading" with {
       html_tag: 'h4',
       content: heading|render|striptags|trim,
-      utility_classes: ['alert-heading']
+      alert_utility_classes: ['alert-heading']
     } only %}
   {% endif %}
 

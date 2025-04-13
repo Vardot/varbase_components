@@ -50,7 +50,7 @@ props:
       title: Hidden status
       description: Hidden spinner status message.
       default: true
-    utility_classes:
+    spinner_utility_classes:
       type: array
       title: Utility Classes
       default: []

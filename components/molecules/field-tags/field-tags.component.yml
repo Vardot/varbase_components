@@ -41,7 +41,7 @@ props:
       type: string
       title: Field type
       description: The type of the field.
-    utility_classes:
+    field_tags_utility_classes:
       type: array
       title: Utility Classes
       default: []

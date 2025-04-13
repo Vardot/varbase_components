@@ -51,7 +51,7 @@ props:
       title: Disabled
       description: Disabled button
       default: false
-    utility_classes:
+    button_utility_classes:
       type: array
       title: Utility Classes
       default: []

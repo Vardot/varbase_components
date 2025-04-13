@@ -5,7 +5,7 @@ The universal media header style on top of web pages.
 ## Properties:
 * `media_type`: Media entity type. (image, video, remote_video).
 * `provider`: Video provider for remote videos. (youtube, video).
-* `utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
+* `media_header_utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
 
 ## Attributes:
 * N/A

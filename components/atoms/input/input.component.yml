@@ -53,7 +53,7 @@ props:
       type: string
       title: Placeholder
       description: The input placeholder attribute specifies a short hint that describes the expected value of an input field (a sample value or a short description of the expected format).
-    utility_classes:
+    input_utility_classes:
       type: array
       title: Utility Classes
       default: []

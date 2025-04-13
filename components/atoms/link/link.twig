@@ -20,7 +20,7 @@
  * - underline_opacity: Change the underline’s opacity. Requires adding .link-underline to
  *                      first set an rgba() color we use to then modify the alpha opacity.
  *                      (0|10|25|50|75|100)
- * - utility_classes: An array of utility classes that can be used to add extra
+ * - link_utility_classes: An array of utility classes that can be used to add extra
  *                    Bootstrap utility classes or custom classes to this component.
  *
  * Available attributes:
@@ -36,9 +36,9 @@
 {% set underline_offset = underline_offset ? ['link-offset-' ~ underline_offset] : [] %}
 {% set underline_opacity = underline_opacity ? ['link-underline', 'link-underline-opacity-' ~ underline_opacity] : [] %}
 {% set underline_color = underline_color ? ['link-underline-' ~ underline_color] : [] %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set link_utility_classes = link_utility_classes ? link_utility_classes : [] %}
 
-{% set link_classes = []|merge(link_color)|merge(link_opacity)|merge(underline_offset)|merge(underline_opacity)|merge(underline_color)|merge(utility_classes) %}
+{% set link_classes = []|merge(link_color)|merge(link_opacity)|merge(underline_offset)|merge(underline_opacity)|merge(underline_color)|merge(link_utility_classes) %}
 
 {% if url %}
   {% set attributes = attributes.setAttribute('href', url) %}

@@ -50,7 +50,7 @@ inherited in Bootstrap, meaning any nested tables can be styled independent from
 * `empty`: The message to display in an extra row if table does not have any rows.
 * `no_striping`: A boolean indicating that the row should receive no striping.
 * `header_columns`: The number of columns in the header.
-* `utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or
+* `table_utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or
                      custom CSS classes over to the table element.
 * `thead_utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or
                            custom CSS classes over to the head of the table element.

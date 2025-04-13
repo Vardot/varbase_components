@@ -26,7 +26,7 @@ props:
       type: object
       title: Data
       description: json encoded drimage data object
-    utility_classes:
+    dynamic_responsive_image_utility_classes:
       type: array
       title: Utility Classes 
       default: []

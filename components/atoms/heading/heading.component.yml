@@ -34,7 +34,7 @@ props:
       type: string
       title: URL Link
       description: Simple URL link for heading.
-    utility_classes:
+    heading_utility_classes:
       type: array
       title: Utility Classes 
       default: []

@@ -9,9 +9,9 @@
  * - media_position: Choose the location of the media from (overlay|start|end|top|bottom).
  * - horizontal_alignment: Horizontal alignment of the content. (start|center|end)
  * - vertical_alignment: Vertical alignment of the content. (start|center|end)
- * - utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add `card`)
- * - media_utility_classes: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add `card-img`)
- * - content_utility_classes: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`)
+ * - card_hero_utility_classes: Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add `card`)
+ * - card_hero_media_utility_classes: Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add `card-img`)
+ * - card_hero_content_utility_classes: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`)
  *
  * Available attributes:
  * - card_attributes: Drupal attributes for featured card wrapper.
@@ -28,9 +28,9 @@
 {% set padded = padded ? ['p-4'] : [''] %}
 {% set vertical_alignment = vertical_alignment == '' ? [] : ['justify-content-' ~ vertical_alignment] %}
 {% set horizontal_alignment = horizontal_alignment == '' ? [] : ['align-items-' ~ horizontal_alignment, 'text-' ~ horizontal_alignment] %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
-{% set media_utility_classes = media_utility_classes ? media_utility_classes : [] %}
-{% set content_utility_classes = content_utility_classes ? content_utility_classes : [] %}
+{% set card_hero_utility_classes = card_hero_utility_classes ? card_hero_utility_classes : [] %}
+{% set card_hero_media_utility_classes = card_hero_media_utility_classes ? card_hero_media_utility_classes : [] %}
+{% set card_hero_content_utility_classes = card_hero_content_utility_classes ? card_hero_content_utility_classes : [] %}
 
 {% if not card_attributes %}
   {% set card_attributes = create_attribute() %}
@@ -50,7 +50,7 @@
     'varbase-hero-card',
     'hero-style-' ~ media_position,
     'clearfix',
-  ]|merge(card_border)|merge(padded)|merge(utility_classes)
+  ]|merge(card_border)|merge(padded)|merge(card_hero_utility_classes)
 %}
 
 {# Media position of media overlay #}
@@ -62,7 +62,7 @@
       'card-img-overlay',
       'p-0',
       'm-0',
-    ]|merge(media_utility_classes)
+    ]|merge(card_hero_media_utility_classes)
   %}
 
   {%
@@ -71,7 +71,7 @@
       'hero-card-content',
       'd-flex',
       'flex-column',
-    ]|merge(vertical_alignment)|merge(horizontal_alignment)|merge(content_utility_classes)
+    ]|merge(vertical_alignment)|merge(horizontal_alignment)|merge(card_hero_content_utility_classes)
   %}
 
   {% set card_attributes = card_attributes.addClass(card_classes) %}
@@ -96,7 +96,7 @@
     set media_classes = [
       'card-img',
       'card-img-' ~ media_position,
-    ]|merge(media_utility_classes)
+    ]|merge(card_hero_media_utility_classes)
   %}
 
   {%
@@ -105,7 +105,7 @@
       'hero-card-content',
       'd-flex',
       'flex-column',
-    ]|merge(vertical_alignment)|merge(horizontal_alignment)|merge(content_utility_classes)
+    ]|merge(vertical_alignment)|merge(horizontal_alignment)|merge(card_hero_content_utility_classes)
   %}
 
   {%
@@ -163,7 +163,7 @@
     set media_classes = [
       'card-img',
       'card-img-' ~ media_position,
-    ]|merge(media_utility_classes)
+    ]|merge(card_hero_media_utility_classes)
   %}
 
   {%
@@ -172,7 +172,7 @@
       'hero-card-content',
       'd-flex',
       'flex-column',
-    ]|merge(vertical_alignment)|merge(horizontal_alignment)|merge(content_utility_classes)
+    ]|merge(vertical_alignment)|merge(horizontal_alignment)|merge(card_hero_content_utility_classes)
   %}
 
   {% if media_position == 'bottom' %}

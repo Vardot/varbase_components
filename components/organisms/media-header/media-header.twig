@@ -6,7 +6,7 @@
  * Available properties:
  * - media_type: Media entity type. (image, video, remote_video).
  * - provider: Video provider (for remote video) (youtube, video).
- * - utility_classes: (optional) An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
+ * - media_header_utility_classes: (optional) An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
  *
  * Available attributes:
  * - N/A
@@ -33,7 +33,7 @@
           {% if page_title %}
             {% include 'varbase_components:page-title' with {
                 title: page_title,
-                utility_classes: ['vmh-page-title']
+                page_title_utility_classes: ['vmh-page-title']
               }
             %}
           {% endif %}

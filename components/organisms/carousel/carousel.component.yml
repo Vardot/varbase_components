@@ -29,12 +29,12 @@ props:
       title: Indicators
       description: Add indicators to the carousel, alongside the previous/next controls.
       default: false
-    utility_classes:
+    carousel_utility_classes:
       type: array
       title: Utility Classes
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the carousel element.
       default: []
-    indicators_utility_classes:
+    carousel_indicators_utility_classes:
       type: array
       title: Indicators Utility Classes
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the indicators element.

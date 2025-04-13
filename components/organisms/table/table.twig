@@ -25,7 +25,7 @@
  * - empty: The message to display in an extra row if table does not have any rows.
  * - no_striping: A boolean indicating that the row should receive no striping.
  * - header_columns: The number of columns in the header.
- * - utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or
+ * - table_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or
  *                    custom CSS classes over to the table element.
  * - thead_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or
  *                          custom CSS classes over to the head of the table element.
@@ -63,7 +63,7 @@
 {% set size_classes = size ? ['table-' ~ size] : [] %}
 {% set sticky_thead_classes = sticky ? ['sticky-top'] : [] %}
 
-{% set utility_classes = utility_classes ?? [] %}
+{% set table_utility_classes = table_utility_classes ?? [] %}
 {% set thead_utility_classes = thead_utility_classes ?? [] %}
 {% set tbody_utility_classes = tbody_utility_classes ?? [] %}
 {% set tfoot_utility_classes = tfoot_utility_classes ?? [] %}
@@ -73,7 +73,7 @@
 {%
   set table_classes = [
     'table',
-  ]|merge(color_classes)|merge(striped_rows_classes)|merge(striped_columns_classes)|merge(hover_classes)|merge(bordered_classes)|merge(border_color_classes)|merge(borderless_classes)|merge(size_classes)|merge(utility_classes)
+  ]|merge(color_classes)|merge(striped_rows_classes)|merge(striped_columns_classes)|merge(hover_classes)|merge(bordered_classes)|merge(border_color_classes)|merge(borderless_classes)|merge(size_classes)|merge(table_utility_classes)
 %}
 
 {% if responsive %}
