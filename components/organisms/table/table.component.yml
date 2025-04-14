@@ -130,23 +130,31 @@ props:
     table_utility_classes:
       type: array
       title: Utility Classes
-      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the table element.
       default: []
+      items:
+        type: 'string'
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the table element.
     thead_utility_classes:
       type: array
       title: Table Head Utility Classes
-      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the head of the table element.
       default: []
+      items:
+        type: 'string'
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the head of the table element.
     tbody_utility_classes:
       type: array
       title: Table Body Utility Classes
-      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the body of the table element.
       default: []
+      items:
+        type: 'string'
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the body of the table element.
     troot_utility_classes:
       type: array
       title: Table Root Utility Classes
-      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the root of the table element.
       default: []
+      items:
+        type: 'string'
+      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the root of the table element.
     attributes:
       type: object
       title: Attributes

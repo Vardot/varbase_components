@@ -27,6 +27,8 @@ props:
       type: array
       title: Utility Classes
       default: []
+      items:
+        type: 'string'
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.
     attributes:
       $ref: 'ui-patterns://attributes'

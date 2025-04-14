@@ -48,18 +48,24 @@ props:
     card_impressed_utility_classes:
       type: array
       title: 'Utility Classes'
-      description: 'Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add `card`).' 
       default: []
+      items:
+        type: 'string'
+      description: 'Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add `card`).' 
     card_impressed_media_utility_classes:
       type: array
       title: 'Media Utility Classes'
-      description: 'Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add `card-img`).'
       default: []
+      items:
+        type: 'string'
+      description: 'Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add `card-img`).'
     card_impressed_content_utility_classes:
       type: array
       title: Content Utility Classes
-      description: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`).'
       default: []
+      items:
+        type: 'string'
+      description: Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`).'
     card_attributes:
       type: object
       title: 'Card Attributes'

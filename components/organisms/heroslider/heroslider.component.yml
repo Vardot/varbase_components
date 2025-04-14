@@ -78,8 +78,10 @@ props:
     heroslider_utility_classes:
       type: array
       title: 'Utility Classes'
-      description: 'An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the heroslider element.'
       default: []
+      items:
+        type: 'string'
+      description: 'An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the heroslider element.'
     heroslider_controls_utility_classes:
       type: array
       title: 'Controls Utility Classes'
@@ -88,8 +90,10 @@ props:
     heroslider_indicators_utility_classes:
       type: array
       title: 'Indicators Utility Classes'
-      description: 'An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the indicators element.'
       default: []
+      items:
+        type: 'string'
+      description: 'An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the indicators element.'
     attributes:
       type: object
       title: 'Attributes'

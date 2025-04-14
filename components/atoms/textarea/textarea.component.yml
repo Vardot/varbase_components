@@ -64,11 +64,15 @@ props:
       type: array
       title: Wrapper utility classes
       default: []
+      items:
+        type: 'string'
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the wrapper div to this component.
     utility_classes:
       type: array
       title: Utility Classes
       default: []
+      items:
+        type: 'string'
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the form element to this component.
     wrapper_attributes:
       type: object
