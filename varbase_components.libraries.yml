@@ -137,6 +137,7 @@ oembed-frame-video-vimeo:
   js:
     components/organisms/heroslider/js/oembed-frame.heroslider.vimeo.js: {}
 
+# Ckeditor 5 styles.
 ckeditor5-root:
   dependencies:
     - core/components.varbase_components--root
