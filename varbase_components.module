@@ -45,8 +45,9 @@ function varbase_components_library_info_alter(array &$libraries, $module) {
     unset($libraries['init']['css']);
   }
 
-  // Load components styles for CKEditor5 styles.
+  // Load components root and styles for CKEditor5 styles.
   if ($module === 'ckeditor5' && isset($libraries['internal.drupal.ckeditor5.stylesheets'])) {
+    $libraries['internal.drupal.ckeditor5.stylesheets']['dependencies'][] = 'varbase_components/ckeditor5-root';
     $libraries['internal.drupal.ckeditor5.stylesheets']['dependencies'][] = 'varbase_components/ckeditor5-styles';
   }
 
@@ -60,6 +61,22 @@ function varbase_components_library_info_alter(array &$libraries, $module) {
 
     unset($libraries['drupal.responsive-preview']['js']['js/popperjs/popper.min.js']);
     $libraries['drupal.responsive-preview']['dependencies'][] = 'varbase_components/popper-script';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function varbase_components_preprocess_field(&$variables) {
+  $ckeditor5_fields = [
+    'text_with_summary',
+    'text_long',
+  ];
+
+  // Check if the field type is in the list of CKEditor5 fields.
+  if (in_array($variables['field_type'], $ckeditor5_fields)) {
+    // Attach the library to the field.
+    $variables['#attached']['library'][] = 'varbase_components/ckeditor5-styles';
   }
 }
 
