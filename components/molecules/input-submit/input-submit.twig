@@ -11,6 +11,10 @@
  */
 #}
 
+
+{% set input_submit_utility_classes = input_submit_utility_classes ? input_submit_utility_classes : [] %}
+
 {% include "varbase_components:input" with {
-  type: 'submit'
+  type: 'submit',
+  input_utility_classes: input_submit_utility_classes,
 } %}
