@@ -40,6 +40,7 @@
 {% set accordion_utility_classes = accordion_utility_classes ? accordion_utility_classes : [] %}
 
 
+
 {# Accordion wrapper #}
 {%
   set classes = [
@@ -60,12 +61,12 @@
   <div class="accordion-top d-flex flex-wrap {{ title ? 'justify-content-between' : 'justify-content-end' }} align-items-end">
     {% if title %}
       {% set title_tag = title_tag ? title_tag : 'h2' %}
-      {% set accordion_item_title_utility_classes = accordion_item_title_utility_classes ? accordion_item_title_utility_classes : [] %}
+      {% set accordion_title_utility_classes = accordion_title_utility_classes ? accordion_title_utility_classes : [] %}
 
       {%
         set title_classes = [
           'accordion-title',
-        ]|merge(accordion_item_title_utility_classes)
+        ]|merge(accordion_title_utility_classes)
       %}
 
       {% if not title_attributes %}

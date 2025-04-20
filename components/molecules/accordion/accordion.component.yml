@@ -69,7 +69,7 @@ props:
       description: An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to the root accordion wrapper.
     accordion_title_utility_classes:
       type: object
-      title: Utility Classes
+      title: Title Utility Classes
       default: []
       items:
         type: 'string'
