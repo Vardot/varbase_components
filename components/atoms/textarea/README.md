@@ -20,7 +20,7 @@ Text area type form element.
 * `disabled`: Disables the control for user input.
 * `wrapper_html_tag`: (div|span) The HTML tag for the wrapper.
 * `wrapper_utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the wrapper div to this component.
-* `utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the form element to this component.
+* `textarea_utility_classes`: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the form element to this component.
 
 ## Attributes:
 * `wrapper_attributes`: HTML attributes for the wrapper element.
@@ -73,7 +73,7 @@ Used in [Vartheme BS5](https://github.com/Vardot/vartheme_bs5/blob/3.0.x/templat
     placeholder: "Type test in this text area",
     wrapper_html_tag: "div",
     wrapper_utility_classes: ['p-sm-3'],
-    utility_classes: ['mt-3']
+    textarea_utility_classes: ['mt-3']
   } 
 %}
 ```

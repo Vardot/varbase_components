@@ -76,31 +76,31 @@
     "card_impressed_utility_classes": {
       "name": "Utility Classes",
       "description": "Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add `card`).",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "card_impressed_media_utility_classes": {
       "name": "Media Utility Classes",
       "description": "Use to add extra Bootstrap utility classes for the Card Media region wrapper. E.g. `bg-secondary mb-3` ( Do not add `card-img`).",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "card_impressed_content_utility_classes": {
       "name": "Content Utility Classes",
       "description": "Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add `card-body`).",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "card_attributes": {
       "name": "Card Attributes",
       "description": "HTML attributes for the card element.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     },
     "content_attributes": {
       "name": "Content Attributes",
       "description": "HTML attributes for the content element.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     }
   }
@@ -118,9 +118,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>",
-    "card_impressed_utility_classes": [
-      "col-12"
-    ]
+    "card_impressed_utility_classes": ['col-12'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}
@@ -138,9 +138,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>",
-    "card_impressed_utility_classes": [
-      "col-9"
-    ]
+    "card_impressed_utility_classes": ['col-9'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}
@@ -158,9 +158,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>",
-    "card_impressed_utility_classes": [
-      "col-6"
-    ]
+    "card_impressed_utility_classes": ['col-6'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}
@@ -178,9 +178,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>",
-    "card_impressed_utility_classes": [
-      "col-4"
-    ]
+    "card_impressed_utility_classes": ['col-4'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}
@@ -198,9 +198,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>",
-    "card_impressed_utility_classes": [
-      "col-3"
-    ]
+    "card_impressed_utility_classes": ['col-3'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}
@@ -218,9 +218,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div>",
-    "card_impressed_utility_classes": [
-      "col-12"
-    ]
+    "card_impressed_utility_classes": ['col-12'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}
@@ -238,9 +238,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div>",
-    "card_impressed_utility_classes": [
-      "col-9"
-    ]
+    "card_impressed_utility_classes": ['col-9'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}
@@ -258,9 +258,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div>",
-    "card_impressed_utility_classes": [
-      "col-6"
-    ]
+    "card_impressed_utility_classes": ['col-6'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}
@@ -278,10 +278,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div>",
-    "card_impressed_utility_classes": [
-      "shadow-lg",
-      "col-12"
-    ]
+    "card_impressed_utility_classes": ['shadow-lg', 'col-12'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}
@@ -299,10 +298,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div>",
-    "card_impressed_utility_classes": [
-      "shadow-lg",
-      "col-6"
-    ]
+    "card_impressed_utility_classes": ['shadow-lg', 'col-6'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}
@@ -320,12 +318,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div>",
-    "card_impressed_utility_classes": [
-      "bg-light",
-      "text-dark",
-      "shadow-lg",
-      "col-6"
-    ]
+    "card_impressed_utility_classes": ['bg-light', 'text-dark', 'shadow-lg', 'col-6'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}
@@ -343,12 +338,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div>",
-    "card_impressed_utility_classes": [
-      "bg-light",
-      "text-dark",
-      "shadow-sm",
-      "col-6"
-    ]
+    "card_impressed_utility_classes": ['bg-light', 'text-dark', 'shadow-sm', 'col-6'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}
@@ -366,11 +358,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title text-light\"><a class=\"text-light\" href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"></div>",
-    "card_impressed_utility_classes": [
-      "bg-dark",
-      "text-light",
-      "col-6"
-    ]
+    "card_impressed_utility_classes": ['bg-dark', 'text-light', 'col-6'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}
@@ -388,11 +378,9 @@
     "anchor_all": true,
     "media": "<picture class=\"card-img-top img-fluid\"><img class=\"card-img-top img-fluid\" src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></picture>",
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title text-light\"><a class=\"text-light\" href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra arcu risus, id tempus risus elementum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas ...</div><div class=\"read-more text-end\"></div>",
-    "card_impressed_utility_classes": [
-      "bg-dark",
-      "text-light",
-      "col-6"
-    ]
+    "card_impressed_utility_classes": ['bg-dark', 'text-light', 'col-6'],
+    "card_impressed_media_utility_classes": [],
+    "card_impressed_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-impressed') }}

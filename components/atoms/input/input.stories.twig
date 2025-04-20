@@ -77,7 +77,7 @@
     "input_utility_classes": {
       "name": "Utility Classes",
       "description": "An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "attributes": {
@@ -98,7 +98,7 @@
     "bs_size": "",
     "placeholder": "Example text",
     "children": " Example input text element",
-    "input_utility_classes": ["w-50"]
+    "input_utility_classes": ['w-50']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -113,7 +113,7 @@
     "bs_size": "",
     "placeholder": "",
     "children": "",
-    "input_utility_classes": ["btn", "btn-primary"]
+    "input_utility_classes": ['btn', 'btn-primary']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -127,37 +127,39 @@
     "bs_form_control": false,
     "bs_size": "",
     "placeholder": "",
-    "children": " Example input Checkbox element"
+    "children": " Example input Checkbox element",
+    "input_utility_classes": []
   }
 } %}
 {{ include('varbase_components:input') }}
 {% endstory %}
 
 {% story InputColor with {
-      "name": "Input Color",
-      "args": {
-        "type": "color",
-        "value": "#008ecf",
-        "bs_form_control": false,
-        "bs_size": "",
-        "placeholder": "",
-        "children": " Select input Color element"
-      }
+  "name": "Input Color",
+  "args": {
+    "type": "color",
+    "value": "#008ecf",
+    "bs_form_control": false,
+    "bs_size": "",
+    "placeholder": "",
+    "children": " Select input Color element",
+    "input_utility_classes": []
+  }
 } %}
 {{ include('varbase_components:input') }}
 {% endstory %}
 
 {% story InputEmail with {
-      "name": "Input Email",
-      "args": {
-        "type": "email",
-        "value": "example@email.com",
-        "bs_form_control": true,
-        "bs_size": "",
-        "placeholder": "example@email.com",
-        "children": " Example input Email element",
-        "input_utility_classes": ["w-50"]
-      }
+  "name": "Input Email",
+  "args": {
+    "type": "email",
+    "value": "example@email.com",
+    "bs_form_control": true,
+    "bs_size": "",
+    "placeholder": "example@email.com",
+    "children": " Example input Email element",
+    "input_utility_classes": ['w-50']
+  }
 } %}
 {{ include('varbase_components:input') }}
 {% endstory %}
@@ -171,7 +173,7 @@
     "bs_size": "",
     "placeholder": "Example File",
     "children": "Example input File element",
-    "input_utility_classes": ["w-50"]
+    "input_utility_classes": ['w-50']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -185,7 +187,8 @@
     "bs_form_control": false,
     "bs_size": "",
     "placeholder": "",
-    "children": "Example input hidden element, inspect HTML code to see the code for it"
+    "children": "Example input hidden element, inspect HTML code to see the code for it",
+    "input_utility_classes": []
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -200,7 +203,7 @@
         "bs_size": "",
         "placeholder": "",
         "children": " Example input Image element as a submit button",
-        "input_utility_classes": ["w-25"],
+        "input_utility_classes": ['w-25'],
         "attributes": {
           "src": "https://git.drupalcode.org/project/vartheme_bs5/-/raw/3.0.x/images/social_auth/social_auth_google/img/google_logo.svg",
           "alt": "Submit to Google",
@@ -221,7 +224,7 @@
     "bs_size": "",
     "placeholder": "Input numbers only",
     "children": " Example input number element",
-    "input_utility_classes": ["w-25"]
+    "input_utility_classes": ['w-25']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -236,7 +239,7 @@
     "bs_size": "",
     "placeholder": "Type a password",
     "children": " Example input password element",
-    "input_utility_classes": ["w-25"]
+    "input_utility_classes": ['w-25']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -250,7 +253,8 @@
     "bs_form_control": false,
     "bs_size": "",
     "placeholder": "",
-    "children": " Example input radio button element"
+    "children": " Example input radio button element",
+    "input_utility_classes": []
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -265,7 +269,7 @@
     "bs_size": "",
     "placeholder": "",
     "children": " Example input range element",
-    "input_utility_classes": ["w-25"]
+    "input_utility_classes": ['w-25']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -280,7 +284,7 @@
     "bs_size": "",
     "placeholder": "",
     "children": " Example input reset button element",
-    "input_utility_classes": ["btn", "btn-primary"]
+    "input_utility_classes": ['btn', 'btn-primary']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -295,7 +299,7 @@
     "bs_size": "",
     "placeholder": "",
     "children": " Example input search button element",
-    "input_utility_classes": ["btn", "btn-primary"]
+    "input_utility_classes": ['btn', 'btn-primary']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -310,7 +314,7 @@
     "bs_size": "",
     "placeholder": "",
     "children": " Example input Submit button element",
-    "input_utility_classes": ["btn", "btn-primary"]
+    "input_utility_classes": ['btn', 'btn-primary']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -325,7 +329,7 @@
     "bs_size": "",
     "placeholder": "",
     "children": " Example input Telephone number element",
-    "input_utility_classes": ["w-25"]
+    "input_utility_classes": ['w-25']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -340,7 +344,7 @@
     "bs_size": "",
     "placeholder": "",
     "children": " Example input time element",
-    "input_utility_classes": ["w-25"]
+    "input_utility_classes": ['w-25']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -355,7 +359,7 @@
     "bs_size": "",
     "placeholder": "Input a link",
     "children": " Example input URL link element",
-    "input_utility_classes": ["w-50"]
+    "input_utility_classes": ['w-50']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -370,7 +374,7 @@
     "bs_size": "",
     "placeholder": "",
     "children": " Example input Week element",
-    "input_utility_classes": ["w-25"]
+    "input_utility_classes": ['w-25']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -385,7 +389,7 @@
     "bs_size": "",
     "placeholder": "",
     "children": " Example input Month input element",
-    "input_utility_classes": ["w-25"]
+    "input_utility_classes": ['w-25']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -400,7 +404,7 @@
     "bs_size": "",
     "placeholder": "",
     "children": " Example input Date element",
-    "input_utility_classes": ["w-25"]
+    "input_utility_classes": ['w-25']
   }
 } %}
 {{ include('varbase_components:input') }}
@@ -415,7 +419,7 @@
     "bs_size": "",
     "placeholder": "",
     "children": " Example input Datetime local element",
-    "input_utility_classes": ["w-25"]
+    "input_utility_classes": ['w-25']
   }
 } %}
 {{ include('varbase_components:input') }}

@@ -16,7 +16,7 @@
     "attributes": {
       "name": "Attributes",
       "description": "HTML attributes for the containing element.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     }
   }
@@ -25,7 +25,8 @@
 {% story InputCheckbox with {
   "name": "Input Checkbox",
   "args": {
-    "children": " Checkbox"
+    "children": " Checkbox",
+    "input_checkbox_utility_classes": []
   }
 } %}
 {{ include('varbase_components:input-checkbox') }}

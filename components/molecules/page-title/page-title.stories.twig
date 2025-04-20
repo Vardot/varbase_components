@@ -35,7 +35,7 @@
     "page_title_utility_classes": {
       "name": "Utility Classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "title_attributes": {
@@ -52,7 +52,8 @@
   "name": "Page Title",
   "args": {
     "title": "Page Title Example",
-    "display": ""
+    "display": "",
+    "page_title_utility_classes": []
   }
 } %}
 {{ include('varbase_components:page-title') }}
@@ -62,7 +63,8 @@
   "name": "Page Title with Display 1",
   "args": {
     "title": "Page Title with Display 1",
-    "display": "display-1"
+    "display": "display-1",
+    "page_title_utility_classes": []
   }
 } %}
 {{ include('varbase_components:page-title') }}

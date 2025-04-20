@@ -89,25 +89,25 @@
     "wrapper_utility_classes": {
       "name": "Wrapper utility classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the wrapper div to this component.",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
-    "utility_classes": {
+    "textarea_utility_classes": {
       "name": "Utility Classes",
       "description": "An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "wrapper_attributes": {
       "name": "Wrapper Attributes",
       "description": "HTML attributes for the wrapper element.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     },
     "attributes": {
       "name": "Attributes",
       "description": "HTML attributes for the containing element.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     }
   }
@@ -126,7 +126,9 @@
     "placeholder": "Type test in this text area",
     "readonly": false,
     "disabled": false,
-    "wrapper_html_tag": "div"
+    "wrapper_html_tag": "div",
+    "wrapper_utility_classes": [],
+    "textarea_utility_classes": []
   }
 } %}
 {{ include('varbase_components:textarea') }}
@@ -145,7 +147,9 @@
     "placeholder": "Type test in this text area",
     "readonly": false,
     "disabled": false,
-    "wrapper_html_tag": "div"
+    "wrapper_html_tag": "div",
+    "wrapper_utility_classes": [],
+    "textarea_utility_classes": []
   }
 } %}
 {{ include('varbase_components:textarea') }}
@@ -164,7 +168,9 @@
     "placeholder": "Type test in this text area",
     "readonly": false,
     "disabled": true,
-    "wrapper_html_tag": "div"
+    "wrapper_html_tag": "div",
+    "wrapper_utility_classes": [],
+    "textarea_utility_classes": []
   }
 } %}
 {{ include('varbase_components:textarea') }}
@@ -184,7 +190,8 @@
     "readonly": false,
     "disabled": false,
     "wrapper_html_tag": "div",
-    "utility_classes": ["is-valid"]
+    "wrapper_utility_classes": [],
+    "textarea_utility_classes": ['is-valid']
   }
 } %}
 {{ include('varbase_components:textarea') }}
@@ -204,11 +211,11 @@
     "readonly": false,
     "disabled": false,
     "wrapper_html_tag": "div",
-    "utility_classes": ["is-invalid"]
+    "wrapper_utility_classes": [],
+    "textarea_utility_classes": ['is-valid']
   }
 } %}
 {{ include('varbase_components:textarea') }}
 {% endstory %}
-
 
 {% endstories %}

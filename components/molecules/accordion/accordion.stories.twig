@@ -82,7 +82,7 @@
     "accordion_utility_classes": {
       "name": "Utility Classes",
       "description": "An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to the root accordion wrapper.",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "attributes": {
@@ -124,7 +124,8 @@
       }
     ],
     "toggle_all": false,
-    "flush": false
+    "flush": false,
+    "accordion_utility_classes": []
   }
 } %}
 {{ include('varbase_components:accordion') }}
@@ -163,7 +164,8 @@
     ],
     "expanded_item_index": 0,
     "toggle_all": false,
-    "flush": false
+    "flush": false,
+    "accordion_utility_classes": []
   }
 } %}
 {{ include('varbase_components:accordion') }}
@@ -195,7 +197,8 @@
     ],
     "expanded_item_index": 2,
     "toggle_all": false,
-    "flush": false
+    "flush": false,
+    "accordion_utility_classes": []
   }
 } %}
 {{ include('varbase_components:accordion') }}
@@ -228,7 +231,8 @@
       }
     ],
     "toggle_all": true,
-    "flush": false
+    "flush": false,
+    "accordion_utility_classes": []
   }
 } %}
 {{ include('varbase_components:accordion') }}

@@ -101,25 +101,25 @@
     "heroslider_utility_classes": {
       "name": "Utility Classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the heroslider element.",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "heroslider_indicators_utility_classes": {
       "name": "Indicators Utility Classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the indicators element.",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "attributes": {
       "name": "Attributes",
       "description": "HTML attributes to apply to the heroslider main wrapper tag.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     },
     "indicators_attributes": {
       "name": "Indicators Attributes",
       "description": "HTML attributes to apply to the indicators wrapper tag.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     },
     "empty": {
@@ -150,7 +150,9 @@
       {"'#markup'": "<div class=\"card varbase-hero-card clearfix border-0\"> <div class=\"media media--type-image media--view-mode-varbase-heroslider ds-1col clearfix\"> <div class=\"vw-100 varbase-video-player ratio ratio-16x9\"> <div class=\"drimage\" data-w=\"2600\" data-h=\"1463\"><picture><img src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\" width=\"16\" height=\"9\" loading=\"lazy\"></picture></div><noscript><img src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></noscript> </div></div> <div class=\"hero-card-content card-img-overlay d-flex flex-column justify-content-end align-items-start\"> <div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h2 class=\"card-title\"> Varbase; Better Than Ever</h2></div><div data-component-id=\"varbase_components:field\" class=\"field field--name-field-brief field--type-string-long field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div> <div class=\"mt-5\"><a href=\"https://vardot.com\" class=\"btn btn-primary btn-lg\" target=\"_blank\" rel=\"noopener\">Learn More</a></div> </div></div>"},
       {"'#markup'": "<div class=\"card varbase-hero-card clearfix border-0\"> <div class=\"media media--type-image media--view-mode-varbase-heroslider ds-1col clearfix\"> <div class=\"vw-100 varbase-video-player ratio ratio-16x9\"> <div class=\"drimage\" data-w=\"2600\" data-h=\"1463\"><picture><img src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\" width=\"16\" height=\"9\" loading=\"lazy\"></picture></div><noscript><img src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\"></noscript> </div></div> <div class=\"hero-card-content card-img-overlay d-flex flex-column justify-content-end align-items-start\"> <div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h2 class=\"card-title\"> Varbase; Better Than Ever</h2></div><div data-component-id=\"varbase_components:field\" class=\"field field--name-field-brief field--type-string-long field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div> <div class=\"mt-5\"><a href=\"https://vardot.com\" class=\"btn btn-primary btn-lg\" target=\"_blank\" rel=\"noopener\">Learn More</a></div> </div></div>"}
     ],
-    "empty": "<p> Hero Slider </p><p> There are no slides right now! </p><a class=\"btn btn-primary hidden-anonymous visible-admin add-slider\" href=\"[site:url]/node/add/varbase_heroslider/\"> Add One Now </a>"
+    "empty": "<p> Hero Slider </p><p> There are no slides right now! </p><a class=\"btn btn-primary hidden-anonymous visible-admin add-slider\" href=\"[site:url]/node/add/varbase_heroslider/\"> Add One Now </a>",
+    "heroslider_utility_classes": [],
+    "heroslider_indicators_utility_classes": [],
   }
 } %}
 {{ include('varbase_components:heroslider') }}
@@ -173,7 +175,9 @@
     "items": [
       {"'#markup'": "<div class=\"card varbase-hero-card clearfix border-0\"> <div class=\"media media--type-image media--view-mode-varbase-heroslider ds-1col clearfix\"> <div class=\"vw-100 varbase-video-player ratio ratio-16x9\"> <div class=\"drimage\" data-w=\"2600\" data-h=\"1463\"><picture><img src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\" width=\"16\" height=\"9\" loading=\"lazy\"></picture></div><noscript><img src=\"https://raw.githubusercontent.com/Vardot/varbase_media_demo/10.0.0/content/file/coworking-1.jpg\" ></noscript> </div></div> <div class=\"hero-card-content card-img-overlay d-flex flex-column justify-content-end align-items-start\"> <div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h2 class=\"card-title\"> Varbase; Better Than Ever</h2></div><div data-component-id=\"varbase_components:field\" class=\"field field--name-field-brief field--type-string-long field--label-hidden field__item\">Elevate your digital experience with Varbase's dynamic design system, seamlessly blending aesthetic appeal with unparalleled functionality. Unleash the power of intuitive design for a compelling web presence.</div> <div class=\"mt-5\"><a href=\"https://vardot.com\" class=\"btn btn-primary btn-lg\" target=\"_blank\" rel=\"noopener\">Learn More</a></div> </div></div>"}
     ],
-    "empty": "<p> Hero Slider </p><p> There are no slides right now! </p><a class=\"btn btn-primary hidden-anonymous visible-admin add-slider\" href=\"[site:url]/node/add/varbase_heroslider/\"> Add One Now </a>"
+    "empty": "<p> Hero Slider </p><p> There are no slides right now! </p><a class=\"btn btn-primary hidden-anonymous visible-admin add-slider\" href=\"[site:url]/node/add/varbase_heroslider/\"> Add One Now </a>",
+    "heroslider_utility_classes": [],
+    "heroslider_indicators_utility_classes": [],
   }
 } %}
 {{ include('varbase_components:heroslider') }}
@@ -191,7 +195,9 @@
     "ride": "carousel",
     "touch": true,
     "wrap": true,
-    "empty": "<p> Hero Slider </p><p> There are no slides right now! </p><a class=\"btn btn-primary hidden-anonymous visible-admin add-slider\" href=\"[site:url]/node/add/varbase_heroslider/\"> Add One Now </a>"
+    "empty": "<p> Hero Slider </p><p> There are no slides right now! </p><a class=\"btn btn-primary hidden-anonymous visible-admin add-slider\" href=\"[site:url]/node/add/varbase_heroslider/\"> Add One Now </a>",
+    "heroslider_utility_classes": [],
+    "heroslider_indicators_utility_classes": [],
   }
 } %}
 {{ include('varbase_components:heroslider') }}

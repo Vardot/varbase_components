@@ -27,7 +27,7 @@
     "breadcrumb_utility_classes": {
       "name": "Utility Classes",
       "description": "An array of utility classes that can be used to add extra Bootstrap utility classes or custom classes to this component.",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "attributes": {
@@ -53,7 +53,8 @@
       "1": {"url": "#", "text": "Library"},
       "2": {"text": "Book"}
     },
-    "divider": "\\F285"
+    "divider": "\\F285",
+    "breadcrumb_utility_classes": []
   }
 } %}
 {{ include('varbase_components:breadcrumb') }}

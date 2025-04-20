@@ -160,49 +160,49 @@
     "table_utility_classes": {
       "name": "Utility Classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the table element.",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "thead_utility_classes": {
       "name": "Table Head Utility Classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the head of the table element.",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "tbody_utility_classes": {
       "name": "Table Body Utility Classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the body of the table element.",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "tfoot_utility_classes": {
       "name": "Table Footer Utility Classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the footer of the table element.",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "attributes": {
       "name": "Attributes",
       "description": "HTML attributes to apply to the `<table>` tag.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     },
     "thead_attributes": {
       "name": "Table head attributes",
       "description": "HTML attributes to apply to the `<thead>` tag.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     },
     "tbody_attributes": {
       "name": "Table body attributes",
       "description": "HTML attributes to apply to the `<tbody>` tag.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     },
     "tfoot_attributes": {
       "name": "Table footer attributes",
       "description": "HTML attributes to apply to the `<tfoot>` tag.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     }
   }
@@ -328,7 +328,11 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4
+    "header_columns": 4,
+    "table_utility_classes": [],
+    "thead_utility_classes": [],
+    "tbody_utility_classes": [],
+    "tfoot_utility_classes": []
   }
 } %}
 {{ include('varbase_components:table') }}
@@ -454,7 +458,11 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4
+    "header_columns": 4,
+    "table_utility_classes": [],
+    "thead_utility_classes": [],
+    "tbody_utility_classes": [],
+    "tfoot_utility_classes": []
   }
 } %}
 {{ include('varbase_components:table') }}
@@ -580,7 +588,11 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4
+    "header_columns": 4,
+    "table_utility_classes": [],
+    "thead_utility_classes": [],
+    "tbody_utility_classes": [],
+    "tfoot_utility_classes": []
   }
 } %}
 {{ include('varbase_components:table') }}
@@ -706,7 +718,11 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4
+    "header_columns": 4,
+    "table_utility_classes": [],
+    "thead_utility_classes": [],
+    "tbody_utility_classes": [],
+    "tfoot_utility_classes": []
   }
 } %}
 {{ include('varbase_components:table') }}
@@ -1431,7 +1447,11 @@
     "footer":  {},
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4
+    "header_columns": 4,
+    "table_utility_classes": [],
+    "thead_utility_classes": [],
+    "tbody_utility_classes": [],
+    "tfoot_utility_classes": []
   }
 } %}
 {{ include('varbase_components:table') }}
@@ -1557,7 +1577,11 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4
+    "header_columns": 4,
+    "table_utility_classes": [],
+    "thead_utility_classes": [],
+    "tbody_utility_classes": [],
+    "tfoot_utility_classes": []
   }
 } %}
 {{ include('varbase_components:table') }}
@@ -1683,7 +1707,11 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4
+    "header_columns": 4,
+    "table_utility_classes": [],
+    "thead_utility_classes": [],
+    "tbody_utility_classes": [],
+    "tfoot_utility_classes": []
   }
 } %}
 {{ include('varbase_components:table') }}
@@ -1809,7 +1837,11 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4
+    "header_columns": 4,
+    "table_utility_classes": [],
+    "thead_utility_classes": [],
+    "tbody_utility_classes": [],
+    "tfoot_utility_classes": []
   }
 } %}
 {{ include('varbase_components:table') }}

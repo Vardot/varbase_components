@@ -62,13 +62,13 @@
     "pagination_utility_classes": {
       "name": "Utility Classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to this to this component.",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "attributes": {
       "name": "Title Attributes",
       "description": "HTML attributes for the title element.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     }
   }
@@ -155,7 +155,8 @@
     "current": "2",
     "ellipses": {
       "next": true
-    }
+    },
+    "pagination_utility_classes": []
   }
 } %}
 {{ include('varbase_components:pagination') }}
@@ -242,7 +243,8 @@
     "current": "2",
     "ellipses": {
       "next": true
-    }
+    },
+    "pagination_utility_classes": []
   }
 } %}
 {{ include('varbase_components:pagination') }}
@@ -329,7 +331,8 @@
     "current": "2",
     "ellipses": {
       "next": true
-    }
+    },
+    "pagination_utility_classes": []
   }
 } %}
 {{ include('varbase_components:pagination') }}

@@ -15,7 +15,7 @@
  * - disabled: Disables the control for user input.
  * - wrapper_html_tag: (div|span) The HTML tag for the wrapper.
  * - wrapper_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the wrapper div to this component.
- * - utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the form element to this component.
+ * - textarea_utility_classes: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the form element to this component.
  * 
  * Available attributes:
  * - attributes: HTML attributes for the <textarea> element.
@@ -29,7 +29,7 @@
 #}
 {% set resizable_classes = resizable ? ['resize-' ~ resizable] : [] %}
 {% set wrapper_utility_classes = wrapper_utility_classes ? wrapper_utility_classes : [] %}
-{% set utility_classes = utility_classes ? utility_classes : [] %}
+{% set textarea_utility_classes = textarea_utility_classes ? textarea_utility_classes : [] %}
 
 {% if required is not empty and required == true %}
   {% set attributes = attributes.setAttribute('aria-required', 'true') %}
@@ -66,7 +66,7 @@
   set textarea_classes = [
     'form-control',
     'form-textarea',
-  ]|merge(resizable_classes)|merge(utility_classes)
+  ]|merge(resizable_classes)|merge(textarea_utility_classes)
 %}
 {% set attributes = attributes.addClass(textarea_classes) %}
 

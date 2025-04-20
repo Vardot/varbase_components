@@ -59,25 +59,25 @@
     "card_text_utility_classes": {
       "name": "Utility Classes",
       "description": "Use to add extra Bootstrap utility classes for the main Card wrapper. E.g. `mb-3 shadow-lg` ( Do not add card)",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "card_text_content_utility_classes": {
       "name": "Content Utility Classes",
       "description": "Use to add extra Bootstrap utility classes for the Card Content region wrapper. E.g. `w-75 mb-3 overflow-y-hidden`  ( Do not add card-body)",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "card_attributes": {
       "name": "Card Attributes",
       "description": "HTML attributes for the Card element.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     },
     "content_attributes": {
       "name": "Content Attributes",
       "description": "HTML attributes for the content element.",
-      "control": "Drupal\\Core\\Template\\Attribute",
+      "control": "object",
       "defaultValue": {}
     }
   }
@@ -93,9 +93,8 @@
     "equal_height": true,
     "anchor_all": false,
     "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</p>",
-    "card_text_utility_classes": [
-      "col-12"
-    ]
+    "card_text_utility_classes": ['col-12'],
+    "card_text_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-text') }}
@@ -111,9 +110,8 @@
     "equal_height": true,
     "anchor_all": false,
     "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</p>",
-    "card_text_utility_classes": [
-      "col-9"
-    ]
+    "card_text_utility_classes": ['col-9'],
+    "card_text_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-text') }}
@@ -129,9 +127,8 @@
     "equal_height": true,
     "anchor_all": false,
     "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</p>",
-    "card_text_utility_classes": [
-      "col-6"
-    ]
+    "card_text_utility_classes": ['col-6'],
+    "card_text_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-text') }}
@@ -147,9 +144,8 @@
     "equal_height": true,
     "anchor_all": false,
     "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</p>",
-    "card_text_utility_classes": [
-      "col-4"
-    ]
+    "card_text_utility_classes": ['col-4'],
+    "card_text_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-text') }}
@@ -165,9 +161,8 @@
     "equal_height": true,
     "anchor_all": false,
     "content": "<h3 class=\"card-title\"><a href=\"#\">Lorem Ipsum Dolor Sit Amet</a></h3><p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</p>",
-    "card_text_utility_classes": [
-      "col-3"
-    ]
+    "card_text_utility_classes": ['col-3'],
+    "card_text_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-text') }}
@@ -183,9 +178,8 @@
     "equal_height": true,
     "anchor_all": false,
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</div>",
-    "card_text_utility_classes": [
-      "col-12"
-    ]
+    "card_text_utility_classes": ['col-12'],
+    "card_text_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-text') }}
@@ -201,9 +195,8 @@
     "equal_height": true,
     "anchor_all": false,
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</div>",
-    "card_text_utility_classes": [
-      "col-9"
-    ]
+    "card_text_utility_classes": ['col-9'],
+    "card_text_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-text') }}
@@ -219,9 +212,8 @@
     "equal_height": true,
     "anchor_all": false,
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</div>",
-    "card_text_utility_classes": [
-      "col-6"
-    ]
+    "card_text_utility_classes": ['col-6'],
+    "card_text_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-text') }}
@@ -237,9 +229,8 @@
     "equal_height": true,
     "anchor_all": false,
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</div>",
-    "card_text_utility_classes": [
-      "col-4"
-    ]
+    "card_text_utility_classes": ['col-4'],
+    "card_text_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-text') }}
@@ -255,9 +246,8 @@
     "equal_height": true,
     "anchor_all": false,
     "content": "<div data-component-id=\"varbase_components:field\" class=\"field field--name-node-title field--type-ds field--label-hidden field__item\"><h3 class=\"card-title\"><a href=\"#\" hreflang=\"en\">Lorem Ipsum Dolor Sit Amet</a></h3></div><div class=\"field field--name-body field--type-text-with-summary field--label-hidden field__item\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut…</div>",
-    "card_text_utility_classes": [
-      "col-3"
-    ]
+    "card_text_utility_classes": ['col-3'],
+    "card_text_content_utility_classes": []
   }
 } %}
 {{ include('varbase_components:card-text') }}

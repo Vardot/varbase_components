@@ -67,7 +67,7 @@ props:
       items:
         type: 'string'
       description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over the wrapper div to this component.
-    utility_classes:
+    textarea_utility_classes:
       type: array
       title: Utility Classes
       default: []
