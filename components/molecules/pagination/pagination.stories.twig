@@ -44,8 +44,8 @@
     "items": {
       "name": "List of pager items",
       "description": "The list is keyed by the following elements (first, previous, next, last, pages) which they have href, attributes, text)",
-      "control": "array",
-      "defaultValue": []
+      "control": "object",
+      "defaultValue": {}
     },
     "current": {
       "name": "Current page",
@@ -56,7 +56,7 @@
     "ellipses": {
       "name": "Ellipses",
       "description": "If there are more pages than the quantity allows, then an ellipsis before or after the listed pages may be present. (previous, next)",
-      "control": "array",
+      "control": "object",
       "defaultValue": []
     },
     "pagination_utility_classes": {
@@ -140,16 +140,16 @@
         }
       ],
       "last": [
-          {
-            "text": "Last",
-            "href": "#",
-            "attributes": [
-              {
-                "title": "Last",
-                "href": "#"
-              }
-            ]
-          }
+        {
+          "text": "Last",
+          "href": "#",
+          "attributes": [
+            {
+              "title": "Last",
+              "href": "#"
+            }
+          ]
+        }
       ]
     },
     "current": "2",

@@ -112,12 +112,12 @@
     "colgroups": {
       "name": "Column groups",
       "description": "Column groups which contains attributes",
-      "control": "array"
+      "control": "object"
     },
     "header": {
       "name": "Table header cells",
       "description": "Table header cells which contains (tag, attributes, content, field, sort)",
-      "control": "array",
+      "control": "object",
       "defaultValue": {}
     },
     "sticky": {
@@ -129,13 +129,13 @@
     "rows": {
       "name": "Rows",
       "description": "Table rows, which each row contains (attributes, data, no_striping, cells). Each cell contains (tag, attributes, content, active_table_sort)",
-      "control": "array",
+      "control": "object",
       "defaultValue": {}
     },
     "footer": {
       "name": "Footer",
       "description": "Table footer rows, in the same format as the rows variable.",
-      "control": "array",
+      "control": "object",
       "defaultValue": {}
     },
     "empty": {
@@ -1967,7 +1967,11 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4
+    "header_columns": 4,
+    "table_utility_classes": [],
+    "thead_utility_classes": [],
+    "tbody_utility_classes": [],
+    "tfoot_utility_classes": []
   }
 } %}
 {{ include('varbase_components:table') }}
@@ -2093,7 +2097,11 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4
+    "header_columns": 4,
+    "table_utility_classes": [],
+    "thead_utility_classes": [],
+    "tbody_utility_classes": [],
+    "tfoot_utility_classes": []
   }
 } %}
 {{ include('varbase_components:table') }}
@@ -2219,7 +2227,11 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4
+    "header_columns": 4,
+    "table_utility_classes": [],
+    "thead_utility_classes": [],
+    "tbody_utility_classes": [],
+    "tfoot_utility_classes": []
   }
 } %}
 {{ include('varbase_components:table') }}
@@ -2345,7 +2357,11 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4
+    "header_columns": 4,
+    "table_utility_classes": [],
+    "thead_utility_classes": [],
+    "tbody_utility_classes": [],
+    "tfoot_utility_classes": []
   }
 } %}
 {{ include('varbase_components:table') }}
@@ -2471,7 +2487,11 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4
+    "header_columns": 4,
+    "table_utility_classes": [],
+    "thead_utility_classes": [],
+    "tbody_utility_classes": [],
+    "tfoot_utility_classes": []
   }
 } %}
 {{ include('varbase_components:table') }}
