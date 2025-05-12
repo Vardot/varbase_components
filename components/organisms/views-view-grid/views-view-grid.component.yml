@@ -2,6 +2,7 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 name: Views view grid
 status: experimental
 description: Component implementation for views to display rows in a grid.
+group: Views
 props:
   type: object
   properties:

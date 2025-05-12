@@ -4,7 +4,7 @@
  * Varbase Components implementation for Bootstrap heroslider component.
  *
  * Available properties:
- * - media_position: Choose the location of the media from (overlay|start|end|top|bottom).
+ * - controls_indicators_position: Choose the location of the media from (overlay|start|end|top|bottom).
  * - id: Set a unique id on the heroslider for optional controls, especially if the single page is using multiple hero sliders.
  * - items: An array of slider items, with a formatted UI Pattern for Cards.
  * - controls: Add the previous/next controls.
@@ -36,11 +36,11 @@
 #}
 {% apply spaceless %}
 
-{% set media_position = media_position ? ['hero-style-' ~ media_position] : ['hero-style-overlay'] %}
 {% set heroslider_id = id ? id : 'heroslider-' ~ random(1000) %}
 {% set heroslider_utility_classes = heroslider_utility_classes ?? [] %}
 {% set heroslider_controls_utility_classes = heroslider_controls_utility_classes ?? [] %}
 {% set heroslider_indicators_utility_classes = heroslider_indicators_utility_classes ?? [] %}
+{% set controls_indicators_position = controls_indicators_position ? ['hero-style-' ~ controls_indicators_position] : ['hero-style-overlay'] %}
 
 {%
   set heroslider_classes = [
@@ -48,7 +48,7 @@
     'js-varbase-heroslider',
     'carousel',
     'slide',
-  ]|merge(heroslider_utility_classes)|merge(media_position)
+  ]|merge(heroslider_utility_classes)|merge(controls_indicators_position)
 %}
 
 {% if not attributes %}

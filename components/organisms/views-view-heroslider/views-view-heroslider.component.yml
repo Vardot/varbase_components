@@ -1,7 +1,8 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
-name: Heroslider
+name: Views view Heroslider
 status: experimental
 description: 'A slideshow component for cycling through elements images/media or slides of text—like a heroslider.'
+group: Views
 props:
   type: object
   properties:
@@ -9,11 +10,6 @@ props:
       type: string
       title: 'Heroslider ID'
       description: 'Set a unique id on the heroslider for optional controls, especially if the single page is using multiple hero sliders.'
-    items:
-      type: array
-      title: Items
-      description: 'An array of slider items, with a formatted UI Pattern for Cards.'
-      default: []
     controls:
       type: boolean
       title: 'Controls'
@@ -110,14 +106,9 @@ props:
       description: 'HTML attributes to apply to the indicators wrapper tag.'
       $ref: 'ui-patterns://attributes'
 slots:
-  empty:
-    type: string
-    title: 'Empty'
-    description: 'The HTML message when the Hero Slider has no slides'
-    default: ''
-libraryOverrides:
-  dependencies:
-    - varbase_components/bs-carousel-script
-    - varbase_components/local-video-slider
-    - varbase_components/youtube-video-slider
-    - varbase_components/vimeo-video-slider
+  rows:
+    type: array
+    title: 'Rows'
+    description: 'Rows'
+    items:
+      type: 'object'

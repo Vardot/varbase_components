@@ -2,6 +2,7 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 name: Views view table
 status: experimental
 description: Implementation for displaying a view as a table.
+group: Views
 props:
   type: object
   properties:
