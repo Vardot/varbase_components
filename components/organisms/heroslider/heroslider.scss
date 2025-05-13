@@ -242,8 +242,8 @@ $carousel-control-pause-icon-dark: url("data:image/svg+xml,<svg xmlns='http://ww
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
       .carousel-controls {
         position: absolute;
-        right: 9.375rem;
-        left: auto;
+        right: auto;
+        left: 9.375rem;
         width: calc(50vw - 11.125rem);
       }
 
@@ -257,8 +257,8 @@ $carousel-control-pause-icon-dark: url("data:image/svg+xml,<svg xmlns='http://ww
     @media screen and (min-width: map-get($grid-breakpoints, "lg")) {
       .carousel-controls {
         position: absolute;
-        right: auto;
-        left: 9.375rem;
+        right: 9.375rem;
+        left: auto;
         width: calc(50vw - 11.125rem);
       }
 
@@ -266,8 +266,6 @@ $carousel-control-pause-icon-dark: url("data:image/svg+xml,<svg xmlns='http://ww
         margin-left: 9.375rem;
       }
     }
-
-
   }
 
   &> .view-empty {

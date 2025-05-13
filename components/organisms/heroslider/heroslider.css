@@ -185,13 +185,13 @@
   }
 
   [dir="ltr"] .carousel.varbase-heroslider.hero-style-start .carousel-controls {
-    right: 9.375rem;
-    left: auto;
+    right: auto;
+    left: 9.375rem;
   }
 
   [dir="rtl"] .carousel.varbase-heroslider.hero-style-start .carousel-controls {
-    left: 9.375rem;
-    right: auto;
+    left: auto;
+    right: 9.375rem;
   }
 
   [dir="ltr"] .carousel.varbase-heroslider.hero-style-start .card-body {
@@ -210,13 +210,13 @@
   }
 
   [dir="ltr"] .carousel.varbase-heroslider.hero-style-end .carousel-controls {
-    right: auto;
-    left: 9.375rem;
+    right: 9.375rem;
+    left: auto;
   }
 
   [dir="rtl"] .carousel.varbase-heroslider.hero-style-end .carousel-controls {
-    left: auto;
-    right: 9.375rem;
+    left: 9.375rem;
+    right: auto;
   }
 
   [dir="ltr"] .carousel.varbase-heroslider.hero-style-end .card-body {
