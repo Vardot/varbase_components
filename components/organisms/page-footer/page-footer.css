@@ -1,5 +1,5 @@
 footer.footer {
-  background-color: #084298;
+  background-color: rgb(7.8, 66, 151.8);
   color: var(--bs-white);
 }
 
@@ -93,7 +93,7 @@ footer.footer .footer-logo-image {
 }
 
 .social-media-menu-icons li.nav-item > a:hover, .social-media-menu-icons li.nav-item > a:focus, .social-media-menu-icons li.nav-item > a:active {
-  color: #cfe2ff;
+  color: rgb(206.6, 226, 254.6);
   text-decoration: none;
 }
 

@@ -19,17 +19,17 @@
   include('varbase_components:heroslider',
     {
       id: id,
-      controls: controls ?? true,
-      indicators: indicators ?? true,
-      controls_indicators_position: controls_indicators_position ?? 'overlay',
-      interval: interval ?? 6000,
-      keyboard: keyboard ?? true,
-      pause: pause ?? 'hover',
-      ride: ride ?? 'carousel',
-      touch: touch ?? true,
-      wrap: wrap ?? true,
-      items: rows ?? [],
-      empty: empty
+      controls: (controls ?? false),
+      indicators: (indicators ?? false),
+      controls_indicators_position: (controls_indicators_position ?? 'overlay'),
+      interval: (interval ?? 6000),
+      keyboard: (keyboard ?? true),
+      pause: (pause ?? 'hover'),
+      ride: (ride ?? 'carousel'),
+      touch: (touch ?? true),
+      wrap: (wrap ?? true),
+      items: (rows ?? []),
+      empty: (empty ?? '')
     },
     with_context = false
   )

@@ -119,6 +119,11 @@
   margin-bottom: 1.88rem;
 }
 
+.carousel.varbase-heroslider.hero-style-top {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 @media screen and (max-width: 992px) {
   .carousel.varbase-heroslider.hero-style-start .carousel-controls, .carousel.varbase-heroslider.hero-style-end .carousel-controls, .carousel.varbase-heroslider.hero-style-top .carousel-controls, .carousel.varbase-heroslider.hero-style-bottom .carousel-controls {
     position: relative;

@@ -119,7 +119,7 @@
 }
 
 .alert-secondary.alert-dismissible .btn-close {
-  background: #520dc2;
+  background: rgb(81.6, 12.8, 193.6);
 }
 
 .alert-success.alert-dismissible .btn-close {
@@ -131,18 +131,18 @@
 }
 
 .alert-warning.alert-dismissible .btn-close {
-  background: #ffcd39;
+  background: rgb(255, 205.4, 56.6);
 }
 
 .alert-danger.alert-dismissible .btn-close {
-  background: #b02a37;
+  background: rgb(176, 42.4, 55.2);
 }
 
 .alert-light.alert-dismissible .btn-close {
-  background: #c6c7c8;
+  background: rgb(198.4, 199.2, 200);
 }
 
 .alert-dark.alert-dismissible .btn-close {
-  background: #4d5154;
+  background: rgb(77.4, 80.6, 83.8);
 }
 

@@ -157,7 +157,12 @@ $carousel-control-pause-icon-dark: url("data:image/svg+xml,<svg xmlns='http://ww
       margin-top: 1.88rem;
       margin-bottom: 1.88rem;
     }
-  }  
+  }
+
+  &.hero-style-top {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
   &.hero-style-start,
   &.hero-style-end,

@@ -50,7 +50,7 @@
 .vb-tags li > a:focus,
 .vb-tags li > a:active {
   text-decoration: none;
-  background-color: #520dc2;
+  background-color: rgb(81.6, 12.8, 193.6);
 }
 
 [dir="ltr"] [dir=rtl] .vb-tags {
@@ -86,6 +86,6 @@
 .vb-tag > a:focus,
 .vb-tag > a:active {
   text-decoration: none;
-  background-color: #520dc2;
+  background-color: rgb(81.6, 12.8, 193.6);
 }
 
