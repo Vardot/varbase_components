@@ -117,3 +117,15 @@ slots:
     description: 'Rows'
     items:
       type: 'object'
+  empty:
+    type: string
+    title: 'Empty'
+    description: 'The HTML message when the Hero Slider has no slides'
+    default: ''
+libraryOverrides:
+  dependencies:
+    - varbase_components/bs-carousel-script
+    - varbase_components/local-video-slider
+    - varbase_components/youtube-video-slider
+    - varbase_components/vimeo-video-slider
+    - drimage_improved/drimage_improved

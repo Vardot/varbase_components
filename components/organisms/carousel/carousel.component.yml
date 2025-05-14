@@ -56,3 +56,4 @@ props:
 libraryOverrides:
   dependencies:
     - varbase_components/bs-carousel-script
+    - drimage_improved/drimage_improved

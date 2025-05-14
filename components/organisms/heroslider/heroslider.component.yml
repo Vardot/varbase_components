@@ -126,3 +126,4 @@ libraryOverrides:
     - varbase_components/local-video-slider
     - varbase_components/youtube-video-slider
     - varbase_components/vimeo-video-slider
+    - drimage_improved/drimage_improved
