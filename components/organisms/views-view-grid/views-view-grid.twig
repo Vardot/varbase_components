@@ -12,43 +12,43 @@
  *   - row_class_default: A flag indicating whether default classes should be
  *     used on rows.
  *   - col_class_default: A flag indicating whether default classes should be
- *     used on columns.
- * - items: A list of grid items. Each item contains a list of rows or columns.
- *   The order in what comes first (row or column) depends on which alignment
+ *     used on data_rows.
+ * - items: A list of grid items. Each item contains a list of rows or data_rows.
+ *   The order in what comes first (row or data_row) depends on which alignment
  *   type is chosen (horizontal or vertical).
- *   - attributes: HTML attributes for each row or column.
- *   - content: A list of columns or rows. Each row or column contains:
- *     - attributes: HTML attributes for each row or column.
- *     - content: The row or column contents.
+ *   - attributes: HTML attributes for each row or data_row.
+ *   - content: A list of data_rows or rows. Each row or data_row contains:
+ *     - attributes: HTML attributes for each row or data_row.
+ *     - content: The row or data_row contents.
  *
  * @see template_preprocess_views_view_grid()
  */
 #}
+{% set col_xs = ((col_xs is defined and col_xs != 'none') ? col_xs : []) %}
+{% set col_sm = ((col_sm is defined and col_sm != 'none') ? col_sm : []) %}
+{% set col_md = ((col_md is defined and col_md != 'none') ? col_md : []) %}
+{% set col_lg = ((col_lg is defined and col_lg != 'none') ? col_lg : []) %}
+{% set col_xl = ((col_xl is defined and col_xl != 'none') ? col_xl : []) %}
+{% set col_xxl = ((col_xxl is defined and col_xxl != 'none') ? col_xxl : []) %}
+
+{% set grid_utility_classes = grid_utility_classes ?? [] %}
+{% set column_utility_classes = column_utility_classes ?? [] %}
+
 {%
   set classes = [
     'views-view-grid',
-    options.alignment,
-    'cols-' ~ options.columns,
-    'clearfix',
-    'col',
-  ]
+    'grid',
+    'row',
+    'clearfix'
+  ]|merge(grid_utility_classes)
 %}
-{% if options.row_class_default %}
-  {%
-    set row_classes = [
-      'views-row',
-      options.alignment == 'horizontal' ? 'clearfix',
-    ]
-  %}
+
+{% if not attributes %}
+  {% set attributes = create_attribute() %}
 {% endif %}
-{% if options.col_class_default %}
-  {%
-    set col_classes = [
-      'views-col',
-      options.alignment == 'vertical' ? 'clearfix',
-    ]
-  %}
-{% endif %}
+
+{% set attributes = attributes.addClass(classes) %}
+
 {% if title %}
   {% include 'varbase_components:heading' with {
       html_tag: 'h3',
@@ -56,26 +56,17 @@
     }
   %}
 {% endif %}
-<div{{ attributes.addClass(classes) }}>
-  {% if options.alignment == 'horizontal' %}
-    {% for row in items %}
-      <div{{ row.attributes.addClass(row_classes, options.row_class_default ? 'row-' ~ loop.index) }}>
-        {% for column in row.content %}
-          <div{{ column.attributes.addClass(col_classes, options.col_class_default ? 'col-' ~ loop.index) }}>
-            {{ column.content }}
-          </div>
-        {% endfor %}
-      </div>
-    {% endfor %}
-  {% else %}
-    {% for column in items %}
-      <div{{ column.attributes.addClass(col_classes, options.col_class_default ? 'col-' ~ loop.index) }}>
-        {% for row in column.content %}
-          <div{{ row.attributes.addClass(row_classes, options.row_class_default ? 'row-' ~ loop.index) }}>
-            {{ row.content }}
-          </div>
-        {% endfor %}
-      </div>
-    {% endfor %}
-  {% endif %}
+
+<div{{ attributes }}>
+  {% for data_row in rows %}
+    {% set data_row_attributes = create_attribute() %}
+    {%
+      set data_row_classes = [
+      ]|merge(column_utility_classes)|merge(col_xs)|merge(col_sm)|merge(col_md)|merge(col_lg)|merge(col_xl)|merge(col_xxl)
+    %}
+    {% set data_row_attributes = data_row_attributes.addClass(data_row_classes) %}
+    <div{{ data_row_attributes}}>
+      {{ data_row }}
+    </div>
+  {% endfor %}
 </div>
