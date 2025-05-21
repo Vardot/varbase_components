@@ -2,6 +2,7 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 name: Block Heading
 status: experimental
 description: A heading block is used to add headings to your page or sections. Headings help structure your page making your content easier to read by humans and search engines.
+group: Blocks
 props:
   type: object
   properties:

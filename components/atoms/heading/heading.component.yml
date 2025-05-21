@@ -34,6 +34,7 @@ props:
       type: string
       title: URL Link
       description: Simple URL link for heading.
+      $ref: "ui-patterns://url"
     heading_utility_classes:
       type: array
       title: Utility Classes 

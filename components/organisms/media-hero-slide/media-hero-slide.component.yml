@@ -37,6 +37,7 @@ props:
       type: string
       title: URL
       description: Direct URL of the current node.
+      $ref: "ui-patterns://url"
     display_submitted:
       type: boolean
       title: Display Submitted

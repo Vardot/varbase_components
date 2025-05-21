@@ -1,7 +1,8 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Block Accordion
 status: experimental
-description: A wrapper accordion block for the Varbase Accordion component. 
+description: A wrapper accordion block for the Varbase Accordion component.
+group: Blocks
 props:
   type: object
   properties:

@@ -16,6 +16,7 @@ props:
       type: string
       title: URL Link
       description: URL link for the button when the HTML tag is an anchor link.
+      $ref: "ui-patterns://url"
     color:
       type: string
       title: Color

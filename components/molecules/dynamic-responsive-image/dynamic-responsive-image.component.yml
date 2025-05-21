@@ -10,6 +10,7 @@ props:
       type: string
       title: Optional URL
       description: An optional URL the image can be linked to.
+      $ref: "ui-patterns://url"
     width:
       type: string
       title: Original Width

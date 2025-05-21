@@ -9,8 +9,9 @@ props:
   properties:
     url:
       type: string
-      label: URL Link
+      title: URL Link
       description: URL link.
+      $ref: "ui-patterns://url"
     color:
       type: string
       title: Color
@@ -29,7 +30,7 @@ props:
         - body-emphasis
     opacity:
       type: string
-      label: Opacity
+      title: Opacity
       description: Change the alpha opacity of the link rgba() color value with utilities. Please be aware that changes to a color’s opacity can lead to links with insufficient contrast.
       default: ''
       enum:
@@ -41,7 +42,7 @@ props:
         - '100'
     underline_color:
       type: string
-      label: Underline color
+      title: Underline color
       description: Change the underline’s color independent of the link text color.
       default: ''
       enum:
@@ -56,7 +57,7 @@ props:
         - dark
     underline_offset:
       type: string
-      label: Underline offset
+      title: Underline offset
       description: Change the underline’s distance from your text. Offset is set in em units to automatically scale with the element’s current font-size.
       default: ''
       enum:
@@ -66,7 +67,7 @@ props:
         - '3'
     underline_opacity:
       type: string
-      label: Underline opacity
+      title: Underline opacity
       description: Change the underline’s opacity. Requires adding .link-underline to first set an rgba() color we use to then modify the alpha opacity.
       default: ''
       enum:
