@@ -23,7 +23,6 @@
  *
  */
 #}
-{{ dump(_context) }}
 
 {% set col_xs = ((col_xs is defined and col_xs != 'none') ? col_xs : []) %}
 {% set col_sm = ((col_sm is defined and col_sm != 'none') ? col_sm : []) %}
@@ -49,8 +48,6 @@
 {% endif %}
 
 {% set attributes = attributes.addClass(classes) %}
-
-{{ dump(_context) }}
 
 <div{{ attributes }}>
   {% if items is iterable %}
