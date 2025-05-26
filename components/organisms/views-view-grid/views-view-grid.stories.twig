@@ -31,57 +31,105 @@
       "defaultValue": []
     },
     "col_xs": {
-      "name": "XS column width",
-      "description": "Column width at xs and above.",
+      "name": "Column width of items at xs breakpoint",
+      "description": "Set the number of columns each item should take up at the xs breakpoint and higher.",
       "control": "select",
-      "options": [
-        "none", "col", "col-auto", "col-1", "col-2", "col-3", "col-4", "col-6", "col-12"
-      ],
-      "defaultValue": "col-12"
+      "options": {
+        "'None or inherit from previous'": "none",
+        "'Equal'": "col",
+        "'Fit to content'": "col-auto",
+        "'1 (12 columns per row)'": "col-1",
+        "'2 (6 columns per row)'": "col-2",
+        "'3 (4 columns per row)'": "col-3",
+        "'4 (3 columns per row)'": "col-4",
+        "'6 (2 columns per row)'": "col-6",
+        "'12 (1 column per row)'": "col-12"
+      },
+      "defaultValue": "none"
     },
     "col_sm": {
-      "name": "SM column width",
-      "description": "Column width at sm and above.",
+      "name": "Column width of items at sm breakpoint",
+      "description": "Set the number of columns each item should take up at the sm breakpoint and higher.",
       "control": "select",
-      "options": [
-        "none", "col-sm", "col-sm-auto", "col-sm-1", "col-sm-2", "col-sm-3", "col-sm-4", "col-sm-6", "col-sm-12"
-      ],
-      "defaultValue": "col-sm-6"
+      "options": {
+        "'None (or inherit from previous)'": "none",
+        "'Equal'": "col-md",
+        "'Fit to content'": "col-md-auto",
+        "'1 (12 columns per row)'": "col-md-1",
+        "'2 (6 columns per row)'": "col-md-2",
+        "'3 (4 columns per row)'": "col-md-3",
+        "'4 (3 columns per row)'": "col-md-4",
+        "'6 (2 columns per row)'": "col-md-6",
+        "'12 (1 column per row)'": "col-md-12"
+      },
+      "defaultValue": "none"
     },
     "col_md": {
-      "name": "MD column width",
-      "description": "Column width at md and above.",
+      "name": "Column width of items at md breakpoint",
+      "description": "Set the number of columns each item should take up at the md breakpoint and higher.",
       "control": "select",
-      "options": [
-        "none", "col-md", "col-md-auto", "col-md-1", "col-md-2", "col-md-3", "col-md-4", "col-md-6", "col-md-12"
-      ],
-      "defaultValue": "col-md-4"
+      "options": {
+        "'None (or inherit from previous)'": "none",
+        "'Equal'": "col-md",
+        "'Fit to content'": "col-md-auto",
+        "'1 (12 columns per row)'": "col-md-1",
+        "'2 (6 columns per row)'": "col-md-2",
+        "'3 (4 columns per row)'": "col-md-3",
+        "'4 (3 columns per row)'": "col-md-4",
+        "'6 (2 columns per row)'": "col-md-6",
+        "'12 (1 column per row)'": "col-md-12"
+      },
+      "defaultValue": "none"
     },
     "col_lg": {
-      "name": "LG column width",
-      "description": "Column width at lg and above.",
+      "name": "Column width of items at lg breakpoint",
+      "description": "Set the number of columns each item should take up at the lg breakpoint and higher.",
       "control": "select",
-      "options": [
-        "none", "col-lg", "col-lg-auto", "col-lg-1", "col-lg-2", "col-lg-3", "col-lg-4", "col-lg-6", "col-lg-12"
-      ],
+      "options": {
+        "'None (or inherit from previous)'": "none",
+        "'Equal'": "col-xl",
+        "'Fit to content'": "col-xl-auto",
+        "'1 (12 columns per row)'": "col-xl-1",
+        "'2 (6 columns per row)'": "col-xl-2",
+        "'3 (4 columns per row)'": "col-xl-3",
+        "'4 (3 columns per row)'": "col-xl-4",
+        "'6 (2 columns per row)'": "col-xl-6",
+        "'12 (1 column per row)'": "col-xl-12"
+      },
       "defaultValue": "none"
     },
     "col_xl": {
-      "name": "XL column width",
-      "description": "Column width at xl and above.",
+      "name": "Column width of items at xl breakpoint",
+      "description": "Set the number of columns each item should take up at the xl breakpoint and higher.",
       "control": "select",
-      "options": [
-        "none", "col-xl", "col-xl-auto", "col-xl-1", "col-xl-2", "col-xl-3", "col-xl-4", "col-xl-6", "col-xl-12"
-      ],
+      "options": {
+        "'None (or inherit from previous)'": "none",
+        "'Equal'": "col-xl",
+        "'Fit to content'": "col-xl-auto",
+        "'1 (12 columns per row)'": "col-xl-1",
+        "'2 (6 columns per row)'": "col-xl-2",
+        "'3 (4 columns per row)'": "col-xl-3",
+        "'4 (3 columns per row)'": "col-xl-4",
+        "'6 (2 columns per row)'": "col-xl-6",
+        "'12 (1 column per row)'": "col-xl-12"
+      },
       "defaultValue": "none"
     },
     "col_xxl": {
-      "name": "XXL column width",
-      "description": "Column width at xxl and above.",
+      "name": "Column width of items at xxl breakpoint",
+      "description": "Set the number of columns each item should take up at the xl breakpoint and higher.",
       "control": "select",
-      "options": [
-        "none", "col-xxl", "col-xxl-auto", "col-xxl-1", "col-xxl-2", "col-xxl-3", "col-xxl-4", "col-xxl-6", "col-xxl-12"
-      ],
+      "options": {
+        "'None (or inherit from previous)'": "none",
+        "'Equal'": "col-xxl",
+        "'Fit to content'": "col-xxl-auto",
+        "'1 (12 columns per row)'": "col-xxl-1",
+        "'2 (6 columns per row)'": "col-xxl-2",
+        "'3 (4 columns per row)'": "col-xxl-3",
+        "'4 (3 columns per row)'": "col-xxl-4",
+        "'6 (2 columns per row)'": "col-xxl-6",
+        "'12 (1 column per row)'": "col-xxl-12"
+      },
       "defaultValue": "none"
     },
     "attributes": {
@@ -99,11 +147,11 @@
     "grid_utility_classes": [],
     "column_utility_classes": ["mb-4"],
     "col_xs": "col-12",
-    "col_sm": "",
-    "col_md": "",
-    "col_lg": "",
-    "col_xl": "",
-    "col_xxl": ""
+    "col_sm": "none",
+    "col_md": "none",
+    "col_lg": "none",
+    "col_xl": "none",
+    "col_xxl": "none"
   }
 } %}
 
@@ -269,11 +317,11 @@
     "grid_utility_classes": [],
     "column_utility_classes": ["gy-4", "g-sm-4"],
     "col_xs": "col-12",
-    "col_sm": "",
-    "col_md": "",
-    "col_lg": "",
+    "col_sm": "none",
+    "col_md": "none",
+    "col_lg": "none",
     "col_xl": "col-xl-4",
-    "col_xxl": ""
+    "col_xxl": "none"
   }
 } %}
 
@@ -357,11 +405,11 @@
       "anchor_all": true,
       "media_position": "top",
       "col_xs": "col-12",
-      "col_sm": "",
-      "col_md": "",
-      "col_lg": "",
+      "col_sm": "none",
+      "col_md": "none",
+      "col_lg": "none",
       "col_xl": "col-xl-4",
-      "col_xxl": "",
+      "col_xxl": "none",
       "media": image1_html,
       "content": content_header1_html ~ heading1_html ~ card_content1_html ~ card_link_html,
       "card_impressed_utility_classes": [],
@@ -379,11 +427,11 @@
       "anchor_all": true,
       "media_position": "top",
       "col_xs": "col-12",
-      "col_sm": "",
-      "col_md": "",
-      "col_lg": "",
+      "col_sm": "none",
+      "col_md": "none",
+      "col_lg": "none",
       "col_xl": "col-xl-4",
-      "col_xxl": "",
+      "col_xxl": "none",
       "media": image2_html,
       "content": content_header2_html ~ heading2_html ~ card_content2_html ~ card_link_html,
       "card_impressed_utility_classes": [],
@@ -401,11 +449,11 @@
       "anchor_all": true,
       "media_position": "top",
       "col_xs": "col-12",
-      "col_sm": "",
-      "col_md": "",
-      "col_lg": "",
+      "col_sm": "none",
+      "col_md": "none",
+      "col_lg": "none",
       "col_xl": "col-xl-4",
-      "col_xxl": "",
+      "col_xxl": "none",
       "media": image3_html,
       "content": content_header3_html ~ heading3_html ~ card_content3_html ~ card_link_html,
       "card_impressed_utility_classes": [],

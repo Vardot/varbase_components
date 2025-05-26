@@ -57,16 +57,15 @@
   %}
 {% endif %}
 
-<div{{ attributes }}>
-  {% for data_row in rows %}
-    {% set data_row_attributes = create_attribute() %}
-    {%
-      set data_row_classes = [
-      ]|merge(column_utility_classes)|merge(col_xs)|merge(col_sm)|merge(col_md)|merge(col_lg)|merge(col_xl)|merge(col_xxl)
-    %}
-    {% set data_row_attributes = data_row_attributes.addClass(data_row_classes) %}
-    <div{{ data_row_attributes}}>
-      {{ data_row }}
-    </div>
-  {% endfor %}
-</div>
+{% if rows is iterable %}
+  <div{{ attributes }}>
+    {% for data_row in rows %}
+      {% set data_row_attributes = create_attribute() %}
+      {% set data_row_classes = []|merge(column_utility_classes)|merge(col_xs)|merge(col_sm)|merge(col_md)|merge(col_lg)|merge(col_xl)|merge(col_xxl) %}
+      {% set data_row_attributes = data_row_attributes.addClass(data_row_classes) %}
+      <div{{ data_row_attributes }}>
+        {{ data_row }}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
