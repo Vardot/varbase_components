@@ -36,7 +36,7 @@
       "control": "select",
       "options": {
         "'None (or inherit from previous)'": "none",
-        "'col'": "col",
+        "col": "col",
         "'col-auto'": "col-auto",
         "'col-1'": "col-1",
         "'col-2'": "col-2",
@@ -568,12 +568,12 @@
 } %}
   {{ include('varbase_components:grid', {
       "items": [
-        {"#markup": "<div class='p-3 bg-light border'>S1</div>"},
-        {"#markup": "<div class='p-3 bg-light border'>S2</div>"},
-        {"#markup": "<div class='p-3 bg-light border'>S3</div>"},
-        {"#markup": "<div class='p-3 bg-light border'>S4</div>"},
-        {"#markup": "<div class='p-3 bg-light border'>S5</div>"},
-        {"#markup": "<div class='p-3 bg-light border'>S6</div>"}
+        {"#markup": "<div class='p-3 bg-light'>S1</div>"},
+        {"#markup": "<div class='p-3 bg-light'>S2</div>"},
+        {"#markup": "<div class='p-3 bg-light'>S3</div>"},
+        {"#markup": "<div class='p-3 bg-light'>S4</div>"},
+        {"#markup": "<div class='p-3 bg-light'>S5</div>"},
+        {"#markup": "<div class='p-3 bg-light'>S6</div>"}
       ]
     })
   }}
@@ -582,7 +582,7 @@
 {% story GridRowCustomClass with {
   "name": "Custom Row Class (shadow + bg)",
   "args": {
-    "column_utility_classes": ["shadow-sm", "bg-white", "rounded"],
+    "column_utility_classes": ["shadow-sm", "bg-white"],
     "grid_utility_classes": ["g-3"],
     "col_xs": "none",
     "col_sm": "none",
@@ -594,9 +594,9 @@
 } %}
   {{ include('varbase_components:grid', {
       "items": [
-        { "#markup": "<div class='p-3 bg-white border'>Styled 1</div>"},
-        { "#markup": "<div class='p-3 bg-white border'>Styled 2</div>"},
-        { "#markup": "<div class='p-3 bg-white border'>Styled 3</div>"}
+        { "#markup": "<div class='p-3'>Styled 1</div>"},
+        { "#markup": "<div class='p-3'>Styled 2</div>"},
+        { "#markup": "<div class='p-3'>Styled 3</div>"}
       ]
     })
   }}

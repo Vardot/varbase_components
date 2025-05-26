@@ -24,12 +24,12 @@
  */
 #}
 
-{% set col_xs = ((col_xs is defined and col_xs != 'none') ? col_xs : []) %}
-{% set col_sm = ((col_sm is defined and col_sm != 'none') ? col_sm : []) %}
-{% set col_md = ((col_md is defined and col_md != 'none') ? col_md : []) %}
-{% set col_lg = ((col_lg is defined and col_lg != 'none') ? col_lg : []) %}
-{% set col_xl = ((col_xl is defined and col_xl != 'none') ? col_xl : []) %}
-{% set col_xxl = ((col_xxl is defined and col_xxl != 'none') ? col_xxl : []) %}
+{% set col_xs = col_xs ? [col_xs] : [] %}
+{% set col_sm = col_sm ? [col_sm] : [] %}
+{% set col_md = col_md ? [col_md] : [] %}
+{% set col_lg = col_lg ? [col_lg] : [] %}
+{% set col_xl = col_xl ? [col_xl] : [] %}
+{% set col_xxl = col_xxl ? [col_xxl] : [] %}
 
 {% set grid_utility_classes = grid_utility_classes ?? [] %}
 {% set column_utility_classes = column_utility_classes ?? [] %}
@@ -49,15 +49,15 @@
 
 {% set attributes = attributes.addClass(classes) %}
 
+{% if items is iterable %}
 <div{{ attributes }}>
-  {% if items is iterable %}
-    {% for item in items %}
-      {% set item_attributes = create_attribute() %}
-      {% set item_classes = []|merge(column_utility_classes)|merge(col_xs)|merge(col_sm)|merge(col_md)|merge(col_lg)|merge(col_xl)|merge(col_xxl) %}
-      {% set item_attributes = item_attributes.addClass(item_classes) %}
-      <div{{ item_attributes }}>
-        {{ item }}
-      </div>
-    {% endfor %}
-  {% endif %}
+  {% for item in items %}
+    {% set item_attributes = create_attribute() %}
+    {% set item_classes = []|merge(column_utility_classes)|merge(col_xs)|merge(col_sm)|merge(col_md)|merge(col_lg)|merge(col_xl)|merge(col_xxl) %}
+    {% set item_attributes = item_attributes.addClass(item_classes) %}
+    <div{{ item_attributes }}>
+      {{ item }}
+    </div>
+  {% endfor %}
 </div>
+{% endif %}
