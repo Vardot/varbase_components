@@ -29,10 +29,13 @@ inherited in Bootstrap, meaning any nested tables can be styled independent from
 > * [Responsive tables](https://getbootstrap.com/docs/5.3/content/tables/#responsive-tables)
 > * [Breakpoint specific](https://getbootstrap.com/docs/5.3/content/tables/#breakpoint-specific)
 
+
+### Variants
+* `variant`: Contextual classes for table variants.
+
 ### Properties:
 * `responsive`: Responsive tables allow tables to be scrolled horizontally with ease.
               Make any table responsive across all viewports.
-* `color`: Table Background Color - Set a background contextual classes to color tables.
 * `striped_rows`: Use to add zebra-striping to any table row within the `<tbody>`. Works when `no_striping` is false.
 * `striped_columns`: Use to add zebra-striping to any table column. Works when `no_striping` is false.
 * `hover`: Enable a hover state on table rows within a `<tbody>`.
@@ -81,8 +84,7 @@ Only passing variables from Drupal.
     sticky: sticky|default([]),
     rows: rows|default([]),
     footer: footer|default([]),
-    empty: empty|default(''),
-    no_striping: no_striping|default(false)
+    empty: empty|default('')
   }
 %}
 ```

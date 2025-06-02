@@ -3,10 +3,12 @@
  * @file
  * Varbase Components implementation for the Table component.
  *
+ * Available Variants:
+ * - variant: Contextual classes for table variants.
+ *
  * Available properties:
  * - responsive: Responsive tables allow tables to be scrolled horizontally with ease.
  *               Make any table responsive across all viewports.
- * - color: Table Background Color - Set a background contextual classes to color tables.
  * - striped_rows: Use to add zebra-striping to any table row within the `<tbody>`. Works with `no_striping` is false.
  * - striped_columns: Use to add zebra-striping to any table column. Works with `no_striping` is false.
  * - hover: Enable a hover state on table rows within a `<tbody>`.
@@ -46,14 +48,14 @@
  */
 #}
 {% set responsive = responsive ?? true %}
-{% set color_classes = color ? ['table-' ~ color] : [] %}
+{% set variant_classes = ((variant is defined and variant != '') ? ['table-' ~ variant] : []) %}
 
-{% if not no_striping %}
-  {% set striped_rows_classes = striped_rows ? ['table-striped'] : [] %}
-  {% set striped_columns_classes = striped_columns ? ['table-striped-columns'] : [] %}
-{% else %}
+{% if no_striping %}
   {% set striped_rows_classes = [] %}
   {% set striped_columns_classes = [] %}
+{% else %}
+  {% set striped_rows_classes = striped_rows ? ['table-striped'] : [] %}
+  {% set striped_columns_classes = striped_columns ? ['table-striped-columns'] : [] %}
 {% endif %}
 
 {% set hover_classes = hover ? ['table-hover'] : [] %}
@@ -73,7 +75,7 @@
 {%
   set table_classes = [
     'table',
-  ]|merge(color_classes)|merge(striped_rows_classes)|merge(striped_columns_classes)|merge(hover_classes)|merge(bordered_classes)|merge(border_color_classes)|merge(borderless_classes)|merge(size_classes)|merge(table_utility_classes)
+  ]|merge(variant_classes)|merge(striped_rows_classes)|merge(striped_columns_classes)|merge(hover_classes)|merge(bordered_classes)|merge(border_color_classes)|merge(borderless_classes)|merge(size_classes)|merge(table_utility_classes)
 %}
 
 {% if responsive %}
@@ -122,7 +124,7 @@
     </thead>
   {% endif %}
 
-  {% if rows %}
+  {% if rows and rows|length > 0 %}
     {% if not tbody_attributes %}
       {% set tbody_attributes = create_attribute() %}
     {% endif %}
@@ -147,8 +149,8 @@
       {% set tbody_attributes = create_attribute() %}
     {% endif %}
     <tbody{{ tbody_attributes.addClass(tbody_utility_classes) }}>
-      <tr class="odd">
-        <td colspan="{{ header_columns }}" class="empty message">{{ empty }}</td>
+      <tr>
+        <td colspan="{{ header|length }}" class="table message">{{ empty }}</td>
       </tr>
     </tbody>
   {% endif %}

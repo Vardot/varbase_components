@@ -5,15 +5,9 @@ description: The Table component with support for Bootstrap
 props:
   type: object
   properties:
-    responsive:
-      type: boolean
-      title: Responsive
-      description: Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports.
-      default: true
-    color:
+    variant:
       type: string
-      title: Table Background Color
-      description: Set a background contextual classes to color tables
+      title: Variant
       default: ''
       enum:
         - ''
@@ -25,26 +19,36 @@ props:
         - danger
         - light
         - dark
+    responsive:
+      type: boolean
+      title: Responsive
+      description: Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports.
+      default: true
+      $ref: "ui-patterns://boolean"
     striped_rows:
       type: boolean
       title: Striped rows
-      description: Use to add zebra-striping to any table row within the `<tbody>`. Works when `no_striping` is false.
+      description: "Use to add zebra-striping to any table row within the tbody. Works when no_striping is false."
       default: false
+      $ref: "ui-patterns://boolean"
     striped_columns:
       type: boolean
       title: Striped columns
-      description: Use to add zebra-striping to any table column. Works when `no_striping` is false.
+      description: Use to add zebra-striping to any table column. Works when no_striping is false.
       default: false
+      $ref: "ui-patterns://boolean"
     hover:
       type: boolean
       title: Hover
-      description: Enable a hover state on table rows within a `<tbody>` for hoverable rows.
+      description: "Enable a hover state on table rows within a tbody for hoverable rows."
       default: false
+      $ref: "ui-patterns://boolean"
     bordered:
       type: boolean
       title: Bordered
       description: Add borders on all sides of the table and cells.
       default: false
+      $ref: "ui-patterns://boolean"
     border_color:
       type: string
       title: Border Color
@@ -73,7 +77,7 @@ props:
     borderless:
       type: boolean
       title: Borderless
-      description: Add `.table-borderless` for a table without borders.
+      description: "Add .table-borderless for a table without borders."
       default: false
     size:
       type: string
@@ -86,23 +90,24 @@ props:
     caption:
       type: string
       title: Caption
-      description: A localized string for the `<caption>` tag.
+      description: "A localized string for the caption tag."
       default: ''
     colgroups:
       type: array
       title: Column groups
       description: Column groups which contains attributes
       default: []
+    sticky:
+      type: boolean
+      title: Sticky
+      description: A flag indicating whether to use a sticky table header. ( set responsive to false for sticky to work)
+      default: false
+      $ref: "ui-patterns://boolean"
     header:
       type: array
       title: Table header cells
       description: Table header cells which contains (tag, attributes, content, field, sort)
       default: []
-    sticky:
-      type: boolean
-      title: Sticky
-      description: A flag indicating whether to use a sticky table header. ( set `responsive` to false for sticky to work)
-      default: false
     rows:
       type: array
       title: Table rows
@@ -123,55 +128,48 @@ props:
       title: No Striping
       description: A boolean indicating that the row should receive no striping.
       default: false
-    header_columns:
-      type: number
-      title: Header Columns
-      description: The number of columns in the header.
-    table_utility_classes:
-      type: array
-      title: Utility Classes
-      default: []
-      items:
-        type: 'string'
-      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the table element.
+      $ref: "ui-patterns://boolean"
     thead_utility_classes:
       type: array
-      title: Table Head Utility Classes
+      title: Table Header Utility Classes
       default: []
       items:
         type: 'string'
-      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the head of the table element.
+      description: Use to add extra Bootstrap utility classes or custom CSS classes over to the head of the table element.
     tbody_utility_classes:
       type: array
       title: Table Body Utility Classes
       default: []
       items:
         type: 'string'
-      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the body of the table element.
-    troot_utility_classes:
+      description: Use to add extra Bootstrap utility classes or custom CSS classes over to the body of the table element.
+    tfoot_utility_classes:
       type: array
-      title: Table Root Utility Classes
+      title: Table Footer Utility Classes
       default: []
       items:
         type: 'string'
-      description: An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the root of the table element.
+      description: Use to add extra Bootstrap utility classes or custom CSS classes over to the foot of the table element.
     attributes:
       type: object
       title: Attributes
-      description: HTML attributes to apply to the `<table>` tag.
+      description: "HTML attributes to apply to the table tag."
       $ref: 'ui-patterns://attributes'
     thead_attributes:
       type: object
-      title: Table head attributes
-      description: HTML attributes to apply to the `<thead>` tag.
+      title: Table Header attributes
+      description: "HTML attributes to apply to the thead tag."
       $ref: 'ui-patterns://attributes'
+      default: {}
     tbody_attributes:
       type: object
-      title: Table body attributes
-      description: HTML attributes to apply to the `<tbody>` tag.
+      title: Table Body attributes
+      description: "HTML attributes to apply to the tbody tag."
       $ref: 'ui-patterns://attributes'
+      default: {}
     tfoot_attributes:
       type: object
-      title: Table footer attributes
-      description: HTML attributes to apply to the `<tfoot>` tag.
+      title: Table Footer attributes
+      description: "HTML attributes to apply to the tfoot tag."
       $ref: 'ui-patterns://attributes'
+      default: {}

@@ -33,99 +33,138 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
-  'cols-' ~ header|length,
-  responsive ? 'responsive-enabled',
-  sticky ? 'sticky-enabled',
-  'table',
-  'table-bordered',
-] %}
+{% set header_cells = [] %}
+{% set first_row = rows|first %}
+{% if first_row %}
+  {% set entity = first_row['#row']._entity %}
+  {% set view_fields = first_row['#view'].field %}
 
-<div class="table-responsive">
-  <table{{ attributes.addClass(classes) }}>
-    {% if caption_needed %}
-      <caption>
-        {% if caption %}
-          {{ caption }}
+  {% for field_name, field_handler_header in view_fields %}
+    {# Check if field should be excluded from display #}
+    {% if not field_handler_header.options.exclude and entity.hasField(field_name) %}
+      {% set field_definition = entity.getFieldDefinition(field_name) %}
+
+      {# Build header cell attributes #}
+      {% set header_attributes = create_attribute() %}
+      {# Determine header content based on label settings #}
+      {% set header_content = '' %}
+      {% if field_handler_header.options.label and field_handler_header.options.label != 'hidden' %}
+        {% set header_content = field_handler_header.options.label %}
+      {% else %}
+        {% set header_content = field_definition.getLabel() %}
+      {% endif %}
+
+      {# Apply label colon setting #}
+      {% if header_content and field_handler_header.options.element_label_colon %}
+        {% set header_content = header_content ~ ':' %}
+      {% endif %}
+      
+      {% set header_cell = {
+        'tag': 'th',
+        'attributes': header_attributes,
+        'content': header_content
+      } %}
+      {% set header_cells = header_cells|merge([header_cell]) %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% set table_rows = [] %}
+{% for row_key, row in rows %}
+  {% set entity = row['#row']._entity %}
+  {% set view = row['#view'] %}
+
+  {% if entity %}
+    {% set cells = [] %}
+    {% for field_name, field_handler in view.field %}
+      {# Skip excluded fields #}
+      {% if not field_handler.options.exclude and entity.hasField(field_name) %}
+        {% set field_value = entity.get(field_name) %}
+
+        {# Get field configuration from view #}
+        {% set field_settings = field_handler.options.settings %}
+        {% set field_formatter = field_handler.options.type %}
+        {% set field_label_display = field_handler.options.label %}
+
+        {# Build cell attributes #}
+        {% set cell_attributes = create_attribute() %}
+        {% if field_handler.options.element_class %}
+          {% set cell_attributes = cell_attributes.addClass(field_handler.options.element_class) %}
+        {% endif %}
+
+        {# Handle empty fields #}
+        {% set cell_content = '' %}
+        {% if not field_value.isEmpty() %}
+          {# Apply field alterations if configured #}
+          {% if field_handler.options.alter.alter_text and field_handler.options.alter.text %}
+            {# Custom alter text - you can expand this logic #}
+            {% set cell_content = field_handler.options.alter.text %}
+          {% else %}
+            {# Render field with view settings #}
+            {% set cell_content = field_handler.original_value %}
+            {# {% set cell_content = row[field_name] %} #}
+          {% endif %}
         {% else %}
-          {{ title }}
+          {# Handle empty field display #}
+          {% if field_handler.options.empty_field_behavior.empty_text %}
+            {% set cell_content = field_handler.options.empty_field_behavior.empty_text %}
+          {% endif %}
         {% endif %}
 
-        {% if (summary is not empty) or (description is not empty) %}
-          <details>
-            {% if summary is not empty %}
-              <summary>{{ summary }}</summary>
-            {% endif %}
-            {% if description is not empty %}
-              {{ description }}
-            {% endif %}
-          </details>
-        {% endif %}
-      </caption>
-    {% endif %}
+        {% set cell = {
+          'tag': 'td',
+          'attributes': cell_attributes,
+          'content': cell_content
+        } %}
+        {% set cells = cells|merge([cell]) %}
+      {% endif %}
+    {% endfor %}
 
-    {% if header %}
-      <thead class="bg-light">
-        <tr>
-          {% for key, column in header %}
-            {% if column.default_classes %}
-              {% set column_classes = [
-                'views-field',
-                'views-field-' ~ fields[key],
-              ] %}
-            {% endif %}
-          <th{{ column.attributes.addClass(column_classes).setAttribute('scope', 'col') }}>
-            {%- if column.wrapper_element -%}
-              <{{ column.wrapper_element }}>
-              {%- if column.url -%}
-                <a href="{{ column.url }}"
-                  title="{{ column.title }}">{{ column.content }}{{ column.sort_indicator }}</a>
-              {%- else -%}
-                {{ column.content }}{{ column.sort_indicator }}
-              {%- endif -%}
-              </{{ column.wrapper_element }}>
-            {%- else -%}
-              {%- if column.url -%}
-                <a href="{{ column.url }}"
-                  title="{{ column.title }}">{{ column.content }}{{ column.sort_indicator }}</a>
-              {%- else -%}
-                {{- column.content }}{{ column.sort_indicator }}
-              {%- endif -%}
-            {%- endif -%}
-            </th>
-          {% endfor %}
-        </tr>
-      </thead>
+    {% if cells %}
+      {# Apply row classes if configured #}
+      {% set row_attributes = create_attribute() %}
+      {% if row['#row_class'] %}
+        {% for class in row['#row_class'] %}
+          {% set row_attributes = row_attributes.addClass(class) %}
+        {% endfor %}
+      {% endif %}
+      
+      {% set table_row = {
+        'attributes': row_attributes,
+        'cells': cells
+      } %}
+      {% set table_rows = table_rows|merge([table_row]) %}
     {% endif %}
+  {% endif %}
+{% endfor %}
 
-    <tbody>
-      {% for row in rows %}
-        <tr{{ row.attributes }}>
-          {% for key, column in row.columns %}
-            {% if column.default_classes %}
-              {% set column_classes = [
-                'views-field'
-              ] %}
-              {% for field in column.fields %}
-                {% set column_classes = column_classes|merge(['views-field-' ~ field]) %}
-              {% endfor %}
-            {% endif %}
-          <td{{ column.attributes.addClass(column_classes) }}>
-            {%- if column.wrapper_element -%}
-              <{{ column.wrapper_element }}>
-              {% for content in column.content %}
-                {{ content.separator }}{{ content.field_output }}
-              {% endfor %}
-              </{{ column.wrapper_element }}>
-            {%- else -%}
-              {% for content in column.content %}
-                {{- content.separator }}{{ content.field_output -}}
-              {% endfor %}
-            {%- endif %}
-            </td>
-          {% endfor %}
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
+{{
+  include('varbase_components:table', {
+      header: header_cells,
+      rows: table_rows,
+      footer: [],
+      caption: caption,
+      empty: "<p>Empty table!</p>"|t,
+      responsive: responsive,
+      sticky: sticky,
+      variant: variant,
+      striped_rows: striped_rows,
+      striped_columns: striped_columns,
+      no_striping: (not(striped_rows or striped_columns)),
+      hover: hover,
+      bordered: bordered,
+      border_color: border_color,
+      borderless: (not bordered),
+      size: size,
+      table_utility_classes: table_utility_classes,
+      thead_utility_classes: thead_utility_classes,
+      tbody_utility_classes: tbody_utility_classes,
+      tfoot_utility_classes: tfoot_utility_classes,
+      attributes: attributes,
+      thead_attributes: thead_attributes,
+      tbody_attributes: tbody_attributes,
+      tfoot_attributes: tfoot_attributes
+    },
+    with_context = false
+  )
+}}

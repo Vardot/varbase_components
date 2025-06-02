@@ -1,5 +1,5 @@
 {% stories Table with {
-  "title": "Organisms/Table",
+  "title": "Molecules/Table",
   "parameters": {
     "componentSubtitle": "Bootstrap Table Component",
     "docs": {
@@ -13,19 +13,13 @@
     }
   },
   "argTypes": {
-    "responsive": {
-      "name": "Responsive",
-      "description": "Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports.",
-      "control": "boolean",
-      "defaultValue": false
-    },
-    "color": {
-      "name": "Table Background Color",
-      "description": "Set a background contextual classes to color tables",
+    "variant": {
+      "name": "Variant",
+      "description": "Contextual classes for table variants.",
       "defaultValue": "",
       "control": "select",
       "options": {
-        "'- none -'": "",
+        "Default": "",
         "Primary": "primary",
         "Secondary": "secondary",
         "Success": "success",
@@ -35,6 +29,12 @@
         "Light": "light",
         "Dark": "dark"
       }
+    },
+    "responsive": {
+      "name": "Responsive",
+      "description": "Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports.",
+      "control": "boolean",
+      "defaultValue": false
     },
     "striped_rows": {
       "name": "Striped rows",
@@ -150,13 +150,6 @@
       "control": "boolean",
       "defaultValue": false
     },
-    "header_columns": {
-      "name": "Header Columns",
-      "description": "The number of columns in the header.",
-      "control": "number",
-      "min": 1,
-      "step": 1
-    },
     "table_utility_classes": {
       "name": "Utility Classes",
       "description": "An array of utility classes. Use to add extra Bootstrap utility classes or custom CSS classes over to the table element.",
@@ -212,8 +205,8 @@
 {% story TableDefault with {
   "name": "Table default",
   "args": {
+    "variant": "",
     "responsive": true,
-    "color": "",
     "striped_rows": false,
     "striped_columns": false,
     "hover": false,
@@ -328,7 +321,6 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4,
     "table_utility_classes": [],
     "thead_utility_classes": [],
     "tbody_utility_classes": [],
@@ -342,8 +334,8 @@
 {% story TableStripedRows with {
   "name": "Table striped rows",
   "args": {
+    "variant": "",
     "responsive": true,
-    "color": "",
     "striped_rows": true,
     "striped_columns": false,
     "hover": true,
@@ -458,7 +450,6 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4,
     "table_utility_classes": [],
     "thead_utility_classes": [],
     "tbody_utility_classes": [],
@@ -472,8 +463,8 @@
 {% story TableStripedColumns with {
   "name": "Table striped columns",
   "args": {
+    "variant": "",
     "responsive": true,
-    "color": "",
     "striped_rows": false,
     "striped_columns": true,
     "hover": true,
@@ -588,7 +579,6 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4,
     "table_utility_classes": [],
     "thead_utility_classes": [],
     "tbody_utility_classes": [],
@@ -602,8 +592,8 @@
 {% story SmallTable with {
   "name": "Small Table",
   "args": {
+    "variant": "",
     "responsive": true,
-    "color": "",
     "striped_rows": true,
     "striped_columns": false,
     "hover": true,
@@ -718,7 +708,6 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4,
     "table_utility_classes": [],
     "thead_utility_classes": [],
     "tbody_utility_classes": [],
@@ -732,8 +721,8 @@
 {% story StickyTableHeader with {
   "name": "Sticky Table Header",
   "args": {
+    "variant": "",
     "responsive": false,
-    "color": "",
     "striped_rows": true,
     "striped_columns": false,
     "hover": true,
@@ -1279,7 +1268,6 @@
     "footer":  {},
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4,
     "table_utility_classes": [],
     "thead_utility_classes": [],
     "tbody_utility_classes": [],
@@ -1293,8 +1281,8 @@
 {% story TablePrimary with {
   "name": "Primary",
   "args": {
+    "variant": "primary",
     "responsive": true,
-    "color": "primary",
     "striped_rows": true,
     "striped_columns": false,
     "hover": true,
@@ -1409,7 +1397,6 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4,
     "table_utility_classes": [],
     "thead_utility_classes": [],
     "tbody_utility_classes": [],
@@ -1423,8 +1410,8 @@
 {% story TableSecondary with {
   "name": "Secondary",
   "args": {
+    "variant": "secondary",
     "responsive": true,
-    "color": "secondary",
     "striped_rows": false,
     "striped_columns": true,
     "hover": true,
@@ -1539,7 +1526,6 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4,
     "table_utility_classes": [],
     "thead_utility_classes": [],
     "tbody_utility_classes": [],
@@ -1553,8 +1539,8 @@
 {% story TableSuccess with {
   "name": "Success",
   "args": {
+    "variant": "success",
     "responsive": true,
-    "color": "success",
     "striped_rows": true,
     "striped_columns": false,
     "hover": true,
@@ -1669,7 +1655,6 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4,
     "table_utility_classes": [],
     "thead_utility_classes": [],
     "tbody_utility_classes": [],
@@ -1683,8 +1668,8 @@
 {% story TableInfo with {
   "name": "Info",
   "args": {
+    "variant": "info",
     "responsive": true,
-    "color": "info",
     "striped_rows": true,
     "striped_columns": false,
     "hover": true,
@@ -1799,7 +1784,6 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4,
     "table_utility_classes": [],
     "thead_utility_classes": [],
     "tbody_utility_classes": [],
@@ -1813,8 +1797,8 @@
 {% story TableWarning with {
   "name": "Warning",
   "args": {
+    "variant": "warning",
     "responsive": true,
-    "color": "warning",
     "striped_rows": true,
     "striped_columns": false,
     "hover": true,
@@ -1929,7 +1913,6 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4,
     "table_utility_classes": [],
     "thead_utility_classes": [],
     "tbody_utility_classes": [],
@@ -1943,8 +1926,8 @@
 {% story TableDanger with {
   "name": "Danger",
   "args": {
+    "variant": "danger",
     "responsive": true,
-    "color": "danger",
     "striped_rows": true,
     "striped_columns": false,
     "hover": true,
@@ -2059,7 +2042,6 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4,
     "table_utility_classes": [],
     "thead_utility_classes": [],
     "tbody_utility_classes": [],
@@ -2073,8 +2055,8 @@
 {% story TableLight with {
   "name": "Light",
   "args": {
+    "variant": "light",
     "responsive": true,
-    "color": "light",
     "striped_rows": true,
     "striped_columns": false,
     "hover": true,
@@ -2189,7 +2171,6 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4,
     "table_utility_classes": [],
     "thead_utility_classes": [],
     "tbody_utility_classes": [],
@@ -2203,8 +2184,8 @@
 {% story TableDark with {
   "name": "Dark",
   "args": {
+    "variant": "dark",
     "responsive": true,
-    "color": "dark",
     "striped_rows": true,
     "striped_columns": false,
     "hover": true,
@@ -2319,7 +2300,6 @@
     },
     "empty": "This Table is empty message",
     "no_striping": false,
-    "header_columns": 4,
     "table_utility_classes": [],
     "thead_utility_classes": [],
     "tbody_utility_classes": [],
