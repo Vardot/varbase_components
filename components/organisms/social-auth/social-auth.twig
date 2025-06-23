@@ -1,15 +1,20 @@
+{% set module = 'social-auth' %}
+
 <div class="social-auth">
-  {% for social_network_index, social_network in social_networks %}
-    <div class="social-network {{ social_network_index }}">
+  {% for id, network in networks %}
+    {% set img_path = custom_networks[id].img_path ?? network.getProviderLogoPath %}
+
+    <div class="social-network {{ id }}">
       {% if destination %}
-        <a class="auth-link" href="{{ path(social_network.route) }}?destination={{ destination | url_encode }}">
+        {% set options = {'query': {'destination': destination}} %}
       {% else %}
-        <a class="auth-link" href="{{ path(social_network.route) }}">
+        {% set options = {} %}
       {% endif %}
-        <img class="auth-icon"
-            src="{{ base_path }}{{ social_network.img_path }}"
-            alt="{{ 'Authenticate through @social_network_name' | t({'@social_network_name': social_network.name}) }}">
-        <span class="auth-name">{{ '@social_network_name' | t({'@social_network_name': social_network.name}) }}</span>
+      <a class="{{ module }} auth-link" href="{{ network.getRedirectUrl(options).toString }}">
+        <img class="{{ module }} auth-icon"
+          src="{{ base_path }}{{ img_path }}"
+          alt="{{ 'Authenticate through @social_network_name' | t({'@social_network_name': network.getSocialNetwork}) }}">
+        <span class="auth-name">{{ '@social_network_name' | t({'@social_network_name': network.getSocialNetwork}) }}</span>
       </a>
     </div>
   {% endfor %}
