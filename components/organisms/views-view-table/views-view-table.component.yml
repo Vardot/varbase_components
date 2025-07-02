@@ -1,4 +1,4 @@
-$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata-full.schema.json
 name: Views view table
 status: experimental
 description: Implementation for displaying a view as a table.
@@ -166,8 +166,5 @@ props:
       default: {}
 slots:
   rows:
-    type: array
-    title: 'Rows'
-    description: 'Rows'
-    items:
-      type: 'object'
+    title: Rows
+    description: Rows
