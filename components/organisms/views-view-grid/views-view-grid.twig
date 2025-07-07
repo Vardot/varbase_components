@@ -24,12 +24,12 @@
  * @see template_preprocess_views_view_grid()
  */
 #}
-{% set col_xs = ((col_xs is defined and col_xs != 'none') ? col_xs : []) %}
-{% set col_sm = ((col_sm is defined and col_sm != 'none') ? col_sm : []) %}
-{% set col_md = ((col_md is defined and col_md != 'none') ? col_md : []) %}
-{% set col_lg = ((col_lg is defined and col_lg != 'none') ? col_lg : []) %}
-{% set col_xl = ((col_xl is defined and col_xl != 'none') ? col_xl : []) %}
-{% set col_xxl = ((col_xxl is defined and col_xxl != 'none') ? col_xxl : []) %}
+{% set col_xs = ((col_xs is defined and col_xs != 'none') ? [col_xs] : []) %}
+{% set col_sm = ((col_sm is defined and col_sm != 'none') ? [col_sm] : []) %}
+{% set col_md = ((col_md is defined and col_md != 'none') ? [col_md] : []) %}
+{% set col_lg = ((col_lg is defined and col_lg != 'none') ? [col_lg] : []) %}
+{% set col_xl = ((col_xl is defined and col_xl != 'none') ? [col_xl] : []) %}
+{% set col_xxl = ((col_xxl is defined and col_xxl != 'none') ? [col_xxl] : []) %}
 
 {% set grid_utility_classes = grid_utility_classes ?? [] %}
 {% set column_utility_classes = column_utility_classes ?? [] %}
