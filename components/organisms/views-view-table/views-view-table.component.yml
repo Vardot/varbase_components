@@ -51,62 +51,62 @@ props:
       default: false
       $ref: "ui-patterns://boolean"
     border_color:
+      type: string
       title: Border Color
       description: Use the border color utility to change border colors.
       default: ''
-      $ref: "ui-patterns://enum_list"
-      items:
-        enum:
-          - ""
-          - primary
-          - secondary
-          - success
-          - info
-          - warning
-          - danger
-          - light
-          - dark
-          - black
-          - white
-          - primary-subtle
-          - secondary-subtle
-          - success-subtle
-          - info-subtle
-          - warning-subtle
-          - danger-subtle
-          - light-subtle
-          - dark-subtle
-        "meta:enum":
-          "": "Default (No Border Color)"
-          "primary": "Primary"
-          "secondary": "Secondary"
-          "success": "Success"
-          "info": "Info"
-          "warning": "Warning"
-          "danger": "Danger"
-          "light": "Light"
-          "dark": "Dark"
-          "black": "Black"
-          "white": "White"
-          "primary-subtle": "Primary Subtle"
-          "secondary-subtle": "Secondary Subtle"
-          "success-subtle": "Success Subtle"
-          "info-subtle": "Info Subtle"
-          "warning-subtle": "Warning Subtle"
-          "danger-subtle": "Danger Subtle"
-          "light-subtle": "Light Subtle"
-          "dark-subtle": "Dark Subtle"
+      enum:
+        - ""
+        - primary
+        - secondary
+        - success
+        - info
+        - warning
+        - danger
+        - light
+        - dark
+        - black
+        - white
+        - primary-subtle
+        - secondary-subtle
+        - success-subtle
+        - info-subtle
+        - warning-subtle
+        - danger-subtle
+        - light-subtle
+        - dark-subtle
+      meta:enum:
+        "": "Default (No Border Color)"
+        "primary": "Primary"
+        "secondary": "Secondary"
+        "success": "Success"
+        "info": "Info"
+        "warning": "Warning"
+        "danger": "Danger"
+        "light": "Light"
+        "dark": "Dark"
+        "black": "Black"
+        "white": "White"
+        "primary-subtle": "Primary Subtle"
+        "secondary-subtle": "Secondary Subtle"
+        "success-subtle": "Success Subtle"
+        "info-subtle": "Info Subtle"
+        "warning-subtle": "Warning Subtle"
+        "danger-subtle": "Danger Subtle"
+        "light-subtle": "Light Subtle"
+        "dark-subtle": "Dark Subtle"
+      x-translation-context: Border Color
     size:
+      type: string
       title: Table Size
       description: Use sm for small to make any table more compact by cutting all cell padding in half.
-      $ref: "ui-patterns://enum_list"
-      items:
-        enum:
-          - ""
-          - "sm"
-        "meta:enum":
-          "" : "Default"
-          "sm" : "Small"
+      enum:
+        - ""
+        - "sm"
+      meta:enum:
+        "" : "Default"
+        "sm" : "Small"
+      x-translation-context: Table Size
       default: ''
     caption:
       type: string

@@ -7,16 +7,16 @@ props:
   type: object
   properties:
     type:
+      type: string
       title: Type
       description: List type
-      $ref: "ui-patterns://enum_list"
-      items:
-        enum:
-          - "ul"
-          - "ol"
-        "meta:enum":
-          "ul" : "Unordered list"
-          "ol" : "Ordered list"
+      enum:
+        - "ul"
+        - "ol"
+      "meta:enum":
+        "ul" : "Unordered list"
+        "ol" : "Ordered list"
+      x-translation-context: Type
       default: ''
     summary_utility_classes:
       type: array
