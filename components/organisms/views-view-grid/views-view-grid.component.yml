@@ -71,6 +71,7 @@ props:
         "col-sm-12" : "12 (1 column per row)"
       x-translation-context: Column width of items at sm breakpoint
     col_md:
+      type: string
       title: Column width of items at md breakpoint
       description: Set the number of columns each item should take up at the md breakpoint and higher.
       enum:
@@ -120,6 +121,7 @@ props:
         "col-lg-12" : "12 (1 column per row)"
       x-translation-context: Column width of items at lg breakpoint
     col_xl:
+      type: string
       title: Column width of items at xl breakpoint
       description: Set the number of columns each item should take up at the xl breakpoint and higher.
       enum:
