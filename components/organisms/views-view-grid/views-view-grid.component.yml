@@ -157,7 +157,7 @@ props:
         - "col-xxl-4"
         - "col-xxl-6"
         - "col-xxl-12"
-      "meta:enum":
+      meta:enum:
         "none" : "None (or inherit from previous)"
         "col-xxl" : "Equal"
         "col-xxl-auto" : "Fit to content"

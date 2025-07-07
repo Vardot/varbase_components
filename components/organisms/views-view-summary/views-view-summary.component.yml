@@ -13,7 +13,7 @@ props:
       enum:
         - "ul"
         - "ol"
-      "meta:enum":
+      meta:enum:
         "ul" : "Unordered list"
         "ol" : "Ordered list"
       x-translation-context: Type
