@@ -1,3 +1,0 @@
-# Nav
-
-Nav component description.

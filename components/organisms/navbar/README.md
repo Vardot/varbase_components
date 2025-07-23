@@ -1,4 +1,0 @@
-# Navbar
-
-Navbar component description.
-

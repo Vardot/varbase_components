@@ -1,0 +1,5 @@
+services:
+  varbase_components.commands:
+    class: Drupal\varbase_components\Commands\ProviderReplaceCommand
+    tags:
+      - { name: drush.command }
