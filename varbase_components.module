@@ -9,5 +9,5 @@
  * Prepares global variables for all templates.
  */
 function varbase_components_preprocess(&$variables) {
-    $variables['active_theme'] = \Drupal::service('theme.manager')->getActiveTheme()->getName();
+  $variables['active_theme'] = \Drupal::service('theme.manager')->getActiveTheme()->getName();
 }

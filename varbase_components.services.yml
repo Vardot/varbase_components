@@ -1,8 +1,6 @@
 services:
   varbase_components.active_theme_change_subscriber:
-    class: '\Drupal\varbase_components\EventSubscriber\ActiveThemeChangeSubscriber'
-    arguments: 
-      - '@messenger'
-      - '@config.factory'
+    class: Drupal\varbase_components\EventSubscriber\ActiveThemeChangeSubscriber
+    arguments: ['@messenger', '@config.factory', '@theme_handler', '@logger.factory']
     tags:
       - { name: event_subscriber }
