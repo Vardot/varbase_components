@@ -195,9 +195,9 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
     foreach ($all_configs as $config_name) {
       $config_changed = FALSE;
 
-      // Special handling for views configurations.
-      if (str_starts_with($config_name, 'views.view.')) {
-        if ($this->processViewsConfig($config_name, $old_theme, $new_theme)) {
+      // Special handling for none vartheme_bs5 configurations.
+      if (str_contains($config_name, 'vartheme_bs5')) {
+        if ($this->processDependenciesInConfig($config_name, $old_theme, $new_theme)) {
           $config_changed = TRUE;
         }
       }
@@ -281,7 +281,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
   }
 
   /**
-   * Processes views configurations with theme dependency replacement.
+   * Processes dependencies in configurations with theme dependency replacement.
    *
    * @param string $config_name
    *   The configuration name.
@@ -293,7 +293,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
    * @return bool
    *   TRUE if the configuration was changed, FALSE otherwise.
    */
-  protected function processViewsConfig(string $config_name, string $old_theme, string $new_theme): bool {
+  protected function processDependenciesInConfig(string $config_name, string $old_theme, string $new_theme): bool {
     $config = $this->configFactory->getEditable($config_name);
     $data = $config->getRawData();
 
@@ -305,20 +305,20 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
 
     // Handle dependencies section.
     if (isset($data['dependencies'])) {
-      $config_changed = $this->updateThemeDependenciesInConfig($data['dependencies'], $old_theme, $new_theme) || $config_changed;
+      $config_changed = $this->changeThemeDependenciesInConfig($data['dependencies'], $old_theme, $new_theme) || $config_changed;
     }
 
     // Save the configuration if any changes were made.
     if ($config_changed) {
       try {
         $config->setData($data)->save();
-        $this->loggerFactory->get('varbase_components')->info('Auto switched theme dependencies in views: @config_name', [
+        $this->loggerFactory->get('varbase_components')->info('Auto switched theme dependencies for: @config_name', [
           '@config_name' => $config_name,
         ]);
         return TRUE;
       }
       catch (\Exception $e) {
-        $this->loggerFactory->get('varbase_components')->error('Failed to save views config @config: @message', [
+        $this->loggerFactory->get('varbase_components')->error('Failed to save config @config: @message', [
           '@config' => $config_name,
           '@message' => $e->getMessage(),
         ]);
@@ -342,7 +342,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
    * @return bool
    *   TRUE if any changes were made, FALSE otherwise.
    */
-  protected function updateThemeDependenciesInConfig(array &$dependencies, string $old_theme, string $new_theme): bool {
+  protected function changeThemeDependenciesInConfig(array &$dependencies, string $old_theme, string $new_theme): bool {
     $changed = FALSE;
 
     if (isset($dependencies['theme']) && is_array($dependencies['theme'])) {
