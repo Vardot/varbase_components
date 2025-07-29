@@ -185,6 +185,16 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
         $config_changed = TRUE;
       }
 
+      if ($config_changed) {
+        $this->loggerFactory->get('varbase_components')->info('Changed config: @config_name', [
+          '@config_name' => $config_name,
+        ]);
+      }
+    }
+
+    foreach ($all_configs as $config_name) {
+      $config_changed = FALSE;
+
       // Special handling for views configurations.
       if (str_starts_with($config_name, 'views.view.')) {
         if ($this->processViewsConfig($config_name, $old_theme, $new_theme)) {
@@ -295,16 +305,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
 
     // Handle dependencies section.
     if (isset($data['dependencies'])) {
-      $config_changed = $this->updateThemeDependencies($data['dependencies'], $old_theme, $new_theme) || $config_changed;
-    }
-
-    // Handle theme references in display configurations.
-    if (isset($data['display']) && is_array($data['display'])) {
-      foreach ($data['display'] as &$display_data) {
-        if (isset($display_data['display_options'])) {
-          $config_changed = $this->updateDisplayThemeReferences($display_data['display_options'], $old_theme, $new_theme) || $config_changed;
-        }
-      }
+      $config_changed = $this->updateThemeDependenciesInConfig($data['dependencies'], $old_theme, $new_theme) || $config_changed;
     }
 
     // Save the configuration if any changes were made.
@@ -341,7 +342,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
    * @return bool
    *   TRUE if any changes were made, FALSE otherwise.
    */
-  protected function updateThemeDependencies(array &$dependencies, string $old_theme, string $new_theme): bool {
+  protected function updateThemeDependenciesInConfig(array &$dependencies, string $old_theme, string $new_theme): bool {
     $changed = FALSE;
 
     if (isset($dependencies['theme']) && is_array($dependencies['theme'])) {
@@ -349,41 +350,6 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
       if ($theme_index !== FALSE) {
         $dependencies['theme'][$theme_index] = $new_theme;
         $changed = TRUE;
-      }
-    }
-
-    return $changed;
-  }
-
-  /**
-   * Updates theme references in display options recursively.
-   *
-   * @param array &$display_options
-   *   The display options array to update (passed by reference).
-   * @param string $old_theme
-   *   The old theme machine name.
-   * @param string $new_theme
-   *   The new theme machine name.
-   *
-   * @return bool
-   *   TRUE if any changes were made, FALSE otherwise.
-   */
-  protected function updateDisplayThemeReferences(array &$display_options, string $old_theme, string $new_theme): bool {
-    $changed = FALSE;
-
-    foreach ($display_options as $key => &$value) {
-      if (is_array($value)) {
-        $changed = $this->updateDisplayThemeReferences($value, $old_theme, $new_theme) || $changed;
-      }
-      elseif (is_string($value)) {
-        // Handle theme references in string values.
-        if (strpos($value, $old_theme) !== FALSE) {
-          $new_value = str_replace($old_theme, $new_theme, $value);
-          if ($new_value !== $value) {
-            $display_options[$key] = $new_value;
-            $changed = TRUE;
-          }
-        }
       }
     }
 
