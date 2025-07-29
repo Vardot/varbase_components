@@ -1,5 +1,5 @@
 name: Varbase Components
-description: This is the components handler module for Varbase distribution.
+description: This is the components handler module with components helper, theme switcher for components in Varbase.
 type: module
 package: Varbase
 core_version_requirement: ~11.2.0

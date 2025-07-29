@@ -195,8 +195,8 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
     foreach ($all_configs as $config_name) {
       $config_changed = FALSE;
 
-      // Special handling for none vartheme_bs5 configurations.
-      if (!str_contains($config_name, 'vartheme_bs5')) {
+      // Special handling for none old theme configurations.
+      if (!str_contains($config_name, $old_theme_escaped)) {
         if ($this->processDependenciesInConfig($config_name, $old_theme, $new_theme)) {
           $config_changed = TRUE;
         }
