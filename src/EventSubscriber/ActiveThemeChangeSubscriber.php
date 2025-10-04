@@ -64,7 +64,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
     MessengerInterface $messenger,
     ConfigFactoryInterface $config_factory,
     ThemeHandlerInterface $theme_handler,
-    LoggerChannelFactoryInterface $logger_factory
+    LoggerChannelFactoryInterface $logger_factory,
   ) {
     $this->messenger = $messenger;
     $this->configFactory = $config_factory;

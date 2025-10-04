@@ -1,6 +1,9 @@
 # Ignore the node modules folder (created by 'npm install').
 node_modules
 
+# Ignore yarn cache
+.yarn/
+
 # Ignore bower packages
 libraries
 
