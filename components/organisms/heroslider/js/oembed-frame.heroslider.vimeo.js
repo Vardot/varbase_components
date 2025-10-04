@@ -8,10 +8,10 @@ var fn;
 
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag), fn = function() {
   document.querySelector("iframe").setAttribute("id", "media-oembed-iframe");
-  let vimeoPlayer, playerConfgured = !1, videoLoop = !1;
+  let vimeoPlayer, playerConfigured = !1, videoLoop = !1;
   function actionProcessor(evt) {
     if ("play" === evt.data) {
-      if (!playerConfgured) {
+      if (!playerConfigured) {
         const vimeoIframe = document.querySelector('iframe[src*="vimeo.com"]'), vimeoOptions = {
           background: !0,
           autoplay: !0,
@@ -19,20 +19,20 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag), fn = function() {
           controls: !1
         };
         vimeoPlayer = new window.Vimeo.Player(vimeoIframe, vimeoOptions), vimeoPlayer.setVolume(0), 
-        vimeoPlayer.setLoop(videoLoop), vimeoPlayer.on("ended", (function() {
+        vimeoPlayer.setLoop(videoLoop), vimeoPlayer.on("ended", function() {
           window.parent.postMessage("endedVimeo", "*"), vimeoPlayer.pause();
-        })), vimeoPlayer.on("play", (function() {
+        }), vimeoPlayer.on("play", function() {
           window.parent.postMessage("playingVimeo", "*");
-        })), playerConfgured = !0;
+        }), playerConfigured = !0;
       }
-      vimeoPlayer.ready().then((function() {
-        vimeoPlayer.getPaused().then((function(paused) {
+      vimeoPlayer.ready().then(function() {
+        vimeoPlayer.getPaused().then(function(paused) {
           paused && vimeoPlayer.play();
-        }));
-      }));
-    } else "pause" === evt.data ? playerConfgured && vimeoPlayer.pause() : "loop" === evt.data && (videoLoop = !0);
+        });
+      });
+    } else "pause" === evt.data ? playerConfigured && vimeoPlayer.pause() : "loop" === evt.data && (videoLoop = !0);
   }
   window.addEventListener ? window.addEventListener("message", actionProcessor, !1) : window.attachEvent("onmessage", actionProcessor);
-}, "loading" !== document.readyState ? fn() : document.addEventListener ? document.addEventListener("DOMContentLoaded", fn) : document.attachEvent("onreadystatechange", (function() {
+}, "loading" !== document.readyState ? fn() : document.addEventListener ? document.addEventListener("DOMContentLoaded", fn) : document.attachEvent("onreadystatechange", function() {
   "loading" !== document.readyState && fn();
-}));
+});

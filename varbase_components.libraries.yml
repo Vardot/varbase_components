@@ -122,7 +122,7 @@ youtube-video-slider:
   js:
     components/organisms/heroslider/js/video.heroslider.youtube.js: { weight: -1 }
 
-# Behaviors for vimeo embeded videos scripts in the heroslider component.
+# Behaviors for vimeo embedded videos scripts in the heroslider component.
 vimeo-video-slider:
   js:
     components/organisms/heroslider/js/video.heroslider.vimeo.js: { weight: -1 }

@@ -22,7 +22,7 @@
 }
 
 .varbase-overlay-card .overlay-card-content:hover, .varbase-overlay-card .overlay-card-content:focus, .varbase-overlay-card .overlay-card-content:active {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .varbase-overlay-card .overlay-card-content > .field {
@@ -111,7 +111,7 @@
 }
 
 .varbase-overlay-card.medium .card-title {
-  font-size: calc(1.3125rem + .75vw);
+  font-size: calc(1.3125rem + 0.75vw);
 }
 
 @media (min-width: 1200px) {
@@ -123,4 +123,3 @@
 .varbase-overlay-card.medium .overlay-card-content {
   padding: 1.875rem;
 }
-

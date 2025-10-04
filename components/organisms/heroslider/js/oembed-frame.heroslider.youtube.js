@@ -10,11 +10,11 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag), fn = function() {
   const mediaIframe = document.querySelector("iframe");
   mediaIframe.setAttribute("id", "media-oembed-iframe"), mediaIframe.style.opacity = "0", 
   document.body.style.backgroundColor = "#000000";
-  let youtubePlayer, playerConfgured = !1;
+  let youtubePlayer, playerConfigured = !1;
   function actionProcessor(evt) {
     if ("play" === evt.data) {
       const youtubeIframe = document.querySelector('iframe[src*="youtube.com"]');
-      if (void 0 !== youtubeIframe && void 0 !== youtubeIframe.src) if (playerConfgured) "function" == typeof youtubePlayer.playVideo && youtubePlayer.playVideo(); else {
+      if (void 0 !== youtubeIframe && void 0 !== youtubeIframe.src) if (playerConfigured) "function" == typeof youtubePlayer.playVideo && youtubePlayer.playVideo(); else {
         let youtubeURL = String(youtubeIframe.src);
         youtubeURL = youtubeURL.replace(/autoplay=0/gi, "autoplay=1"), youtubeURL = youtubeURL.replace(/controls=1/gi, "controls=0"), 
         youtubeURL += "&controls=0", youtubeURL += "&enablejsapi=1", youtubeURL += "&showinfo=0", 
@@ -35,9 +35,10 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag), fn = function() {
             onReady: onPlayerReady,
             onStateChange: onPlayerStateChange
           }
-        }), playerConfgured = !0;
+        }), playerConfigured = !0;
       }
-    } else "pause" === evt.data && playerConfgured && (youtubePlayer.pauseVideo(), youtubePlayer.isPlaying = !1);
+    } else "pause" === evt.data && playerConfigured && (youtubePlayer.pauseVideo(), 
+    youtubePlayer.isPlaying = !1);
   }
   function onPlayerReady(event) {
     event.target.mute(), event.target.setVolume(0), event.target.playVideo();
@@ -49,6 +50,6 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag), fn = function() {
     youtubePlayer.pauseVideo(), youtubePlayer.seekTo(0)) : window.parent.postMessage("playingYoutube", "*");
   }
   window.addEventListener ? window.addEventListener("message", actionProcessor, !1) : window.attachEvent("onmessage", actionProcessor);
-}, "loading" !== document.readyState ? fn() : document.addEventListener ? document.addEventListener("DOMContentLoaded", fn) : document.attachEvent("onreadystatechange", (function() {
+}, "loading" !== document.readyState ? fn() : document.addEventListener ? document.addEventListener("DOMContentLoaded", fn) : document.attachEvent("onreadystatechange", function() {
   "loading" !== document.readyState && fn();
-}));
+});

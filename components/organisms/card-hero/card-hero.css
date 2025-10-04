@@ -43,11 +43,11 @@
 }
 
 [dir="ltr"] .varbase-hero-card.hero-style-overlay .hero-card-content {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.22%, rgba(0, 0, 0, .5) 73.4%);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 2.22%, rgba(0, 0, 0, 0.5) 73.4%);
 }
 
 [dir="rtl"] .varbase-hero-card.hero-style-overlay .hero-card-content {
-  background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 2.22%, rgba(0, 0, 0, .5) 73.4%);
+  background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 2.22%, rgba(0, 0, 0, 0.5) 73.4%);
 }
 
 .varbase-hero-card.hero-style-overlay .hero-card-content > * {
@@ -68,25 +68,25 @@
 
 @media screen and (min-width: 768px) {
   .varbase-hero-card.hero-style-overlay .hero-card-content {
-    padding: 1.88rem calc((100vw - 720px) / 2 + .75rem) 3.88rem;
+    padding: 1.88rem calc((100vw - 720px) / 2 + 0.75rem) 3.88rem;
   }
 }
 
 @media screen and (min-width: 992px) {
   .varbase-hero-card.hero-style-overlay .hero-card-content {
-    padding: 1.88rem calc((100vw - 960px) / 2 + .75rem) 9.375rem;
+    padding: 1.88rem calc((100vw - 960px) / 2 + 0.75rem) 9.375rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .varbase-hero-card.hero-style-overlay .hero-card-content {
-    padding: 1.88rem calc((100vw - 1140px) / 2 + .75rem) 9.375rem;
+    padding: 1.88rem calc((100vw - 1140px) / 2 + 0.75rem) 9.375rem;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .varbase-hero-card.hero-style-overlay .hero-card-content {
-    padding: 1.88rem calc((100vw - 1320px) / 2 + .75rem) 9.375rem;
+    padding: 1.88rem calc((100vw - 1320px) / 2 + 0.75rem) 9.375rem;
   }
 }
 
@@ -184,6 +184,15 @@
   position: relative;
   width: 100vw;
   height: 130vh;
+}
+
+@media screen and (min-width: 1200px) {
+  .varbase-hero-card.hero-style-overlay .media {
+    height: auto;
+  }
+}
+
+.varbase-hero-card.hero-style-overlay .media {
   top: 50%;
   padding-bottom: 0;
 }
@@ -196,12 +205,6 @@
 [dir="rtl"] .varbase-hero-card.hero-style-overlay .media {
   right: 50%;
   transform: translateY(-50%) translateX(50%);
-}
-
-@media screen and (min-width: 1200px) {
-  .varbase-hero-card.hero-style-overlay .media {
-    height: auto;
-  }
 }
 
 .varbase-hero-card.hero-style-overlay .media .drimage img {
@@ -249,25 +252,25 @@
 
 @media screen and (min-width: 768px) {
   .varbase-hero-card.hero-style-top, .varbase-hero-card.hero-style-bottom {
-    padding: 0 calc((100vw - 720px) / 2 + .75rem);
+    padding: 0 calc((100vw - 720px) / 2 + 0.75rem);
   }
 }
 
 @media screen and (min-width: 992px) {
   .varbase-hero-card.hero-style-top, .varbase-hero-card.hero-style-bottom {
-    padding: 0 calc((100vw - 960px) / 2 + .75rem);
+    padding: 0 calc((100vw - 960px) / 2 + 0.75rem);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .varbase-hero-card.hero-style-top, .varbase-hero-card.hero-style-bottom {
-    padding: 0 calc((100vw - 1140px) / 2 + .75rem);
+    padding: 0 calc((100vw - 1140px) / 2 + 0.75rem);
   }
 }
 
 @media screen and (min-width: 1400px) {
   .varbase-hero-card.hero-style-top, .varbase-hero-card.hero-style-bottom {
-    padding: 0 calc((100vw - 1320px) / 2 + .75rem);
+    padding: 0 calc((100vw - 1320px) / 2 + 0.75rem);
   }
 }
 
@@ -306,6 +309,15 @@
   position: relative;
   width: 100vw;
   height: 130vh;
+}
+
+@media screen and (min-width: 1200px) {
+  .varbase-hero-card.hero-style-top .media, .varbase-hero-card.hero-style-bottom .media {
+    height: auto;
+  }
+}
+
+.varbase-hero-card.hero-style-top .media, .varbase-hero-card.hero-style-bottom .media {
   top: 50%;
   padding-bottom: 0;
 }
@@ -318,12 +330,6 @@
 [dir="rtl"] .varbase-hero-card.hero-style-top .media, [dir="rtl"] .varbase-hero-card.hero-style-bottom .media {
   right: 50%;
   transform: translateY(-50%) translateX(50%);
-}
-
-@media screen and (min-width: 1200px) {
-  .varbase-hero-card.hero-style-top .media, .varbase-hero-card.hero-style-bottom .media {
-    height: auto;
-  }
 }
 
 .varbase-hero-card.hero-style-top .media .drimage img, .varbase-hero-card.hero-style-bottom .media .drimage img {
@@ -452,4 +458,3 @@
     transform: translateY(-50%) translateX(50%);
   }
 }
-

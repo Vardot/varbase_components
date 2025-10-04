@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 calc(-1.315rem - .78vw);
+  margin: 0 calc(-1.315rem - 0.78vw);
 }
 
 @media (min-width: 1200px) {
@@ -14,15 +14,15 @@
 
 .social-auth .social-network {
   width: 45%;
-  margin: .25rem;
-  padding: .5rem;
+  margin: 0.25rem;
+  padding: 0.5rem;
   cursor: pointer;
-  transition: box-shadow .2s ease 0s, color;
+  transition: box-shadow 0.2s ease 0s, color;
   border-width: 0;
 }
 
 .social-auth .social-network:hover, .social-auth .social-network:focus, .social-auth .social-network:active {
-  box-shadow: 0 1px 4px rgba(26, 25, 43, .24) !important;
+  box-shadow: 0 1px 4px rgba(26, 25, 43, 0.24) !important;
 }
 
 .social-auth .auth-link {
@@ -35,7 +35,7 @@
 }
 
 .social-auth .auth-link:hover, .social-auth .auth-link:active, .social-auth .auth-link:focus {
-  color: #145cc6;
+  color: #145CC6;
 }
 
 .social-auth .auth-icon {
@@ -45,22 +45,21 @@
 }
 
 [dir="ltr"] .social-auth .auth-icon {
-  margin-right: .75rem;
+  margin-right: 0.75rem;
   margin-left: 0;
 }
 
 [dir="rtl"] .social-auth .auth-icon {
-  margin-left: .75rem;
+  margin-left: 0.75rem;
   margin-right: 0;
 }
 
 @media (max-width: 575.98px) {
   [dir="ltr"] .social-auth .social-network {
-    padding-right: .75rem;
+    padding-right: 0.75rem;
   }
 
   [dir="rtl"] .social-auth .social-network {
-    padding-left: .75rem;
+    padding-left: 0.75rem;
   }
 }
-

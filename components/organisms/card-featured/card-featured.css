@@ -74,7 +74,7 @@
 }
 
 .varbase-featured-card.medium .card-title {
-  font-size: calc(1.3125rem + .75vw);
+  font-size: calc(1.3125rem + 0.75vw);
 }
 
 @media (min-width: 1200px) {
@@ -84,7 +84,7 @@
 }
 
 .varbase-featured-card.small .card-title {
-  font-size: calc(1.275rem + .3vw);
+  font-size: calc(1.275rem + 0.3vw);
 }
 
 @media (min-width: 1200px) {
@@ -96,4 +96,3 @@
 .varbase-featured-card.xsmall .card-title {
   font-size: 1.25rem;
 }
-

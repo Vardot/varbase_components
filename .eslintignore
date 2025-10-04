@@ -1,7 +1,17 @@
 node_modules/**/*
-# Ignore deliberately malformed YAML files.
-drupalci.yml
 
+# Webpack configuration files
 webpack.config.js
+webpack.config.init.js
 webpack.config.dev.js
 webpack.config.build.js
+
+# Bootstrap fixer utility script
+bootstrap.fixer.js
+
+# Vendor JavaScript libraries
+js/bootstrap/**
+js/popperjs/**
+
+# Ignore all JavaScript files
+**/*.js

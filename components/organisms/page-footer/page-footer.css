@@ -1,5 +1,5 @@
 footer.footer {
-  background-color: #084298;
+  background-color: rgb(7.8, 66, 151.8);
   color: var(--bs-white);
 }
 
@@ -18,9 +18,9 @@ footer.footer p a {
 }
 
 footer.footer p a:hover, footer.footer p a:focus, footer.footer p a:active {
-  transition: -webkit-text-decoration .4s;
-  transition: text-decoration .4s;
-  transition: text-decoration .4s, -webkit-text-decoration .4s;
+  transition: -webkit-text-decoration 0.4s;
+  transition: text-decoration 0.4s;
+  transition: text-decoration 0.4s, -webkit-text-decoration 0.4s;
   text-decoration: none;
 }
 
@@ -42,7 +42,7 @@ footer.footer .footer-logo-image {
   position: absolute;
   content: "";
   top: 80%;
-  transition: width .3s;
+  transition: width 0.3s;
   width: 2.4rem !important;
   height: 1px;
   bottom: 0;
@@ -93,11 +93,10 @@ footer.footer .footer-logo-image {
 }
 
 .social-media-menu-icons li.nav-item > a:hover, .social-media-menu-icons li.nav-item > a:focus, .social-media-menu-icons li.nav-item > a:active {
-  color: #cfe2ff;
+  color: rgb(206.6, 226, 254.6);
   text-decoration: none;
 }
 
 .social-media-menu-icons li.nav-item > a:hover:after, .social-media-menu-icons li.nav-item > a:focus:after, .social-media-menu-icons li.nav-item > a:active:after {
   display: none;
 }
-

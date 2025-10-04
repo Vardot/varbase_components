@@ -3,7 +3,7 @@
 }
 
 #auth-box {
-  padding: calc(1.29375rem + .525vw) 0 0;
+  padding: calc(1.29375rem + 0.525vw) 0 0;
 }
 
 @media (min-width: 1200px) {
@@ -27,9 +27,8 @@
 }
 
 #auth-box #bottom-part {
-  font-size: .75rem;
-  padding: calc(1.325rem + .9vw) 0 0;
-  text-align: center;
+  font-size: 0.75rem;
+  padding: calc(1.325rem + 0.9vw) 0 0;
 }
 
 @media (min-width: 1200px) {
@@ -38,15 +37,16 @@
   }
 }
 
+#auth-box #bottom-part {
+  text-align: center;
+}
+
 #auth-box .user-form .form-control {
   max-width: 100%;
 }
 
 .separator {
-  margin: calc(1.325rem + .9vw) 0;
-  display: flex;
-  align-items: center;
-  width: calc(4 * var(3rem) + 3 * var(3rem));
+  margin: calc(1.325rem + 0.9vw) 0;
 }
 
 @media (min-width: 1200px) {
@@ -55,26 +55,35 @@
   }
 }
 
+.separator {
+  display: flex;
+  align-items: center;
+  width: calc(4 * var(3rem) + 3 * var(3rem));
+}
+
 .separator .separator-start,
 .separator .separator-end {
-  height: .0625em;
+  height: 0.0625em;
   background-color: var(--bs-gray-200);
   width: 100%;
 }
 
 .separator .separator-text {
   margin: 0 calc(1.425rem + 2.1vw);
-  font-style: normal;
-  font-weight: 600;
-  font-size: .9rem;
-  line-height: 1rem;
-  color: var(--bs-gray-400);
 }
 
 @media (min-width: 1200px) {
   .separator .separator-text {
     margin: 0 3rem;
   }
+}
+
+.separator .separator-text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  color: var(--bs-gray-400);
 }
 
 .social-auth-login-hint {
@@ -84,4 +93,3 @@
 .account-auth-login-hint {
   margin: 1rem 0;
 }
-

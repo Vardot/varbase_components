@@ -1,19 +1,19 @@
 @keyframes progress-bar-stripes {
   0% {
-    background-position-x: 1.25rem;
+    background-position-x: var(--bs-progress-height);
   }
 }
 
 .progress,
 .progress-stacked {
   --bs-progress-height: 1.25rem;
-  --bs-progress-font-size: .875rem;
+  --bs-progress-font-size: 0.875rem;
   --bs-progress-bg: transparent;
-  --bs-progress-border-radius: .125rem;
+  --bs-progress-border-radius: 0.125rem;
   --bs-progress-box-shadow: none;
   --bs-progress-bar-color: #fff;
   --bs-progress-bar-bg: #0d6efd;
-  --bs-progress-bar-transition: width .6s ease;
+  --bs-progress-bar-transition: width 0.6s ease;
   display: flex;
   height: var(--bs-progress-height);
   overflow: hidden;
@@ -45,11 +45,11 @@
 }
 
 [dir="ltr"] .progress-bar-striped {
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
 [dir="rtl"] .progress-bar-striped {
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
 .progress-stacked > .progress {
@@ -77,7 +77,7 @@
 .progress-bar {
   font-weight: 700;
   line-height: 1.225rem;
-  padding: .0625rem 0rem;
+  padding: 0.0625rem 0rem;
 }
 
 .progress-bar.bg-primary {
@@ -129,4 +129,3 @@
     background-position-x: 1rem;
   }
 }
-

@@ -42,7 +42,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'components'),
-    pathinfo: true,
+    pathinfo: false,
     publicPath: '../../',
   },
   module: {
@@ -78,23 +78,22 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              name: '[name].[ext]?[hash]',
-            }
+            loader: MiniCssExtractPlugin.loader
           },
           {
             loader: 'css-loader',
             options: {
               sourceMap: isDev,
               importLoaders: 2,
-              url: (url) => {
-                // Don't handle sprite svg
-                if (url.includes('sprite.svg')) {
-                  return false;
-                }
+              url: {
+                filter: (url) => {
+                  // Don't handle sprite svg
+                  if (url.includes('sprite.svg')) {
+                    return false;
+                  }
 
-                return true;
+                  return true;
+                }
               },
             },
           },
@@ -105,16 +104,7 @@ module.exports = {
               postcssOptions: {
                 plugins: [
                   autoprefixer(),
-                  postcssRTLCSS(),
-                  ['postcss-perfectionist', {
-                    format: 'expanded',
-                    indentSize: 2,
-                    trimLeadingZero: true,
-                    zeroLengthNoUnit: false,
-                    maxAtRuleLength: false,
-                    maxSelectorLength: false,
-                    maxValueLength: false,
-                  }]
+                  postcssRTLCSS()
                 ],
               },
             },
@@ -123,6 +113,10 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: isDev,
+              api: 'modern-compiler',
+              sassOptions: {
+                silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'slash-div']
+              },
               // Global SCSS imports:
               additionalData: `
                 @use "sass:color";
@@ -159,7 +153,10 @@ module.exports = {
     new CleanWebpackPlugin({
       cleanStaleWebpackAssets: false
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      // Don't add webpack module path comments to CSS files
+      // This removes the long header comments in generated CSS files
+    }),
   ],
   watchOptions: {
     aggregateTimeout: 300,

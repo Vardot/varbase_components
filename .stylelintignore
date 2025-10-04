@@ -1,0 +1,5 @@
+# Ignore generated CSS files from components
+components/**/*.css
+
+# Ignore vendor CSS
+node_modules/**

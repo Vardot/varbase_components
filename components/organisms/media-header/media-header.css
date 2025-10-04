@@ -5,7 +5,6 @@
   align-items: center;
   background-color: #0d6efd;
   margin-bottom: calc(1.375rem + 1.5vw);
-  max-height: 300px;
 }
 
 @media (min-width: 1200px) {
@@ -14,9 +13,23 @@
   }
 }
 
+.vmh-container {
+  max-height: 300px;
+}
+
 @media screen and (min-width: 992px) {
   .vmh-container {
     max-height: 300px;
+  }
+}
+
+.vmh-container .vmh-background:empty {
+  min-height: 300px;
+}
+
+@media screen and (min-width: 992px) {
+  .vmh-container .vmh-background:empty {
+    min-height: 300px;
   }
 }
 
@@ -28,16 +41,6 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
-}
-
-.vmh-container .vmh-background:empty {
-  min-height: 300px;
-}
-
-@media screen and (min-width: 992px) {
-  .vmh-container .vmh-background:empty {
-    min-height: 300px;
-  }
 }
 
 .vmh-container .vmh-background > img,
@@ -73,7 +76,7 @@
   right: 0;
   display: flex; /* Safari 6.1+ */
   flex: 1;
-     flex-flow: wrap;
+  flex-flow: wrap;
   flex-direction: row;
   align-items: center;
   align-content: center;
@@ -95,9 +98,9 @@
   text-align: center;
   color: #fff;
   font-weight: bolder;
-  padding-left: .9375rem;
-  padding-right: .9375rem;
-  font-size: calc(1.3125rem + .75vw);
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  font-size: calc(1.3125rem + 0.75vw);
 }
 
 @media (min-width: 1200px) {
@@ -125,7 +128,7 @@
   background: none !important;
   background-color: transparent !important;
   color: #fff;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .vmh-container .vmh-breadcrumb .breadcrumb a,
@@ -135,11 +138,10 @@
 
 @media screen and (min-width: 992px) {
   .vmh-container .vmh-breadcrumb .breadcrumb {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 }
 
 .vmh-container .vmh-breadcrumb .breadcrumb .active {
   display: none;
 }
-
