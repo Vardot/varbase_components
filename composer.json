@@ -21,6 +21,7 @@
     "drupal/ui_patterns": "~2",
     "drupal/ui_patterns_field_group-ui_patterns_field_group": "~2",
     "drupal/ui_patterns_ds-ui_patterns_ds": "~1",
+    "drupal/ui_icons": "~1.1.0",
     "drupal/storybook": "~1"
   }
 }

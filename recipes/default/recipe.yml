@@ -9,6 +9,11 @@ install:
   - ui_patterns_field_formatters
   - ui_patterns_field_group
   - ui_patterns_ds
+  - ui_icons
+  - ui_icons_patterns
+  - ui_icons_field
+  - ui_icons_picker
+  - ui_icons_library
 config:
   import:
     ui_patterns: "*"
