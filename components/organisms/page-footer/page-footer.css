@@ -76,25 +76,32 @@ footer.footer .footer-logo-image {
 }
 
 .social-media-menu-icons li.nav-item > a {
-  overflow: hidden;
-  text-indent: -9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  color: var(--bs-white);
+  text-decoration: none;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  letter-spacing: -9999px !important;
 }
 
 .social-media-menu-icons li.nav-item > a::before {
-  text-indent: 0;
-}
-
-[dir="ltr"] .social-media-menu-icons li.nav-item > a::before {
-  float: left;
-}
-
-[dir="rtl"] .social-media-menu-icons li.nav-item > a::before {
-  float: right;
+  display: inline-block;
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--bs-white);
+  letter-spacing: normal;
 }
 
 .social-media-menu-icons li.nav-item > a:hover, .social-media-menu-icons li.nav-item > a:focus, .social-media-menu-icons li.nav-item > a:active {
-  color: rgb(206.6, 226, 254.6);
   text-decoration: none;
+}
+
+.social-media-menu-icons li.nav-item > a:hover::before, .social-media-menu-icons li.nav-item > a:focus::before, .social-media-menu-icons li.nav-item > a:active::before {
+  color: rgb(206.6, 226, 254.6);
 }
 
 .social-media-menu-icons li.nav-item > a:hover:after, .social-media-menu-icons li.nav-item > a:focus:after, .social-media-menu-icons li.nav-item > a:active:after {
