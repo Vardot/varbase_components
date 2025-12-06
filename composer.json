@@ -16,7 +16,7 @@
     "source": "http://cgit.drupalcode.org/varbase_components"
   },
   "require": {
-    "drupal/core": "~11.2.0",
+    "drupal/core": "~11.3.0",
     "vardot/varbase-patches": "~10.1.0",
     "drupal/ui_patterns": "~2",
     "drupal/ui_patterns_field_group-ui_patterns_field_group": "~2",
