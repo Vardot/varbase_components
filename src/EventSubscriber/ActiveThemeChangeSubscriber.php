@@ -368,6 +368,10 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
    *   TRUE if the flag is defined and set to TRUE, FALSE otherwise.
    */
   protected function themeHasFlag(string $theme_name, string $flag): bool {
+    if (!$this->themeHandler->themeExists($theme_name)) {
+      return FALSE;
+    }
+
     $theme = $this->themeHandler->getTheme($theme_name);
     if (!$theme) {
       return FALSE;
