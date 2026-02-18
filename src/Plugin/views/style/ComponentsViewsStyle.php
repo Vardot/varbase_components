@@ -332,7 +332,7 @@ class ComponentsViewsStyle extends StylePluginBase {
       try {
         $component = $this->componentPluginManager->find($id);
         $slots = (array) ($component->metadata->slots ?? []);
-        $use_in_views = $component->metadata->use_in_views ?? FALSE;
+        $use_in_views = $definition['use_in_views'] ?? FALSE;
 
         if (isset($slots['rows']) && $use_in_views) {
           $options[$id] = $definition['name'] ?? $id;
