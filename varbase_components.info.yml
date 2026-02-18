@@ -3,3 +3,5 @@ description: This is the components handler module with components helper, theme
 type: module
 package: Varbase
 core_version_requirement: ~11.3.0
+dependencies:
+  - drupal:views
