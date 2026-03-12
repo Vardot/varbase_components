@@ -5,3 +5,4 @@ package: Varbase
 core_version_requirement: ~11.3.0
 dependencies:
   - drupal:views
+  - cva:cva
