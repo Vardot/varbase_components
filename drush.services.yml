@@ -1,7 +1,7 @@
 services:
-  varbase_components.active_theme_change_subscriber:
-    class: Drupal\varbase_components\EventSubscriber\ActiveThemeChangeSubscriber
+  varbase_components.drush_commands:
+    class: Drupal\varbase_components\Commands\VarbaseComponentsCommands
     arguments:
       ["@messenger", "@config.factory", "@theme_handler", "@logger.factory", "@database", "@entity_type.manager", "@entity_field.manager"]
     tags:
-      - { name: event_subscriber }
+      - { name: drush.command }

@@ -5,6 +5,9 @@ namespace Drupal\varbase_components\EventSubscriber;
 use Drupal\Core\Config\ConfigCrudEvent;
 use Drupal\Core\Config\ConfigEvents;
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Database\Connection;
+use Drupal\Core\Entity\EntityFieldManagerInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Extension\ThemeHandlerInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\Messenger\MessengerInterface;
@@ -49,6 +52,27 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
   protected $loggerFactory;
 
   /**
+   * The database connection.
+   *
+   * @var \Drupal\Core\Database\Connection
+   */
+  protected $database;
+
+  /**
+   * The entity type manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
+   * The entity field manager.
+   *
+   * @var \Drupal\Core\Entity\EntityFieldManagerInterface
+   */
+  protected $entityFieldManager;
+
+  /**
    * Constructs an ActiveThemeChangeSubscriber object.
    *
    * @param \Drupal\Core\Messenger\MessengerInterface $messenger
@@ -59,17 +83,29 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
    *   The theme handler service.
    * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $logger_factory
    *   The logger factory service.
+   * @param \Drupal\Core\Database\Connection $database
+   *   The database connection.
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+   *   The entity type manager.
+   * @param \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager
+   *   The entity field manager.
    */
   public function __construct(
     MessengerInterface $messenger,
     ConfigFactoryInterface $config_factory,
     ThemeHandlerInterface $theme_handler,
     LoggerChannelFactoryInterface $logger_factory,
+    Connection $database,
+    EntityTypeManagerInterface $entity_type_manager,
+    EntityFieldManagerInterface $entity_field_manager,
   ) {
     $this->messenger = $messenger;
     $this->configFactory = $config_factory;
     $this->themeHandler = $theme_handler;
     $this->loggerFactory = $logger_factory;
+    $this->database = $database;
+    $this->entityTypeManager = $entity_type_manager;
+    $this->entityFieldManager = $entity_field_manager;
   }
 
   /**
@@ -112,6 +148,9 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
     }
 
     $this->replaceAndSaveThemeInActiveConfigs($old_theme, $new_theme);
+    $this->replaceThemeInContentEntityComponentFields($old_theme, $new_theme);
+    $this->replaceThemePathsInTextFields($old_theme, $new_theme);
+    $this->fixComponentVersionsInConfigs($new_theme);
 
     $this->messenger->addStatus($this->t('Theme changed from %old to %new. Updating active configurations...', [
       '%old' => $old_theme,
@@ -139,6 +178,421 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
   }
 
   /**
+   * Replaces the old theme name in component_tree field tables for all content entities.
+   *
+   * Discovers all content entity types that have fields of type 'component_tree'
+   * and updates the component_id column in both the field data table and the
+   * revision table, replacing occurrences of the old theme name with the new
+   * theme name in SDC component IDs (e.g. sdc.vartheme_bs5.button ->
+   * sdc.mytheme.button).
+   *
+   * @param string $old_theme
+   *   The old theme machine name.
+   * @param string $new_theme
+   *   The new theme machine name.
+   */
+  protected function replaceThemeInContentEntityComponentFields(string $old_theme, string $new_theme): void {
+    $old_prefix = 'sdc.' . $old_theme . '.';
+    $new_prefix = 'sdc.' . $new_theme . '.';
+
+    foreach ($this->entityTypeManager->getDefinitions() as $entity_type_id => $entity_type) {
+      // Only process content entity types.
+      if (!$entity_type->entityClassImplements(\Drupal\Core\Entity\ContentEntityInterface::class)) {
+        continue;
+      }
+
+      try {
+        $field_storage_definitions = $this->entityFieldManager->getFieldStorageDefinitions($entity_type_id);
+      }
+      catch (\Exception $e) {
+        continue;
+      }
+
+      foreach ($field_storage_definitions as $field_name => $field_storage) {
+        if ($field_storage->getType() !== 'component_tree') {
+          continue;
+        }
+
+        // Get the storage handler for the entity type.
+        try {
+          $storage = $this->entityTypeManager->getStorage($entity_type_id);
+        }
+        catch (\Exception $e) {
+          continue;
+        }
+
+        // Only SQL-backed storage has table mappings.
+        if (!$storage instanceof \Drupal\Core\Entity\Sql\SqlEntityStorageInterface) {
+          continue;
+        }
+
+        $table_mapping = $storage->getTableMapping();
+        $tables = $table_mapping->getAllFieldTableNames($field_name);
+
+        $column_name = $table_mapping->getFieldColumnName($field_storage, 'component_id');
+
+        foreach ($tables as $table) {
+          $this->updateComponentIdColumnInTable($table, $column_name, $old_prefix, $new_prefix, $old_theme, $entity_type_id, $field_name);
+        }
+      }
+    }
+  }
+
+  /**
+   * Replaces old theme filesystem paths in text/body fields across all content entities.
+   *
+   * Scans all text-type fields (text, text_long, text_with_summary) for
+   * hardcoded filesystem paths like "themes/contrib/vartheme_bs5/" and
+   * replaces them with the new theme's actual path (e.g.
+   * "themes/custom/mytheme/").
+   *
+   * @param string $old_theme
+   *   The old theme machine name.
+   * @param string $new_theme
+   *   The new theme machine name.
+   */
+  protected function replaceThemePathsInTextFields(string $old_theme, string $new_theme): void {
+    // Determine the new theme's actual filesystem path.
+    if (!$this->themeHandler->themeExists($new_theme)) {
+      return;
+    }
+    $new_theme_info = $this->themeHandler->getTheme($new_theme);
+    if (!$new_theme_info) {
+      return;
+    }
+    $new_theme_path = $new_theme_info->getPath();
+
+    // Build search/replace pairs for both slash-prefixed and non-prefixed paths.
+    $old_patterns = [
+      'themes/contrib/' . $old_theme . '/',
+      'themes/custom/' . $old_theme . '/',
+    ];
+    $new_replacement = $new_theme_path . '/';
+
+    $text_field_types = ['text', 'text_long', 'text_with_summary'];
+
+    foreach ($this->entityTypeManager->getDefinitions() as $entity_type_id => $entity_type) {
+      if (!$entity_type->entityClassImplements(\Drupal\Core\Entity\ContentEntityInterface::class)) {
+        continue;
+      }
+
+      try {
+        $field_storage_definitions = $this->entityFieldManager->getFieldStorageDefinitions($entity_type_id);
+      }
+      catch (\Exception $e) {
+        continue;
+      }
+
+      foreach ($field_storage_definitions as $field_name => $field_storage) {
+        if (!in_array($field_storage->getType(), $text_field_types, TRUE)) {
+          continue;
+        }
+
+        try {
+          $storage = $this->entityTypeManager->getStorage($entity_type_id);
+        }
+        catch (\Exception $e) {
+          continue;
+        }
+
+        if (!$storage instanceof \Drupal\Core\Entity\Sql\SqlEntityStorageInterface) {
+          continue;
+        }
+
+        $table_mapping = $storage->getTableMapping();
+        $tables = $table_mapping->getAllFieldTableNames($field_name);
+
+        // Get all column names for this field (value, summary, format, etc.).
+        $columns = $table_mapping->getColumnNames($field_name);
+        $value_columns = array_filter($columns, fn($col) => str_contains($col, 'value') || str_contains($col, 'summary'));
+
+        foreach ($tables as $table) {
+          foreach ($value_columns as $column_name) {
+            $this->replaceThemePathInTextColumn($table, $column_name, $old_patterns, $new_replacement, $entity_type_id, $field_name);
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * Replaces theme path references in a single text column.
+   *
+   * @param string $table
+   *   The database table name.
+   * @param string $column_name
+   *   The column name.
+   * @param array $old_patterns
+   *   Array of old path patterns to search for.
+   * @param string $new_replacement
+   *   The new path to replace with.
+   * @param string $entity_type_id
+   *   Entity type ID (for logging).
+   * @param string $field_name
+   *   Field name (for logging).
+   */
+  protected function replaceThemePathInTextColumn(
+    string $table,
+    string $column_name,
+    array $old_patterns,
+    string $new_replacement,
+    string $entity_type_id,
+    string $field_name,
+  ): void {
+    try {
+      $schema = $this->database->schema();
+      if (!$schema->tableExists($table) || !$schema->fieldExists($table, $column_name)) {
+        return;
+      }
+
+      foreach ($old_patterns as $old_pattern) {
+        // Check if any rows need updating before attempting the update.
+        $count = $this->database->select($table, 't')
+          ->condition($column_name, '%' . $this->database->escapeLike($old_pattern) . '%', 'LIKE')
+          ->countQuery()
+          ->execute()
+          ->fetchField();
+
+        if (!$count) {
+          continue;
+        }
+
+        // Use a direct UPDATE with an expression to avoid relying on a
+        // specific primary-key column name (which differs per entity type).
+        // REPLACE() is supported on all Drupal-compatible databases.
+        $updated = $this->database->update($table)
+          ->expression($column_name, "REPLACE($column_name, :old, :new)", [
+            ':old' => $old_pattern,
+            ':new' => $new_replacement,
+          ])
+          ->condition($column_name, '%' . $this->database->escapeLike($old_pattern) . '%', 'LIKE')
+          ->execute();
+
+        if ($updated > 0) {
+          $this->loggerFactory->get('varbase_components')->info(
+            'Replaced theme path "@old" → "@new" in @table.@column (@count row(s); @entity_type.@field).',
+            [
+              '@old' => $old_pattern,
+              '@new' => $new_replacement,
+              '@table' => $table,
+              '@column' => $column_name,
+              '@count' => $updated,
+              '@entity_type' => $entity_type_id,
+              '@field' => $field_name,
+            ]
+          );
+        }
+      }
+    }
+    catch (\Exception $e) {
+      $this->loggerFactory->get('varbase_components')->error(
+        'Failed to replace theme paths in @table.@column: @message',
+        ['@table' => $table, '@column' => $column_name, '@message' => $e->getMessage()]
+      );
+    }
+  }
+
+  /**
+   * Updates the component_id column in a single table.
+   *
+   * Selects rows where the component_id starts with the old SDC prefix, then
+   * updates them one by one using Drupal's database abstraction layer (no raw
+   * SQL statements).
+   *
+   * @param string $table
+   *   The database table name.
+   * @param string $column_name
+   *   The column name storing the component ID.
+   * @param string $old_prefix
+   *   The old SDC prefix, e.g. 'sdc.vartheme_bs5.'.
+   * @param string $new_prefix
+   *   The new SDC prefix, e.g. 'sdc.mytheme.'.
+   * @param string $old_theme
+   *   The old theme machine name (used for logging).
+   * @param string $entity_type_id
+   *   The entity type ID (used for logging).
+   * @param string $field_name
+   *   The field name (used for logging).
+   */
+  protected function updateComponentIdColumnInTable(
+    string $table,
+    string $column_name,
+    string $old_prefix,
+    string $new_prefix,
+    string $old_theme,
+    string $entity_type_id,
+    string $field_name,
+  ): void {
+    try {
+      // Select rows that need updating.
+      $results = $this->database->select($table, 't')
+        ->fields('t', [$column_name])
+        ->condition($column_name, $old_prefix . '%', 'LIKE')
+        ->distinct()
+        ->execute()
+        ->fetchCol();
+
+      if (empty($results)) {
+        return;
+      }
+
+      foreach ($results as $old_component_id) {
+        if (!str_starts_with($old_component_id, $old_prefix)) {
+          continue;
+        }
+
+        $new_component_id = $new_prefix . substr($old_component_id, strlen($old_prefix));
+
+        $this->database->update($table)
+          ->fields([$column_name => $new_component_id])
+          ->condition($column_name, $old_component_id)
+          ->execute();
+      }
+
+      $this->loggerFactory->get('varbase_components')->info(
+        'Updated component IDs in table @table (field @field on @entity_type): replaced "sdc.@old.*" with "sdc.@new.*".',
+        [
+          '@table' => $table,
+          '@field' => $field_name,
+          '@entity_type' => $entity_type_id,
+          '@old' => $old_theme,
+          '@new' => $new_prefix,
+        ]
+      );
+    }
+    catch (\Exception $e) {
+      $this->loggerFactory->get('varbase_components')->error(
+        'Failed to update component IDs in table @table: @message',
+        ['@table' => $table, '@message' => $e->getMessage()]
+      );
+    }
+  }
+
+  /**
+   * Fixes component version hashes in all configs after a theme switch.
+   *
+   * When the theme changes, component IDs in config entities (content
+   * templates, entity view displays, etc.) are updated from the old to the
+   * new theme. However, the stored component_version hashes may reference
+   * version snapshots that only exist in the old theme's component config.
+   * This method finds any such stale version and replaces it with the active
+   * version of the corresponding new-theme component.
+   *
+   * @param string $new_theme
+   *   The new theme machine name.
+   */
+  protected function fixComponentVersionsInConfigs(string $new_theme): void {
+    $new_prefix = 'sdc.' . $new_theme . '.';
+    $component_storage = $this->entityTypeManager->getStorage('component');
+
+    // Cache active versions to avoid repeated entity loads.
+    $active_versions = [];
+
+    $all_configs = $this->configFactory->listAll();
+    foreach ($all_configs as $config_name) {
+      $config = $this->configFactory->getEditable($config_name);
+      $data = $config->getRawData();
+      if (empty($data)) {
+        continue;
+      }
+
+      // Convert to YAML, look for component_version entries paired with
+      // SDC component IDs for the new theme.
+      $changed = $this->fixComponentVersionsInArray($data, $new_prefix, $component_storage, $active_versions);
+
+      if ($changed) {
+        try {
+          $config->setData($data)->save();
+          $this->loggerFactory->get('varbase_components')->info(
+            'Fixed component version hashes in config: @config',
+            ['@config' => $config_name]
+          );
+        }
+        catch (\Exception $e) {
+          $this->loggerFactory->get('varbase_components')->error(
+            'Failed to fix component version hashes in config @config: @message',
+            ['@config' => $config_name, '@message' => $e->getMessage()]
+          );
+        }
+      }
+    }
+  }
+
+  /**
+   * Recursively fixes component version hashes in a config data array.
+   *
+   * Looks for arrays that have both 'component_id' and 'component_version'
+   * keys where the component_id starts with the new theme's SDC prefix, then
+   * verifies the version is valid and replaces it with the active version if
+   * it is not.
+   *
+   * @param array &$data
+   *   The config data array to scan and update (passed by reference).
+   * @param string $new_prefix
+   *   The new SDC component ID prefix, e.g. 'sdc.mytheme.'.
+   * @param \Drupal\Core\Entity\EntityStorageInterface $component_storage
+   *   The Canvas component entity storage.
+   * @param array &$active_versions
+   *   Cache of already-resolved active version hashes, keyed by component ID.
+   *
+   * @return bool
+   *   TRUE if any version was changed.
+   */
+  protected function fixComponentVersionsInArray(array &$data, string $new_prefix, $component_storage, array &$active_versions): bool {
+    $changed = FALSE;
+
+    // If this array represents a component tree item with component_id and
+    // component_version, validate and possibly fix the version.
+    if (isset($data['component_id'], $data['component_version'])
+      && is_string($data['component_id'])
+      && str_starts_with($data['component_id'], $new_prefix)
+    ) {
+      $comp_id = $data['component_id'];
+      $stored_version = $data['component_version'];
+
+      // Get or cache the active version for this component.
+      if (!isset($active_versions[$comp_id])) {
+        $comp = $component_storage->load($comp_id);
+        if ($comp) {
+          $active_versions[$comp_id] = [
+            'active' => $comp->getActiveVersion(),
+            'entity' => $comp,
+          ];
+        }
+        else {
+          $active_versions[$comp_id] = NULL;
+        }
+      }
+
+      if (!empty($active_versions[$comp_id])) {
+        $comp = $active_versions[$comp_id]['entity'];
+        $active_version = $active_versions[$comp_id]['active'];
+
+        // Check if the stored version is valid.
+        try {
+          $comp->loadVersion($stored_version);
+        }
+        catch (\Exception $e) {
+          // Version not available in new component — use the active version.
+          $data['component_version'] = $active_version;
+          $changed = TRUE;
+        }
+      }
+    }
+
+    // Recurse into nested arrays.
+    foreach ($data as $key => &$value) {
+      if (is_array($value)) {
+        if ($this->fixComponentVersionsInArray($value, $new_prefix, $component_storage, $active_versions)) {
+          $changed = TRUE;
+        }
+      }
+    }
+
+    return $changed;
+  }
+
+  /**
    * Processes entity view display configurations.
    *
    * @param array $all_configs
@@ -153,6 +607,11 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
   protected function processEntityViewDisplayConfigs(array $all_configs, string $old_theme_escaped, string $old_theme, string $new_theme): void {
     foreach ($all_configs as $config_name) {
       if (!str_starts_with($config_name, 'core.entity_view_display.')) {
+        continue;
+      }
+
+      // Skip canvas component definition configs for the old theme.
+      if (str_starts_with($config_name, 'canvas.component.sdc.' . $old_theme)) {
         continue;
       }
 
@@ -179,6 +638,15 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
   protected function processAllConfigs(array $all_configs, string $old_theme_escaped, string $old_theme, string $new_theme): void {
     foreach ($all_configs as $config_name) {
       $config_changed = FALSE;
+
+      // Skip canvas component definition configs that belong to the old theme
+      // (e.g. canvas.component.sdc.vartheme_bs5.*). These are component
+      // definitions owned by the old theme; the new theme already has its own
+      // equivalent canvas component configs and renaming these would cause UUID
+      // conflicts on cache rebuild.
+      if (str_starts_with($config_name, 'canvas.component.sdc.' . $old_theme)) {
+        continue;
+      }
 
       // Process with patterns for all configs.
       if ($this->processConfigWithPatterns($config_name, $old_theme_escaped, $new_theme)) {
@@ -246,16 +714,50 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
       return FALSE;
     }
 
+    // Determine the filesystem path prefix for the new theme (e.g.
+    // 'themes/custom/mytheme') so we can replace file-path references
+    // such as logo paths or template overrides that include the old theme's
+    // directory.
+    $new_theme_path = NULL;
+    if ($this->themeHandler->themeExists($new_theme)) {
+      $new_theme_info = $this->themeHandler->getTheme($new_theme);
+      if ($new_theme_info) {
+        $new_theme_path = $new_theme_info->getPath();
+      }
+    }
+
     $patterns = [
+      // Filesystem paths: themes/(contrib|custom)/oldtheme → new theme path.
+      // Only added when the new theme path is known.
+      // Colon-separated plugin/component IDs (legacy format).
       '/(\b\w+:)' . $old_theme_escaped . '(:\w+)/',
       '/(^|\s|\'|")' . $old_theme_escaped . '(:\w+)/',
+      // Dot-separated SDC component IDs: sdc.{theme}.{component}.
+      // Replaces 'sdc.oldtheme.' with 'sdc.newtheme.' safely.
+      '/\bsdc\.' . $old_theme_escaped . '\./',
     ];
 
     $new_yaml = $yaml;
-    foreach ($patterns as $pattern) {
-      $new_yaml = preg_replace_callback($pattern, function ($matches) use ($new_theme) {
-        return $matches[1] . $new_theme . $matches[2];
-      }, $new_yaml);
+
+    // Replace filesystem paths first (before the generic theme-name patterns).
+    if ($new_theme_path !== NULL) {
+      $new_yaml = preg_replace(
+        '/themes\/(?:contrib|custom)\/' . $old_theme_escaped . '/',
+        $new_theme_path,
+        $new_yaml
+      );
+    }
+
+    foreach ($patterns as $index => $pattern) {
+      if ($index === 2) {
+        // Simple replacement for the dot-separated SDC prefix.
+        $new_yaml = preg_replace($pattern, 'sdc.' . $new_theme . '.', $new_yaml);
+      }
+      else {
+        $new_yaml = preg_replace_callback($pattern, function ($matches) use ($new_theme) {
+          return $matches[1] . $new_theme . $matches[2];
+        }, $new_yaml);
+      }
     }
 
     if ($new_yaml === $yaml || empty($new_yaml)) {
