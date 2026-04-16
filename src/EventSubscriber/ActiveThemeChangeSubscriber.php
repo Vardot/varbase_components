@@ -481,8 +481,12 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
    * @param string $new_theme
    *   The new theme machine name.
    */
-  protected function fixComponentVersionsInConfigs(string $new_theme): void {
-    $new_prefix = 'sdc.' . $new_theme . '.';
+  protected function fixComponentVersionsInConfigs(string $new_theme, bool $all_components = FALSE): void {
+    // When $all_components is TRUE we pass an empty prefix so every component
+    // reference (SDC, block, js, etc.) is validated — used by the drush
+    // fix-versions command. The theme-switch subscriber keeps the narrow
+    // scope by leaving $all_components at its default.
+    $new_prefix = $all_components ? '' : 'sdc.' . $new_theme . '.';
     $component_storage = $this->entityTypeManager->getStorage('component');
 
     // Cache active versions to avoid repeated entity loads.
@@ -543,20 +547,30 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
 
     // If this array represents a component tree item with component_id and
     // component_version, validate and possibly fix the version.
+    //
+    // An empty $new_prefix means "check every component reference" (used by
+    // the drush fix-versions command so stale hashes on non-SDC components
+    // like `block.*` or `js.*` also get rewritten). A non-empty prefix limits
+    // the scan to a single theme's SDC components (used by the theme-switch
+    // subscriber to avoid touching unrelated trees).
     if (isset($data['component_id'], $data['component_version'])
       && is_string($data['component_id'])
-      && str_starts_with($data['component_id'], $new_prefix)
+      && ($new_prefix === '' || str_starts_with($data['component_id'], $new_prefix))
     ) {
       $comp_id = $data['component_id'];
       $stored_version = $data['component_version'];
 
-      // Get or cache the active version for this component.
+      // Get or cache the active version and known version list for the
+      // component. We resolve the full version list up-front so we can check
+      // validity WITHOUT calling $comp->loadVersion() — that call logs a noisy
+      // canvas warning AND does not throw when the version is missing, which
+      // would otherwise defeat this whole method's purpose.
       if (!isset($active_versions[$comp_id])) {
         $comp = $component_storage->load($comp_id);
-        if ($comp) {
+        if ($comp instanceof \Drupal\canvas\Entity\VersionedConfigEntityInterface) {
           $active_versions[$comp_id] = [
             'active' => $comp->getActiveVersion(),
-            'entity' => $comp,
+            'versions' => $comp->getVersions(),
           ];
         }
         else {
@@ -565,15 +579,18 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
       }
 
       if (!empty($active_versions[$comp_id])) {
-        $comp = $active_versions[$comp_id]['entity'];
         $active_version = $active_versions[$comp_id]['active'];
+        $known_versions = $active_versions[$comp_id]['versions'];
 
-        // Check if the stored version is valid.
-        try {
-          $comp->loadVersion($stored_version);
-        }
-        catch (\Exception $e) {
-          // Version not available in new component — use the active version.
+        // A stored version is valid when it is either the active version or
+        // one of the historically tracked versions. Anything else is stale
+        // (typically left over from a theme switch or a component rebuild)
+        // and must be rewritten to the current active version to avoid the
+        // "Component version … not found … falling back to active version"
+        // warning from Canvas at render time.
+        if ($stored_version !== $active_version
+          && !in_array($stored_version, $known_versions, TRUE)
+        ) {
           $data['component_version'] = $active_version;
           $changed = TRUE;
         }

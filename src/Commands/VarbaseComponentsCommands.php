@@ -161,7 +161,11 @@ class VarbaseComponentsCommands extends DrushCommands {
 
     $subscriber = $this->buildSubscriber();
     $this->output()->writeln(dt('Fixing stale component version hashes for @theme …', ['@theme' => $theme]));
-    $this->callMethod($subscriber, 'fixComponentVersionsInConfigs', [$theme]);
+    // Pass TRUE to scan every component reference (block.*, js.*, etc.), not
+    // only SDC components for this theme — drush fix-versions is the general
+    // "repair everything" entry point, so stale block versions imported by
+    // recipes must be rewritten too.
+    $this->callMethod($subscriber, 'fixComponentVersionsInConfigs', [$theme, TRUE]);
     $this->output()->writeln('<info>Done.</info>');
   }
 
