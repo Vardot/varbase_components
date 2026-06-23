@@ -2,6 +2,9 @@
 
 namespace Drupal\varbase_components\EventSubscriber;
 
+use Drupal\canvas\Entity\VersionedConfigEntityInterface;
+use Drupal\Core\Entity\Sql\SqlEntityStorageInterface;
+use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Config\ConfigCrudEvent;
 use Drupal\Core\Config\ConfigEvents;
 use Drupal\Core\Config\ConfigFactoryInterface;
@@ -197,7 +200,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
 
     foreach ($this->entityTypeManager->getDefinitions() as $entity_type_id => $entity_type) {
       // Only process content entity types.
-      if (!$entity_type->entityClassImplements(\Drupal\Core\Entity\ContentEntityInterface::class)) {
+      if (!$entity_type->entityClassImplements(ContentEntityInterface::class)) {
         continue;
       }
 
@@ -222,7 +225,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
         }
 
         // Only SQL-backed storage has table mappings.
-        if (!$storage instanceof \Drupal\Core\Entity\Sql\SqlEntityStorageInterface) {
+        if (!$storage instanceof SqlEntityStorageInterface) {
           continue;
         }
 
@@ -272,7 +275,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
     $text_field_types = ['text', 'text_long', 'text_with_summary'];
 
     foreach ($this->entityTypeManager->getDefinitions() as $entity_type_id => $entity_type) {
-      if (!$entity_type->entityClassImplements(\Drupal\Core\Entity\ContentEntityInterface::class)) {
+      if (!$entity_type->entityClassImplements(ContentEntityInterface::class)) {
         continue;
       }
 
@@ -295,7 +298,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
           continue;
         }
 
-        if (!$storage instanceof \Drupal\Core\Entity\Sql\SqlEntityStorageInterface) {
+        if (!$storage instanceof SqlEntityStorageInterface) {
           continue;
         }
 
@@ -480,6 +483,8 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
    *
    * @param string $new_theme
    *   The new theme machine name.
+   * @param bool $all_components
+   *   When TRUE, validate every component reference, not only the new theme's.
    */
   protected function fixComponentVersionsInConfigs(string $new_theme, bool $all_components = FALSE): void {
     // When $all_components is TRUE we pass an empty prefix so every component
@@ -567,7 +572,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
       // would otherwise defeat this whole method's purpose.
       if (!isset($active_versions[$comp_id])) {
         $comp = $component_storage->load($comp_id);
-        if ($comp instanceof \Drupal\canvas\Entity\VersionedConfigEntityInterface) {
+        if ($comp instanceof VersionedConfigEntityInterface) {
           $active_versions[$comp_id] = [
             'active' => $comp->getActiveVersion(),
             'versions' => $comp->getVersions(),
@@ -598,7 +603,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
     }
 
     // Recurse into nested arrays.
-    foreach ($data as $key => &$value) {
+    foreach ($data as &$value) {
       if (is_array($value)) {
         if ($this->fixComponentVersionsInArray($value, $new_prefix, $component_storage, $active_versions)) {
           $changed = TRUE;

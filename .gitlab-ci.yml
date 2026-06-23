@@ -1,41 +1,85 @@
-include:
-  - project: $_GITLAB_TEMPLATES_REPO
-    ref: $_GITLAB_TEMPLATES_REF
-    file:
-      - "/includes/include.drupalci.main.yml"
-      - "/includes/include.drupalci.variables.yml"
-      - "/includes/include.drupalci.workflows.yml"
-composer:
-  variables:
-    _LENIENT_ALLOW_LIST: "select2, styleguide"
+################################################################################
+# Self-contained build + validate CI for Varbase Components.
+# Mirrors the Varbase profile: composer.json validation (build) and
+# PHPCS + PHPStan + cspell (validate, gating) plus best-effort eslint/stylelint.
+################################################################################
+stages:
+  - build
+  - validate
+
+variables:
+  COMPOSER_ALLOW_SUPERUSER: "1"
+  COMPOSER_MEMORY_LIMIT: "-1"
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH
+    - if: $CI_COMMIT_TAG
+
+build:composer-validate:
+  stage: build
+  image: public.ecr.aws/docker/library/composer:2
   script:
+    - composer validate --no-check-all --no-check-publish
+
+phpcs:
+  stage: validate
+  image: public.ecr.aws/docker/library/php:8.3-cli
+  before_script:
+    - apt-get update -y > /dev/null && apt-get install -y -qq git unzip > /dev/null
+    - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    - composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+    - composer global require --no-interaction --no-progress drupal/coder:^8.3 dealerdirect/phpcodesniffer-composer-installer:^1
+    - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  script:
+    - phpcs --standard=.phpcs.xml
+  allow_failure: false
+
+phpstan:
+  stage: validate
+  image: public.ecr.aws/docker/library/php:8.3-cli
+  before_script:
+    - apt-get update -y > /dev/null && apt-get install -y -qq git unzip > /dev/null
+    - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    - composer create-project drupal/recommended-project:~11.3.0 /drupal --no-interaction --no-install
+    - cd /drupal
+    - composer config --no-plugins allow-plugins true
     - composer config minimum-stability dev
-    - composer config repositories.drupal composer https://packages.drupal.org/8
-    - composer config --no-plugins allow-plugins.composer/installers true
-    - composer config --no-plugins allow-plugins.cweagans/composer-patches true
-    - composer config --no-plugins allow-plugins.oomphinc/composer-installers-extender true
-    - composer config --no-plugins allow-plugins.phpstan/extension-installer true
-    - composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
-    - composer config --no-plugins allow-plugins.drupal/core-composer-scaffold true
-    - composer config --no-plugins allow-plugins.php-http/discovery true
-    - composer config --no-plugins allow-plugins.tbachert/spi true
-    - composer require --no-update cweagans/composer-patches:~1
-    - composer install -vvv
-composer-lint:
-  allow_failure: true
+    - composer require --no-interaction --no-progress --ignore-platform-reqs mglaman/phpstan-drupal phpstan/extension-installer drupal/cva drush/drush
+    - composer install --no-interaction --no-progress --ignore-platform-reqs
+    - mkdir -p web/modules/custom && cp -r "$CI_PROJECT_DIR" web/modules/custom/varbase_components
+  script:
+    - cd /drupal
+    - php -d memory_limit=2G ./vendor/bin/phpstan analyse -c web/modules/custom/varbase_components/phpstan.neon --no-progress
+  allow_failure: false
+
 cspell:
   stage: validate
-  image: node:18
+  image: public.ecr.aws/docker/library/node:20
   before_script:
     - npm install -g cspell
   script:
-    - cspell "**/*.{php,module,inc,install,test,profile,theme,js,css,md,yml,txt}" --no-progress || true
-  allow_failure: true
+    - cspell lint . --no-progress
+  allow_failure: false
+
 eslint:
+  stage: validate
+  image: public.ecr.aws/docker/library/node:20
+  before_script:
+    - if [ ! -f package.json ]; then echo "no package.json"; exit 0; fi
+    - corepack enable && yarn install --mode=skip-build || true
+  script:
+    - yarn lint:js || true
+    - yarn lint:yaml || true
   allow_failure: true
-phpcs:
-  allow_failure: true
-phpstan:
-  allow_failure: true
-phpunit:
+
+stylelint:
+  stage: validate
+  image: public.ecr.aws/docker/library/node:20
+  before_script:
+    - if [ ! -f package.json ]; then echo "no package.json"; exit 0; fi
+    - corepack enable && yarn install --mode=skip-build || true
+  script:
+    - yarn lint:css || true
   allow_failure: true

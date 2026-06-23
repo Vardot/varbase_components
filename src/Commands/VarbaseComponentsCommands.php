@@ -2,6 +2,9 @@
 
 namespace Drupal\varbase_components\Commands;
 
+use Drupal\varbase_components\EventSubscriber\ActiveThemeChangeSubscriber;
+use Drupal\Core\Entity\Sql\SqlEntityStorageInterface;
+use Drupal\Core\Entity\ContentEntityInterface;
 use Consolidation\OutputFormatters\StructuredData\RowsOfFields;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Database\Connection;
@@ -63,6 +66,8 @@ class VarbaseComponentsCommands extends DrushCommands {
    *   The old theme machine name (e.g. vartheme_bs5).
    * @param string $new_theme
    *   The new theme machine name (e.g. mytheme).
+   * @param array $options
+   *   The command options.
    *
    * @command varbase-components:switch-theme
    * @aliases vc-switch,vcs
@@ -207,7 +212,7 @@ class VarbaseComponentsCommands extends DrushCommands {
 
     // --- Content entity scan ------------------------------------------------
     foreach ($this->entityTypeManager->getDefinitions() as $entity_type_id => $entity_type) {
-      if (!$entity_type->entityClassImplements(\Drupal\Core\Entity\ContentEntityInterface::class)) {
+      if (!$entity_type->entityClassImplements(ContentEntityInterface::class)) {
         continue;
       }
       try {
@@ -226,7 +231,7 @@ class VarbaseComponentsCommands extends DrushCommands {
         catch (\Exception $e) {
           continue;
         }
-        if (!$storage instanceof \Drupal\Core\Entity\Sql\SqlEntityStorageInterface) {
+        if (!$storage instanceof SqlEntityStorageInterface) {
           continue;
         }
         $table_mapping = $storage->getTableMapping();
@@ -265,8 +270,8 @@ class VarbaseComponentsCommands extends DrushCommands {
    * @return \Drupal\varbase_components\EventSubscriber\ActiveThemeChangeSubscriber
    *   A fully-constructed subscriber.
    */
-  protected function buildSubscriber(): \Drupal\varbase_components\EventSubscriber\ActiveThemeChangeSubscriber {
-    return new \Drupal\varbase_components\EventSubscriber\ActiveThemeChangeSubscriber(
+  protected function buildSubscriber(): ActiveThemeChangeSubscriber {
+    return new ActiveThemeChangeSubscriber(
       $this->messenger,
       $this->configFactory,
       $this->themeHandler,
@@ -326,7 +331,7 @@ class VarbaseComponentsCommands extends DrushCommands {
     $total = 0;
     $prefix = 'sdc.' . $theme . '.';
     foreach ($this->entityTypeManager->getDefinitions() as $entity_type_id => $entity_type) {
-      if (!$entity_type->entityClassImplements(\Drupal\Core\Entity\ContentEntityInterface::class)) {
+      if (!$entity_type->entityClassImplements(ContentEntityInterface::class)) {
         continue;
       }
       try {
@@ -341,7 +346,7 @@ class VarbaseComponentsCommands extends DrushCommands {
         }
         try {
           $storage = $this->entityTypeManager->getStorage($entity_type_id);
-          if (!$storage instanceof \Drupal\Core\Entity\Sql\SqlEntityStorageInterface) {
+          if (!$storage instanceof SqlEntityStorageInterface) {
             continue;
           }
           $table_mapping = $storage->getTableMapping();

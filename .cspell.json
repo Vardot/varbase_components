@@ -35,6 +35,16 @@
     "browserslist",
     "stylelint",
     "eslint",
-    "cspell"
+    "cspell",
+    "Drush",
+    "bsdc",
+    "drush",
+    "mytheme",
+    "newtheme",
+    "oldtheme",
+    "phar",
+    "phpstan",
+    "vcfv",
+    "vcscan"
   ]
 }
