@@ -69,6 +69,54 @@ class VarbaseComponentsHooks {
   }
 
   /**
+   * Removes orphaned Canvas component configs when a theme is uninstalled.
+   *
+   * Canvas creates an `sdc.<theme>.<name>` component config entity for every
+   * SDC the theme provides, but these are not theme-dependent config, so core
+   * does not delete them when the theme is uninstalled (unlike page_region
+   * configs). They linger as orphans (e.g. `canvas.component.sdc.vartheme_bs5.*`
+   * after switching away from and uninstalling Vartheme BS5). Drupal forbids
+   * uninstalling the default theme, and the theme-switch subscriber has already
+   * migrated content/config to the new theme, so the uninstalled theme's
+   * components are unreferenced and safe to remove.
+   *
+   * @param array $themes
+   *   The uninstalled theme machine names.
+   */
+  #[Hook('themes_uninstalled')]
+  public function themesUninstalled(array $themes): void {
+    if (!\Drupal::moduleHandler()->moduleExists('canvas')) {
+      return;
+    }
+    $entity_type_manager = \Drupal::entityTypeManager();
+    if (!$entity_type_manager->hasDefinition('component')) {
+      return;
+    }
+
+    try {
+      $storage = $entity_type_manager->getStorage('component');
+      foreach ($themes as $theme) {
+        $ids = $storage->getQuery()
+          ->accessCheck(FALSE)
+          ->condition('id', 'sdc.' . $theme . '.', 'STARTS_WITH')
+          ->execute();
+        if (!empty($ids)) {
+          $storage->delete($storage->loadMultiple($ids));
+          \Drupal::logger('varbase_components')->info(
+            'Removed @count orphaned Canvas component config(s) for uninstalled theme @theme.',
+            ['@count' => count($ids), '@theme' => $theme]
+          );
+        }
+      }
+    }
+    catch (\Throwable $e) {
+      \Drupal::logger('varbase_components')->error('Orphaned Canvas component cleanup failed: @message', [
+        '@message' => $e->getMessage(),
+      ]);
+    }
+  }
+
+  /**
    * Runs the idempotent component-version heal when Canvas is installed.
    */
   protected function healComponentVersions(): void {
