@@ -171,6 +171,9 @@ class VarbaseComponentsCommands extends DrushCommands {
     // "repair everything" entry point, so stale block versions imported by
     // recipes must be rewritten too.
     $this->callMethod($subscriber, 'fixComponentVersionsInConfigs', [$theme, TRUE]);
+    // Repair authored/demo content entities (canvas_page, nodes, …) too — they
+    // pin component versions that fixComponentVersionsInConfigs does not touch.
+    $this->callMethod($subscriber, 'fixComponentVersionsInContentEntities', [NULL]);
     $this->output()->writeln('<info>Done.</info>');
   }
 

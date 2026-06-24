@@ -151,9 +151,11 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
     }
 
     $this->replaceAndSaveThemeInActiveConfigs($old_theme, $new_theme);
+    $this->migratePageRegions($old_theme, $new_theme);
     $this->replaceThemeInContentEntityComponentFields($old_theme, $new_theme);
     $this->replaceThemePathsInTextFields($old_theme, $new_theme);
     $this->fixComponentVersionsInConfigs($new_theme);
+    $this->fixComponentVersionsInContentEntities($new_theme);
 
     $this->messenger->addStatus($this->t('Theme changed from %old to %new. Updating active configurations...', [
       '%old' => $old_theme,
@@ -178,6 +180,81 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
 
     // Process all other configs.
     $this->processAllConfigs($all_configs, $old_theme_escaped, $old_theme, $new_theme);
+  }
+
+  /**
+   * Clones Canvas page_region entities from the old theme to the new theme.
+   *
+   * Canvas stores theme-specific page regions (the header/footer built in
+   * Canvas) as config entities named `canvas.page_region.<theme>.<region>`.
+   * The theme name is baked into the config ID, the `theme` property, and the
+   * theme dependency, so it cannot be migrated by the in-place YAML string
+   * replacement that handles component IDs. Without this step the new theme has
+   * no page regions and, once the old theme is uninstalled, its page_region
+   * configs are deleted — leaving the site with no Canvas header/footer.
+   *
+   * For every page region owned by the old theme this creates an equivalent
+   * region for the new theme (when one does not already exist). The source
+   * region's component_tree has already had its component IDs migrated by
+   * replaceAndSaveThemeInActiveConfigs(), so the clone inherits the new theme's
+   * SDC component references.
+   *
+   * @param string $old_theme
+   *   The old theme machine name.
+   * @param string $new_theme
+   *   The new theme machine name.
+   */
+  protected function migratePageRegions(string $old_theme, string $new_theme): void {
+    // The page_region entity type ships with Canvas; bail out gracefully if it
+    // is not available (Canvas not installed).
+    if (!$this->entityTypeManager->hasDefinition('page_region')) {
+      return;
+    }
+
+    try {
+      $storage = $this->entityTypeManager->getStorage('page_region');
+    }
+    catch (\Exception $e) {
+      return;
+    }
+
+    $old_prefix = 'canvas.page_region.' . $old_theme . '.';
+    foreach ($this->configFactory->listAll($old_prefix) as $config_name) {
+      $region = substr($config_name, strlen($old_prefix));
+      $new_id = $new_theme . '.' . $region;
+
+      // Don't clobber a region the new theme already provides.
+      if ($storage->load($new_id)) {
+        continue;
+      }
+
+      $source = $storage->load($old_theme . '.' . $region);
+      if (!$source) {
+        continue;
+      }
+
+      try {
+        $data = $source->toArray();
+        $data['id'] = $new_id;
+        $data['theme'] = $new_theme;
+        $data['region'] = $region;
+        // Let the entity API assign a fresh UUID and recalculate dependencies.
+        unset($data['uuid'], $data['_core']);
+
+        $storage->create($data)->save();
+
+        $this->loggerFactory->get('varbase_components')->info(
+          'Migrated Canvas page region "@region" from theme @old to @new.',
+          ['@region' => $region, '@old' => $old_theme, '@new' => $new_theme]
+        );
+      }
+      catch (\Exception $e) {
+        $this->loggerFactory->get('varbase_components')->error(
+          'Failed to migrate Canvas page region "@region" to theme @new: @message',
+          ['@region' => $region, '@new' => $new_theme, '@message' => $e->getMessage()]
+        );
+      }
+    }
   }
 
   /**
@@ -467,6 +544,169 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
       $this->loggerFactory->get('varbase_components')->error(
         'Failed to update component IDs in table @table: @message',
         ['@table' => $table, '@message' => $e->getMessage()]
+      );
+    }
+  }
+
+  /**
+   * Fixes stale component version hashes in content entity component trees.
+   *
+   * Mirrors fixComponentVersionsInConfigs() but for content entities: any
+   * stored component_version in a `component_tree` field that is neither the
+   * component's active version nor one of its known historical versions is
+   * rewritten to the active version. This is required after a component's
+   * schema/template changes its version hash (e.g. editing an SDC component)
+   * — config templates are repaired by fixComponentVersionsInConfigs(), but
+   * demo/authored content (canvas_page, nodes, …) pins the old hash and would
+   * otherwise make Canvas's editor layout API reject the page with
+   * "requested version … is not available".
+   *
+   * @param string|null $theme
+   *   When given, only components whose ID starts with `sdc.<theme>.` are
+   *   touched. NULL repairs every component reference.
+   */
+  protected function fixComponentVersionsInContentEntities(?string $theme = NULL): void {
+    $component_storage = $this->entityTypeManager->getStorage('component');
+    $prefix = $theme !== NULL ? 'sdc.' . $theme . '.' : '';
+
+    // Cache of active version + known versions, keyed by component ID.
+    $version_cache = [];
+
+    foreach ($this->entityTypeManager->getDefinitions() as $entity_type_id => $entity_type) {
+      if (!$entity_type->entityClassImplements(ContentEntityInterface::class)) {
+        continue;
+      }
+
+      try {
+        $field_storage_definitions = $this->entityFieldManager->getFieldStorageDefinitions($entity_type_id);
+      }
+      catch (\Exception $e) {
+        continue;
+      }
+
+      foreach ($field_storage_definitions as $field_name => $field_storage) {
+        if ($field_storage->getType() !== 'component_tree') {
+          continue;
+        }
+
+        try {
+          $storage = $this->entityTypeManager->getStorage($entity_type_id);
+        }
+        catch (\Exception $e) {
+          continue;
+        }
+
+        if (!$storage instanceof SqlEntityStorageInterface) {
+          continue;
+        }
+
+        $table_mapping = $storage->getTableMapping();
+        $tables = $table_mapping->getAllFieldTableNames($field_name);
+        $id_column = $table_mapping->getFieldColumnName($field_storage, 'component_id');
+        $version_column = $table_mapping->getFieldColumnName($field_storage, 'component_version');
+
+        foreach ($tables as $table) {
+          $this->fixVersionColumnInTable($table, $id_column, $version_column, $prefix, $component_storage, $version_cache, $entity_type_id, $field_name);
+        }
+      }
+    }
+  }
+
+  /**
+   * Rewrites stale component_version values to the active version in one table.
+   *
+   * @param string $table
+   *   The field data/revision table name.
+   * @param string $id_column
+   *   The component_id column name.
+   * @param string $version_column
+   *   The component_version column name.
+   * @param string $prefix
+   *   Optional `sdc.<theme>.` prefix limiting which rows are considered.
+   * @param \Drupal\Core\Entity\EntityStorageInterface $component_storage
+   *   The Canvas component entity storage.
+   * @param array &$version_cache
+   *   Cache of active/known versions keyed by component ID.
+   * @param string $entity_type_id
+   *   Entity type ID (for logging).
+   * @param string $field_name
+   *   Field name (for logging).
+   */
+  protected function fixVersionColumnInTable(
+    string $table,
+    string $id_column,
+    string $version_column,
+    string $prefix,
+    $component_storage,
+    array &$version_cache,
+    string $entity_type_id,
+    string $field_name,
+  ): void {
+    try {
+      $schema = $this->database->schema();
+      if (!$schema->tableExists($table)
+        || !$schema->fieldExists($table, $id_column)
+        || !$schema->fieldExists($table, $version_column)) {
+        return;
+      }
+
+      $query = $this->database->select($table, 't')
+        ->fields('t', [$id_column, $version_column])
+        ->distinct();
+      if ($prefix !== '') {
+        $query->condition($id_column, $this->database->escapeLike($prefix) . '%', 'LIKE');
+      }
+      $pairs = $query->execute()->fetchAll();
+
+      foreach ($pairs as $pair) {
+        $component_id = $pair->{$id_column};
+        $stored_version = $pair->{$version_column};
+        if ($component_id === NULL || $stored_version === NULL) {
+          continue;
+        }
+
+        if (!array_key_exists($component_id, $version_cache)) {
+          $comp = $component_storage->load($component_id);
+          $version_cache[$component_id] = $comp instanceof VersionedConfigEntityInterface
+            ? ['active' => $comp->getActiveVersion(), 'versions' => $comp->getVersions()]
+            : NULL;
+        }
+
+        $info = $version_cache[$component_id];
+        if (empty($info)) {
+          continue;
+        }
+
+        if ($stored_version === $info['active'] || in_array($stored_version, $info['versions'], TRUE)) {
+          continue;
+        }
+
+        $updated = $this->database->update($table)
+          ->fields([$version_column => $info['active']])
+          ->condition($id_column, $component_id)
+          ->condition($version_column, $stored_version)
+          ->execute();
+
+        if ($updated > 0) {
+          $this->loggerFactory->get('varbase_components')->info(
+            'Fixed stale component version for @component in @table (@count row(s); @entity_type.@field): @old → @new.',
+            [
+              '@component' => $component_id,
+              '@table' => $table,
+              '@count' => $updated,
+              '@entity_type' => $entity_type_id,
+              '@field' => $field_name,
+              '@old' => $stored_version,
+              '@new' => $info['active'],
+            ]
+          );
+        }
+      }
+    }
+    catch (\Exception $e) {
+      $this->loggerFactory->get('varbase_components')->error(
+        'Failed to fix component versions in @table.@column: @message',
+        ['@table' => $table, '@column' => $version_column, '@message' => $e->getMessage()]
       );
     }
   }
