@@ -164,6 +164,39 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
   }
 
   /**
+   * Heals stale component version hashes across all configs and content.
+   *
+   * Canvas regenerates its SDC component config entities on cache rebuild,
+   * module install and theme install: createVersion() records the new active
+   * version and deleteVersionIfExists() drops the previous one. Any config or
+   * content that still pins the previous version hash is therefore left stale.
+   * Page render tolerates this (the component falls back to its active version),
+   * but the Canvas editor layout/auto-save API surfaces the mismatch and the
+   * "Component version … not found, falling back to active version" warning is
+   * logged on every render.
+   *
+   * This performs the same full-scope repair as the
+   * varbase-components:fix-versions Drush command, and is invoked from the
+   * rebuild / modules_installed / themes_installed hooks (which run after Canvas
+   * has regenerated the components) so a fresh build, a module install or a
+   * theme enable self-heal with no manual command. It is idempotent and a no-op
+   * when nothing is stale, and bails out when Canvas is not installed.
+   *
+   * @param string|null $theme
+   *   Reserved for future per-theme scoping; healing is full-scope.
+   */
+  public function heal(?string $theme = NULL): void {
+    if (!$this->entityTypeManager->hasDefinition('component')) {
+      return;
+    }
+    // Ensure version lookups reflect the freshly regenerated components.
+    $this->entityTypeManager->getStorage('component')->resetCache();
+    // TRUE = validate every component reference, not only one theme's SDC.
+    $this->fixComponentVersionsInConfigs($theme ?? '', TRUE);
+    $this->fixComponentVersionsInContentEntities(NULL);
+  }
+
+  /**
    * Replaces theme name in active config and saves back to database.
    *
    * @param string $old_theme

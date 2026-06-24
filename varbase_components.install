@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for Varbase Components.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Weight Varbase Components heavier than Canvas so its rebuild /
+ * modules_installed / themes_installed hooks run after Canvas has regenerated
+ * the SDC component versions, allowing the component-version heal to see the
+ * current active versions.
+ */
+function varbase_components_install($is_syncing) {
+  module_set_weight('varbase_components', 10);
+}
+
+/**
+ * Set the Varbase Components module weight so heal hooks run after Canvas.
+ */
+function varbase_components_update_10001() {
+  module_set_weight('varbase_components', 10);
+}
