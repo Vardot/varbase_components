@@ -2,7 +2,7 @@ name: Varbase Components
 description: This is the components handler module with components helper, theme switcher for components in Varbase.
 type: module
 package: Varbase
-core_version_requirement: ~11.3.0
+core_version_requirement: ~11.4.0
 dependencies:
   - drupal:views
   - cva:cva
