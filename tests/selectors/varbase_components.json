@@ -1,0 +1,12 @@
+{
+  "css": {
+    "drupal page heading": "h1",
+    "drupal status messages": ".messages--status",
+    "drupal error messages": ".messages--error",
+    "drupal access denied heading": "h1:has-text('Access denied')",
+    "admin content view": ".view-content",
+    "admin config page": ".admin-list, .layout-container",
+    "modules table": "#system-modules, form#system-modules"
+  },
+  "xpath": {}
+}

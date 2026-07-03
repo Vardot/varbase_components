@@ -1,0 +1,10 @@
+name: 'Varbase Components Test'
+description: 'Provisions a Standard site with Varbase Components enabled for the automated tests. Enabling Varbase Components runs its default recipe, which installs and configures the UI Patterns and UI Icons component stack. The Field Group and Display Suite (Extras) modules are enabled first because the imported UI Patterns Field Group / Display Suite configuration depends on them.'
+type: 'Testing'
+install:
+  - node
+  - block
+  - field_group
+  - ds
+  - ds_extras
+  - varbase_components

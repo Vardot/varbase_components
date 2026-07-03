@@ -1,6 +1,17 @@
 # Ignore the node modules folder (created by 'npm install').
 node_modules
 
+# Ignore gitlab-ci-local runner cache/artefacts.
+.gitlab-ci-local/
+
+# Ignore webship-js test artefacts (keep the .gitkeep placeholders).
+tests/reports/*
+!tests/reports/.gitkeep
+tests/screenshots/*
+!tests/screenshots/.gitkeep
+tests/videos/*
+!tests/videos/.gitkeep
+
 # Ignore yarn cache
 .yarn/
 

@@ -1,27 +1,39 @@
 {
-  "name": "drupal/varbase_components",
-  "description": "This is the components handler module with components helper, theme switcher for components in Varbase.",
-  "type": "drupal-module",
-  "homepage": "https://www.drupal.org/project/varbase_components",
-  "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "Vardot",
-      "homepage": "https://www.drupal.org/vardot",
-      "role": "Maintainer"
+    "name": "drupal/varbase_components",
+    "description": "This is the components handler module with components helper, theme switcher for components in Varbase.",
+    "type": "drupal-module",
+    "homepage": "https://www.drupal.org/project/varbase_components",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Vardot",
+            "homepage": "https://www.drupal.org/vardot",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "http://drupal.org/project/issues/varbase_components",
+        "source": "http://cgit.drupalcode.org/varbase_components"
+    },
+    "require": {
+        "drupal/core": "~11.4.0",
+        "vardot/varbase-patches": "~10.1.0",
+        "drupal/ui_patterns": "~2",
+        "drupal/ui_patterns_field_group-ui_patterns_field_group": "~2",
+        "drupal/ui_patterns_ds-ui_patterns_ds": "~1",
+        "drupal/ds": "^3.28",
+        "drupal/field_group": "^4.0",
+        "drupal/ui_icons": "~1.1.0",
+        "drupal/storybook": "~1"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/runtime": true,
+            "vardot/varbase-patches": true,
+            "cweagans/composer-patches": true,
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "oomphinc/composer-installers-extender": true
+        }
     }
-  ],
-  "support": {
-    "issues": "http://drupal.org/project/issues/varbase_components",
-    "source": "http://cgit.drupalcode.org/varbase_components"
-  },
-  "require": {
-    "drupal/core": "~11.3.0",
-    "vardot/varbase-patches": "~10.1.0",
-    "drupal/ui_patterns": "~2",
-    "drupal/ui_patterns_field_group-ui_patterns_field_group": "~2",
-    "drupal/ui_patterns_ds-ui_patterns_ds": "~1",
-    "drupal/ui_icons": "~1.1.0",
-    "drupal/storybook": "~1"
-  }
 }
