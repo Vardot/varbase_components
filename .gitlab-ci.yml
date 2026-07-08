@@ -129,6 +129,9 @@ webship-js-test:
 
 # Allow the Varbase stack Composer plugins in the CI build.
 composer:
+  variables:
+    DRUPAL_CORE: "11.4.0"
+    IGNORE_PROJECT_DRUPAL_CORE_VERSION: "1"
   before_script:
     - composer config --no-plugins allow-plugins.symfony/runtime true || true
     - composer config --no-plugins allow-plugins.composer/installers true || true
