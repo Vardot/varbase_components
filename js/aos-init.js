@@ -7,19 +7,19 @@
  * aos.js is available on window.AOS.
  */
 (function (Drupal, once) {
-  'use strict';
+  "use strict";
 
   Drupal.behaviors.varbaseComponentsAos = {
     attach: function (context, settings) {
-      once('varbase-aos-init', 'html', context).forEach(function () {
-        if (typeof AOS !== 'undefined') {
+      once("varbase-aos-init", "html", context).forEach(function () {
+        if (typeof AOS !== "undefined") {
           AOS.init({
             once: true,
-            disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+            disable: window.matchMedia("(prefers-reduced-motion: reduce)")
+              .matches,
           });
         }
       });
     },
   };
-
 })(Drupal, once);

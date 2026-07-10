@@ -5,6 +5,8 @@
  * Install, update and uninstall functions for Varbase Components.
  */
 
+use Drupal\varbase_components\Hook\VarbaseComponentsHooks;
+
 /**
  * Implements hook_install().
  *
@@ -15,6 +17,7 @@
  */
 function varbase_components_install($is_syncing) {
   module_set_weight('varbase_components', 10);
+  VarbaseComponentsHooks::disableHiddenComponents();
 }
 
 /**

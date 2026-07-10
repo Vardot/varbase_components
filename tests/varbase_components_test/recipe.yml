@@ -1,0 +1,9 @@
+name: 'Varbase Components Test'
+description: 'Provisions a Standard site with Varbase Components and Drupal Canvas enabled for the automated tests. The core Navigation module is enabled too so its Drupal Canvas components get created, which exercises the hidden components list shipped in varbase_components.settings.'
+type: 'Testing'
+install:
+  - node
+  - block
+  - navigation
+  - canvas
+  - varbase_components

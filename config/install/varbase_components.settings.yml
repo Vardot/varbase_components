@@ -1,0 +1,12 @@
+hidden_canvas_components:
+  - block.admin_menu_links
+  - block.ai_operations_status
+  - block.ai_setup_ai_provider
+  - block.events_block
+  - block.project_browser_block.ai_dashboard_recommended
+  - block.project_browser_block.varbase_recipes
+  - block.share
+  - block.social_auth_login
+  - block.views_block.recent_pages-block_recent_pages
+  - sdc.navigation.message
+  - sdc.webshare.share

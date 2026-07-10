@@ -2,12 +2,82 @@
 
 namespace Drupal\varbase_components\Hook;
 
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Hook\Attribute\Hook;
 
 /**
  * Hook implementations for varbase_components.
  */
 class VarbaseComponentsHooks {
+
+  /**
+   * Gets the Drupal Canvas components kept out of the component library.
+   *
+   * The list ships in the `hidden_canvas_components` setting of
+   * `varbase_components.settings` (no settings UI): administrative and
+   * duplicate components that content editors and site builders should not
+   * place on pages — dashboard feeds, Project Browser blocks, AI
+   * administration blocks, and the Webshare Share block and component that
+   * duplicate the theme Share component. Drupal Canvas only lets the source
+   * discovery compute the initial status of a Component config entity and
+   * provides no alter hook for it, so the entity presave hook is the
+   * supported way to set the initial status. Components on this list are
+   * created disabled no matter when the module or recipe providing them gets
+   * enabled. Only the initial status is enforced: a site builder can still
+   * re-enable any of them manually.
+   *
+   * @return string[]
+   *   The hidden Component config entity IDs.
+   *
+   * @see \Drupal\canvas\ComponentSource\ComponentSourceManager::generateComponents()
+   * @see \Drupal\canvas\ComponentSource\ComponentCandidatesDiscoveryInterface::computeInitialComponentStatus()
+   */
+  public static function getHiddenCanvasComponents(): array {
+    return \Drupal::config('varbase_components.settings')->get('hidden_canvas_components') ?? [];
+  }
+
+  /**
+   * Creates hidden-list Drupal Canvas components disabled.
+   *
+   * @param \Drupal\Core\Entity\EntityInterface $component
+   *   The Drupal Canvas Component config entity being saved.
+   *
+   * @see self::getHiddenCanvasComponents()
+   */
+  #[Hook('component_presave')]
+  public function componentPresave(EntityInterface $component): void {
+    if (!$component->isNew() || !$component->status()) {
+      return;
+    }
+    if (\in_array($component->id(), self::getHiddenCanvasComponents(), TRUE)) {
+      $component->disable();
+    }
+  }
+
+  /**
+   * Disables the hidden-list Drupal Canvas components that already exist.
+   *
+   * Covers components created before this module got installed; components
+   * created afterwards are created disabled by componentPresave().
+   *
+   * @see self::getHiddenCanvasComponents()
+   */
+  public static function disableHiddenComponents(): void {
+    $entity_type_manager = \Drupal::entityTypeManager();
+    if (!$entity_type_manager->hasDefinition('component')) {
+      return;
+    }
+    $hidden = self::getHiddenCanvasComponents();
+    if (empty($hidden)) {
+      return;
+    }
+    $storage = $entity_type_manager->getStorage('component');
+    foreach ($storage->loadMultiple($hidden) as $component) {
+      if ($component->status()) {
+        $component->disable()->save();
+      }
+    }
+  }
 
   /**
    * Prepares global variables for all templates.
