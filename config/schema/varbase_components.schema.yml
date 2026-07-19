@@ -8,3 +8,28 @@ varbase_components.settings:
       sequence:
         type: string
         label: 'Drupal Canvas Component config entity ID'
+
+views.exposed_form.components_exposed_form:
+  type: views_exposed_form
+  label: 'Component'
+  mapping:
+    component_id:
+      type: string
+      label: 'The Single Directory Component that renders the exposed filters'
+
+views.style.components_views_style:
+  type: views_style
+  label: 'Component'
+  mapping:
+    component_id:
+      type: string
+      label: 'The Single Directory Component that renders the view'
+    rows_slot:
+      type: string
+      label: 'The component slot the view rows are placed in'
+    prop_mappings:
+      type: sequence
+      label: 'Static values for the component props'
+      sequence:
+        type: string
+        label: 'Prop value'
