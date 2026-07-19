@@ -15,9 +15,10 @@ use Drupal\Core\Extension\ThemeHandlerInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\Messenger\MessengerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\Component\Serialization\Exception\InvalidDataTypeException;
+use Drupal\Component\Serialization\Yaml;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\Yaml\Exception\ParseException;
-use Symfony\Component\Yaml\Yaml;
+use Symfony\Component\Yaml\Yaml as SymfonyYaml;
 
 /**
  * Handles theme changes and updates configurations automatically.
@@ -995,7 +996,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
     }
 
     try {
-      $yaml = Yaml::dump($data);
+      $yaml = SymfonyYaml::dump($data);
     }
     catch (\Exception $e) {
       $this->loggerFactory->get('varbase_components')->warning('Failed to dump YAML for config @config: @message', [
@@ -1060,7 +1061,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
     }
 
     try {
-      $new_data = Yaml::parse($new_yaml);
+      $new_data = Yaml::decode($new_yaml);
       if (!is_array($new_data)) {
         return FALSE;
       }
@@ -1068,7 +1069,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
       $config->setData($new_data)->save();
       return TRUE;
     }
-    catch (ParseException $e) {
+    catch (InvalidDataTypeException $e) {
       $this->loggerFactory->get('varbase_components')->error('Failed to parse YAML for config @config: @message', [
         '@config' => $config_name,
         '@message' => $e->getMessage(),
@@ -1194,9 +1195,9 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
     }
 
     try {
-      $info_file_data = Yaml::parse($file_contents);
+      $info_file_data = Yaml::decode($file_contents);
     }
-    catch (ParseException $e) {
+    catch (InvalidDataTypeException $e) {
       $this->loggerFactory->get('varbase_components')->error('Failed to parse theme info file @file: @message', [
         '@file' => $theme_info_file,
         '@message' => $e->getMessage(),
