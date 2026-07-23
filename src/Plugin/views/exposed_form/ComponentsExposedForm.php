@@ -67,6 +67,7 @@ class ComponentsExposedForm extends ExposedFormPluginBase {
   protected function defineOptions(): array {
     $options = parent::defineOptions();
     $options['component_id'] = ['default' => ''];
+    $options['reset_button_always_show'] = ['default' => FALSE];
     return $options;
   }
 
@@ -85,6 +86,31 @@ class ComponentsExposedForm extends ExposedFormPluginBase {
       '#empty_option' => $this->t('- Select a component -'),
       '#required' => TRUE,
     ];
+
+    $form['reset_button_always_show'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Always show reset button'),
+      '#description' => $this->t('Keep the reset button visible even without user input.'),
+      '#default_value' => $this->options['reset_button_always_show'],
+      '#states' => [
+        'invisible' => [
+          'input[name="exposed_form_options[reset_button]"]' => ['checked' => FALSE],
+        ],
+      ],
+    ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function exposedFormAlter(&$form, FormStateInterface $form_state): void {
+    parent::exposedFormAlter($form, $form_state);
+
+    // Core hides the reset action when there is no exposed input; reveal it
+    // again when the view opts to always show it (BEF parity).
+    if (!empty($this->options['reset_button_always_show']) && isset($form['actions']['reset'])) {
+      $form['actions']['reset']['#access'] = TRUE;
+    }
   }
 
   /**
