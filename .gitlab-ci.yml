@@ -51,8 +51,22 @@ eslint:
   allow_failure: false
 phpcs:
   allow_failure: false
+
+# PHPStan analysis is scoped to src (see phpstan.neon), but phpstan-drupal boots
+# Drupal first: it discovers EVERY extension in the build and runs class_exists()
+# on each service id that is declared without an explicit class. Drupal Canvas 1.9
+# added the hidden experimental canvas_headless module, whose
+# JsComponentCanvasRenderConverter service is declared that way and extends
+# Drupal\custom_elements\RenderConverter\CanvasRenderConverter. This build does
+# not carry custom_elements, so loading that class throws and kills the PHPStan
+# bootstrap before excludePaths or ignoreErrors can apply. Take canvas_headless
+# out of the build for this job; nothing here integrates with it. The template job
+# .phpstan-base has no before_script of its own, so this adds one instead of
+# replacing template steps.
 phpstan:
   allow_failure: false
+  before_script:
+    - rm -rf $CI_PROJECT_DIR/$_WEB_ROOT/modules/contrib/canvas/modules/canvas_headless
 
 # = Reusable before_script fragments (via !reference) =
 .fragments:
