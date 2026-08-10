@@ -2,7 +2,7 @@
 
 # Varbase Components
 [![pipeline status](https://git.drupalcode.org/project/varbase_components/badges/4.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_components/-/pipelines)
-[![Varbase Components](https://img.shields.io/badge/Varbase%20Components-4.0.0--alpha2-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/varbase_components/-/pipelines?ref=4.0.0-alpha2)
+[![Varbase Components](https://img.shields.io/badge/Varbase%20Components-4.0.0--beta4-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/varbase_components/-/pipelines?ref=4.0.0-beta4)
 [![Automated Functional Testing](https://git.drupalcode.org/project/varbase_project/badges/11.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_project/-/pipelines)
 ---
 
