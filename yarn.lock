@@ -1129,6 +1129,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vardot/varbase-e2e@npm:~2.0.1":
+  version: 2.0.2
+  resolution: "@vardot/varbase-e2e@npm:2.0.2"
+  dependencies:
+    "@axe-core/playwright": "npm:^4.11.3"
+    "@cucumber/cucumber": "npm:*"
+    "@cucumber/pretty-formatter": "npm:~1"
+    "@types/node": "npm:~20"
+    ajv: "npm:^8.20.0"
+    ajv-formats: "npm:^3.0.1"
+    axe-core: "npm:^4.11.4"
+    axios: "npm:~1"
+    cucumber-html-reporter: "npm:^6.0.0"
+    http-server: "npm:^14.1.1"
+    js-yaml: "npm:^4.1.1"
+    playwright: "npm:^1.58.2"
+    tsx: "npm:^4.19.2"
+    typescript: "npm:~5"
+  bin:
+    generate-reports: bin/generate-reports.js
+    init-varbase-e2e: bin/init-varbase-e2e.js
+  checksum: 10c0/58acc6564a078e09d29581be93da90ecf98908e1da455f4f3efabb5d7b4204940480e0f5714b00233dcfa6824f4da6688916c7fb18b31d8c49ab380eb0d34c29
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:^5.0.0":
   version: 5.0.0
   resolution: "abbrev@npm:5.0.0"
@@ -4304,6 +4329,7 @@ __metadata:
   dependencies:
     "@cucumber/cucumber": "npm:10.0.1"
     "@cucumber/pretty-formatter": "npm:1.0.0"
+    "@vardot/varbase-e2e": "npm:~2.0.1"
     cspell: "npm:^8.16.1"
     eslint: "npm:^8.57.1"
     eslint-config-prettier: "npm:^9.1.0"
@@ -4312,7 +4338,6 @@ __metadata:
     playwright: "npm:1.60.0"
     prettier: "npm:^3.4.2"
     tsx: "npm:4.22.1"
-    webship-js: "npm:~2.0.0"
   languageName: unknown
   linkType: soft
 
@@ -4338,31 +4363,6 @@ __metadata:
   version: 3.1.0
   resolution: "vscode-uri@npm:3.1.0"
   checksum: 10c0/5f6c9c10fd9b1664d71fab4e9fbbae6be93c7f75bb3a1d9d74399a88ab8649e99691223fd7cef4644376cac6e94fa2c086d802521b9a8e31c5af3e60f0f35624
-  languageName: node
-  linkType: hard
-
-"webship-js@npm:~2.0.0":
-  version: 2.0.4
-  resolution: "webship-js@npm:2.0.4"
-  dependencies:
-    "@axe-core/playwright": "npm:^4.11.3"
-    "@cucumber/cucumber": "npm:*"
-    "@cucumber/pretty-formatter": "npm:~1"
-    "@types/node": "npm:~20"
-    ajv: "npm:^8.20.0"
-    ajv-formats: "npm:^3.0.1"
-    axe-core: "npm:^4.11.4"
-    axios: "npm:~1"
-    cucumber-html-reporter: "npm:^6.0.0"
-    http-server: "npm:^14.1.1"
-    js-yaml: "npm:^4.1.1"
-    playwright: "npm:^1.58.2"
-    tsx: "npm:^4.19.2"
-    typescript: "npm:~5"
-  bin:
-    generate-reports: bin/generate-reports.js
-    init-webship-js: bin/init-webship.js
-  checksum: 10c0/ea2df09db5a89115c04abe2e3f24f4f89c291065594c14effb19a67a1302bd2b172ed3d2b285c83c75739c1f7a422a2c6de78b99496a04fcdc31b24763655bbc
   languageName: node
   linkType: hard
 
