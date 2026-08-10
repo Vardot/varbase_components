@@ -18,5 +18,8 @@
   "require": {
     "drupal/core": "~11.4.0",
     "drupal/cva": "~1"
+  },
+  "require-dev": {
+    "drupal/custom_elements": "^3.4"
   }
 }

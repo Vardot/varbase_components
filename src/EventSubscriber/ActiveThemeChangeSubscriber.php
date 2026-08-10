@@ -18,7 +18,6 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Component\Serialization\Exception\InvalidDataTypeException;
 use Drupal\Component\Serialization\Yaml;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\Yaml\Yaml as SymfonyYaml;
 
 /**
  * Handles theme changes and updates configurations automatically.
@@ -996,7 +995,7 @@ class ActiveThemeChangeSubscriber implements EventSubscriberInterface {
     }
 
     try {
-      $yaml = SymfonyYaml::dump($data);
+      $yaml = Yaml::encode($data);
     }
     catch (\Exception $e) {
       $this->loggerFactory->get('varbase_components')->warning('Failed to dump YAML for config @config: @message', [
