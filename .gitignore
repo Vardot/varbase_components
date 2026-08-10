@@ -4,7 +4,7 @@ node_modules
 # Ignore gitlab-ci-local runner cache/artefacts.
 .gitlab-ci-local/
 
-# Ignore webship-js test artefacts (keep the .gitkeep placeholders).
+# Ignore varbase-e2e test artefacts (keep the .gitkeep placeholders).
 tests/reports/*
 !tests/reports/.gitkeep
 tests/screenshots/*
