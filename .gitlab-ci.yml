@@ -24,7 +24,7 @@ include:
 variables:
   # The 3.0.x branch targets Drupal core 11.4 only. Pin the core version and
   # ignore the project's info.yml core_version_requirement when resolving it.
-  DRUPAL_CORE: "11.4.0"
+  DRUPAL_CORE: "11.4.9"
   IGNORE_PROJECT_DRUPAL_CORE_VERSION: "1"
   # Make every drupalci validate job blocking (stylelint et al. default to
   # allow_failure:true). Combined with the per-job allow_failure:false overrides
@@ -129,6 +129,10 @@ varbase-e2e-test:
 
 # Allow the Varbase stack Composer plugins in the CI build.
 composer:
+  variables:
+    # Test on the current Drupal 11.4 release, which has the Twig 3.30 fix (#3625969).
+    DRUPAL_CORE: "11.4.9"
+    IGNORE_PROJECT_DRUPAL_CORE_VERSION: "1"
   before_script:
     - composer config --no-plugins allow-plugins.symfony/runtime true || true
     - composer config --no-plugins allow-plugins.composer/installers true || true
