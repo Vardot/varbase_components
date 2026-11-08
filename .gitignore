@@ -39,3 +39,9 @@ nbproject
 .bash_history
 .bashrc
 errors.log
+
+# JavaScript lockfiles are not committed: installs resolve from package.json
+# (packageManager yarn@4.18.1, engines).
+yarn.lock
+package-lock.json
+pnpm-lock.yaml

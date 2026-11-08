@@ -33,9 +33,9 @@ variables:
   _ALL_VALIDATE_ALLOW_FAILURE: "0"
   COMPOSER_FLAGS: "--no-strict-lock"
   COMPOSER_MEMORY_LIMIT: "-1"
-  # A yarn.lock is committed (it pins a single @cucumber/cucumber instance so
-  # varbase-e2e and the suite share one Cucumber runtime); varbase-e2e's
-  # postinstall may still touch files, so keep non-immutable installs in CI.
+  # No yarn.lock is committed; Yarn 4 defaults to immutable installs on CI and
+  # would refuse to create one. The package.json resolutions keep a single
+  # @cucumber/cucumber instance for varbase-e2e and the suite.
   YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
 
 # = Validate stage (all blocking) =
@@ -80,7 +80,7 @@ phpstan:
     - service apache2 start
     - export SIMPLETEST_DB=mysql://$MYSQL_USER:$MYSQL_PASSWORD@database/$MYSQL_DATABASE
   node_playwright: &node_playwright
-    - curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+    - curl -fsSL https://deb.nodesource.com/setup_24.x | bash -
     - apt-get install -y nodejs
     - node --version && npm --version
     # Back up cucumber.js - varbase-e2e's postinstall can clobber it under yarn 4.
@@ -142,6 +142,13 @@ varbase-e2e-test:
         --pdf-out tests/reports/cucumber_report.pdf
   allow_failure: false
 
+.composer-base:
+  variables:
+    # Every composer job, variants included: Drupal core's own Yarn 4.9.1 would
+    # read the project .yarnrc.yml (Yarn >= 4.14 keys) too.
+    YARN_RC_FILENAME: .yarnrc.core.yml
+    YARN_NODE_LINKER: node-modules
+
 # Allow the Varbase stack Composer plugins in the CI build, and pull the
 # packages the browser-test site needs at runtime: Drupal Canvas (the module
 # under test integrates with it) and the Varbase patches set for the Varbase 11
@@ -160,3 +167,9 @@ composer:
     - composer config --no-plugins allow-plugins.tbachert/spi true || true
     - composer config --no-plugins allow-plugins.vardot/varbase-patches true || true
     - composer require --no-update drupal/canvas:~1.8 vardot/varbase-patches:~11.0.0
+
+stylelint:
+  variables:
+    # Drupal core's own Yarn 4.9.1 would read the project .yarnrc.yml (Yarn >= 4.14 keys) too.
+    YARN_RC_FILENAME: .yarnrc.core.yml
+    YARN_NODE_LINKER: node-modules
