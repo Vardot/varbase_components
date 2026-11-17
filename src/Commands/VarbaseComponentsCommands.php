@@ -297,7 +297,6 @@ class VarbaseComponentsCommands extends DrushCommands {
    */
   protected function callMethod(object $object, string $method, array $args = []): void {
     $ref = new \ReflectionMethod($object, $method);
-    $ref->setAccessible(TRUE);
     $ref->invokeArgs($object, $args);
   }
 
