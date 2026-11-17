@@ -35,6 +35,8 @@ variables:
   # No yarn.lock is committed; Yarn 4 defaults to immutable installs and would
   # refuse to create one. Allow lockfile creation in CI for every job.
   YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
+  # PHP 8.5 for the drupalci job images (the template default is PHP 8.3).
+  _TARGET_PHP: "8.5"
 
 # = Validate stage (all blocking) =
 # Force EVERY drupalci validate job to gate. _ALL_VALIDATE_ALLOW_FAILURE=0 flips
