@@ -34,8 +34,8 @@ variables:
   COMPOSER_FLAGS: "--no-strict-lock"
   COMPOSER_MEMORY_LIMIT: "-1"
   # No yarn.lock is committed; Yarn 4 defaults to immutable installs on CI and
-  # would refuse to create one. package.json asks for @cucumber/cucumber in the
-  # range varbase-e2e uses (^12.9.0), so Yarn installs a single copy.
+  # would refuse to create one. Cucumber, Playwright and the pretty formatter
+  # come from @vardot/varbase-e2e, so Yarn installs a single copy of each.
   YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
   # PHP 8.5 for the drupalci job images (the template default is PHP 8.3).
   _TARGET_PHP: "8.5"

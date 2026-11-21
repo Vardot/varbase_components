@@ -21,11 +21,11 @@
     "phpcbf": "phpcbf --standard=./.phpcs.xml .",
     "lint:yaml": "node ./node_modules/eslint/bin/eslint.js --ext .yml .",
     "spellcheck": "cspell lint .",
-    "test": "cucumber-js --config cucumber.js",
-    "test:chromium": "BROWSER=chromium cucumber-js --config cucumber.js",
-    "test:firefox": "BROWSER=firefox cucumber-js --config cucumber.js",
-    "test:webkit": "BROWSER=webkit cucumber-js --config cucumber.js",
-    "generate-reports": "generate-reports"
+    "test": "node ./node_modules/@cucumber/cucumber/bin/cucumber.js --config cucumber.js",
+    "test:chromium": "BROWSER=chromium node ./node_modules/@cucumber/cucumber/bin/cucumber.js --config cucumber.js",
+    "test:firefox": "BROWSER=firefox node ./node_modules/@cucumber/cucumber/bin/cucumber.js --config cucumber.js",
+    "test:webkit": "BROWSER=webkit node ./node_modules/@cucumber/cucumber/bin/cucumber.js --config cucumber.js",
+    "generate-reports": "node ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js"
   },
   "devDependencies": {
     "cspell": "^8.16.1",
@@ -37,14 +37,9 @@
   },
   "packageManager": "yarn@4.18.1",
   "dependencies": {
-    "@cucumber/cucumber": "^12.9.0",
-    "@cucumber/pretty-formatter": "^1.0.0",
-    "@vardot/varbase-e2e": "^2.0.8",
-    "playwright": "^1.60.0",
-    "tsx": "^4.22.1"
+    "@vardot/varbase-e2e": "^2.0.8"
   },
   "resolutions": {
-    "playwright": "1.60.0",
     "playwright-core": "1.60.0"
   }
 }
